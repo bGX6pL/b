@@ -397,6 +397,14 @@ footer p + p { margin-top: 10px; }
   }).join("");
 
   if (bank.source_note) $("[data-bank-src]").textContent = bank.source_note;
+  // Message match with the ad: ?m=5000&y=30 opens the receipt the creative showed.
+  var q = new URLSearchParams(location.search);
+  [["amount", q.get("m")], ["years", q.get("y")]].forEach(function (kv) {
+    var seg = document.querySelector('[data-seg="' + kv[0] + '"]'), btn = kv[1] && seg.querySelector('[data-v="' + kv[1] + '"]');
+    if (!btn) return;
+    seg.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === btn ? "true" : "false"); });
+    state[kv[0]] = Number(kv[1]);
+  });
   render();
 })();
 </script>

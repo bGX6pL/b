@@ -399,6 +399,13 @@ footer p + p { margin-top: 10px; }
     var t = e.target.closest("[data-open-sheet^='row-']");
     if (t) { var tk = t.dataset.openSheet.slice(4); $("[data-sheet-sub]").textContent = "Dvojče k " + tk + " a dalším 19 fondům pošleme v PDF spolu s celým žebříčkem."; Lead.setContext({ unlock_ticker: tk }); }
   });
+  // Message match with the ad: ?sort=ter opens the fee ranking and says so in the headline.
+  var qs = new URLSearchParams(location.search).get("sort");
+  if (qs && LABEL[qs]) {
+    state.key = qs;
+    document.querySelectorAll("[data-k]").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.k === qs ? "true" : "false"); });
+    if (qs === "ter") $("#h1").innerHTML = "Srovnali jsme <mark>poplatky 20&nbsp;ETF z&nbsp;NYSE.</mark> <em>Tady je výsledek.</em>";
+  }
   $("[data-notes]").textContent = "Poplatek = roční nákladovost (TER/expense ratio). Velikost = majetek fondu. Dividenda = výnos za posledních 12 měsíců. Výnosy v USD včetně dividend k " +
     F.date(D.meta.returns_as_of) + ", p.a. = průměrně za rok. Zdroj: správci fondů, ověřeno proti justETF a stockanalysis.com.";
   render();

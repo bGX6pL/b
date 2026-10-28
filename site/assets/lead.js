@@ -106,8 +106,11 @@
         email: email, variant: cfg.variant, placement: form.dataset.placement || "", context: context,
         page: location.pathname, referrer: document.referrer.slice(0, 300), ts: new Date().toISOString()
       }, utm());
-      send(payload).then(function () {
-        store("lead", { variant: cfg.variant, masked: mask(email), context: context, placement: form.dataset.placement });
+      send(payload).then(function (res) {
+        // The endpoint may answer {"id": "..."}; the thank-you page uses it to attach the follow-up answer to this lead.
+        return res && res.json ? res.json().catch(function () { return {}; }) : {};
+      }).then(function (data) {
+        store("lead", { id: (data && data.id) || null, variant: cfg.variant, masked: mask(email), context: context, placement: form.dataset.placement });
         track("generate_lead", { variant: cfg.variant, placement: form.dataset.placement });
         var sep = cfg.thankYou.indexOf("?") > -1 ? "&" : "?";
         setTimeout(function () { location.href = cfg.thankYou + sep + "v=" + encodeURIComponent(cfg.variant); }, 150);
