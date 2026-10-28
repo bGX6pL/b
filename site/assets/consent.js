@@ -87,6 +87,7 @@
       write(c === "yes" ? "granted" : "denied");
       if (c === "yes") loadTags();
       el.remove();
+      document.dispatchEvent(new CustomEvent("consent:closed"));
     });
     document.body.appendChild(el);
   }

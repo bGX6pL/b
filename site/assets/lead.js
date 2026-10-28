@@ -148,14 +148,18 @@
     var watch = document.querySelectorAll("[data-lead-form]:not(#lead-sheet *), [data-hide-sticky]");
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) visible.add(en.target); else visible.delete(en.target); });
-      var scrolled = window.scrollY > window.innerHeight * 0.6;
-      bar.classList.toggle("is-shown", scrolled && visible.size === 0);
+      update();
     }, { threshold: 0.15 });
     watch.forEach(function (w) { io.observe(w); });
-    window.addEventListener("scroll", function () {
-      var scrolled = window.scrollY > window.innerHeight * 0.6;
-      bar.classList.toggle("is-shown", scrolled && visible.size === 0);
-    }, { passive: true });
+    // data-sticky-mode="always": the hero has no form of its own, so the bar is the first-screen CTA.
+    var always = bar.dataset.stickyMode === "always";
+    function update() {
+      var scrolled = always || window.scrollY > window.innerHeight * 0.6;
+      bar.classList.toggle("is-shown", scrolled && visible.size === 0 && !document.querySelector(".consent"));
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    document.addEventListener("consent:closed", update);
+    update();
   }
 
   window.Lead = {

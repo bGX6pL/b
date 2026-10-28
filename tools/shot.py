@@ -46,19 +46,22 @@ def dismiss_consent(page):
             try:
                 loc = frame.get_by_role("button", name=label, exact=False)
                 if loc.count() and loc.first.is_visible():
-                    loc.first.click(timeout=2000)
+                    try:
+                        loc.first.click(timeout=2000)
+                    except Exception:  # covered/animating: fall back to a DOM click
+                        loc.first.evaluate("e => e.click()")
                     time.sleep(0.8)
                     return label
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"consent attempt '{label}': {str(e).splitlines()[0]}", file=sys.stderr)
             try:
                 loc = frame.locator(f"a:text-is('{label}'), [role=button]:text-matches('{label}', 'i')")
                 if loc.count() and loc.first.is_visible():
                     loc.first.click(timeout=2000)
                     time.sleep(0.8)
                     return label
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"consent attempt '{label}': {str(e).splitlines()[0]}", file=sys.stderr)
     return None
 
 

@@ -33,10 +33,10 @@ window.Fmt = (function () {
 
   function czk(v) { return num(Math.round(v)) + NB + "Kč"; }
 
-  // Billions of USD with Czech wording: 712.4 → "712 mld. USD", 8.43 → "8,4 mld. USD".
+  // Billions with Czech wording: 712.4 → "712 mld. USD", 70.2 → "70 mld. USD", 8.43 → "8,4 mld. USD".
   function bn(v, cur) {
     if (v === null || v === undefined) return "–";
-    return num(v, v >= 100 ? 0 : 1) + NB + "mld." + NB + (cur || "USD");
+    return num(v, v >= 10 ? 0 : 1) + NB + "mld." + NB + (cur || "USD");
   }
 
   function date(iso) {
