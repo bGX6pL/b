@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chcete VOO? Tady je jeho evropské dvojče | ETF tahák</title>
+<meta name="description" content="Americká ETF z burzy NYSE vám většina brokerů v Česku neprodá. Ke každému ukážeme evropské dvojče se stejným indexem, které koupíte. Tahák zdarma do e-mailu.">
+<meta name="theme-color" content="#F1EDE3">
+<meta property="og:title" content="Chcete VOO? Tady je jeho evropské dvojče">
+<meta property="og:description" content="20 ETF z NYSE a jejich evropská dvojčata, poplatky brokerů a daně v ČR. Tahák zdarma.">
+<meta property="og:type" content="website">
+<link rel="preload" href="../assets/fonts/schibsted-grotesk-400_800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/schibsted-grotesk-400_800-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+:root {
+  --bg: #F1EDE3; --card: #FFFDF7; --ink: #15130F; --muted: #5F594E; --line: #D6CEBD;
+  --accent: #0B6B4C; --accent-soft: #DCEDE4; --accent-ink: #fff; --danger: #B3362A; --ok: #0B6B4C;
+  --radius: 14px;
+  --font-head: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --consent-bg: #15130F; --consent-ink: #F1EDE3;
+}
+body { background: var(--bg); }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 16px; }
+
+/* ---------- top ---------- */
+.top { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+.logo { text-decoration: none; font: 800 19px/1 var(--font-head); letter-spacing: -.02em; display: flex; align-items: center; gap: 8px; }
+.logo i { width: 22px; height: 22px; border-radius: 6px; background: var(--ink); position: relative; flex: none; }
+.logo i::before, .logo i::after { content: ""; position: absolute; left: 5px; right: 5px; height: 3px; border-radius: 2px; background: var(--bg); }
+.logo i::before { top: 6px; } .logo i::after { bottom: 6px; background: #7ED3A8; }
+.top__meta { font: 500 12px/1.2 var(--font-mono); color: var(--muted); text-align: right; }
+
+/* ---------- hero ---------- */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy" "finder" "form"; gap: 14px; padding: 6px 0 28px; }
+.hero > * { min-width: 0; }
+.hero__copy { grid-area: copy; }
+.finder { grid-area: finder; }
+.hero .lead { grid-area: form; }
+.eyebrow { font: 600 12px/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+h1 { font: 800 clamp(31px, 8.6vw, 62px)/1.0 var(--font-head); letter-spacing: -.035em; text-wrap: balance; }
+h1 .tk { font-family: var(--font-mono); font-weight: 700; letter-spacing: -.04em; background: var(--ink); color: var(--bg); padding: 0 .14em; border-radius: .12em; }
+.lede { margin-top: 10px; font-size: 16px; line-height: 1.4; color: var(--muted); max-width: 34em; }
+.lede b { color: var(--ink); font-weight: 600; }
+.d-only { display: none; }
+@media (min-width: 900px) { .d-only { display: inline; } }
+
+/* ticker chips */
+.chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px 10px; padding: 2px 16px; scroll-padding-inline: 16px; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: none; scroll-snap-align: start; border: 1.5px solid var(--ink); background: transparent; border-radius: 999px; padding: 7px 13px;
+  font: 700 14px/1 var(--font-mono); letter-spacing: .02em; }
+.chip[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+.chip small { font-weight: 500; opacity: .6; font-size: 10px; margin-left: 4px; }
+
+/* ticket stubs */
+.stub { position: relative; background: var(--card); border-radius: var(--radius); padding: 14px 16px; border: 1px solid var(--line); }
+.stub__meta { display: flex; justify-content: space-between; gap: 8px; font: 600 11px/1.2 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.stub__tk { font: 700 30px/1 var(--font-mono); letter-spacing: -.03em; margin-top: 8px; display: flex; align-items: baseline; gap: 10px; }
+.stub__fee { font: 600 13px/1 var(--font-mono); color: var(--muted); letter-spacing: 0; }
+.stub__name { font-size: 14px; color: var(--muted); margin-top: 4px; }
+.stub--us { padding-right: 112px; }
+.stub--us .stub__tk { color: #8C8576; }
+.stub--us [data-us-tk] { text-decoration: line-through; text-decoration-thickness: 3px; text-decoration-color: var(--danger); }
+.stamp { position: absolute; right: 12px; top: 50%; transform: translateY(-50%) rotate(-8deg); border: 2px solid var(--danger); color: var(--danger);
+  border-radius: 8px; padding: 5px 7px; font: 800 11px/1.1 var(--font-mono); text-transform: uppercase; text-align: center; letter-spacing: .04em; opacity: .92; }
+.perf { position: relative; height: 26px; display: flex; align-items: center; justify-content: center; }
+.perf::before { content: ""; position: absolute; left: 18px; right: 18px; top: 50%; border-top: 2px dashed var(--line); }
+.perf span { position: relative; background: var(--bg); padding: 0 10px; font: 600 11px/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.perf span::before { content: "↓ "; }
+.stub--eu { border: 2px solid var(--accent); box-shadow: 0 1px 0 var(--accent), 0 14px 30px -18px rgba(11,107,76,.55); }
+.stub--eu .stub__meta { color: var(--accent); }
+.stub--eu .stub__tk { color: var(--ink); }
+.isin { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font: 500 12.5px/1 var(--font-mono); color: var(--ink);
+  background: var(--accent-soft); border: 0; border-radius: 6px; padding: 6px 8px; }
+.isin::after { content: "kopírovat"; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
+.isin.is-copied::after { content: "zkopírováno ✓"; }
+.ticks { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 10px; font-size: 13px; }
+.ticks li { list-style: none; display: flex; gap: 5px; align-items: baseline; }
+.ticks li::before { content: "✓"; color: var(--accent); font-weight: 800; }
+.ticks li.warn::before { content: "≈"; color: #9A6B00; }
+.ticks { padding: 0; margin-bottom: 0; }
+.stub__alt { display: none; margin-top: 10px; padding-top: 9px; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--muted); }
+.stub__alt b { font-family: var(--font-mono); color: var(--ink); font-weight: 700; }
+.flash { animation: flash .45s ease; }
+@keyframes flash { from { opacity: .2; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* lead form */
+.lead__row { display: flex; gap: 6px; background: var(--card); border: 2px solid var(--ink); border-radius: 14px; padding: 5px; }
+.lead input[type="email"] { flex: 1; min-width: 0; border: 0; background: transparent; padding: 10px 8px; font-size: 16px; outline: none; }
+.lead button[type="submit"] { flex: none; border: 0; border-radius: 10px; background: var(--ink); color: var(--bg); padding: 0 16px; font-weight: 700; font-size: 15px; min-height: 46px; }
+.lead button[type="submit"]::after { content: " →"; }
+.lead__row:focus-within { box-shadow: 0 0 0 4px rgba(11,107,76,.25); }
+.lead__note { margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.lead__note b { color: var(--ink); font-weight: 600; }
+.lead__legal { margin-top: 6px; font-size: 11.5px; line-height: 1.4; color: var(--muted); }
+.lead__legal a { color: var(--muted); }
+
+/* ---------- sections ---------- */
+section.block { padding: 44px 0; border-top: 1px solid var(--line); }
+.kicker { font: 600 12px/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+h2 { font: 800 clamp(26px, 6.4vw, 42px)/1.05 var(--font-head); letter-spacing: -.03em; text-wrap: balance; max-width: 18em; }
+.sub { color: var(--muted); margin-top: 10px; max-width: 38em; }
+
+.why { display: grid; gap: 10px; margin-top: 22px; counter-reset: why; }
+.why li { list-style: none; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px 14px 52px; position: relative; }
+.why li::before { counter-increment: why; content: counter(why); position: absolute; left: 14px; top: 13px; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--ink); color: var(--bg); font: 700 13px/26px var(--font-mono); text-align: center; }
+.why b { display: block; margin-bottom: 2px; }
+.why { padding: 0; }
+.honest { margin-top: 14px; padding: 12px 14px; border-left: 3px solid #C99A2E; background: #F7EBCD; border-radius: 0 10px 10px 0; font-size: 14px; }
+
+.inside { display: grid; gap: 22px; margin-top: 24px; align-items: start; }
+.pdf { position: relative; aspect-ratio: 210/297; max-width: 320px; width: 78%; margin: 0 auto; background: #fff; border-radius: 6px;
+  box-shadow: 0 1px 0 var(--line), 0 30px 50px -28px rgba(0,0,0,.45); overflow: hidden; transform: rotate(-2deg); }
+.pdf img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.pdf__badge { position: absolute; right: -6px; top: 14px; background: var(--accent); color: #fff; font: 700 11px/1 var(--font-mono); padding: 7px 10px; border-radius: 6px 0 0 6px; text-transform: uppercase; letter-spacing: .05em; }
+.list { padding: 0; margin: 0; display: grid; gap: 14px; }
+.list li { list-style: none; display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: start; }
+.list .n { font: 700 22px/1 var(--font-mono); letter-spacing: -.04em; padding-top: 2px; }
+.list b { display: block; font-size: 17px; }
+.list span { color: var(--muted); font-size: 14.5px; }
+
+.table { margin-top: 22px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; position: relative; }
+.table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th { text-align: left; font: 600 10.5px/1.2 var(--font-mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.table td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.table td .m { font: 700 14px/1.2 var(--font-mono); }
+.table td small { display: block; color: var(--muted); font-size: 12px; }
+.table .arrow { color: var(--accent); font-weight: 800; padding-left: 0; padding-right: 0; width: 12px; }
+.table tr.blur td { filter: blur(4px); user-select: none; }
+.table__more { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 16px;
+  background: linear-gradient(to bottom, rgba(255,253,247,0), var(--card) 62%); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 12px; background: var(--ink); color: var(--bg);
+  font-weight: 700; font-size: 15px; padding: 14px 18px; text-decoration: none; min-height: 48px; }
+.btn--ghost { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+
+.proof { display: grid; gap: 10px; margin-top: 22px; }
+.proof div { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.proof b { display: block; font-size: 16px; margin-bottom: 4px; }
+.proof span { color: var(--muted); font-size: 14.5px; }
+
+.faq { margin-top: 18px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 16px 30px 16px 0; font-weight: 700; font-size: 16.5px; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 12px; font: 500 24px/1 var(--font-mono); }
+.faq details[open] summary::after { content: "–"; }
+.faq p { padding: 0 0 16px; color: var(--muted); max-width: 44em; }
+
+.final { padding: 48px 0 56px; border-top: 1px solid var(--line); }
+.final .lead { margin-top: 20px; max-width: 560px; }
+
+footer { padding: 28px 0 110px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+footer p + p { margin-top: 10px; }
+footer a { color: var(--muted); }
+.ph { background: #F2DE9B; color: #4A3A00; padding: 0 3px; border-radius: 3px; }
+
+/* sticky + sheet theme */
+.sticky-cta__in { display: flex; align-items: center; gap: 10px; background: var(--ink); color: var(--bg); border-radius: 16px; padding: 8px 8px 8px 14px; box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+.sticky-cta__in p { flex: 1; font-size: 13px; line-height: 1.3; }
+.sticky-cta__in b { display: block; font-size: 14px; }
+.sticky-cta__in button { border: 0; background: #7ED3A8; color: var(--ink); border-radius: 11px; font-weight: 800; padding: 12px 14px; }
+.sheet h3 { font: 800 22px/1.1 var(--font-head); letter-spacing: -.02em; padding-right: 30px; }
+.sheet .sub { margin: 6px 0 14px; font-size: 14.5px; }
+
+/* ---------- desktop ---------- */
+@media (min-width: 900px) {
+  .wrap { padding: 0 32px; }
+  .top { height: 72px; }
+  .hero { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); grid-template-areas: "copy finder" "form finder"; column-gap: 64px; row-gap: 26px; padding: 30px 0 64px; align-items: start; }
+  .hero__copy { padding-top: 20px; }
+  .lede { font-size: 19px; margin-top: 18px; }
+  .chips { margin: 0 0 12px; padding: 2px 0; flex-wrap: wrap; overflow: visible; }
+  .finder { background: #E8E2D4; border-radius: 22px; padding: 22px; }
+  .perf span { background: #E8E2D4; }
+  .stub { padding: 18px 20px; }
+  .stub__alt { display: block; }
+  .stub__tk { font-size: 40px; }
+  .stub--us { padding-right: 140px; }
+  .stamp { font-size: 12.5px; right: 18px; }
+  .lead { max-width: 520px; }
+  .lead input[type="email"] { font-size: 17px; padding: 12px 10px; }
+  .lead button[type="submit"] { padding: 0 22px; font-size: 16px; min-height: 52px; }
+  section.block { padding: 80px 0; }
+  .why { grid-template-columns: repeat(3, 1fr); }
+  .inside { grid-template-columns: 340px 1fr; gap: 64px; }
+  .pdf { width: 100%; }
+  .list { gap: 22px; }
+  .proof { grid-template-columns: repeat(3, 1fr); }
+  .table td, .table th { padding: 12px 18px; }
+  .final { padding: 80px 0 96px; }
+  footer { padding-bottom: 40px; }
+}
+</style>
+<script>window.LEAD_CONFIG = Object.assign({ variant: "A", thankYou: "../dekujeme/" }, window.LEAD_CONFIG || {});</script>
+<script src="../assets/consent.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="./" aria-label="ETF tahák"><i aria-hidden="true"></i>ETF tahák</a>
+    <span class="top__meta" data-asof>data k 30. 9. 2026</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="h1">
+      <div class="hero__copy">
+        <p class="eyebrow">Srovnání ETF z burzy NYSE</p>
+        <h1 id="h1">Chcete <span class="tk" data-h1-tk>VOO</span>? Tady je jeho evropské dvojče.</h1>
+        <p class="lede">Americká ETF vám většina brokerů v Česku <b>neprodá</b>.<span class="d-only"> Ke každému ale existuje evropská verze se stejným indexem.</span> Vyberte fond:</p>
+      </div>
+
+      <div class="finder" id="finder" aria-live="polite">
+        <div class="chips" role="tablist" aria-label="Americké ETF" data-chips></div>
+        <article class="stub stub--us" data-us>
+          <div class="stub__meta"><span data-us-ex>NYSE Arca · USA</span></div>
+          <div class="stub__tk"><span data-us-tk>VOO</span> <span class="stub__fee" data-us-fee>0,03 % ročně</span></div>
+          <p class="stub__name" data-us-name>Vanguard S&amp;P 500 ETF</p>
+          <div class="stamp" aria-label="Pro drobné investory v EU nedostupné">V EU<br>nekoupíte</div>
+        </article>
+        <div class="perf"><span>evropské dvojče</span></div>
+        <article class="stub stub--eu" data-eu>
+          <div class="stub__meta"><span data-eu-ex>Xetra · Irsko · UCITS</span><span data-eu-match>stejný index</span></div>
+          <div class="stub__tk"><span data-eu-tk>SPYL</span> <span class="stub__fee" data-eu-fee>0,03 % ročně</span></div>
+          <p class="stub__name" data-eu-name>SPDR S&amp;P 500 UCITS ETF (Acc)</p>
+          <button class="isin" type="button" data-isin>ISIN IE000XZSV718</button>
+          <ul class="ticks" data-eu-ticks><li>S&amp;P 500, stejných 500 firem</li><li>akumulační</li></ul>
+          <p class="stub__alt" data-eu-alt></p>
+        </article>
+      </div>
+
+      <form class="lead" data-lead-form data-placement="hero" novalidate>
+        <label class="sr-only" for="email-hero">Váš e-mail</label>
+        <div class="lead__row">
+          <input id="email-hero" type="email" name="email" placeholder="váš@e-mail.cz" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+          <button type="submit">Poslat tahák</button>
+        </div>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="lead__note" data-note>Pošleme PDF se <b>všemi 20 dvojčaty</b>, poplatky brokerů a&nbsp;daněmi v&nbsp;ČR. Bez telefonu, bez poradce.</p>
+        <p data-lead-msg aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="block" aria-labelledby="h-why">
+      <p class="kicker">Proč to tak je</p>
+      <h2 id="h-why">VOO v aplikaci brokera nenajdete. Není to chyba.</h2>
+      <ol class="why">
+        <li><b>EU chce dokument KID</b>Od roku 2018 smí broker drobnému investorovi prodat fond jen se „sdělením klíčových informací“ v jeho jazyce.</li>
+        <li><b>Americké fondy ho nemají</b>Vanguard, iShares ani SPDR ho pro své americké ETF nevydávají. Broker proto nákup zablokuje.</li>
+        <li><b>Evropská dvojčata ho mají</b>Stejní správci nabízejí irské fondy UCITS na stejné indexy. Ty koupíte u běžných brokerů v ČR.</li>
+      </ol>
+      <p class="honest"><b>Dvojče není 1:1 kopie.</b> Liší se poplatkem, měnou a tím, jak se uvnitř fondu daní dividendy. U akumulační verze vám ale žádné dividendy nechodí, takže je nemusíte každý rok uvádět v daňovém přiznání.</p>
+    </section>
+
+    <section class="block" aria-labelledby="h-in">
+      <p class="kicker">Co dostanete</p>
+      <h2 id="h-in">Tahák na 2 strany. Všechno, co potřebujete k prvnímu nákupu.</h2>
+      <div class="inside">
+        <div class="pdf"><img src="../tahak/nahled-1.png" alt="Náhled první strany ETF taháku" width="620" height="877" loading="lazy"><span class="pdf__badge">PDF zdarma</span></div>
+        <ul class="list">
+          <li><span class="n">20</span><div><b>ETF z NYSE v jedné tabulce</b><span>Poplatek, velikost fondu, dividenda a výnos za 5 a 10 let.</span></div></li>
+          <li><span class="n">20</span><div><b>Evropských dvojčat</b><span>Název, ISIN, ticker na Xetře i v Londýně, poplatek a typ (akumulační / distribuční).</span></div></li>
+          <li><span class="n">6</span><div><b>Brokerů dostupných v ČR</b><span>Kolik zaplatíte za nákup, za směnu korun a za vedení účtu.</span></div></li>
+          <li><span class="n">1</span><div><b>Stránka o daních</b><span>Časový test 3 roky, limit 100 000 Kč, dividendy a formulář W-8BEN.</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="h-peek">
+      <p class="kicker">Ukázka z taháku</p>
+      <h2 id="h-peek">Nejhledanější fondy a co koupit místo nich</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th>Z NYSE</th><th></th><th>Evropské dvojče</th><th>Poplatek</th></tr></thead>
+          <tbody data-peek></tbody>
+        </table>
+        <div class="table__more"><button class="btn" type="button" data-open-sheet="peek">Odemknout všech 20 →</button></div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="h-proof">
+      <p class="kicker">Proč nám můžete věřit</p>
+      <h2 id="h-proof">Žádný poradce vám volat nebude.</h2>
+      <div class="proof">
+        <div><b>Chceme jen e-mail</b><span>Nikdy telefon. Pokud vám kvůli investicím někdo volá sám od sebe, buďte na pozoru.</span></div>
+        <div><b>Každé číslo je ověřené</b><span>Z webu správce fondu a ze dvou nezávislých zdrojů. Výnosy k 30. 9. 2026.</span></div>
+        <div><b>Odhlášení jedním klikem</b><span>V každém e-mailu. Adresu nikomu neprodáváme.</span></div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="h-faq">
+      <p class="kicker">Časté otázky</p>
+      <h2 id="h-faq">Než nám dáte e-mail</h2>
+      <div class="faq">
+        <details><summary>Je to opravdu zdarma? Kde je háček?</summary><p>Tahák je zdarma. Výměnou vám během 10 dnů pošleme 4 krátké e-maily s praktickými tipy a pak jednou za čtvrtletí aktualizovaný tahák. Odhlásit se můžete kdykoli jedním klikem.</p></details>
+        <details><summary>Dá se VOO koupit nějak jinak?</summary><p>Ano, ale pro většinu lidí to nedává smysl. Americká ETF koupí hlavně tzv. profesionální klienti (MiFID II), kteří splní přísné podmínky na objem obchodů a majetek. Proto tahák ukazuje evropská dvojčata, která koupíte běžně.</p></details>
+        <details><summary>Je dvojče stejně dobré jako originál?</summary><p>Sleduje stejný index, takže drží stejné firmy. Rozdíly jsou v poplatku (o setiny procenta), měně a zdanění dividend uvnitř fondu. Pro českého investora bývá akumulační irská verze daňově jednodušší.</p></details>
+        <details><summary>Je to investiční doporučení?</summary><p>Ne. Srovnáváme veřejně dostupná data o fondech. Co koupíte, je vaše rozhodnutí. Před nákupem si vždy přečtěte sdělení klíčových informací (KID) fondu.</p></details>
+        <details><summary>Odkud jsou data?</summary><p>Poplatky, velikosti a výnosy jsou z webů správců (Vanguard, iShares, State Street, Schwab, Invesco), ověřené proti justETF a dalším databázím. Výnosy k 30. 9. 2026, ostatní údaje k <span data-asof-plain>29. 10. 2026</span>.</p></details>
+      </div>
+    </section>
+
+    <section class="final" aria-labelledby="h-final" data-hide-sticky>
+      <h2 id="h-final">Pošleme vám všech 20 dvojčat do e-mailu.</h2>
+      <p class="sub">PDF na 2 strany. Do minuty ve schránce, ke stažení i hned po odeslání.</p>
+      <form class="lead" data-lead-form data-placement="final" novalidate>
+        <label class="sr-only" for="email-final">Váš e-mail</label>
+        <div class="lead__row">
+          <input id="email-final" type="email" name="email" placeholder="váš@e-mail.cz" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+          <button type="submit">Poslat tahák</button>
+        </div>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="lead__legal">Odesláním dostanete tahák a e-maily o ETF. Odhlásit se můžete jedním klikem. <a href="../ochrana-udaju/">Jak chráníme vaše údaje</a></p>
+        <p data-lead-msg aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>ETF tahák provozuje <span class="ph">[společnost s.r.o., IČO, sídlo]</span>. Kontakt: <span class="ph">[e-mail]</span>. <a href="../ochrana-udaju/">Ochrana osobních údajů</a> · <a href="#" data-consent-reset>Nastavení cookies</a></p>
+    <p>Obsah má pouze informační charakter a není investičním doporučením ani investičním poradenstvím. Investování je spojeno s rizikem, hodnota investice může klesat i stoupat a návratnost vložených prostředků není zaručena. Minulé výnosy nejsou zárukou budoucích výnosů. Výnosy fondů v USD se v korunách mohou zvýšit nebo snížit v důsledku pohybu měnového kurzu. Před investicí si přečtěte sdělení klíčových informací (KID) a prospekt fondu.</p>
+  </footer>
+</div>
+
+<div class="sticky-cta" data-sticky-cta>
+  <div class="sticky-cta__in">
+    <p><b>Tahák: 20 ETF + dvojčata</b>PDF zdarma, jen e-mail</p>
+    <button type="button" data-open-sheet="sticky">Chci ho</button>
+  </div>
+</div>
+
+<div class="sheet" id="lead-sheet" hidden>
+  <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheet-h">
+    <button class="sheet__close" type="button" data-close-sheet aria-label="Zavřít">×</button>
+    <h3 id="sheet-h">Kam poslat tahák?</h3>
+    <p class="sub" data-sheet-sub>20 ETF z NYSE, jejich evropská dvojčata, poplatky brokerů a daně. PDF na 2 strany.</p>
+    <form class="lead" data-lead-form data-placement="sheet" novalidate>
+      <label class="sr-only" for="email-sheet">Váš e-mail</label>
+      <div class="lead__row">
+        <input id="email-sheet" type="email" name="email" placeholder="váš@e-mail.cz" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+        <button type="submit">Poslat</button>
+      </div>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="lead__legal">Bez telefonu. Odhlášení jedním klikem. <a href="../ochrana-udaju/">Ochrana údajů</a></p>
+      <p data-lead-msg aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<script src="../assets/data.js"></script>
+<script src="../assets/fmt.js"></script>
+<script src="../assets/lead.js"></script>
+<script>
+(function () {
+  var D = window.ETF_DATA, F = window.Fmt;
+  // Order = how often Czech beginners ask for them; QQQ is Nasdaq-listed but too common to leave out.
+  var ORDER = ["VOO", "SPY", "QQQ", "VTI", "VT", "SCHD", "VUG", "IVV", "VGT", "VYM", "VWO", "GLD"];
+  var funds = ORDER.map(function (t) { return D.us.find(function (f) { return f.t === t; }); })
+    .filter(function (f) { return f && D.twins[f.twin]; });
+  var $ = function (s) { return document.querySelector(s); };
+  var chips = $("[data-chips]");
+
+  funds.forEach(function (f, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.setAttribute("role", "tab");
+    b.setAttribute("aria-selected", i === 0 ? "true" : "false");
+    b.dataset.t = f.t;
+    b.innerHTML = f.t + (f.ex !== "NYSE Arca" && f.ex !== "NYSE" ? "<small>" + f.ex + "</small>" : "");
+    chips.appendChild(b);
+  });
+
+  function show(t, animate) {
+    var f = funds.find(function (x) { return x.t === t; });
+    var tw = D.twins[f.twin], p = tw.pick;
+    chips.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-selected", c.dataset.t === t ? "true" : "false"); });
+    $("[data-us-tk]").textContent = f.t;
+    $("[data-h1-tk]").textContent = f.t;
+    $("[data-us-fee]").textContent = F.pct(f.ter) + " ročně";
+    $("[data-us-name]").textContent = f.name;
+    $("[data-us-ex]").textContent = f.ex + " · USA";
+    $("[data-eu-tk]").textContent = p.ticker;
+    $("[data-eu-fee]").textContent = F.pct(p.ter) + " ročně";
+    $("[data-eu-name]").textContent = p.name;
+    $("[data-eu-ex]").textContent = p.ex + " · " + (p.domicile_cz || "Irsko") + " · UCITS";
+    $("[data-eu-match]").textContent = tw.match === "exact" ? "stejný index" : "podobný index";
+    $("[data-isin]").textContent = "ISIN " + p.isin;
+    $("[data-isin]").dataset.isin = p.isin;
+    var ticks = [];
+    if (tw.match === "exact") ticks.push("<li>" + tw.label + (f.n ? ", stejné firmy" : "") + "</li>");
+    else ticks.push('<li class="warn">' + (tw.short_note || "podobné složení, jiný index") + "</li>");
+    ticks.push("<li>" + (p.dist === "acc" ? "akumulační — dividendy reinvestuje" : "distribuční — vyplácí dividendy") + "</li>");
+    $("[data-eu-ticks]").innerHTML = ticks.join("");
+    var alt = (tw.alt || []).slice(0, 2).map(function (a) { return "<b>" + a.ticker + "</b> " + F.pct(a.ter); });
+    $("[data-eu-alt]").innerHTML = alt.length ? "Další možnosti: " + alt.join(" · ") + " — srovnání v taháku" : "";
+    $("[data-eu-alt]").hidden = !alt.length;
+    $("[data-note]").innerHTML = "Pošleme PDF s dvojčetem k <b>" + f.t + "</b> a dalšími 19, poplatky brokerů a&nbsp;daněmi v&nbsp;ČR. Bez telefonu, bez poradce.";
+    $("[data-sheet-sub]").textContent = "Dvojče k " + f.t + " a dalších 19, poplatky brokerů a daně. PDF na 2 strany.";
+    if (animate) { var eu = $("[data-eu]"); eu.classList.remove("flash"); void eu.offsetWidth; eu.classList.add("flash"); }
+    Lead.setContext({ ticker: f.t, twin_isin: p.isin });
+  }
+
+  chips.addEventListener("click", function (e) {
+    var c = e.target.closest(".chip"); if (!c) return;
+    show(c.dataset.t, true);
+    Lead.track("finder_select", { ticker: c.dataset.t });
+  });
+
+  $("[data-isin]").addEventListener("click", function (e) {
+    var el = e.currentTarget;
+    if (navigator.clipboard) navigator.clipboard.writeText(el.dataset.isin).then(function () {
+      el.classList.add("is-copied"); setTimeout(function () { el.classList.remove("is-copied"); }, 1600);
+    });
+    Lead.track("isin_copy", { isin: el.dataset.isin });
+  });
+
+  // Peek table: first rows readable, the rest blurred (they are in the PDF).
+  var rows = funds.slice(0, 7).map(function (f, i) {
+    var p = D.twins[f.twin].pick;
+    return '<tr class="' + (i > 3 ? "blur" : "") + '"><td><span class="m">' + f.t + "</span><small>" + F.pct(f.ter) + "</small></td>" +
+      '<td class="arrow">→</td><td><span class="m">' + p.ticker + "</span><small>" + p.name + "</small></td><td class='num'>" + F.pct(p.ter) + "</td></tr>";
+  });
+  $("[data-peek]").innerHTML = rows.join("");
+
+  document.querySelectorAll("[data-asof]").forEach(function (el) { el.textContent = "výnosy k " + F.date(D.meta.returns_as_of); });
+  document.querySelectorAll("[data-asof-plain]").forEach(function (el) { el.textContent = F.date(D.meta.compiled); });
+
+  var q = new URLSearchParams(location.search).get("t");
+  show(q && funds.some(function (f) { return f.t === q.toUpperCase(); }) ? q.toUpperCase() : "VOO", false);
+})();
+</script>
+</body>
+</html>

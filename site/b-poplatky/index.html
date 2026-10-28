@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kolik vám za 20 let sebere poplatek? | ETF tahák</title>
+<meta name="description" content="Spočítejte si, kolik zaplatíte na poplatcích v bankovním fondu a kolik v ETF z burzy NYSE nebo v jeho evropském dvojčeti. Tahák nejlevnějších ETF zdarma.">
+<meta name="theme-color" content="#0F1713">
+<meta property="og:title" content="Účtenka za 20 let investování">
+<meta property="og:description" content="Bankovní fond vs. ETF z NYSE: kolik vás stojí poplatky. Spočítáte za 5 vteřin.">
+<link rel="preload" href="../assets/fonts/bricolage-grotesque-400_800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/jetbrains-mono-500_700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+:root {
+  --bg: #0F1713; --card: #18221D; --ink: #F2F0E8; --muted: #A3AFA7; --line: #2A3830;
+  --accent: #D4F45A; --accent-ink: #10180F; --danger: #FF6E4E; --ok: #D4F45A;
+  --paper: #FBF8F0; --paper-ink: #1B1A17; --paper-muted: #6E6A60; --paper-line: #D9D3C3;
+  --radius: 16px;
+  --font-head: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --consent-bg: #F2F0E8; --consent-ink: #0F1713;
+}
+body { font-variation-settings: "opsz" 14; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+.logo { text-decoration: none; font: 800 19px/1 var(--font-head); letter-spacing: -.02em; display: flex; align-items: center; gap: 8px; }
+.logo i { width: 22px; height: 22px; border-radius: 6px; background: var(--accent); position: relative; flex: none; }
+.logo i::before, .logo i::after { content: ""; position: absolute; left: 5px; right: 5px; height: 3px; border-radius: 2px; background: var(--bg); }
+.logo i::before { top: 6px; } .logo i::after { bottom: 6px; }
+.top__meta { font: 500 11.5px/1.2 var(--font-mono); color: var(--muted); text-align: right; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy" "calc" "form"; gap: 14px; padding: 4px 0 30px; }
+.hero > * { min-width: 0; }
+.hero__copy { grid-area: copy; } .calc { grid-area: calc; } .hero .lead { grid-area: form; }
+.eyebrow { font: 600 11.5px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+h1 { font: 800 clamp(32px, 9vw, 66px)/.98 var(--font-head); font-variation-settings: "opsz" 96; letter-spacing: -.035em; text-wrap: balance; }
+h1 em { font-style: normal; color: var(--accent); }
+.d-only { display: none; }
+@media (min-width: 900px) { .d-only { display: inline; } }
+.lede { margin-top: 10px; color: var(--muted); font-size: 16px; line-height: 1.4; max-width: 34em; }
+
+/* controls */
+.ctrl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin-bottom: 10px; }
+.seg { display: flex; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 3px; gap: 2px; }
+.seg button { flex: 1; border: 0; background: transparent; color: var(--muted); border-radius: 9px; padding: 9px 4px; font: 700 13.5px/1 var(--font-mono); white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg--years button { padding: 9px 9px; }
+.ctrl__lbl { grid-column: 1 / -1; display: flex; justify-content: space-between; font: 600 10.5px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-bottom: -2px; }
+
+/* receipt */
+.receipt { --zz: 10px; position: relative; background: var(--paper); color: var(--paper-ink); padding: 16px 16px 12px; font-family: var(--font-mono);
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom/var(--zz) 51% repeat-x,
+                conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top/var(--zz) 51% repeat-x;
+          mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom/var(--zz) 51% repeat-x,
+                conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top/var(--zz) 51% repeat-x; }
+.r-head { text-align: center; padding-bottom: 8px; border-bottom: 1.5px dashed var(--paper-line); }
+.r-head b { display: block; font-size: 14px; letter-spacing: .14em; }
+.r-head span { font-size: 12px; color: var(--paper-muted); }
+.r-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 8px 0; border-bottom: 1px dotted var(--paper-line); align-items: baseline; }
+.r-row .l { font-size: 13px; font-weight: 700; }
+.r-row .l small { display: block; font-weight: 500; font-size: 11.5px; color: var(--paper-muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.r-row .v { font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.r-row--bank .v { color: #C2361A; }
+.r-row--us { opacity: .55; }
+.r-row--us .l > span { text-decoration: line-through; }
+.r-row--eu .v { color: #1B1A17; }
+.r-total { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: end; padding: 10px 0 2px; border-top: 3px double var(--paper-ink); margin-top: 8px; }
+.r-total .l { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.r-total .v { font: 800 clamp(26px, 8vw, 36px)/1 var(--font-mono); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.r-foot { margin-top: 8px; font-size: 10.5px; line-height: 1.4; color: var(--paper-muted); }
+.r-foot button { border: 0; background: none; padding: 0; text-decoration: underline; font: inherit; color: var(--paper-ink); }
+.pop { animation: pop .35s ease; }
+@keyframes pop { 0% { opacity: .3; } 100% { opacity: 1; } }
+
+/* form */
+.lead__row { display: flex; gap: 6px; background: var(--ink); border-radius: 14px; padding: 5px; }
+.lead input[type="email"] { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--bg); padding: 10px 8px; font-size: 16px; outline: none; }
+.lead input::placeholder { color: #6E7770; }
+.lead button[type="submit"] { flex: none; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-ink); padding: 0 16px; font-weight: 800; font-size: 15px; min-height: 46px; }
+.lead__row:focus-within { box-shadow: 0 0 0 4px rgba(212,244,90,.35); }
+.lead__note { margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.lead__note b { color: var(--ink); }
+.lead__legal { margin-top: 6px; font-size: 11.5px; color: var(--muted); }
+.lead__legal a { color: var(--muted); }
+
+/* sections */
+section.block { padding: 46px 0; border-top: 1px solid var(--line); }
+.kicker { font: 600 11.5px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+h2 { font: 800 clamp(26px, 6.6vw, 44px)/1.03 var(--font-head); font-variation-settings: "opsz" 72; letter-spacing: -.03em; text-wrap: balance; max-width: 17em; }
+.sub { color: var(--muted); margin-top: 10px; max-width: 38em; }
+
+.bars { margin-top: 22px; display: grid; gap: 14px; }
+.bar__lbl { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; margin-bottom: 6px; }
+.bar__lbl b { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.bar__track { height: 14px; background: var(--card); border-radius: 7px; overflow: hidden; }
+.bar__fill { height: 100%; border-radius: 7px; background: var(--ink); transition: width .5s ease; }
+.bar--etf .bar__fill { background: var(--accent); }
+.bar--bank .bar__fill { background: var(--danger); }
+.callout { margin-top: 18px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; font-size: 14.5px; color: var(--muted); }
+.callout b { color: var(--ink); }
+
+.cheap { margin-top: 22px; display: grid; gap: 8px; }
+.cheap__row { display: grid; grid-template-columns: 58px minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.cheap__tk { font: 700 16px/1 var(--font-mono); }
+.cheap__name { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cheap__fee { font: 700 15px/1 var(--font-mono); text-align: right; }
+.cheap__twin { grid-column: 2 / -1; font-size: 12.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
+.cheap__twin b { color: var(--accent); font-family: var(--font-mono); }
+.cheap__twin.locked b { filter: blur(4px); user-select: none; }
+.cheap__more { display: flex; justify-content: center; margin-top: 8px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 12px; background: var(--accent); color: var(--accent-ink);
+  font-weight: 800; font-size: 15px; padding: 14px 18px; text-decoration: none; min-height: 48px; }
+
+.inside { display: grid; gap: 24px; margin-top: 24px; align-items: center; }
+.pdf { position: relative; aspect-ratio: 210/297; max-width: 300px; width: 74%; margin: 0 auto; background: #fff; border-radius: 6px; overflow: hidden; transform: rotate(2deg);
+  box-shadow: 0 30px 60px -25px rgba(0,0,0,.7); }
+.pdf img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.list { padding: 0; margin: 0; display: grid; gap: 14px; }
+.list li { list-style: none; display: grid; grid-template-columns: 26px 1fr; gap: 10px; }
+.list li::before { content: "✓"; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 800; display: grid; place-items: center; font-size: 14px; }
+.list b { display: block; font-size: 16.5px; }
+.list span { color: var(--muted); font-size: 14.5px; }
+
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 16px 30px 16px 0; font-weight: 700; font-size: 16.5px; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 12px; font: 500 24px/1 var(--font-mono); color: var(--accent); }
+.faq details[open] summary::after { content: "–"; }
+.faq p { padding: 0 0 16px; color: var(--muted); max-width: 44em; }
+.faq { margin-top: 16px; }
+
+.final { padding: 50px 0 60px; border-top: 1px solid var(--line); }
+.final .lead { margin-top: 20px; max-width: 560px; }
+footer { padding: 28px 0 110px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+footer p + p { margin-top: 10px; }
+.ph { background: #4A4214; color: #F4E7A1; padding: 0 3px; border-radius: 3px; }
+
+.sticky-cta__in { display: flex; align-items: center; gap: 10px; background: var(--accent); color: var(--accent-ink); border-radius: 16px; padding: 8px 8px 8px 14px; box-shadow: 0 12px 30px rgba(0,0,0,.45); }
+.sticky-cta__in p { flex: 1; font-size: 13px; line-height: 1.3; }
+.sticky-cta__in b { display: block; font-size: 14px; }
+.sticky-cta__in button { border: 0; background: var(--bg); color: var(--ink); border-radius: 11px; font-weight: 800; padding: 12px 14px; }
+.sheet__panel { background: var(--card); }
+.sheet h3 { font: 800 22px/1.1 var(--font-head); letter-spacing: -.02em; padding-right: 30px; }
+.sheet .sub { margin: 6px 0 14px; font-size: 14.5px; }
+.sheet__close { color: var(--ink); }
+
+@media (min-width: 900px) {
+  .wrap { padding: 0 32px; }
+  .top { height: 72px; }
+  .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 470px); grid-template-areas: "copy calc" "form calc"; column-gap: 72px; row-gap: 26px; padding: 34px 0 72px; align-items: start; }
+  .hero__copy { padding-top: 26px; }
+  .lede { font-size: 19px; margin-top: 18px; }
+  .receipt { padding: 26px 26px 22px; }
+  .r-row .l { font-size: 14px; } .r-row .v { font-size: 18px; }
+  .lead { max-width: 520px; }
+  .lead input[type="email"] { font-size: 17px; padding: 12px 10px; }
+  .lead button[type="submit"] { padding: 0 22px; font-size: 16px; min-height: 52px; }
+  section.block { padding: 84px 0; }
+  .cheap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .inside { grid-template-columns: 320px 1fr; gap: 64px; }
+  .pdf { width: 100%; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .final { padding: 84px 0 96px; }
+  footer { padding-bottom: 40px; }
+}
+</style>
+<script>window.LEAD_CONFIG = Object.assign({ variant: "B", thankYou: "../dekujeme/" }, window.LEAD_CONFIG || {});</script>
+<script src="../assets/consent.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="./" aria-label="ETF tahák"><i aria-hidden="true"></i>ETF tahák</a>
+    <span class="top__meta">kalkulačka poplatků</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="h1">
+      <div class="hero__copy">
+        <p class="eyebrow">ETF z NYSE vs. bankovní fond</p>
+        <h1 id="h1">Kolik vám za <em data-h1-years>20 let</em> sebere poplatek?</h1>
+        <p class="lede">Stejné akcie, jiný poplatek.<span class="d-only"> Bankovní fondy berou kolem 2 % ročně a k tomu vstupní poplatek. ETF z americké burzy NYSE a jejich evropská dvojčata od 0,03 %.</span> Zkuste to:</p>
+      </div>
+
+      <div class="calc" aria-live="polite">
+        <div class="ctrl">
+          <div class="ctrl__lbl"><span>Měsíčně</span><span>Let</span></div>
+          <div class="seg" data-seg="amount" role="group" aria-label="Měsíční vklad">
+            <button type="button" data-v="1000">1 000</button><button type="button" data-v="3000" aria-pressed="true">3 000</button><button type="button" data-v="5000">5 000</button><button type="button" data-v="10000">10 000</button>
+          </div>
+          <div class="seg seg--years" data-seg="years" role="group" aria-label="Doba investování">
+            <button type="button" data-v="10">10</button><button type="button" data-v="20" aria-pressed="true">20</button><button type="button" data-v="30">30</button>
+          </div>
+        </div>
+
+        <div class="receipt" data-receipt>
+          <div class="r-head"><b data-r-head>ÚČTENKA ZA 20 LET</b><span data-r-sub>vloženo 720 000 Kč</span></div>
+          <div class="r-row r-row--bank"><div class="l">Bankovní fond<small data-bank-desc>2 % ročně + 3 % vstupní</small></div><div class="v" data-cost-bank>−359 000 Kč</div></div>
+          <div class="r-row r-row--us"><div class="l"><span data-us-lbl>VOO z NYSE</span><small data-us-desc>0,03 % · v ČR nekoupíte</small></div><div class="v" data-cost-us>−5 000 Kč</div></div>
+          <div class="r-row r-row--eu"><div class="l"><span data-eu-lbl>Dvojče SPYL</span><small data-eu-desc>0,03 % + směna 0,5 %</small></div><div class="v" data-cost-eu>−12 000 Kč</div></div>
+          <div class="r-total"><div class="l">Ušetříte s ETF</div><div class="v" data-save>347 000 Kč</div></div>
+          <p class="r-foot" data-assume>Při výnosu 7 % ročně před poplatky. Ilustrace, ne předpověď. <button type="button" data-open-assume>Jak počítáme</button></p>
+        </div>
+      </div>
+
+      <form class="lead" data-lead-form data-placement="hero" novalidate>
+        <label class="sr-only" for="email-hero">Váš e-mail</label>
+        <div class="lead__row">
+          <input id="email-hero" type="email" name="email" placeholder="váš@e-mail.cz" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+          <button type="submit">Poslat tahák</button>
+        </div>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="lead__note">Pošleme <b>váš výpočet</b> a tahák: 20 nejlevnějších ETF z NYSE, jejich evropská dvojčata a poplatky brokerů v ČR. Bez telefonu.</p>
+        <p data-lead-msg aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="block" aria-labelledby="h-where">
+      <div class="cols">
+        <div>
+          <p class="kicker">Kde se rozdíl bere</p>
+          <h2 id="h-where">Poplatek 2 % zní málo. Platíte ho ale každý rok ze všeho.</h2>
+          <p class="sub">I z výnosů, které jste vydělali v minulých letech. Proto rozdíl s časem roste rychleji než vaše vklady.</p>
+        </div>
+        <div>
+          <div class="bars" data-bars></div>
+          <p class="callout" data-callout></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="h-cheap">
+      <p class="kicker">Ukázka z taháku</p>
+      <h2 id="h-cheap">Nejlevnější ETF z NYSE a jejich evropská dvojčata</h2>
+      <p class="sub">Roční poplatek (TER) podle správců fondů. Dvojčata, která v ČR koupíte, najdete v taháku.</p>
+      <div class="cheap" data-cheap></div>
+      <div class="cheap__more"><button class="btn" type="button" data-open-sheet="cheap">Ukázat všechna dvojčata →</button></div>
+    </section>
+
+    <section class="block" aria-labelledby="h-in">
+      <p class="kicker">Co dostanete</p>
+      <div class="inside">
+        <div class="pdf"><img src="../tahak/nahled-1.png" alt="Náhled první strany ETF taháku" width="620" height="877" loading="lazy"></div>
+        <div>
+          <h2 id="h-in">Tahák na 2 strany + váš výpočet</h2>
+          <ul class="list" style="margin-top:20px">
+            <li><div><b>20 ETF z NYSE podle poplatku</b><span>A u každého evropské dvojče: ISIN, ticker, poplatek.</span></div></li>
+            <li><div><b>Skryté poplatky 6 brokerů v ČR</b><span>Nákup, směna korun na eura a dolary, vedení účtu.</span></div></li>
+            <li><div><b>Daně na jedné stránce</b><span>Kdy nemusíte platit nic (časový test 3 roky) a co s dividendami.</span></div></li>
+            <li><div><b>Váš výpočet z kalkulačky</b><span>Abyste ho měli po ruce, až budete vybírat fond.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="h-faq">
+      <p class="kicker">Časté otázky</p>
+      <h2 id="h-faq">Férové odpovědi</h2>
+      <div class="faq">
+        <details><summary>Proč počítáte se 7 % ročně?</summary><p>Je to konzervativní předpoklad pro akciový fond na dlouhou dobu. Na poměru mezi poplatky to moc nemění: při jakémkoli kladném výnosu je fond s poplatkem 2 % dráž než fond s 0,03 %. Budoucí výnos nikdo nezná, minulé výnosy nejsou zárukou.</p></details>
+        <details><summary>Proč ukazujete VOO, když ho nekoupím?</summary><p>Protože ho doporučuje půl internetu. Pro drobné investory v EU je ale většinou nedostupné (chybí mu dokument KID). Evropské dvojče sleduje stejný index a stojí podobně — v taháku jsou dvojčata všech 20 fondů.</p></details>
+        <details><summary>Co je „směna měny“ u ETF?</summary><p>Evropská ETF se obchodují v eurech nebo dolarech. Broker vám koruny smění a vezme si za to procento. Rozdíl mezi brokery je velký — srovnání najdete v taháku.</p></details>
+        <details><summary>Je to zdarma? Kde je háček?</summary><p>Tahák je zdarma. Výměnou vám pošleme 4 krátké e-maily s tipy o ETF a jednou za čtvrtletí aktualizovaný tahák. Odhlásit se můžete jedním klikem.</p></details>
+        <details><summary>Je to investiční doporučení?</summary><p>Ne. Kalkulačka ukazuje matematiku poplatků a srovnáváme veřejná data o fondech. Rozhodnutí je na vás. Před nákupem si přečtěte sdělení klíčových informací (KID) fondu.</p></details>
+      </div>
+    </section>
+
+    <section class="final" aria-labelledby="h-final" data-hide-sticky>
+      <h2 id="h-final">Pošleme vám výpočet a tahák nejlevnějších ETF.</h2>
+      <p class="sub">PDF na 2 strany. Ke stažení hned po odeslání a kopie do e-mailu.</p>
+      <form class="lead" data-lead-form data-placement="final" novalidate>
+        <label class="sr-only" for="email-final">Váš e-mail</label>
+        <div class="lead__row">
+          <input id="email-final" type="email" name="email" placeholder="váš@e-mail.cz" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+          <button type="submit">Poslat tahák</button>
+        </div>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="lead__legal">Odesláním dostanete tahák a e-maily o ETF. Odhlásit se můžete jedním klikem. <a href="../ochrana-udaju/">Jak chráníme vaše údaje</a></p>
+        <p data-lead-msg aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>ETF tahák provozuje <span class="ph">[společnost s.r.o., IČO, sídlo]</span>. Kontakt: <span class="ph">[e-mail]</span>. <a href="../ochrana-udaju/">Ochrana osobních údajů</a> · <a href="#" data-consent-reset>Nastavení cookies</a></p>
+    <p data-bank-src></p>
+    <p>Obsah má pouze informační charakter a není investičním doporučením ani investičním poradenstvím. Kalkulačka je modelový výpočet, nikoli předpověď. Investování je spojeno s rizikem, hodnota investice může klesat i stoupat a návratnost vložených prostředků není zaručena. Minulé výnosy nejsou zárukou budoucích výnosů. Před investicí si přečtěte sdělení klíčových informací (KID) a prospekt fondu.</p>
+  </footer>
+</div>
+
+<div class="sticky-cta" data-sticky-cta>
+  <div class="sticky-cta__in">
+    <p><b data-sticky-save>S ETF ušetříte 347 000 Kč</b>Výpočet + tahák do e-mailu</p>
+    <button type="button" data-open-sheet="sticky">Poslat</button>
+  </div>
+</div>
+
+<div class="sheet" id="lead-sheet" hidden>
+  <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheet-h">
+    <button class="sheet__close" type="button" data-close-sheet aria-label="Zavřít">×</button>
+    <h3 id="sheet-h">Kam poslat výpočet a tahák?</h3>
+    <p class="sub">20 nejlevnějších ETF z NYSE, jejich evropská dvojčata a poplatky brokerů v ČR.</p>
+    <form class="lead" data-lead-form data-placement="sheet" novalidate>
+      <label class="sr-only" for="email-sheet">Váš e-mail</label>
+      <div class="lead__row">
+        <input id="email-sheet" type="email" name="email" placeholder="váš@e-mail.cz" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+        <button type="submit">Poslat</button>
+      </div>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="lead__legal">Bez telefonu. Odhlášení jedním klikem. <a href="../ochrana-udaju/">Ochrana údajů</a></p>
+      <p data-lead-msg aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<script src="../assets/data.js"></script>
+<script src="../assets/fmt.js"></script>
+<script src="../assets/lead.js"></script>
+<script>
+(function () {
+  var D = window.ETF_DATA, F = window.Fmt, $ = function (s) { return document.querySelector(s); };
+  var R = 0.07; // gross annual return assumption, stated next to every result
+  var state = { amount: 3000, years: 20 };
+  var us = D.us.find(function (f) { return f.t === "VOO"; });
+  var twin = D.twins[us.twin].pick;
+  var fx = D.calc && D.calc.fx_fee_pct !== undefined ? D.calc.fx_fee_pct : 0.5;
+  var bank = D.bank;
+
+  // Future value of monthly deposits made at month end; ter = annual % of assets, upfront = % of every deposit.
+  function fv(c, years, ter, upfront) {
+    var n = years * 12, net = (1 + R) * (1 - ter / 100) - 1, m = Math.pow(1 + net, 1 / 12) - 1;
+    var dep = c * (1 - upfront / 100);
+    return dep * (Math.pow(1 + m, n) - 1) / m;
+  }
+  function round(v) { return Math.round(v / 1000) * 1000; } // results to the nearest thousand — no false precision
+
+  function render() {
+    var c = state.amount, y = state.years, paid = c * 12 * y;
+    var gross = fv(c, y, 0, 0);
+    var fBank = fv(c, y, bank.ter_pct, bank.entry_pct), fUs = fv(c, y, us.ter, 0), fEu = fv(c, y, twin.ter, fx);
+    var costBank = gross - fBank, costUs = gross - fUs, costEu = gross - fEu, save = fEu - fBank;
+    $("[data-h1-years]").textContent = y + " let";
+    $("[data-r-head]").textContent = "ÚČTENKA ZA " + y + " LET";
+    $("[data-r-sub]").textContent = F.czk(c) + " měsíčně · vloženo " + F.czk(paid);
+    $("[data-bank-desc]").textContent = F.pctS(bank.ter_pct) + " ročně + " + F.pctS(bank.entry_pct) + " vstupní";
+    $("[data-us-lbl]").textContent = us.t + " z NYSE";
+    $("[data-us-desc]").textContent = F.pctS(us.ter) + " · v ČR většinou nekoupíte";
+    $("[data-eu-lbl]").textContent = "Dvojče " + twin.ticker;
+    $("[data-eu-desc]").textContent = F.pctS(twin.ter) + " + směna měny " + F.pctS(fx);
+    $("[data-cost-bank]").textContent = "−" + F.czk(round(costBank));
+    $("[data-cost-us]").textContent = "−" + F.czk(round(costUs));
+    $("[data-cost-eu]").textContent = "−" + F.czk(round(costEu));
+    $("[data-save]").textContent = F.czk(round(save));
+    $("[data-sticky-save]").textContent = "S ETF ušetříte " + F.czk(round(save));
+    $("[data-save]").classList.remove("pop"); void $("[data-save]").offsetWidth; $("[data-save]").classList.add("pop");
+
+    var max = gross;
+    $("[data-bars]").innerHTML = [
+      ["Bez jakýchkoli poplatků", gross, ""],
+      ["Evropské dvojče " + twin.ticker, fEu, "bar--etf"],
+      ["Bankovní akciový fond", fBank, "bar--bank"]
+    ].map(function (b) {
+      return '<div class="bar ' + b[2] + '"><div class="bar__lbl"><span>' + b[0] + "</span><b>" + F.czk(round(b[1])) + "</b></div>" +
+        '<div class="bar__track"><div class="bar__fill" style="width:' + (b[1] / max * 100).toFixed(1) + '%"></div></div></div>';
+    }).join("");
+    $("[data-callout]").innerHTML = "Z každých 100 Kč, které by vám akcie vydělaly, si bankovní fond za " + y + " let vezme <b>" +
+      Math.round(costBank / (gross - paid) * 100) + " Kč</b>. Evropské dvojče " + twin.ticker + " <b>" + Math.max(1, Math.round(costEu / (gross - paid) * 100)) + " Kč</b>.";
+    Lead.setContext({ calc_amount: c, calc_years: y, calc_save_czk: round(save) });
+  }
+
+  document.querySelectorAll("[data-seg]").forEach(function (seg) {
+    seg.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      seg.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      state[seg.dataset.seg] = Number(b.dataset.v);
+      render();
+      Lead.track("calc_change", { amount: state.amount, years: state.years });
+    });
+  });
+  $("[data-open-assume]").addEventListener("click", function () {
+    var el = $("[data-assume]");
+    el.innerHTML = "Hrubý výnos 7 % ročně, vklad vždy na konci měsíce. Roční poplatek (TER) se strhává průběžně z majetku, vstupní poplatek z každého vkladu, " +
+      "směna měny u ETF z každého vkladu. „Poplatky“ = o kolik méně budete mít oproti stejné investici bez poplatků (včetně ušlého zhodnocení). Výsledky zaokrouhleny na tisíce. Ilustrace, ne předpověď.";
+  });
+
+  // Cheapest NYSE ETFs with their twins; first two twins readable, the rest are in the PDF.
+  var cheap = D.us.filter(function (f) { return !f.ref && D.twins[f.twin]; }).sort(function (a, b) { return a.ter - b.ter; }).slice(0, 8);
+  $("[data-cheap]").innerHTML = cheap.map(function (f, i) {
+    var p = D.twins[f.twin].pick, locked = i > 1;
+    return '<div class="cheap__row"><span class="cheap__tk">' + f.t + '</span><span class="cheap__name">' + f.name + '</span><span class="cheap__fee">' + F.pct(f.ter) + "</span>" +
+      '<span class="cheap__twin' + (locked ? " locked" : "") + '"><span>dvojče v ČR</span><b>' + (locked ? "XXXX " + F.pct(p.ter) : p.ticker + " " + F.pct(p.ter)) + "</b></span></div>";
+  }).join("");
+
+  if (bank.source_note) $("[data-bank-src]").textContent = bank.source_note;
+  render();
+})();
+</script>
+</body>
+</html>
