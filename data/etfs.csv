@@ -1,0 +1,7 @@
+ticker,name,issuer,exchange,index,ter_pct,aum_usd_bn,inception,holdings,distribution,yield_pct,ret_1y,ret_5y,ret_10y,twin_isin,twin_ticker,twin_exchange,twin_ter_pct,twin_dist,twin_match
+VUG,Vanguard Morningstar Growth ETF,Vanguard,NYSE Arca,Morningstar US Large Cap Growth Index,0.03,232.9,2004-01-26,135,čtvrtletně,0.35,13.09,13.87,17.94,,,,,,
+VGT,Vanguard Information Technology ETF,Vanguard,NYSE Arca,MSCI US Investable Market Information Technology 25/50 Index,0.09,154.5,2004-01-26,318,čtvrtletně,0.33,35.19,20.92,24.72,,,,,,
+VYM,Vanguard High Dividend Yield ETF,Vanguard,NYSE Arca,FTSE High Dividend Yield Index,0.04,78.9,2006-11-10,593,čtvrtletně,2.35,12.72,11.63,11.28,,,,,,
+VIG,Vanguard Dividend Appreciation ETF,Vanguard,NYSE Arca,S&P U.S. Dividend Growers Index,0.04,109.1,2006-04-21,333,čtvrtletně,1.51,9.77,10.72,12.86,,,,,,
+VXUS,Vanguard Total International Stock ETF,Vanguard,Nasdaq,FTSE Global All Cap ex US Index,0.05,163.2,2011-01-26,,,,,,,,,,,,
+BND,Vanguard Total Bond Market ETF,Vanguard,Nasdaq,Bloomberg U.S. Aggregate Float Adjusted Index,0.03,161.4,2007-04-03,,,,,,,,,,,,

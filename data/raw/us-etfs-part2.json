@@ -95,11 +95,11 @@
      "note": "Net = gross (no fee waivers). Prospectus figure dated 2026-04-28 per Vanguard. Nasdaq.com shows 0.04% (stale, pre-fee-cut) - ignored."
     },
     "aum_usd_bn": {
-     "value": 232.9,
+     "value": 232.87,
      "as_of": "2026-09-30",
      "sources": [
       {
-       "name": "issuer page (ETF share-class total net assets)",
+       "name": "issuer page (ETF share-class total net assets, rounded to 0.1 bn)",
        "url": "https://investor.vanguard.com/investment-products/etfs/profile/vug",
        "value": 232.9,
        "as_of": "2026-09-30"
@@ -107,7 +107,7 @@
       {
        "name": "issuer fact sheet (ETF total net assets)",
        "url": "https://fund-docs.vanguard.com/F0967.pdf",
-       "value": 232.9,
+       "value": 232.87,
        "as_of": "2026-09-30"
       },
       {
@@ -124,7 +124,7 @@
       }
      ],
      "status": "verified",
-     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 392.2 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by -3.2% because of the later date - within 5% tolerance."
+     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 392.18 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by -3.2% because of the later date - within 5% tolerance."
     },
     "inception_date": {
      "value": "2004-01-26",
@@ -463,11 +463,11 @@
      "note": "Net = gross (no fee waivers). Prospectus figure dated 2025-12-19 per Vanguard. Nasdaq.com shows 0.10% (stale, pre-fee-cut) - ignored."
     },
     "aum_usd_bn": {
-     "value": 154.5,
+     "value": 154.54,
      "as_of": "2026-09-30",
      "sources": [
       {
-       "name": "issuer page (ETF share-class total net assets)",
+       "name": "issuer page (ETF share-class total net assets, rounded to 0.1 bn)",
        "url": "https://investor.vanguard.com/investment-products/etfs/profile/vgt",
        "value": 154.5,
        "as_of": "2026-09-30"
@@ -475,7 +475,7 @@
       {
        "name": "issuer fact sheet (ETF total net assets)",
        "url": "https://fund-docs.vanguard.com/F0958.pdf",
-       "value": 154.5,
+       "value": 154.54,
        "as_of": "2026-09-30"
       },
       {
@@ -492,7 +492,7 @@
       }
      ],
      "status": "verified",
-     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 178.0 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by -4.4% because of the later date - within 5% tolerance."
+     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 178.05 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by -4.5% because of the later date - within 5% tolerance."
     },
     "inception_date": {
      "value": "2004-01-26",
@@ -831,11 +831,11 @@
      "note": "Net = gross (no fee waivers). Prospectus figure dated 2026-02-27 per Vanguard. Nasdaq.com shows 0.06% (stale, pre-fee-cut) - ignored."
     },
     "aum_usd_bn": {
-     "value": 78.9,
+     "value": 78.95,
      "as_of": "2026-09-30",
      "sources": [
       {
-       "name": "issuer page (ETF share-class total net assets)",
+       "name": "issuer page (ETF share-class total net assets, rounded to 0.1 bn)",
        "url": "https://investor.vanguard.com/investment-products/etfs/profile/vym",
        "value": 78.9,
        "as_of": "2026-09-30"
@@ -843,7 +843,7 @@
       {
        "name": "issuer fact sheet (ETF total net assets)",
        "url": "https://fund-docs.vanguard.com/F0923.pdf",
-       "value": 78.9,
+       "value": 78.95,
        "as_of": "2026-09-30"
       },
       {
@@ -860,7 +860,7 @@
       }
      ],
      "status": "verified",
-     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 95.8 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by +4.1% because of the later date - within 5% tolerance."
+     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 95.77 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by +4.0% because of the later date - within 5% tolerance."
     },
     "inception_date": {
      "value": "2006-11-10",
@@ -1199,11 +1199,11 @@
      "note": "Net = gross (no fee waivers). Prospectus figure dated 2026-05-28 per Vanguard. Nasdaq.com shows 0.06% (stale, pre-fee-cut) - ignored."
     },
     "aum_usd_bn": {
-     "value": 109.1,
+     "value": 109.12,
      "as_of": "2026-09-30",
      "sources": [
       {
-       "name": "issuer page (ETF share-class total net assets)",
+       "name": "issuer page (ETF share-class total net assets, rounded to 0.1 bn)",
        "url": "https://investor.vanguard.com/investment-products/etfs/profile/vig",
        "value": 109.1,
        "as_of": "2026-09-30"
@@ -1211,7 +1211,7 @@
       {
        "name": "issuer fact sheet (ETF total net assets)",
        "url": "https://fund-docs.vanguard.com/F0920.pdf",
-       "value": 109.1,
+       "value": 109.12,
        "as_of": "2026-09-30"
       },
       {
@@ -1567,11 +1567,11 @@
      "note": "Net = gross (no fee waivers). Prospectus figure dated 2026-05-28 per Vanguard. Nasdaq.com shows 0.12% (stale, pre-fee-cut) - ignored."
     },
     "aum_usd_bn": {
-     "value": 35.9,
+     "value": 35.95,
      "as_of": "2026-09-30",
      "sources": [
       {
-       "name": "issuer page (ETF share-class total net assets)",
+       "name": "issuer page (ETF share-class total net assets, rounded to 0.1 bn)",
        "url": "https://investor.vanguard.com/investment-products/etfs/profile/vnq",
        "value": 35.9,
        "as_of": "2026-09-30"
@@ -1579,7 +1579,7 @@
       {
        "name": "issuer fact sheet (ETF total net assets)",
        "url": "https://fund-docs.vanguard.com/F0986.pdf",
-       "value": 35.9,
+       "value": 35.95,
        "as_of": "2026-09-30"
       },
       {
@@ -1596,7 +1596,7 @@
       }
      ],
      "status": "verified",
-     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 66.4 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by +3.5% because of the later date - within 5% tolerance."
+     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 66.4 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by +3.4% because of the later date - within 5% tolerance."
     },
     "inception_date": {
      "value": "2004-09-23",
@@ -1941,11 +1941,11 @@
      "note": "Net = gross (no fee waivers). Prospectus figure dated 2026-04-28 per Vanguard. Nasdaq.com shows 0.05% (stale, pre-fee-cut) - ignored."
     },
     "aum_usd_bn": {
-     "value": 76.9,
+     "value": 76.95,
      "as_of": "2026-09-30",
      "sources": [
       {
-       "name": "issuer page (ETF share-class total net assets)",
+       "name": "issuer page (ETF share-class total net assets, rounded to 0.1 bn)",
        "url": "https://investor.vanguard.com/investment-products/etfs/profile/vb",
        "value": 76.9,
        "as_of": "2026-09-30"
@@ -1953,7 +1953,7 @@
       {
        "name": "issuer fact sheet (ETF total net assets)",
        "url": "https://fund-docs.vanguard.com/F0969.pdf",
-       "value": 76.9,
+       "value": 76.95,
        "as_of": "2026-09-30"
       },
       {
@@ -1970,7 +1970,7 @@
       }
      ],
      "status": "verified",
-     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 175.8 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by +1.1% because of the later date - within 5% tolerance."
+     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 175.79 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by +1.0% because of the later date - within 5% tolerance."
     },
     "inception_date": {
      "value": "2004-01-26",
@@ -2309,11 +2309,11 @@
      "note": "Net = gross (no fee waivers). Prospectus figure dated 2026-02-27 per Vanguard. Nasdaq.com shows 0.07% (stale, pre-fee-cut) - ignored."
     },
     "aum_usd_bn": {
-     "value": 163.2,
+     "value": 163.23,
      "as_of": "2026-09-30",
      "sources": [
       {
-       "name": "issuer page (ETF share-class total net assets)",
+       "name": "issuer page (ETF share-class total net assets, rounded to 0.1 bn)",
        "url": "https://investor.vanguard.com/investment-products/etfs/profile/vxus",
        "value": 163.2,
        "as_of": "2026-09-30"
@@ -2321,7 +2321,7 @@
       {
        "name": "issuer fact sheet (ETF total net assets)",
        "url": "https://fund-docs.vanguard.com/F3369.pdf",
-       "value": 163.2,
+       "value": 163.23,
        "as_of": "2026-09-30"
       },
       {
@@ -2338,7 +2338,7 @@
       }
      ],
      "status": "verified",
-     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 649.3 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by -1.5% because of the later date - within 5% tolerance."
+     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 649.29 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by -1.5% because of the later date - within 5% tolerance."
     },
     "inception_date": {
      "value": "2011-01-26",
@@ -2462,11 +2462,11 @@
      "note": "Net = gross (no fee waivers). Prospectus figure dated 2026-04-28 per Vanguard."
     },
     "aum_usd_bn": {
-     "value": 161.4,
+     "value": 161.44,
      "as_of": "2026-09-30",
      "sources": [
       {
-       "name": "issuer page (ETF share-class total net assets)",
+       "name": "issuer page (ETF share-class total net assets, rounded to 0.1 bn)",
        "url": "https://investor.vanguard.com/investment-products/etfs/profile/bnd",
        "value": 161.4,
        "as_of": "2026-09-30"
@@ -2474,7 +2474,7 @@
       {
        "name": "issuer fact sheet (ETF total net assets)",
        "url": "https://fund-docs.vanguard.com/F0928.pdf",
-       "value": 161.4,
+       "value": 161.44,
        "as_of": "2026-09-30"
       },
       {
@@ -2491,7 +2491,7 @@
       }
      ],
      "status": "verified",
-     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 389.3 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by +2.9% because of the later date - within 5% tolerance."
+     "note": "SHARE-CLASS value (ETF shares only). Fund-level total net assets incl. Vanguard mutual-fund share classes = 389.34 bn USD at 2026-09-30. Vanguard only publishes month-end TNA; stockanalysis (2026-10-28) differs by +2.9% because of the later date - within 5% tolerance."
     },
     "inception_date": {
      "value": "2007-04-03",
@@ -2521,6 +2521,3220 @@
     }
    },
    "notes": "Reference ticker only: listed on Nasdaq, not NYSE/NYSE Arca. Only exchange, name, index, expense ratio, AUM and inception collected."
+  },
+  {
+   "ticker": "AGG",
+   "former_ticker": null,
+   "name": "iShares Core U.S. Aggregate Bond ETF",
+   "issuer": "iShares (BlackRock)",
+   "issuer_url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+   "reference_only": false,
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Exchange)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Exchange)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/AGG",
+       "value": "PCX / NYSEArca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/AGG/info?assetclass=etf",
+       "value": "PSE",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca)."
+    },
+    "index": {
+     "value": "Bloomberg US Aggregate Bond Index",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Benchmark Index)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": "Bloomberg US Aggregate Bond Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Benchmark)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": "Bloomberg US Aggregate Bond Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Index Tracked)",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": "Bloomberg US Aggregate",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Bloomberg index ticker LBUSTRUU."
+    },
+    "expense_ratio_pct": {
+     "value": 0.03,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": 0.03,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross (management fee 0.03%, no waiver)."
+    },
+    "aum_usd_bn": {
+     "value": 139.14,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": 139.14,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": 135.65,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": 139.16,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/AGG/summary?assetclass=etf",
+       "value": 139.42,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by +0.0%, Nasdaq.com by +0.2% (dates within 1 day) - within 5%."
+    },
+    "inception_date": {
+     "value": "2003-09-22",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Fund Inception)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": "2003-09-22",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet (Fund Launch Date)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": "2003-09-22",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": "2003-09-22",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "First trading day in Yahoo history: 2003-09-29."
+    },
+    "holdings_count": {
+     "value": 13467,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Number of Holdings)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": 13467,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": 13479,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": 13375,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer vs stockanalysis differ by 0.09%. Fact sheet 13,375 is month-end 2026-09-30 (different date)."
+    },
+    "distribution_freq": {
+     "value": "Monthly",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": "Monthly",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": "Monthly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": "Monthly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 5.04,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet (30 Day SEC Yield)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": 5.04,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer page (30 Day SEC Yield)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": 5.04,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer page (12m Trailing Yield, reference)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": 4.13,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (TTM yield, reference)",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": 4.14,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "TYPE: 30-day SEC yield. Fact sheet (2026-09-30) and page (2026-10-27) both show 5.04%. Trailing-12-month yield 4.13% (issuer, 2026-10-27) / 4.14% (stockanalysis)."
+    },
+    "ret_1y_pct": {
+     "value": -1.87,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": -1.87,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": -1.87,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/AGG",
+       "value": -1.86,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return -1.86% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = -1.86% (diff 0.0 pp)."
+    },
+    "ret_5y_pct": {
+     "value": -0.64,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": -0.64,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": -0.64,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/AGG",
+       "value": -0.62,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return -0.62% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = -0.62% (diff 0.0 pp)."
+    },
+    "ret_10y_pct": {
+     "value": 1.11,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-us-aggregate-bond-etf",
+       "value": 1.11,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": 1.11,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/AGG",
+       "value": 1.12,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 1.1% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 1.12% (diff 0.02 pp)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "BlackRock Cash Cl Inst SL Agency (money-market sweep)",
+       3.02
+      ],
+      [
+       "U.S. Treasury Note 4.375% 05/15/2036",
+       0.4
+      ],
+      [
+       "U.S. Treasury Note 4.625% 02/15/2035",
+       0.4
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer holdings CSV",
+       "url": "https://www.ishares.com/us/products/239458/ishares-core-total-us-bond-market-etf/latest-holdings.csv",
+       "value": [
+        [
+         "BLACKROCK CASH CL INST SL AGENCY",
+         3.02
+        ],
+        [
+         "TREASURY NOTE (OLD) 4.38% 2036-05-15",
+         0.4
+        ],
+        [
+         "TREASURY NOTE 4.63% 2035-02-15",
+         0.4
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Top holdings)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/agg-ishares-core-u-s-aggregate-bond-etf-fund-fact-sheet-en-us.pdf",
+       "value": [
+        [
+         "BLACKROCK CASH CL INST SL AGENCY",
+         2.93
+        ],
+        [
+         "TREASURY NOTE",
+         0.4
+        ],
+        [
+         "TREASURY NOTE",
+         0.4
+        ]
+       ],
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/agg/",
+       "value": null,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "single-source",
+     "note": "Only the issuer publishes bond-level holdings (stockanalysis has none for AGG); fact sheet (2026-09-30) shows the same pattern. #1 is a cash/money-market vehicle; the largest actual bonds are individual Treasury notes at ~0.40% each (#2/#3 are a tie at 0.40% - ordered by market value). Not very meaningful for a 13,000-bond index fund."
+    }
+   },
+   "notes": ""
+  },
+  {
+   "ticker": "DGRO",
+   "former_ticker": null,
+   "name": "iShares Core Dividend Growth ETF",
+   "issuer": "iShares (BlackRock)",
+   "issuer_url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+   "reference_only": false,
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Exchange)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Exchange)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/dgro/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/DGRO",
+       "value": "PCX / NYSEArca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/DGRO/info?assetclass=etf",
+       "value": "PSE",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca)."
+    },
+    "index": {
+     "value": "Morningstar US Dividend Growth Index",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Benchmark Index)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": "Morningstar US Dividend Growth Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Benchmark)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": "Morningstar US Dividend Growth Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Index Tracked)",
+       "url": "https://stockanalysis.com/etf/dgro/",
+       "value": "Morningstar US Dividend Growth Index",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Bloomberg index ticker MSDIVGT."
+    },
+    "expense_ratio_pct": {
+     "value": 0.08,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": 0.08,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": 0.08,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/dgro/",
+       "value": 0.08,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross (management fee 0.08%)."
+    },
+    "aum_usd_bn": {
+     "value": 44.62,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": 44.62,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": 41.89,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/dgro/",
+       "value": 44.47,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/DGRO/summary?assetclass=etf",
+       "value": 44.64,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by -0.3%, Nasdaq.com by +0.0% (dates within 1 day) - within 5%."
+    },
+    "inception_date": {
+     "value": "2014-06-10",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Fund Inception)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": "2014-06-10",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet (Fund Launch Date)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": "2014-06-10",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/dgro/",
+       "value": "2014-06-10",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "First trading day in Yahoo history: 2014-06-12."
+    },
+    "holdings_count": {
+     "value": 391,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Number of Holdings)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": 391,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer holdings CSV (equity rows)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf/latest-holdings.csv",
+       "value": 391,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (all lines)",
+       "url": "https://stockanalysis.com/etf/dgro/",
+       "value": 398,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": 389,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Stocks only. Issuer holdings CSV has 391 equity rows + 7 cash/futures/money-market rows = 398, which is what stockanalysis counts (different basis). Fact sheet 389 is month-end 2026-09-30."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": "Quarterly",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/dgro/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 2.07,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (30 Day SEC Yield)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": 2.07,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (30 Day SEC Yield)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": 2.07,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer page (12m Trailing Yield, reference)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": 1.98,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (TTM yield, reference)",
+       "url": "https://stockanalysis.com/etf/dgro/",
+       "value": 1.87,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "TYPE: 30-day SEC yield at 2026-09-30. Trailing-12-month yield 1.98% (issuer, 2026-09-30) / 1.87% (stockanalysis, price of 2026-10-28)."
+    },
+    "ret_1y_pct": {
+     "value": 12.95,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": 12.95,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": 12.95,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/DGRO",
+       "value": 13.01,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 13.02% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 13.01% (diff -0.01 pp)."
+    },
+    "ret_5y_pct": {
+     "value": 10.96,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": 10.96,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": 10.96,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/DGRO",
+       "value": 10.95,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 10.96% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 10.95% (diff -0.01 pp)."
+    },
+    "ret_10y_pct": {
+     "value": 13.16,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf",
+       "value": 13.16,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": 13.16,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/DGRO",
+       "value": 13.14,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 13.16% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 13.14% (diff -0.02 pp)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "Exxon Mobil (ExxonMobil Holdings Corp)",
+       3.24
+      ],
+      [
+       "Microsoft",
+       3.14
+      ],
+      [
+       "Apple",
+       3.11
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer holdings CSV",
+       "url": "https://www.ishares.com/us/products/264623/ishares-core-dividend-growth-etf/latest-holdings.csv",
+       "value": [
+        [
+         "EXXONMOBIL HOLDINGS CORP",
+         3.24
+        ],
+        [
+         "MICROSOFT",
+         3.14
+        ],
+        [
+         "APPLE",
+         3.11
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis holdings",
+       "url": "https://stockanalysis.com/etf/dgro/holdings/",
+       "value": [
+        [
+         "ExxonMobil Holdings Corporation",
+         3.24
+        ],
+        [
+         "Microsoft Corporation",
+         3.14
+        ],
+        [
+         "Apple Inc.",
+         3.11
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Top holdings)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/dgro-ishares-core-dividend-growth-etf-fund-fact-sheet-en-us.pdf",
+       "value": [
+        [
+         "MICROSOFT",
+         3.22
+        ],
+        [
+         "APPLE",
+         3.16
+        ],
+        [
+         "EXXONMOBIL HOLDINGS CORP",
+         3.11
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Daily holdings 2026-10-27. Note the order changes with prices: at 2026-09-30 (fact sheet) it was Microsoft 3.22, Apple 3.16, ExxonMobil 3.11. Weights are within ~0.1 pp of each other."
+    }
+   },
+   "notes": ""
+  },
+  {
+   "ticker": "IAU",
+   "former_ticker": null,
+   "name": "iShares Gold Trust",
+   "issuer": "iShares (BlackRock)",
+   "issuer_url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+   "reference_only": false,
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Exchange)",
+       "url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Exchange)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/iau/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/IAU",
+       "value": "PCX / NYSEArca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/IAU/info?assetclass=etf",
+       "value": "PSE",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca)."
+    },
+    "index": {
+     "value": "LBMA Gold Price (PM)",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Bloomberg index ticker GOLDLNPM)",
+       "url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+       "value": "LBMA Gold Price",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Reference Benchmark)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": "LBMA Gold Price",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Index Tracked)",
+       "url": "https://stockanalysis.com/etf/iau/",
+       "value": "LBMA Gold Price",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Not an index fund: grantor trust holding physical gold; NAV is valued at the LBMA Gold Price PM. Uses LBMA Gold Price since 2015-03-20 (London Gold Fix before)."
+    },
+    "expense_ratio_pct": {
+     "value": 0.25,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Sponsor Fee)",
+       "url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+       "value": 0.25,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Sponsor Fee)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": 0.25,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/iau/",
+       "value": 0.25,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com",
+       "url": "https://api.nasdaq.com/api/quote/IAU/summary?assetclass=etf",
+       "value": 0.25,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Sponsor's fee (the trust's only ongoing fee)."
+    },
+    "aum_usd_bn": {
+     "value": 60.06,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+       "value": 60.06,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": 62.22,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/iau/",
+       "value": 59.71,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/IAU/summary?assetclass=etf",
+       "value": 60.19,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by -0.6%, Nasdaq.com by +0.2% (dates within 1 day) - within 5%. Trust held 14.86 m oz (462.3 t) of gold on 2026-10-28."
+    },
+    "inception_date": {
+     "value": "2005-01-21",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Fund Inception)",
+       "url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+       "value": "2005-01-21",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet (Fund Launch Date)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": "2005-01-21",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/iau/",
+       "value": "2005-01-21",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "First trading day in Yahoo history: 2005-01-28 (inception vs first trade)."
+    },
+    "holdings_count": {
+     "value": null,
+     "as_of": null,
+     "sources": [],
+     "status": "verified",
+     "note": "n/a - physically backed gold trust (holds only gold bullion)."
+    },
+    "distribution_freq": {
+     "value": "none",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer fact sheet (Distribution Frequency)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": "None",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (payout frequency)",
+       "url": "https://stockanalysis.com/etf/iau/",
+       "value": "n/a",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Gold trust - no distributions."
+    },
+    "dividend_yield_pct": {
+     "value": null,
+     "as_of": null,
+     "sources": [],
+     "status": "verified",
+     "note": "n/a - no income, no distributions."
+    },
+    "ret_1y_pct": {
+     "value": 8.9,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+       "value": 8.9,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": 8.9,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/IAU",
+       "value": 7.32,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 7.32% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 7.32% (diff 0.0 pp). Gold-trust NAV is struck at the LBMA PM price (~3 pm London) while market price is the 4 pm NY close, so NAV and market returns can differ noticeably (1y: 8.90 vs 7.32)."
+    },
+    "ret_5y_pct": {
+     "value": 18.8,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+       "value": 18.8,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": 18.8,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/IAU",
+       "value": 18.51,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 18.51% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 18.51% (diff 0.0 pp). Gold-trust NAV is struck at the LBMA PM price (~3 pm London) while market price is the 4 pm NY close, so NAV and market returns can differ noticeably (1y: 8.90 vs 7.32)."
+    },
+    "ret_10y_pct": {
+     "value": 11.91,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarter-end) (NAV)",
+       "url": "https://www.ishares.com/us/products/239561/ishares-gold-trust-fund",
+       "value": 11.91,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ishares.com/us/literature/fact-sheet/iau-ishares-gold-trust-fund-fact-sheet-en-us.pdf",
+       "value": 11.91,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/IAU",
+       "value": 11.9,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 11.89% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 11.9% (diff 0.01 pp). Gold-trust NAV is struck at the LBMA PM price (~3 pm London) while market price is the 4 pm NY close, so NAV and market returns can differ noticeably (1y: 8.90 vs 7.32)."
+    },
+    "top3_holdings": {
+     "value": null,
+     "as_of": null,
+     "sources": [],
+     "status": "verified",
+     "note": "n/a - gold bullion only."
+    }
+   },
+   "notes": "Grantor trust (not a 1940-Act fund). 1:2 reverse split 2021-05-24 per Yahoo split record."
+  },
+  {
+   "ticker": "SCHG",
+   "former_ticker": null,
+   "name": "Schwab U.S. Large-Cap Growth ETF",
+   "issuer": "Schwab Asset Management",
+   "issuer_url": "https://www.schwabassetmanagement.com/products/schg",
+   "reference_only": false,
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Exchange)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": "NYSE Arca, Inc.",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Exchange)",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/schg/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHG",
+       "value": "PCX / NYSEArca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/SCHG/info?assetclass=etf",
+       "value": "PSE",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca)."
+    },
+    "index": {
+     "value": "Dow Jones U.S. Large-Cap Growth Total Stock Market Index",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Index Name)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": "Dow Jones U.S. Large-Cap Growth Total Stock Market Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": "Dow Jones U.S. Large-Cap Growth Total Stock Market Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Index Tracked)",
+       "url": "https://stockanalysis.com/etf/schg/",
+       "value": "Dow Jones US Total Stock Market Large-Cap Growth",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Bloomberg ticker DWLGT."
+    },
+    "expense_ratio_pct": {
+     "value": 0.04,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Total Expense Ratio)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": 0.04,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": 0.04,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/schg/",
+       "value": 0.04,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com",
+       "url": "https://api.nasdaq.com/api/quote/SCHG/summary?assetclass=etf",
+       "value": 0.04,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "aum_usd_bn": {
+     "value": 63.78,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Total Net Assets)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": 63.78,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Total net assets)",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": 63.85,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/schg/",
+       "value": 62.52,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/SCHG/summary?assetclass=etf",
+       "value": 63.76,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by -2.0%, Nasdaq.com by -0.0% (dates within 1 day) - within 5%."
+    },
+    "inception_date": {
+     "value": "2009-12-11",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Fund Inception)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": "2009-12-11",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": "2009-12-11",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/schg/",
+       "value": "2009-12-11",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "Yahoo price history for SCHG starts 2010-01-04 (data-coverage limit, not a listing date)."
+    },
+    "holdings_count": {
+     "value": 189,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Total Holdings)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": 189,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/schg/",
+       "value": 189,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Number of securities)",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": 187,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Fact sheet 187 is month-end 2026-09-30."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer fact sheet (Distribution frequency)",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/schg/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 0.35,
+     "as_of": "2026-10-26",
+     "sources": [
+      {
+       "name": "issuer page (SEC Yield 30 Day)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": 0.35,
+       "as_of": "2026-10-26"
+      },
+      {
+       "name": "issuer page (Distribution Yield TTM, reference)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": 0.39,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (TTM yield, reference)",
+       "url": "https://stockanalysis.com/etf/schg/",
+       "value": 0.39,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "single-source",
+     "note": "TYPE: 30-day SEC yield as of 2026-10-26 (Schwab page shows only the latest; no 2026-09-30 SEC value found, fact sheet has no yield). Trailing-12-month distribution yield 0.39% (issuer 2026-09-30) = 0.39% (stockanalysis) - verified for TTM type."
+    },
+    "ret_1y_pct": {
+     "value": 13.01,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarterly tab 2026-09-30) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": 13.01,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": 13.01,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHG",
+       "value": 13.08,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 13.08% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 13.08% (diff 0.0 pp)."
+    },
+    "ret_5y_pct": {
+     "value": 14.71,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarterly tab 2026-09-30) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": 14.71,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": 14.71,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHG",
+       "value": 14.72,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 14.72% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 14.72% (diff 0.0 pp)."
+    },
+    "ret_10y_pct": {
+     "value": 18.68,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarterly tab 2026-09-30) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": 18.68,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": 18.68,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHG",
+       "value": 18.69,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 18.69% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 18.69% (diff 0.0 pp)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "NVIDIA",
+       12.24
+      ],
+      [
+       "Apple",
+       11.76
+      ],
+      [
+       "Microsoft",
+       9.16
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Top Holdings)",
+       "url": "https://www.schwabassetmanagement.com/products/schg",
+       "value": [
+        [
+         "NVIDIA",
+         12.24
+        ],
+        [
+         "APPLE",
+         11.76
+        ],
+        [
+         "MICROSOFT",
+         9.16
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis holdings",
+       "url": "https://stockanalysis.com/etf/schg/holdings/",
+       "value": [
+        [
+         "NVIDIA Corporation",
+         12.26
+        ],
+        [
+         "Apple Inc.",
+         11.77
+        ],
+        [
+         "Microsoft Corporation",
+         9.27
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Top 10)",
+       "url": "https://www.schwabassetmanagement.com/resource/schg-fact-sheet",
+       "value": [
+        [
+         "NVIDIA Corporation",
+         12.68
+        ],
+        [
+         "Apple Inc.",
+         11.15
+        ],
+        [
+         "Microsoft Corporation",
+         8.74
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Same names/order in all sources; stockanalysis weights differ by up to 0.11 pp (likely a slightly different file date)."
+    }
+   },
+   "notes": "4:1 share split 2024-10-10/11. Schwab site blocks scripted downloads; data read in a normal browser session (product page + PDF fact sheet)."
+  },
+  {
+   "ticker": "SCHD",
+   "former_ticker": null,
+   "name": "Schwab U.S. Dividend Equity ETF",
+   "issuer": "Schwab Asset Management",
+   "issuer_url": "https://www.schwabassetmanagement.com/products/schd",
+   "reference_only": false,
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Exchange)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": "NYSE Arca, Inc.",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Exchange)",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/schd/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHD",
+       "value": "PCX / NYSEArca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/SCHD/info?assetclass=etf",
+       "value": "PSE",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca)."
+    },
+    "index": {
+     "value": "Dow Jones U.S. Dividend 100 Index",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Index Name)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": "Dow Jones U.S. Dividend 100 Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": "Dow Jones U.S. Dividend 100 Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Index Tracked)",
+       "url": "https://stockanalysis.com/etf/schd/",
+       "value": "Dow Jones U.S. Dividend 100",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Bloomberg ticker DJUSDIVT."
+    },
+    "expense_ratio_pct": {
+     "value": 0.06,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Total Expense Ratio)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": 0.06,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": 0.06,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/schd/",
+       "value": 0.06,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com",
+       "url": "https://api.nasdaq.com/api/quote/SCHD/summary?assetclass=etf",
+       "value": 0.06,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "aum_usd_bn": {
+     "value": 118.47,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Total Net Assets)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": 118.47,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Total net assets)",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": 107.89,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/schd/",
+       "value": 118.84,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/SCHD/summary?assetclass=etf",
+       "value": 118.22,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by +0.3%, Nasdaq.com by -0.2% (dates within 1 day) - within 5%. Large jump vs fact sheet (107.89 bn at 2026-09-30) is real: price rose ~8% in October 2026 plus inflows (NAV 32.5 -> 35.11)."
+    },
+    "inception_date": {
+     "value": "2011-10-20",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Fund Inception)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": "2011-10-20",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": "2011-10-20",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/schd/",
+       "value": "2011-10-20",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "First trading day in Yahoo history: 2011-10-20."
+    },
+    "holdings_count": {
+     "value": 102,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Total Holdings)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": 102,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/schd/",
+       "value": 102,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Number of securities)",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": 100,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Fact sheet 100 is month-end 2026-09-30."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer fact sheet (Distribution frequency)",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/schd/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 3.13,
+     "as_of": "2026-10-26",
+     "sources": [
+      {
+       "name": "issuer page (SEC Yield 30 Day)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": 3.13,
+       "as_of": "2026-10-26"
+      },
+      {
+       "name": "issuer page (Distribution Yield TTM, reference)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": 3.24,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (TTM yield, reference)",
+       "url": "https://stockanalysis.com/etf/schd/",
+       "value": 3.0,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "single-source",
+     "note": "TYPE: 30-day SEC yield as of 2026-10-26 (only latest value published; fact sheet has no yield). Trailing-12-month distribution yield 3.24% (issuer, 2026-09-30 price) vs 3.00% (stockanalysis, 2026-10-28 price - lower because price rose ~8% in October)."
+    },
+    "ret_1y_pct": {
+     "value": 23.36,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarterly tab 2026-09-30) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": 23.36,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": 23.36,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHD",
+       "value": 23.34,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 23.32% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 23.34% (diff 0.02 pp). Large gap vs VYM (12.72%) checked: confirmed by fact sheet and by raw Yahoo prices (close 27.30 -> 32.53 plus 1.055 USD dividends = ~23.0% simple). Genuine divergence (different index rules), not a data error."
+    },
+    "ret_5y_pct": {
+     "value": 9.48,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarterly tab 2026-09-30) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": 9.48,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": 9.48,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHD",
+       "value": 9.46,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 9.47% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 9.46% (diff -0.01 pp)."
+    },
+    "ret_10y_pct": {
+     "value": 12.44,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (average annual, quarterly tab 2026-09-30) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": 12.44,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": 12.44,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHD",
+       "value": 12.44,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 12.44% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 12.44% (diff 0.0 pp)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "Texas Instruments",
+       4.8
+      ],
+      [
+       "Qualcomm",
+       4.29
+      ],
+      [
+       "Procter & Gamble",
+       4.27
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Top Holdings)",
+       "url": "https://www.schwabassetmanagement.com/products/schd",
+       "value": [
+        [
+         "TEXAS INSTRUMENT",
+         4.8
+        ],
+        [
+         "QUALCOMM",
+         4.29
+        ],
+        [
+         "PROCTER & GAMBLE",
+         4.27
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer all-holdings page",
+       "url": "https://www.schwabassetmanagement.com/allholdings/SCHD",
+       "value": [
+        [
+         "TEXAS INSTRUMENT INC",
+         4.71
+        ],
+        [
+         "QUALCOMM",
+         4.34
+        ],
+        [
+         "PROCTER & GAMBLE",
+         4.32
+        ]
+       ],
+       "as_of": "2026-10-13"
+      },
+      {
+       "name": "issuer fact sheet (Top 10)",
+       "url": "https://www.schwabassetmanagement.com/resource/schd-fact-sheet",
+       "value": [
+        [
+         "Texas Instruments Incorporated",
+         4.69
+        ],
+        [
+         "QUALCOMM Incorporated",
+         4.62
+        ],
+        [
+         "Procter & Gamble Company",
+         4.2
+        ]
+       ],
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis holdings",
+       "url": "https://stockanalysis.com/etf/schd/holdings/",
+       "value": [
+        [
+         "Texas Instruments Incorporated",
+         4.6
+        ],
+        [
+         "ConocoPhillips",
+         4.34
+        ],
+        [
+         "Chevron Corporation",
+         4.31
+        ]
+       ],
+       "as_of": "2026-10-27"
+      }
+     ],
+     "status": "conflict",
+     "note": "Issuer documents (2026-09-30, 2026-10-13, 2026-10-27) consistently show TXN, QCOM, PG as top 3; stockanalysis shows TXN, COP, CVX - rejected (issuer preferred). Caveat: on 2026-10-27 #3 is a near-tie - PG, CVX and COP are all 4.27%, so #3 can flip day to day. SCHD is ~equal-weight-ish (top 10 = ~42%)."
+    }
+   },
+   "notes": "3:1 share split 2024-10 (Yahoo split record 2024-10-11). Schwab site blocks scripted downloads; data read in a normal browser session."
+  },
+  {
+   "ticker": "XLK",
+   "former_ticker": null,
+   "name": "State Street Technology Select Sector SPDR ETF",
+   "issuer": "State Street Investment Management (formerly SSGA)",
+   "issuer_url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+   "reference_only": false,
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Primary Exchange Name)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": "NYSE ARCA",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/xlk/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK",
+       "value": "PCX / NYSEArca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/XLK/info?assetclass=etf",
+       "value": "PSE",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca)."
+    },
+    "index": {
+     "value": "Technology Select Sector Index",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Benchmark)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": "Technology Select Sector Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": "Technology Select Sector Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Index Tracked)",
+       "url": "https://stockanalysis.com/etf/xlk/",
+       "value": "S&P Technology Select Sector",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "S&P Dow Jones index (ticker IXTTR); a capped subset of the S&P 500 technology sector."
+    },
+    "expense_ratio_pct": {
+     "value": 0.08,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Gross Expense Ratio = Expense Ratio)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": 0.08,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Gross Expense Ratio)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": 0.08,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/xlk/",
+       "value": 0.08,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Gross = net. Nasdaq.com shows 0.1% (stale) - ignored."
+    },
+    "aum_usd_bn": {
+     "value": 125.02,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Assets Under Management)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": 125.02,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/xlk/",
+       "value": 120.84,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/XLK/summary?assetclass=etf",
+       "value": 125.08,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by -3.3%, Nasdaq.com by +0.0% (dates within 1 day) - within 5%."
+    },
+    "inception_date": {
+     "value": "1998-12-16",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Inception Date)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": "1998-12-16",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet (Inception Date)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": "1998-12-16",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/xlk/",
+       "value": "1998-12-16",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "Inception 1998-12-16; exchange listing date 1998-12-22 (issuer 'Listing Date'; Yahoo first trade 1998-12-22)."
+    },
+    "holdings_count": {
+     "value": 75,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Number of Holdings)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": 75,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer daily holdings XLSX (equity rows)",
+       "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/holdings-daily-us-en-xlk.xlsx",
+       "value": 75,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (all lines)",
+       "url": "https://stockanalysis.com/etf/xlk/",
+       "value": 78,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": 74,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Stocks only. Holdings XLSX = 75 stocks + money-market fund + USD cash + index future = 78 lines (what stockanalysis counts). Fact sheet 74 at 2026-09-30."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Distribution Frequency)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": "Quarterly",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/xlk/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 0.42,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet (30 Day SEC Yield)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": 0.42,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer page (30 Day SEC Yield)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": 0.42,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer page (Fund Distribution Yield = TTM, reference)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": 0.44,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (TTM yield, reference)",
+       "url": "https://stockanalysis.com/etf/xlk/",
+       "value": 0.44,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "TYPE: 30-day SEC yield (0.42% both at 2026-09-30 fact sheet and 2026-10-27 page). Trailing-12-month distribution yield 0.44% (issuer) = 0.44% (stockanalysis)."
+    },
+    "ret_1y_pct": {
+     "value": 39.47,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (quarter-end performance) (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": 39.47,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": 39.47,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK",
+       "value": 39.61,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 39.53% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 39.61% (diff 0.08 pp). SSGA 'market value' return uses bid/ask midpoint at NAV time, Yahoo uses official close -> explains the 0.08 pp gap. VGT vs XLK 1y gap (35.19 vs 39.47) checked: both confirmed by fact sheets and Yahoo; XLK is S&P 500-only and capped, VGT includes mid/small caps."
+    },
+    "ret_5y_pct": {
+     "value": 22.14,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (quarter-end performance) (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": 22.14,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": 22.14,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK",
+       "value": 22.16,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 22.16% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 22.16% (diff 0.0 pp)."
+    },
+    "ret_10y_pct": {
+     "value": 24.66,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (quarter-end performance) (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": 24.66,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": 24.66,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK",
+       "value": 24.68,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 24.67% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 24.68% (diff 0.01 pp)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "NVIDIA",
+       15.22
+      ],
+      [
+       "Apple",
+       14.62
+      ],
+      [
+       "Microsoft",
+       11.38
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Fund Top Holdings)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+       "value": [
+        [
+         "NVIDIA CORP",
+         15.22
+        ],
+        [
+         "APPLE INC",
+         14.62
+        ],
+        [
+         "MICROSOFT CORP",
+         11.38
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer daily holdings XLSX",
+       "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/holdings-daily-us-en-xlk.xlsx",
+       "value": [
+        [
+         "NVIDIA CORP",
+         15.219
+        ],
+        [
+         "APPLE INC",
+         14.617
+        ],
+        [
+         "MICROSOFT CORP",
+         11.385
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis holdings",
+       "url": "https://stockanalysis.com/etf/xlk/holdings/",
+       "value": [
+        [
+         "NVIDIA Corporation",
+         15.22
+        ],
+        [
+         "Apple Inc.",
+         14.62
+        ],
+        [
+         "Microsoft Corporation",
+         11.38
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Top 10)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-xlk.pdf",
+       "value": [
+        [
+         "NVIDIA CORP",
+         15.47
+        ],
+        [
+         "APPLE INC",
+         13.61
+        ],
+        [
+         "MICROSOFT CORP",
+         10.66
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    }
+   },
+   "notes": "Renamed from 'Technology Select Sector SPDR Fund' (SSGA rebranded to State Street Investment Management). 2:1 share split 2025-12-05 per Yahoo split record."
+  },
+  {
+   "ticker": "GLD",
+   "former_ticker": null,
+   "name": "SPDR Gold Shares",
+   "issuer": "World Gold Trust Services (sponsor); marketed by State Street",
+   "issuer_url": "https://www.spdrgoldshares.com/usa/gld/",
+   "reference_only": false,
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Primary Exchange Name)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-gold-shares-gld",
+       "value": "NYSE ARCA",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Exchange)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gld.pdf",
+       "value": "NYSE ARCA",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "spdrgoldshares.com (sponsor site)",
+       "url": "https://www.spdrgoldshares.com/usa/gld/",
+       "value": "New York Stock Exchange Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/gld/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD",
+       "value": "PCX / NYSEArca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/GLD/info?assetclass=etf",
+       "value": "PSE",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca)."
+    },
+    "index": {
+     "value": "LBMA Gold Price PM",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Benchmark)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-gold-shares-gld",
+       "value": "LBMA Gold Price PM",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gld.pdf",
+       "value": "LBMA Gold Price PM",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "spdrgoldshares.com",
+       "url": "https://www.spdrgoldshares.com/usa/gld/",
+       "value": "LBMA Gold Price PM",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/gld/",
+       "value": "LBMA Gold Price",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Not an index fund: grantor trust holding physical gold, NAV valued at LBMA Gold Price PM (since 2015-03-20; London PM Fix before)."
+    },
+    "expense_ratio_pct": {
+     "value": 0.4,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Expense Ratio)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-gold-shares-gld",
+       "value": 0.4,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Gross Expense Ratio)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gld.pdf",
+       "value": 0.4,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "spdrgoldshares.com",
+       "url": "https://www.spdrgoldshares.com/usa/gld/",
+       "value": 0.4,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/gld/",
+       "value": 0.4,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Sponsor fee; gross = net."
+    },
+    "aum_usd_bn": {
+     "value": 135.84,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Assets Under Management)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-gold-shares-gld",
+       "value": 135.84,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/gld/",
+       "value": 134.26,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/GLD/summary?assetclass=etf",
+       "value": 135.99,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by -1.2%, Nasdaq.com by +0.1% (dates within 1 day) - within 5%."
+    },
+    "inception_date": {
+     "value": "2004-11-18",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Inception / Listing Date)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-gold-shares-gld",
+       "value": "2004-11-18",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gld.pdf",
+       "value": "2004-11-18",
+       "as_of": null
+      },
+      {
+       "name": "spdrgoldshares.com",
+       "url": "https://www.spdrgoldshares.com/usa/gld/",
+       "value": "2004-11-18",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/gld/",
+       "value": "2004-11-18",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "Inception = listing date (first trade 2004-11-18)."
+    },
+    "holdings_count": {
+     "value": null,
+     "as_of": null,
+     "sources": [],
+     "status": "verified",
+     "note": "n/a - physically backed gold trust."
+    },
+    "distribution_freq": {
+     "value": "none",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "stockanalysis (payout frequency)",
+       "url": "https://stockanalysis.com/etf/gld/",
+       "value": "n/a",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "single-source",
+     "note": "Grantor gold trust - pays no distributions (issuer pages list no distribution schedule; stockanalysis 'n/a')."
+    },
+    "dividend_yield_pct": {
+     "value": null,
+     "as_of": null,
+     "sources": [],
+     "status": "verified",
+     "note": "n/a - no income, no distributions."
+    },
+    "ret_1y_pct": {
+     "value": 8.74,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (quarter-end performance) (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-gold-shares-gld",
+       "value": 8.74,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gld.pdf",
+       "value": 8.74,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD",
+       "value": 7.14,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 7.14% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 7.14% (diff 0.0 pp). Sanity check vs IAU (NAV 8.9%): gap 0.16 pp ~= fee gap 0.15 pp x (1+return) - consistent. NAV (LBMA PM) vs market (bid/ask mid at NAV time per SSGA) can differ noticeably for gold trusts."
+    },
+    "ret_5y_pct": {
+     "value": 18.62,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (quarter-end performance) (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-gold-shares-gld",
+       "value": 18.62,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gld.pdf",
+       "value": 18.62,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD",
+       "value": 18.32,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 18.31% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 18.32% (diff 0.01 pp). Sanity check vs IAU (NAV 18.8%): gap 0.18 pp ~= fee gap 0.15 pp x (1+return) - consistent. NAV (LBMA PM) vs market (bid/ask mid at NAV time per SSGA) can differ noticeably for gold trusts."
+    },
+    "ret_10y_pct": {
+     "value": 11.74,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (quarter-end performance) (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-gold-shares-gld",
+       "value": 11.74,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-gld.pdf",
+       "value": 11.74,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD",
+       "value": 11.73,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 11.72% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 11.73% (diff 0.01 pp). Sanity check vs IAU (NAV 11.91%): gap 0.17 pp ~= fee gap 0.15 pp x (1+return) - consistent. NAV (LBMA PM) vs market (bid/ask mid at NAV time per SSGA) can differ noticeably for gold trusts."
+    },
+    "top3_holdings": {
+     "value": null,
+     "as_of": null,
+     "sources": [],
+     "status": "verified",
+     "note": "n/a - gold bullion only."
+    }
+   },
+   "notes": "Legal name SPDR Gold Trust; grantor trust (not a 1940-Act fund)."
+  },
+  {
+   "ticker": "JEPI",
+   "former_ticker": null,
+   "name": "JPMorgan Equity Premium Income ETF",
+   "issuer": "J.P. Morgan Asset Management",
+   "issuer_url": "https://am.jpmorgan.com/us/en/asset-management/adv/products/jpmorgan-equity-premium-income-etf-etf-shares-46641q332",
+   "reference_only": false,
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer product data (tradingInfo.exchange)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": "NYSE-Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/jepi/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/JEPI",
+       "value": "PCX / NYSEArca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/JEPI/info?assetclass=etf",
+       "value": "PSE",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca)."
+    },
+    "index": {
+     "value": "None - actively managed (performance benchmark: S&P 500 Index)",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer product data (benchmarks)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": "S&P 500 Index; ICE BofA 3-Month US Treasury Bill Index (secondary)",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Benchmark 1 / 2)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": "S&P 500 Index / ICE BofA 3-Month US Treasury Bill Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (Index Tracked)",
+       "url": "https://stockanalysis.com/etf/jepi/",
+       "value": null,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "ACTIVE fund - does not track an index. S&P 500 is only the comparison benchmark. Strategy: low-volatility US large-cap stock portfolio plus S&P 500 index call options sold via equity-linked notes (ELNs)."
+    },
+    "expense_ratio_pct": {
+     "value": 0.35,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer product data (net expense)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": 0.35,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Net Expenses)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": 0.35,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/jepi/",
+       "value": 0.35,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com",
+       "url": "https://api.nasdaq.com/api/quote/JEPI/summary?assetclass=etf",
+       "value": 0.35,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Gross = net 0.35%."
+    },
+    "aum_usd_bn": {
+     "value": 46.09,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer product data (aum.netAsset)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": 46.09,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (Fund assets)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": 45.27,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/jepi/",
+       "value": 45.62,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/JEPI/summary?assetclass=etf",
+       "value": 45.91,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by -1.0%, Nasdaq.com by -0.4% (dates within 1 day) - within 5%."
+    },
+    "inception_date": {
+     "value": "2020-05-20",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer product data (fundInceptionDate)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": "2020-05-20",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet (Class launch)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": "2020-05-20",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/jepi/",
+       "value": "2020-05-20",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "First trading day in Yahoo history: 2020-05-21."
+    },
+    "holdings_count": {
+     "value": 135,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer product data (numberOfHoldings)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": 135,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (all lines)",
+       "url": "https://stockanalysis.com/etf/jepi/",
+       "value": 137,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": 140,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer 135 vs stockanalysis 137 (1.5%, within 2%; issuer daily file has 137 lines incl. ELNs/cash). Fact sheet 140 at 2026-09-30."
+    },
+    "distribution_freq": {
+     "value": "Monthly",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer fact sheet ('monthly income stream')",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": "Monthly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/jepi/",
+       "value": "Monthly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 7.45,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer product data (yieldMonthEnd.thirtyDaySecYield)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": 7.45,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (30-day SEC yield)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": 7.45,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (12-month rolling dividend yield, reference)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": 8.04,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis (TTM yield, reference)",
+       "url": "https://stockanalysis.com/etf/jepi/",
+       "value": 7.94,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "TYPE: 30-day SEC yield at 2026-09-30 (7.29% on 2026-10-27). 12-month rolling distribution yield 8.04% (issuer) / 7.94% TTM (stockanalysis). IMPORTANT: the payout is LARGELY OPTION PREMIUM (income from S&P 500 call options sold via ELNs) plus stock dividends - not a classic dividend yield; it varies with market volatility."
+    },
+    "ret_1y_pct": {
+     "value": 6.62,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer product data (performanceReturns, quarter-end) (NAV)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": 6.62,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": 6.62,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/JEPI",
+       "value": 6.66,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 6.68% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 6.66% (diff -0.02 pp)."
+    },
+    "ret_5y_pct": {
+     "value": 7.78,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer product data (performanceReturns, quarter-end) (NAV)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": 7.78,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Q3-2026) (NAV)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": 7.78,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Yahoo Finance adjusted close (MARKET PRICE basis, computed; cross-check only)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/JEPI",
+       "value": 7.76,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, quarter-end 2026-09-30; issuer web data and issuer Q3-2026 fact sheet (separate document) match exactly. Independent cross-check on market-price basis: issuer market-price return 7.76% vs return computed from Yahoo Finance adjusted closes 2025/2021/2016-09-30 -> 2026-09-30 = 7.76% (diff 0.0 pp)."
+    },
+    "ret_10y_pct": {
+     "value": null,
+     "as_of": "2026-09-30",
+     "sources": [],
+     "status": "verified",
+     "note": "Fund younger than 10 years at 2026-09-30 (inception 2020-05-20); no 10-year return exists."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "Microsoft",
+       1.97
+      ],
+      [
+       "Apple",
+       1.96
+      ],
+      [
+       "Mastercard",
+       1.88
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer product data (dailyHoldings)",
+       "url": "https://am.jpmorgan.com/FundsMarketingHandler/product-data?cusip=46641Q332&country=us&role=adv&language=en&userLoggedIn=false",
+       "value": [
+        [
+         "MICROSOFT CORP COMMON",
+         1.97
+        ],
+        [
+         "APPLE INC COMMON STOCK",
+         1.96
+        ],
+        [
+         "MASTERCARD INC COMMON",
+         1.88
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis holdings",
+       "url": "https://stockanalysis.com/etf/jepi/holdings/",
+       "value": [
+        [
+         "Microsoft Corporation",
+         1.97
+        ],
+        [
+         "Apple Inc.",
+         1.96
+        ],
+        [
+         "Mastercard Incorporated",
+         1.88
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Top 10, excl. cash)",
+       "url": "https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/literature/fact-sheet/etfs/FS-JEPI.PDF",
+       "value": [
+        [
+         "MICROSOFT",
+         2.0
+        ],
+        [
+         "NVIDIA",
+         1.9
+        ],
+        [
+         "APPLE",
+         1.9
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Very flat portfolio (~1.8-2.0% each), so ranks change often (2026-09-30: Microsoft, NVIDIA, Apple)."
+    }
+   },
+   "notes": "Actively managed covered-call style income ETF."
+  },
+  {
+   "ticker": "QQQ",
+   "former_ticker": null,
+   "name": "Invesco QQQ ETF",
+   "issuer": "Invesco",
+   "issuer_url": "https://www.invesco.com/qqq-etf/en/home.html",
+   "reference_only": true,
+   "fields": {
+    "exchange": {
+     "value": "Nasdaq",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/qqq/",
+       "value": "Nasdaq",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ",
+       "value": "NGM / NasdaqGM",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/QQQ/info?assetclass=etf",
+       "value": "NASDAQ-GM",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing Nasdaq (Nasdaq Global Market per Nasdaq.com/Yahoo) - NOT listed on NYSE/NYSE Arca. Issuer page text not explicit on venue; three independent market-data sources agree."
+    },
+    "index": {
+     "value": "Nasdaq-100 Index",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer API (benchmark label)",
+       "url": "https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/QQQ/performance/standard?idType=ticker&performanceSubType=annualized&productType=ETF",
+       "value": "NASDAQ-100 Index (USD)",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer page",
+       "url": "https://www.invesco.com/qqq-etf/en/home.html",
+       "value": "Nasdaq-100 index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/qqq/",
+       "value": "NASDAQ 100 Index",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.18,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page ('total expense ratio is 0.18%')",
+       "url": "https://www.invesco.com/qqq-etf/en/home.html",
+       "value": 0.18,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/qqq/",
+       "value": 0.18,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com",
+       "url": "https://api.nasdaq.com/api/quote/QQQ/summary?assetclass=etf",
+       "value": 0.2,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Cut from 0.20% to 0.18% with the conversion from a unit investment trust to an open-end ETF (shareholder vote 2025-12-19, effective ~2025-12-22 per press reports). Nasdaq.com still shows 0.20% (stale)."
+    },
+    "aum_usd_bn": {
+     "value": 482.97,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer API (shareclassTotalNetAssets)",
+       "url": "https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46090E103?expand=nav&idType=cusip&variationType=fundDetails&productType=ETF",
+       "value": 482.97,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/qqq/",
+       "value": 471.53,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/QQQ/summary?assetclass=etf",
+       "value": 487.28,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by -2.4%, Nasdaq.com by +0.9% (dates within 1 day) - within 5%."
+    },
+    "inception_date": {
+     "value": "1999-03-10",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page / API (performanceStartDate)",
+       "url": "https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/QQQ/performance/standard?idType=ticker&performanceSubType=annualized&productType=ETF",
+       "value": "1999-03-10",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/qqq/",
+       "value": "1999-03-10",
+       "as_of": null
+      },
+      {
+       "name": "Yahoo first trade",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ",
+       "value": "1999-03-10",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    }
+   },
+   "notes": "Reference ticker only: listed on Nasdaq, not NYSE. Issuer now brands it 'Invesco QQQ ETF'; legal/registrant name 'Invesco QQQ Trust, Series 1' still shown by Nasdaq.com and stockanalysis. Converted from UIT to open-end ETF in Dec 2025."
+  },
+  {
+   "ticker": "QQQM",
+   "former_ticker": null,
+   "name": "Invesco NASDAQ 100 ETF",
+   "issuer": "Invesco",
+   "issuer_url": "https://www.invesco.com/us/en/financial-products/etfs/invesco-nasdaq-100-etf.html",
+   "reference_only": true,
+   "fields": {
+    "exchange": {
+     "value": "Nasdaq",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "stockanalysis (Stock Exchange)",
+       "url": "https://stockanalysis.com/etf/qqqm/",
+       "value": "Nasdaq",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Yahoo Finance chart meta (exchangeName / fullExchangeName)",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQM",
+       "value": "NGM / NasdaqGM",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (exchange)",
+       "url": "https://api.nasdaq.com/api/quote/QQQM/info?assetclass=etf",
+       "value": "NASDAQ-GM",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing Nasdaq (Nasdaq Global Market per Nasdaq.com/Yahoo) - NOT listed on NYSE/NYSE Arca. Issuer page is behind a role-selection gate (not clicked); three independent market-data sources agree."
+    },
+    "index": {
+     "value": "Nasdaq-100 Index",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "stockanalysis (Index Tracked)",
+       "url": "https://stockanalysis.com/etf/qqqm/",
+       "value": "NASDAQ 100 Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer page title",
+       "url": "https://www.invesco.com/us/en/financial-products/etfs/invesco-nasdaq-100-etf.html",
+       "value": "Invesco NASDAQ 100 ETF",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "single-source",
+     "note": "Only stockanalysis states the index explicitly; the issuer product page is behind a role-selection gate. The fund name and its holdings (identical top weights to QQQ, Invesco holdings API) are consistent with the Nasdaq-100."
+    },
+    "expense_ratio_pct": {
+     "value": 0.15,
+     "as_of": null,
+     "sources": [
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/qqqm/",
+       "value": 0.15,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com",
+       "url": "https://api.nasdaq.com/api/quote/QQQM/summary?assetclass=etf",
+       "value": 0.15,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer page/fact sheet not reachable without the role gate; two independent secondary sources agree."
+    },
+    "aum_usd_bn": {
+     "value": 110.42,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer API (shareclassTotalNetAssets)",
+       "url": "https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46138G649?expand=nav&idType=cusip&variationType=fundDetails&productType=ETF",
+       "value": 110.42,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis (AUM)",
+       "url": "https://stockanalysis.com/etf/qqqm/",
+       "value": 107.59,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Nasdaq.com quote API (AUM)",
+       "url": "https://api.nasdaq.com/api/quote/QQQM/summary?assetclass=etf",
+       "value": 109.89,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund-level total net assets (single share class, so fund = share class). stockanalysis differs by -2.6%, Nasdaq.com by -0.5% (dates within 1 day) - within 5%."
+    },
+    "inception_date": {
+     "value": "2020-10-13",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "stockanalysis",
+       "url": "https://stockanalysis.com/etf/qqqm/",
+       "value": "2020-10-13",
+       "as_of": null
+      },
+      {
+       "name": "Yahoo first trade",
+       "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQM",
+       "value": "2020-10-13",
+       "as_of": null
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer document not reachable; stockanalysis inception = Yahoo first trading day."
+    }
+   },
+   "notes": "Reference ticker only: listed on Nasdaq, not NYSE."
   }
  ]
 }
