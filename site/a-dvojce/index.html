@@ -45,8 +45,10 @@ h1 { font: 800 clamp(31px, 8.6vw, 62px)/1.0 var(--font-head); letter-spacing: -.
 h1 .tk { font-family: var(--font-mono); font-weight: 700; letter-spacing: -.04em; background: var(--ink); color: var(--bg); padding: 0 .14em; border-radius: .12em; }
 .lede { margin-top: 10px; font-size: 16px; line-height: 1.4; color: var(--muted); max-width: 34em; }
 .lede b { color: var(--ink); font-weight: 600; }
-.d-only { display: none; }
-@media (min-width: 900px) { .d-only { display: inline; } }
+.d-only, .d-only-block { display: none; }
+.mini { list-style: none; padding: 0; margin: 22px 0 0; gap: 22px; border-top: 1px solid var(--line); padding-top: 16px; font-size: 14px; color: var(--muted); }
+.mini b { display: block; font: 700 26px/1 var(--font-mono); color: var(--ink); letter-spacing: -.03em; margin-bottom: 4px; }
+@media (min-width: 900px) { .d-only { display: inline; } .d-only-block { display: flex; } }
 
 /* ticker chips */
 .chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px 10px; padding: 2px 16px; scroll-padding-inline: 16px; }
@@ -242,6 +244,7 @@ footer a { color: var(--muted); }
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="lead__note" data-note>Pošleme PDF se <b>všemi 20 dvojčaty</b>, poplatky brokerů a&nbsp;daněmi v&nbsp;ČR. Bez telefonu, bez poradce.</p>
         <p data-lead-msg aria-live="polite"></p>
+        <ul class="mini d-only-block"><li><b>20</b> ETF z NYSE a jejich dvojčata</li><li><b>6</b> brokerů v ČR</li><li><b>1</b> stránka o daních</li></ul>
       </form>
     </section>
 

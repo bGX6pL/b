@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ETF tahák — přehled návrhů</title>
+<link rel="stylesheet" href="site/assets/fonts/fonts.css">
+<style>
+:root { --bg: #F4F2EC; --ink: #16150F; --muted: #625D52; --line: #DAD4C6; --card: #fff; --accent: #0B6B4C; }
+* { box-sizing: border-box; } body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 "Schibsted Grotesk", system-ui, sans-serif; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 28px 20px 60px; }
+h1 { font-weight: 800; font-size: clamp(30px, 5vw, 48px); letter-spacing: -.03em; line-height: 1.02; margin: 0; }
+.lede { color: var(--muted); max-width: 60em; margin: 10px 0 0; }
+h2 { font-weight: 800; font-size: 24px; letter-spacing: -.02em; margin: 44px 0 12px; }
+.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.card .shots { display: grid; grid-template-columns: 1fr 1.9fr; gap: 6px; padding: 10px; background: #EEEAE0; }
+.card img { width: 100%; height: 230px; object-fit: cover; object-position: top; border-radius: 6px; border: 1px solid var(--line); background: #fff; }
+.card .body { padding: 12px 14px 16px; }
+.card h3 { margin: 0; font-size: 18px; font-weight: 800; }
+.card p { margin: 4px 0 10px; color: var(--muted); font-size: 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 6px; }
+.links a { font-size: 13px; font-weight: 700; text-decoration: none; border: 1.5px solid var(--ink); border-radius: 999px; padding: 4px 10px; color: var(--ink); }
+.links a.primary { background: var(--ink); color: var(--bg); }
+.ads { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.ads figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 8px; }
+.ads img { width: 100%; border-radius: 6px; display: block; }
+.ads figcaption { font-size: 13px; color: var(--muted); padding: 6px 2px 0; }
+ul.docs { padding-left: 18px; } ul.docs li { margin: 4px 0; } ul.docs a { font-weight: 700; color: var(--ink); }
+code { font-family: "JetBrains Mono", monospace; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>ETF tahák — 4 návrhy landing page, 2 reklamy</h1>
+  <p class="lede">Lead magnet se srovnáním ETF z burzy NYSE pro českého drobného investora z mobilní reklamy. Všechny varianty jsou funkční stránky se stejnými ověřenými daty (<code>data/etfs.json</code>). Otevírejte přes lokální server: <code>.venv/Scripts/python -m http.server 8000</code> v kořeni repozitáře → <code>http://localhost:8000/</code>.</p>
+
+  <h2>Landing pages</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="shots"><img src="screenshots/a-mobile-first.png" alt="A mobil"><img src="screenshots/a-desktop-first.png" alt="A desktop"></div>
+      <div class="body"><h3>A — Dvojče</h3><p>„Chcete VOO? Tady je jeho evropské dvojče.“ Výběr fondu → lístek s razítkem a buyable dvojče s ISIN. Pro reklamu 1.</p>
+        <div class="links"><a class="primary" href="site/a-dvojce/">Otevřít</a><a href="site/a-dvojce/?t=QQQ">?t=QQQ</a><a href="screenshots/a-mobile-full.png">mobil celé</a><a href="screenshots/a-desktop-full.png">desktop celé</a></div></div>
+    </article>
+    <article class="card">
+      <div class="shots"><img src="screenshots/b-mobile-first.png" alt="B mobil"><img src="screenshots/b-desktop-first.png" alt="B desktop"></div>
+      <div class="body"><h3>B — Účtenka</h3><p>„Kolik vám za 20 let sebere poplatek?“ Kalkulačka jako účtenka: bankovní fond vs. VOO vs. dvojče. Pro reklamu 2.</p>
+        <div class="links"><a class="primary" href="site/b-poplatky/">Otevřít</a><a href="site/b-poplatky/?m=5000&amp;y=30">?m=5000&amp;y=30</a><a href="screenshots/b-mobile-full.png">mobil celé</a><a href="screenshots/b-desktop-full.png">desktop celé</a></div></div>
+    </article>
+    <article class="card">
+      <div class="shots"><img src="screenshots/c-mobile-first.png" alt="C mobil"><img src="screenshots/c-desktop-first.png" alt="C desktop"></div>
+      <div class="body"><h3>C — Žebříček</h3><p>„Srovnali jsme 20 ETF z NYSE.“ Řaditelný žebříček v novinovém stylu, sloupec dvojčat zamčený. Pro reklamu 2 (<code>?sort=ter</code>) nebo obecnou.</p>
+        <div class="links"><a class="primary" href="site/c-srovnani/">Otevřít</a><a href="site/c-srovnani/?sort=ter">?sort=ter</a><a href="screenshots/c-mobile-full.png">mobil celé</a><a href="screenshots/c-desktop-full.png">desktop celé</a></div></div>
+    </article>
+    <article class="card">
+      <div class="shots"><img src="screenshots/d-mobile-first.png" alt="D mobil"><img src="screenshots/d-desktop-first.png" alt="D desktop"></div>
+      <div class="body"><h3>D — Přeložit portfolio</h3><p>„Složte si portfolio z amerických ETF. Přeložíme ho do evropských.“ Vzory z YouTube/Redditu → nákupní lístek. Pro reklamu 1.</p>
+        <div class="links"><a class="primary" href="site/d-portfolio/">Otevřít</a><a href="site/d-portfolio/?p=three">?p=three</a><a href="screenshots/d-mobile-full.png">mobil celé</a><a href="screenshots/d-desktop-full.png">desktop celé</a></div></div>
+    </article>
+  </div>
+
+  <h2>Po odeslání</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="shots"><img src="screenshots/thankyou-mobile-first.png" alt="Děkovací stránka"><img src="site/tahak/nahled-1.png" alt="PDF strana 1" style="object-position:top"></div>
+      <div class="body"><h3>Děkovací stránka + PDF tahák</h3><p>Okamžité stažení, osobní výstup, odemčená dvojčata, otázka na 1 klik, náhled e-mailů.</p>
+        <div class="links"><a class="primary" href="site/dekujeme/?v=A">Děkovací stránka</a><a href="site/tahak/etf-tahak-2026.pdf">PDF</a><a href="docs/emaily.md">E-maily</a></div></div>
+    </article>
+  </div>
+
+  <h2>Reklamy</h2>
+  <div class="ads">
+    <figure><img src="ads/ad-1-dvojce-feed.png" alt="Reklama 1 feed"><figcaption>1 · Dvojče · feed 4:5</figcaption></figure>
+    <figure><img src="ads/ad-1-dvojce-story.png" alt="Reklama 1 story"><figcaption>1 · Dvojče · Stories 9:16</figcaption></figure>
+    <figure><img src="ads/ad-2-uctenka-feed.png" alt="Reklama 2 feed"><figcaption>2 · Účtenka · feed 4:5</figcaption></figure>
+    <figure><img src="ads/ad-2-uctenka-story.png" alt="Reklama 2 story"><figcaption>2 · Účtenka · Stories 9:16</figcaption></figure>
+  </div>
+
+  <h2>Dokumenty</h2>
+  <ul class="docs">
+    <li><a href="docs/strategie.md">Strategie</a> — cílová skupina, nabídka, moment žádosti o kontakt, formulář, po odeslání, varianty, měření</li>
+    <li><a href="docs/reklamy.md">Reklamy</a> — texty, nadpisy, URL s parametry, nastavení kampaně</li>
+    <li><a href="docs/data-overeni.md">Ověření dat</a> — metodika, výsledky kontrol, outliery</li>
+    <li><a href="research/competitors/README.md">Konkurence</a> — rešerše se screenshoty z mobilu</li>
+    <li><a href="research/cz-context.md">Český kontext</a> — brokeři, daně, regulace, reklamní platformy, cílová skupina</li>
+    <li><a href="docs/spusteni.md">Spuštění zítra</a> — kontrolní seznam</li>
+  </ul>
+</div>
+</body>
+</html>
