@@ -107,7 +107,7 @@ Každá varianta ukazuje skutečná data už v první obrazovce, bez kliknutí: 
 - **Oprava překlepů v doméně** (`seznam.cs` → `seznam.cz`, `gmial.com` → `gmail.com`) — v Česku je velký podíl schránek na Seznamu, překlep = ztracený lead.
 - **Klávesnice pro e-mail** (`inputmode="email"`, `autocomplete="email"`) → na mobilu jeden ťuk na návrh adresy.
 - **Honeypot** místo CAPTCHA (CAPTCHA na mobilu zabíjí konverzi).
-- **Žádné zaškrtávátko:** souhlas s navazujícími e-maily je jasně napsaný u tlačítka a odhlášení je v každém e-mailu. *(Právní posouzení: viz `research/cz-context.md`; pokud právník trvá na samostatném souhlasu, přidá se jedno nepovinné zaškrtávátko — tahák se pošle i bez něj.)*
+- **Tahák dostane každý, souhlas s dalšími e-maily je zvlášť.** Podmínit PDF odběrem newsletteru je podle EDPB (Guidelines 05/2020, čl. 7 odst. 4 GDPR) téměř jistě neplatný souhlas a podle zákona 480/2004 Sb. jsou navazující e-maily obchodní sdělení. Formulář proto zůstává s **jedním polem a bez zaškrtávátka**. O souhlas žádáme **na děkovací stránce, hned po předání PDF**: jedno tlačítko „Ano, posílejte“ vedle stejně viditelného „Ne, stačí mi tahák“, potom double opt-in e-mail. Ukládáme znění souhlasu a čas. Detail v `research/cz-context.md` (6c).
 
 ---
 
@@ -117,13 +117,15 @@ Každá varianta ukazuje skutečná data už v první obrazovce, bez kliknutí: 
 1. **„Hotovo. Tahák je váš.“ + tlačítko Stáhnout PDF.** Okamžitá odměna; nemusí čekat na e-mail (ten může skončit v Promoakcích).
 2. **Jeho osobní výstup** — dvojče k fondu, který vybral / jeho výpočet / jeho nákupní lístek s ISIN.
 3. **Odemčená tabulka všech dvojčat** — splněný slib „odemknout“.
-4. **Jedna otázka, 1 klik:** „Kde investujete, nebo chcete začít?“ (XTB, Trading 212, DEGIRO, IBKR, Fio, Revolut, Portu/Fondee, jinde, zatím nikde). Progresivní profilace bez dalšího pole ve formuláři. Odpověď řídí obsah e-mailu č. 3 a je nejcennější segmentací pro klienta.
-5. **Co přijde dál:** časová osa e-mailů — žádné překvapení, méně odhlášení.
+4. **Souhlas s tipy a aktualizacemi, 1 klik:** „Poslat vám 4 krátké tipy a čtvrtletní aktualizaci taháku?“ — *Ano, posílejte* / *Ne, stačí mi tahák*. Je to okamžik nejvyšší vděčnosti (právě dostal hodnotu) a souhlas je prokazatelně svobodný.
+5. **Jen po „Ano“ jedna otázka, 1 klik:** „Pro kterého brokera vám máme psát?“ (XTB, Trading 212, DEGIRO, IBKR, Fio, Revolut, Portu/Fondee, jinde, zatím nikde). Progresivní profilace bez dalšího pole ve formuláři. Odpověď řídí obsah e-mailu č. 3 a je nejcennější segmentací pro klienta.
+6. **Co přijde dál:** časová osa e-mailů — žádné překvapení, méně odhlášení.
 
 ### E-mailová sekvence (detail v `docs/emaily.md`)
 | Kdy | E-mail | Cíl |
 |---|---|---|
-| hned | Tahák v PDF + osobní výstup | Doručit slib, ověřit adresu |
+| hned | Tahák v PDF + osobní výstup (transakční, bez propagace — dostane každý) | Doručit slib |
+| hned, jen po „Ano“ | Potvrzení odběru (double opt-in) | Prokazatelný souhlas |
 | D+1 | 3 chyby při prvním nákupu ETF | Užitečnost → otevírání dalších e-mailů |
 | D+3 | Dvojče u vašeho brokera (podle odpovědi z děkovací stránky) | Personalizace, první konverzní krok klienta |
 | D+6 | Daně bez stresu | Odstranit poslední bariéru |
@@ -173,7 +175,8 @@ Kreativy jsou v `ads/` (PNG 1080×1350 pro feed a 1080×1920 pro Stories/Reels),
 | Reklama | CTR odkazu | ≥ 1,2 % |
 | Stránka | podíl návštěv s interakcí | ≥ 35 % |
 | Stránka | konverze návštěva → e-mail | ≥ 20 % |
-| Děkovačka | odpověď na otázku „kde investujete“ | ≥ 50 % |
+| Děkovačka | souhlas s tipy („Ano, posílejte“) + potvrzení v e-mailu | ≥ 50 % / ≥ 80 % z nich |
+| Děkovačka | odpověď na otázku „kde investujete“ (z přihlášených) | ≥ 60 % |
 | E-maily | open rate e-mailu č. 1 / proklik | ≥ 55 % / ≥ 20 % |
 | Kvalita | odhlášení do 10 dnů | ≤ 6 % |
 
@@ -187,7 +190,9 @@ Kreativy jsou v `ads/` (PNG 1080×1350 pro feed a 1080×1920 pro Stories/Reels),
 Podrobně v `research/cz-context.md` a `docs/spusteni.md`.
 - **Není to investiční doporučení:** stránky srovnávají veřejná data, nic nedoporučují, vzorová portfolia jsou označená jako příklady. Na každé stránce je standardní upozornění na riziko, minulé výnosy a měnové riziko.
 - **Minulé výnosy** jen jako doplňkový údaj, vždy s datem, měnou (USD) a zdrojem, za 1/5/10 let.
-- **E-maily:** souhlas jasně u tlačítka, odhlášení v každém e-mailu, správce a účely v `/ochrana-udaju/`.
+- **E-maily:** PDF bez podmínky, souhlas s dalšími e-maily zvlášť na děkovací stránce + double opt-in, odhlášení v každém e-mailu, správce a účely v `/ochrana-udaju/`.
+- **MAR (investiční doporučení):** výběr dvojčete se řídí zveřejněným pravidlem (stejný index, nejnižší TER mezi velkými akumulačními třídami), u obsahu bude autor, datum a prohlášení o střetu zájmů. Vzorová portfolia (varianta D) jsou regulatorně nejcitlivější — ESMA považuje i nápady „jak složit portfolio“ za možné doporučení; před spuštěním D právní posouzení.
+- **Reklamní platformy:** Meta pro ČR ověření finančního inzerenta nevyžaduje → den 1 jen Meta. Google Ads vyžaduje od 15. 9. 2026 ověření finančních služeb i v ČR → až po ověření. TikTok zatím ne.
 - **Cookies:** měřicí kódy Meta a Google se načtou až po souhlasu; „Odmítnout“ je stejně velké jako „Povolit“.
 - **Fonty hostujeme sami** — žádný přenos IP adresy na Google při načtení stránky.
 

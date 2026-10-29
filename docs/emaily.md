@@ -6,7 +6,9 @@ Proměnné: `{{dvojce}}` (blok s dvojčetem, výpočtem nebo lístkem podle vari
 
 ---
 
-## E-mail 0 — hned po odeslání
+**Kdo dostává co:** E-mail 0 (tahák) dostane každý, kdo zadá e-mail — je transakční a nesmí obsahovat propagaci. Potvrzovací e-mail a sekvenci 1–4 + čtvrtletní aktualizace dostanou jen ti, kdo na děkovací stránce klikli „Ano, posílejte“ a odběr potvrdili (double opt-in).
+
+## E-mail 0 — hned po odeslání (všem, transakční)
 **Předmět:** Váš ETF tahák (PDF)
 **Preheader:** 20 ETF z NYSE, jejich evropská dvojčata, brokeři a daně na 2 stranách.
 
@@ -18,15 +20,21 @@ Proměnné: `{{dvojce}}` (blok s dvojčetem, výpočtem nebo lístkem podle vari
 >
 > Na první straně najdete 20 ETF z burzy NYSE a ke každému evropské dvojče — ISIN stačí zkopírovat do vyhledávání v aplikaci brokera. Na druhé straně je, kolik berou brokeři v ČR, a daně v pěti bodech.
 >
-> Zítra pošlu 3 nejčastější chyby, které lidé dělají při prvním nákupu ETF. Trvá to 2 minuty čtení.
->
 > Petra, ETF tahák
 >
 > *P. S. Nikdy vám nebudeme volat. Pokud vám kvůli investicím volá někdo neznámý sám od sebe, buďte opatrní.*
 
 ---
 
-## E-mail 1 — D+1
+## Potvrzení odběru — hned, jen po „Ano, posílejte“
+**Předmět:** Potvrďte prosím odběr tipů o ETF
+> Klikli jste, že chcete 4 krátké tipy o ETF a čtvrtletní aktualizace taháku. Potvrďte to prosím jedním klikem: **[Ano, chci odebírat]**
+>
+> Pokud jste to nebyli vy, e-mail ignorujte — nic vám posílat nebudeme. Tahák už máte v samostatném e-mailu.
+
+---
+
+## E-mail 1 — D+1 (jen potvrzení odběratelé)
 **Předmět:** 3 chyby při prvním nákupu ETF
 **Preheader:** Dvě z nich stojí peníze, třetí nervy u daňového přiznání.
 
@@ -63,7 +71,7 @@ Proměnné: `{{dvojce}}` (blok s dvojčetem, výpočtem nebo lístkem podle vari
 > - **Akumulační fond** nevyplácí dividendy, takže do prodeje nic nepřiznáváte.
 > - **Distribuční fond** = dividendy patří do daňového přiznání.
 >
-> *Toto není daňové poradenství — u větších částek se poraďte s daňovým poradcem.* Podrobnosti a zdroje: str. 2 taháku.
+> *Daňové informace jsou zjednodušené, vycházejí z předpisů platných k [datum], závisí na vašich individuálních poměrech a mohou se změnit. Nejde o daňové poradenství.* Podrobnosti a zdroje: str. 2 taháku.
 
 *(Formulace v tomto e-mailu se finalizují podle `research/cz-context.md`, kapitola Daně.)*
 
@@ -92,4 +100,4 @@ Proměnné: `{{dvojce}}` (blok s dvojčetem, výpočtem nebo lístkem podle vari
 ---
 
 ## Patička (všechny e-maily)
-> Tento e-mail dostáváte, protože jste si na [doména] stáhli ETF tahák. **[Odhlásit se jedním klikem]** · Provozovatel: [společnost s.r.o., IČO, sídlo] · Obsah má informační charakter a není investičním doporučením. Investování je spojeno s rizikem.
+> Tento e-mail dostáváte, protože jste se po stažení ETF taháku na [doména] přihlásili k odběru tipů. **[Odhlásit se jedním klikem]** · Provozovatel: [společnost s.r.o., IČO, sídlo] · Obsah má informační charakter a není investičním doporučením. Investování je spojeno s rizikem.

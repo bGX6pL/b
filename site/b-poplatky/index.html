@@ -100,6 +100,11 @@ h2 { font: 800 clamp(26px, 6.6vw, 44px)/1.03 var(--font-head); font-variation-se
 .bar__fill { height: 100%; border-radius: 7px; background: var(--ink); transition: width .5s ease; }
 .bar--etf .bar__fill { background: var(--accent); }
 .bar--bank .bar__fill { background: var(--danger); }
+.cases { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 22px; }
+.cases__lbl { width: 100%; font: 600 10.5px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.cases button { flex: 1 1 0; min-width: 0; border: 1px solid var(--line); background: var(--card); color: var(--muted); border-radius: 10px; padding: 8px 6px; font: 500 11.5px/1.3 var(--font-mono); text-align: left; }
+.cases button b { display: block; color: var(--ink); font: 700 13px/1.2 var(--font-body); margin-bottom: 2px; }
+.cases button[aria-pressed="true"] { border-color: var(--danger); box-shadow: inset 0 0 0 1px var(--danger); }
 .callout { margin-top: 18px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; font-size: 14.5px; color: var(--muted); }
 .callout b { color: var(--ink); }
 
@@ -228,6 +233,7 @@ footer p + p { margin-top: 10px; }
           <p class="sub">I z výnosů, které jste vydělali v minulých letech. Proto rozdíl s časem roste rychleji než vaše vklady.</p>
         </div>
         <div>
+          <div class="cases" data-cases role="group" aria-label="Typ bankovního fondu"></div>
           <div class="bars" data-bars></div>
           <p class="callout" data-callout></p>
         </div>
@@ -265,7 +271,7 @@ footer p + p { margin-top: 10px; }
         <details><summary>Proč počítáte se 7 % ročně?</summary><p>Je to konzervativní předpoklad pro akciový fond na dlouhou dobu. Na poměru mezi poplatky to moc nemění: při jakémkoli kladném výnosu je fond s poplatkem 2 % dráž než fond s 0,03 %. Budoucí výnos nikdo nezná, minulé výnosy nejsou zárukou.</p></details>
         <details><summary>Proč ukazujete VOO, když ho nekoupím?</summary><p>Protože ho doporučuje půl internetu. Pro drobné investory v EU je ale většinou nedostupné (chybí mu dokument KID). Evropské dvojče sleduje stejný index a stojí podobně — v taháku jsou dvojčata všech 20 fondů.</p></details>
         <details><summary>Co je „směna měny“ u ETF?</summary><p>Evropská ETF se obchodují v eurech nebo dolarech. Broker vám koruny smění a vezme si za to procento. Rozdíl mezi brokery je velký — srovnání najdete v taháku.</p></details>
-        <details><summary>Je to zdarma? Kde je háček?</summary><p>Tahák je zdarma. Výměnou vám pošleme 4 krátké e-maily s tipy o ETF a jednou za čtvrtletí aktualizovaný tahák. Odhlásit se můžete jedním klikem.</p></details>
+        <details><summary>Je to zdarma? Kde je háček?</summary><p>Tahák je zdarma a pošleme ho každému, kdo zadá e-mail — k ničemu dalšímu se tím nezavazujete. Po odeslání vám nabídneme 4 krátké tipy o ETF a čtvrtletní aktualizaci taháku. Přihlásit se k nim nemusíte, a když ano, odhlásíte se jedním klikem.</p></details>
         <details><summary>Je to investiční doporučení?</summary><p>Ne. Kalkulačka ukazuje matematiku poplatků a srovnáváme veřejná data o fondech. Rozhodnutí je na vás. Před nákupem si přečtěte sdělení klíčových informací (KID) fondu.</p></details>
       </div>
     </section>
@@ -280,7 +286,7 @@ footer p + p { margin-top: 10px; }
           <button type="submit">Poslat tahák</button>
         </div>
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <p class="lead__legal">Odesláním dostanete tahák a e-maily o ETF. Odhlásit se můžete jedním klikem. <a href="../ochrana-udaju/">Jak chráníme vaše údaje</a></p>
+        <p class="lead__legal">E-mail použijeme k zaslání taháku. Telefon ani jiné údaje nechceme. <a href="../ochrana-udaju/">Jak chráníme vaše údaje</a></p>
         <p data-lead-msg aria-live="polite"></p>
       </form>
     </section>
@@ -312,7 +318,7 @@ footer p + p { margin-top: 10px; }
         <button type="submit">Poslat</button>
       </div>
       <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <p class="lead__legal">Bez telefonu. Odhlášení jedním klikem. <a href="../ochrana-udaju/">Ochrana údajů</a></p>
+      <p class="lead__legal">Jen k zaslání taháku. Bez telefonu. <a href="../ochrana-udaju/">Ochrana údajů</a></p>
       <p data-lead-msg aria-live="polite"></p>
     </form>
   </div>
@@ -331,23 +337,31 @@ footer p + p { margin-top: 10px; }
   var fx = D.calc && D.calc.fx_fee_pct !== undefined ? D.calc.fx_fee_pct : 0.5;
   var bank = D.bank;
 
-  // Future value of monthly deposits made at month end; ter = annual % of assets, upfront = % of every deposit.
+  // Future value of monthly deposits made at month end. ter = annual % of assets.
+  // upfront = share of every payment that never gets invested: a bank entry fee is a mark-up inside the payment
+  // (rate/(1+rate), as ČS and KB compute it), the broker's FX fee is a flat % of the converted amount.
   function fv(c, years, ter, upfront) {
     var n = years * 12, net = (1 + R) * (1 - ter / 100) - 1, m = Math.pow(1 + net, 1 / 12) - 1;
-    var dep = c * (1 - upfront / 100);
+    var dep = c * (1 - upfront);
     return dep * (Math.pow(1 + m, n) - 1) / m;
   }
+  function markup(pct) { return pct / (100 + pct); }
+  var CASES = bank.cases || [{ id: "typical", label: "typický", entry_pct: bank.entry_pct, ter_pct: bank.ter_pct }];
+  state.case = (CASES.find(function (k) { return k.id === "typical"; }) || CASES[0]).id;
+  function cur() { return CASES.find(function (k) { return k.id === state.case; }); }
   function round(v) { return Math.round(v / 1000) * 1000; } // results to the nearest thousand — no false precision
 
   function render() {
     var c = state.amount, y = state.years, paid = c * 12 * y;
     var gross = fv(c, y, 0, 0);
-    var fBank = fv(c, y, bank.ter_pct, bank.entry_pct), fUs = fv(c, y, us.ter, 0), fEu = fv(c, y, twin.ter, fx);
+    var bk = cur();
+    var fBank = fv(c, y, bk.ter_pct, markup(bk.entry_pct)), fUs = fv(c, y, us.ter, 0), fEu = fv(c, y, twin.ter, fx / 100);
     var costBank = gross - fBank, costUs = gross - fUs, costEu = gross - fEu, save = fEu - fBank;
     $("[data-h1-years]").textContent = y + " let";
     $("[data-r-head]").textContent = "ÚČTENKA ZA " + y + " LET";
     $("[data-r-sub]").textContent = F.czk(c) + " měsíčně · vloženo " + F.czk(paid);
-    $("[data-bank-desc]").textContent = F.pctS(bank.ter_pct) + " ročně + " + F.pctS(bank.entry_pct) + " vstupní";
+    $("[data-bank-desc]").textContent = F.pctS(bk.ter_pct) + " ročně + " + F.pctS(bk.entry_pct) + " vstupní";
+    document.querySelectorAll("[data-case]").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.case === state.case ? "true" : "false"); });
     $("[data-us-lbl]").textContent = us.t + " z NYSE";
     $("[data-us-desc]").textContent = F.pctS(us.ter) + " · v ČR většinou nekoupíte";
     $("[data-eu-lbl]").textContent = "Dvojče " + twin.ticker;
@@ -363,14 +377,14 @@ footer p + p { margin-top: 10px; }
     $("[data-bars]").innerHTML = [
       ["Bez jakýchkoli poplatků", gross, ""],
       ["Evropské dvojče " + twin.ticker, fEu, "bar--etf"],
-      ["Bankovní akciový fond", fBank, "bar--bank"]
+      ["Bankovní fond (" + bk.label + ")", fBank, "bar--bank"]
     ].map(function (b) {
       return '<div class="bar ' + b[2] + '"><div class="bar__lbl"><span>' + b[0] + "</span><b>" + F.czk(round(b[1])) + "</b></div>" +
         '<div class="bar__track"><div class="bar__fill" style="width:' + (b[1] / max * 100).toFixed(1) + '%"></div></div></div>';
     }).join("");
     $("[data-callout]").innerHTML = "Z každých 100 Kč, které by vám akcie vydělaly, si bankovní fond za " + y + " let vezme <b>" +
       Math.round(costBank / (gross - paid) * 100) + " Kč</b>. Evropské dvojče " + twin.ticker + " <b>" + Math.max(1, Math.round(costEu / (gross - paid) * 100)) + " Kč</b>.";
-    Lead.setContext({ calc_amount: c, calc_years: y, calc_save_czk: round(save) });
+    Lead.setContext({ calc_amount: c, calc_years: y, calc_case: state.case, calc_save_czk: round(save) });
   }
 
   document.querySelectorAll("[data-seg]").forEach(function (seg) {
@@ -382,10 +396,20 @@ footer p + p { margin-top: 10px; }
       Lead.track("calc_change", { amount: state.amount, years: state.years });
     });
   });
+  var cs = document.querySelector("[data-cases]");
+  if (cs && CASES.length > 1) {
+    cs.innerHTML = '<span class="cases__lbl">Porovnat s bankovním fondem:</span>' + CASES.map(function (k) {
+      return '<button type="button" data-case="' + k.id + '"><b>' + k.label + "</b>" + F.pctS(k.entry_pct) + " + " + F.pctS(k.ter_pct) + " ročně</button>";
+    }).join("");
+    cs.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-case]"); if (!b) return;
+      state.case = b.dataset.case; render(); Lead.track("calc_case", { case: state.case });
+    });
+  } else if (cs) cs.hidden = true;
   $("[data-open-assume]").addEventListener("click", function () {
     var el = $("[data-assume]");
-    el.innerHTML = "Hrubý výnos 7 % ročně, vklad vždy na konci měsíce. Roční poplatek (TER) se strhává průběžně z majetku, vstupní poplatek z každého vkladu, " +
-      "směna měny u ETF z každého vkladu. „Poplatky“ = o kolik méně budete mít oproti stejné investici bez poplatků (včetně ušlého zhodnocení). Výsledky zaokrouhleny na tisíce. Ilustrace, ne předpověď.";
+    el.innerHTML = "Hrubý výnos 7 % ročně, vklad vždy na konci měsíce. Roční poplatek (TER) se strhává průběžně z majetku. Vstupní poplatek banky je přirážka v rámci platby (3 % = 2,91 % z vkladu, jak počítá ČS a KB), " +
+      "směna měny u ETF se platí z každého vkladu. „Poplatky“ = o kolik méně budete mít oproti stejné investici bez poplatků (včetně ušlého zhodnocení). Výsledky zaokrouhleny na tisíce. Ilustrace, ne předpověď.";
   });
 
   // Cheapest NYSE ETFs with their twins; first two twins readable, the rest are in the PDF.

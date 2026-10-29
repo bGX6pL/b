@@ -12,6 +12,7 @@ button { cursor: pointer; }
 a { color: inherit; }
 h1, h2, h3, p { margin: 0; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+[hidden] { display: none !important; } /* component display rules must never beat the hidden attribute */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
 .num { font-variant-numeric: tabular-nums; }

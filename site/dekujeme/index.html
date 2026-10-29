@@ -50,6 +50,15 @@ h2 { font: var(--head-w) clamp(24px, 6vw, 34px)/1.08 var(--font-head); letter-sp
 .thanks { display: none; margin-top: 12px; font-weight: 700; color: var(--accent); }
 [data-theme="A"] .thanks, [data-theme="D"] .thanks, [data-theme="C"] .thanks { color: var(--accent); }
 .ask.is-answered .thanks { display: block; }
+.optin { display: grid; gap: 8px; margin-top: 16px; }
+.optin button { border-radius: 12px; padding: 14px 16px; font-weight: 800; font-size: 16px; border: 2px solid var(--ink); }
+.optin__yes { background: var(--accent); color: var(--accent-ink); border-color: var(--accent) !important; }
+.optin__no { background: transparent; color: var(--ink); font-weight: 600 !important; font-size: 15px !important; }
+.ask .fine { font-size: 12px; margin-top: 10px; } .ask .fine a { color: var(--muted); }
+.noopt { margin-top: 12px; font-weight: 700; color: var(--ink) !important; }
+.h3 { font-size: clamp(20px, 5vw, 26px) !important; margin-top: 4px; }
+[data-step2] { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--line); }
+@media (min-width: 600px) { .optin { grid-template-columns: auto auto; justify-content: start; } }
 
 .mine { margin-top: 14px; background: var(--soft); border-radius: var(--radius); padding: 16px; }
 .mine:empty { display: none; }
@@ -104,9 +113,18 @@ footer a { color: var(--muted); }
 
     <section aria-labelledby="h-ask">
       <div class="ask" data-ask>
-        <p class="kicker">Jedna otázka, 1 klik</p>
-        <h2 id="h-ask">Kde investujete, nebo chcete začít?</h2>
-        <p>Další e-maily vám pak napíšeme pro konkrétního brokera: jak tam dvojče najít a kolik zaplatíte.</p>
+        <p class="kicker">Chcete víc? Nemusíte.</p>
+        <h2 id="h-ask">Poslat vám 4 krátké tipy a čtvrtletní aktualizaci taháku?</h2>
+        <p data-consent-text>Během 10 dnů 4 e-maily s praktickými tipy o ETF, pak jednou za čtvrtletí aktualizovaný tahák. Žádné volání, odhlášení jedním klikem v každém e-mailu.</p>
+        <div class="optin" data-optin-btns>
+          <button type="button" class="optin__yes" data-optin="yes">Ano, posílejte</button>
+          <button type="button" class="optin__no" data-optin="no">Ne, stačí mi tahák</button>
+        </div>
+        <p class="fine">Odběr potvrdíte v e-mailu, který vám hned pošleme. Souhlas můžete kdykoli odvolat. <a href="../ochrana-udaju/">Ochrana údajů</a></p>
+        <p class="noopt" data-noopt hidden>Rozumíme. Tahák máte a víc vám psát nebudeme.</p>
+        <div data-step2 hidden>
+        <h2 class="h3">Pro kterého brokera vám máme psát?</h2>
+        <p>Třetí e-mail pak bude o vašem brokerovi: jak tam dvojče najít a kolik zaplatíte.</p>
         <div class="opts" role="group" aria-label="Broker" data-opts>
           <button type="button" data-b="xtb">XTB</button>
           <button type="button" data-b="t212">Trading 212</button>
@@ -118,7 +136,8 @@ footer a { color: var(--muted); }
           <button type="button" data-b="other">Jinde</button>
           <button type="button" data-b="none">Zatím nikde</button>
         </div>
-        <p class="thanks" role="status">Díky! Příští e-mail bude o vašem brokerovi.</p>
+        <p class="thanks" role="status">Díky! Teď jen potvrďte odběr v e-mailu.</p>
+        </div>
       </div>
     </section>
 
@@ -134,7 +153,7 @@ footer a { color: var(--muted); }
     </section>
 
     <section aria-labelledby="h-next">
-      <p class="kicker">Co přijde dál</p>
+      <p class="kicker">Co přijde, když se přihlásíte</p>
       <h2 id="h-next">4 krátké e-maily. Žádné volání.</h2>
       <ol class="steps">
         <li><span class="when">Teď</span><div><b>ETF tahák v PDF</b><span>Totéž, co jste právě stáhli, ať ho máte v telefonu.</span></div></li>
@@ -188,15 +207,28 @@ footer a { color: var(--muted); }
       "<small>" + p.name + "</small><span class='isin'>" + p.isin + "</span></td><td class='num'>" + F.pct(p.ter) + "</td></tr>";
   }).join("");
 
+  function post(path, body) {
+    if (!cfg.endpoint) return;
+    fetch(cfg.endpoint.replace(/\/?$/, path), { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
+      body: JSON.stringify(Object.assign({ id: lead && lead.id, variant: cfg.variant }, body)) }).catch(function () {});
+  }
+  // Newsletter consent is asked separately from the PDF (which everyone gets): freely given, unticked by default,
+  // with the exact wording stored as evidence (GDPR art. 7(1); zákon 480/2004 Sb. § 7).
+  document.querySelector("[data-optin-btns]").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-optin]"); if (!b) return;
+    var yes = b.dataset.optin === "yes";
+    this.hidden = true;
+    $("[data-noopt]").hidden = yes;
+    $("[data-step2]").hidden = !yes;
+    if (window.Track) window.Track(yes ? "newsletter_optin" : "newsletter_decline", { variant: cfg.variant });
+    if (yes) post("/consent", { newsletter: true, consent_text: $("[data-consent-text]").textContent.trim(), ts: new Date().toISOString() });
+  });
   $("[data-opts]").addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b) return;
     this.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
     $("[data-ask]").classList.add("is-answered");
     if (window.Track) window.Track("lead_profile", { broker: b.dataset.b });
-    if (cfg.endpoint) {
-      fetch(cfg.endpoint.replace(/\/?$/, "/profile"), { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
-        body: JSON.stringify({ id: lead && lead.id, broker: b.dataset.b, variant: cfg.variant }) }).catch(function () {});
-    }
+    post("/profile", { broker: b.dataset.b });
   });
   try { sessionStorage.setItem("lead_seen", "1"); } catch (e) {}
 })();

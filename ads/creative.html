@@ -102,7 +102,9 @@ body { -webkit-font-smoothing: antialiased; }
     var fx = D.calc && D.calc.fx_fee_pct !== undefined ? D.calc.fx_fee_pct : 0.5;
     var fv = function (ter, up) { var n = y * 12, net = (1 + R) * (1 - ter / 100) - 1, m = Math.pow(1 + net, 1 / 12) - 1; return c * (1 - up / 100) * (Math.pow(1 + m, n) - 1) / m; };
     var r = function (v) { return Math.round(v / 1000) * 1000; };
-    var g = fv(0, 0), cb = g - fv(bank.ter_pct, bank.entry_pct), ce = g - fv(tw.ter, fx), save = fv(tw.ter, fx) - fv(bank.ter_pct, bank.entry_pct);
+    // Same model as /b-poplatky/: bank entry fee is a mark-up inside the payment (rate/(1+rate)), FX fee flat per deposit.
+    var bankUp = 100 * bank.entry_pct / (100 + bank.entry_pct);
+    var g = fv(0, 0), cb = g - fv(bank.ter_pct, bankUp), ce = g - fv(tw.ter, fx), save = fv(tw.ter, fx) - fv(bank.ter_pct, bankUp);
     root.innerHTML =
       '<div class="ad a2">' +
       '<p class="eyebrow">ETF z NYSE vs. bankovní fond</p>' +
