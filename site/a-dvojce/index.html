@@ -299,7 +299,7 @@ footer a { color: var(--muted); }
       <p class="kicker">Časté otázky</p>
       <h2 id="h-faq">Než nám dáte e-mail</h2>
       <div class="faq">
-        <details><summary>Podle čeho vybíráte dvojče?</summary><p>Podle pevného pravidla, ne podle názoru: evropský fond (UCITS) na stejný index; z nich ten s nejnižším ročním poplatkem mezi akumulačními třídami s majetkem nad 1 mld. EUR. Kde stejný index v Evropě není, ukážeme nejbližší podobný a napíšeme, v čem se liší. Další možnosti ke každému fondu jsou v taháku.</p></details>
+        <details><summary>Podle čeho vybíráte dvojče?</summary><p>Podle pevného pravidla, ne podle názoru: evropský fond (UCITS) na stejný index; z nich ten s nejnižším ročním poplatkem mezi akumulačními třídami s majetkem nad 1 mld. EUR. Kde stejný index v Evropě není, ukážeme nejbližší podobný fond (může být i menší) a napíšeme, v čem se liší. Další možnosti ke každému fondu jsou v taháku.</p></details>
         <details><summary>Je to opravdu zdarma? Kde je háček?</summary><p>Tahák je zdarma a pošleme ho každému, kdo zadá e-mail — k ničemu dalšímu se tím nezavazujete. Po odeslání vám nabídneme 4 krátké tipy o ETF a čtvrtletní aktualizaci taháku. Přihlásit se k nim nemusíte, a když ano, odhlásíte se jedním klikem.</p></details>
         <details><summary>Dá se VOO koupit nějak jinak?</summary><p>Ano, ale pro většinu lidí to nedává smysl. Americká ETF koupí hlavně tzv. profesionální klienti (MiFID II), kteří splní přísné podmínky na objem obchodů a majetek. Proto tahák ukazuje evropská dvojčata, která koupíte běžně.</p></details>
         <details><summary>Je dvojče stejně dobré jako originál?</summary><p>Sleduje stejný index, takže drží stejné firmy. Rozdíly jsou v poplatku (o setiny procenta), měně a zdanění dividend uvnitř fondu. Pro českého investora bývá akumulační irská verze daňově jednodušší.</p></details>
@@ -390,7 +390,7 @@ footer a { color: var(--muted); }
     $("[data-eu-tk]").textContent = p.ticker;
     $("[data-eu-fee]").textContent = F.pct(p.ter) + " ročně";
     $("[data-eu-name]").textContent = p.name;
-    $("[data-eu-ex]").textContent = p.ex + " · " + (p.domicile_cz || "Irsko") + " · UCITS";
+    $("[data-eu-ex]").textContent = p.ex + " · " + (p.domicile_cz || "Irsko") + " · " + (p.wrapper || "UCITS");
     $("[data-eu-match]").textContent = tw.match === "exact" ? "stejný index" : "podobný index";
     $("[data-isin]").textContent = "ISIN " + p.isin;
     $("[data-isin]").dataset.isin = p.isin;

@@ -1,7 +1,14 @@
 ticker,name,issuer,exchange,index,ter_pct,aum_usd_bn,inception,holdings,distribution,yield_pct,ret_1y,ret_5y,ret_10y,twin_isin,twin_ticker,twin_exchange,twin_ter_pct,twin_dist,twin_match
-VUG,Vanguard Morningstar Growth ETF,Vanguard,NYSE Arca,Morningstar US Large Cap Growth Index,0.03,232.9,2004-01-26,135,čtvrtletně,0.35,13.09,13.87,17.94,,,,,,
-VGT,Vanguard Information Technology ETF,Vanguard,NYSE Arca,MSCI US Investable Market Information Technology 25/50 Index,0.09,154.5,2004-01-26,318,čtvrtletně,0.33,35.19,20.92,24.72,,,,,,
-VYM,Vanguard High Dividend Yield ETF,Vanguard,NYSE Arca,FTSE High Dividend Yield Index,0.04,78.9,2006-11-10,593,čtvrtletně,2.35,12.72,11.63,11.28,,,,,,
-VIG,Vanguard Dividend Appreciation ETF,Vanguard,NYSE Arca,S&P U.S. Dividend Growers Index,0.04,109.1,2006-04-21,333,čtvrtletně,1.51,9.77,10.72,12.86,,,,,,
-VXUS,Vanguard Total International Stock ETF,Vanguard,Nasdaq,FTSE Global All Cap ex US Index,0.05,163.2,2011-01-26,,,,,,,,,,,,
-BND,Vanguard Total Bond Market ETF,Vanguard,Nasdaq,Bloomberg U.S. Aggregate Float Adjusted Index,0.03,161.4,2007-04-03,,,,,,,,,,,,
+VUG,Vanguard Morningstar Growth ETF,Vanguard,NYSE Arca,Morningstar US Large Cap Growth Index,0.03,232.87,2004-01-26,135,čtvrtletně,0.35,13.09,13.87,17.94,IE0005E8B9S4,MWOV,Xetra,0.19,acc,close
+SCHG,Schwab U.S. Large-Cap Growth ETF,Schwab Asset Management,NYSE Arca,Dow Jones U.S. Large-Cap Growth Total Stock Market Index,0.04,63.78,2009-12-11,189,čtvrtletně,0.35,13.01,14.71,18.68,IE0005E8B9S4,MWOV,Xetra,0.19,acc,close
+VGT,Vanguard Information Technology ETF,Vanguard,NYSE Arca,MSCI US Investable Market Information Technology 25/50 Index,0.09,154.54,2004-01-26,318,čtvrtletně,0.33,35.19,20.92,24.72,IE00B3WJKG14,QDVE,Xetra,0.15,acc,close
+XLK,State Street Technology Select Sector SPDR ETF,State Street Investment Management (formerly SSGA),NYSE Arca,Technology Select Sector Index,0.08,125.02,1998-12-16,75,čtvrtletně,0.42,39.47,22.14,24.66,IE00B3WJKG14,QDVE,Xetra,0.15,acc,close
+SCHD,Schwab U.S. Dividend Equity ETF,Schwab Asset Management,NYSE Arca,Dow Jones U.S. Dividend 100 Index,0.06,118.47,2011-10-20,102,čtvrtletně,3.13,23.36,9.48,12.44,IE00BYXVGY31,FUSA,Xetra,0.25,acc,close
+VYM,Vanguard High Dividend Yield ETF,Vanguard,NYSE Arca,FTSE High Dividend Yield Index,0.04,78.95,2006-11-10,593,čtvrtletně,2.35,12.72,11.63,11.28,IE00BYXVGY31,FUSA,Xetra,0.25,acc,close
+VIG,Vanguard Dividend Appreciation ETF,Vanguard,NYSE Arca,S&P U.S. Dividend Growers Index,0.04,109.12,2006-04-21,333,čtvrtletně,1.51,9.77,10.72,12.86,IE00BZ56RG20,WTDM,Xetra,0.33,acc,close
+JEPI,JPMorgan Equity Premium Income ETF,J.P. Morgan Asset Management,NYSE Arca,None - actively managed (performance benchmark: S&P 500 Index),0.35,46.09,2020-05-20,135,měsíčně,7.45,6.62,7.78,,IE000U5MJOZ6,JEIP,Xetra,0.35,dist,close
+AGG,iShares Core U.S. Aggregate Bond ETF,iShares (BlackRock),NYSE Arca,Bloomberg US Aggregate Bond Index,0.03,139.14,2003-09-22,13467,měsíčně,5.04,-1.87,-0.64,1.11,IE00BYXYYM63,IUAA,LSE,0.25,acc,exact
+GLD,SPDR Gold Shares,World Gold Trust Services (sponsor); marketed by State Street,NYSE Arca,LBMA Gold Price PM,0.4,135.84,2004-11-18,,nevyplácí,,8.74,18.62,11.74,DE000A2T0VU5,XGDU,Xetra,0.11,acc,close
+QQQ,Invesco QQQ ETF,Invesco,Nasdaq,Nasdaq-100 Index,0.18,482.97,1999-03-10,,,,,,,IE00BMFKG444,XNAS,Xetra,0.2,acc,exact
+VXUS,Vanguard Total International Stock ETF,Vanguard,Nasdaq,FTSE Global All Cap ex US Index,0.05,163.23,2011-01-26,,,,,,,IE0009A5ADV9,VXUS,Xetra,0.12,acc,close
+BND,Vanguard Total Bond Market ETF,Vanguard,Nasdaq,Bloomberg U.S. Aggregate Float Adjusted Index,0.03,161.44,2007-04-03,,,,,,,IE00BYXYYM63,IUAA,LSE,0.25,acc,exact

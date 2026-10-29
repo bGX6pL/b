@@ -42,11 +42,84 @@ DIST_CZ = {"quarterly": "čtvrtletně", "monthly": "měsíčně", "annual": "ro�
            "semi-annual": "pololetně", "semi-annually": "pololetně", "none": "nevyplácí", "n/a": "nevyplácí"}
 DOMICILE_CZ = {"IE": "Irsko", "LU": "Lucembursko", "DE": "Německo", "FR": "Francie", "JE": "Jersey", "GB": "Velká Británie", "NL": "Nizozemsko"}
 
-# Czech labels per twin set id (ids come from data/raw/ucits-twins.json). Filled after research.
-TWIN_LABELS = {}
+# Czech labels per twin set id (ids from data/raw/ucits-twins.json). "short" = one-line honest difference for
+# close (non-identical) matches, shown next to the twin; exact-index sets need none.
+TWIN_LABELS = {
+    "sp500": {"label": "S&P 500"},
+    "global_all_cap": {"label": "celý svět (FTSE Global All Cap)"},
+    "em_msci_imi": {"label": "rozvíjející se trhy (MSCI EM IMI)"},
+    "djia": {"label": "Dow Jones, 30 firem"},
+    "russell2000": {"label": "malé firmy USA (Russell 2000)"},
+    "sp500_equal_weight": {"label": "S&P 500 se stejnými vahami"},
+    "us_aggregate_bond": {"label": "dluhopisy USA (Bloomberg US Aggregate)"},
+    "nasdaq100": {"label": "Nasdaq-100"},
+    "us_total_market": {"label": "celý trh USA", "short": "index MSCI USA, bez malých firem"},
+    "world_ex_us": {"label": "svět bez USA", "short": "bez malých firem, fond je zatím malý"},
+    "developed_ex_us": {"label": "vyspělé trhy bez USA", "short": "index MSCI místo FTSE, bez malých firem"},
+    "em_ftse": {"label": "rozvíjející se trhy (FTSE)", "short": "stejný poskytovatel FTSE, bez malých firem"},
+    "us_small_cap": {"label": "malé firmy USA", "short": "Russell 2000 místo CRSP Small Cap"},
+    "us_large_growth": {"label": "růstové akcie USA", "short": "jiný index: Russell 1000 Growth"},
+    "us_tech": {"label": "technologie USA", "short": "stejné firmy, jiné limity vah"},
+    "us_dividend_income": {"label": "dividendové akcie USA", "short": "jiná strategie: kvalita + dividenda"},
+    "us_dividend_growth": {"label": "rostoucí dividendy USA", "short": "podobná strategie, jiný index"},
+    "us_equity_premium_income": {"label": "příjem z opcí na S&P 500", "short": "stejný správce i strategie, evropská struktura"},
+    "us_reit": {"label": "nemovitostní firmy USA", "short": "jiný index, jen distribuční třída"},
+    "gold": {"label": "zlato", "short": "ETC krytá fyzickým zlatem, ne fond UCITS"},
+}
+
+
+def display_name(name):
+    """Readable fund name for the pages: drop the registered/trademark signs and the long 'State Street'
+    brand prefix of SPDR funds. The official name stays in data/etfs.json."""
+    import re
+    n = re.sub("[®™�]", "", name or "")
+    n = re.sub(r"^State Street\s+(?=SPDR)", "", n)
+    return re.sub(r"\s{2,}", " ", n).strip()
 
 
 def build_cz(cz_raw, C):
     """Map the Czech-context research (brokers, taxes, bank funds, FX) to what the pages need.
-    Filled after research lands; returns safe defaults so the build never crashes."""
-    return {"fx": None, "brokers": [], "bank": None, "tax": None, "calc": None}
+    Every number keeps a pointer to its source in data/raw/cz-context.json."""
+    out = {"fx": None, "brokers": [], "bank": None, "tax": None, "calc": {"fx_fee_pct": 0.5, "fx_fee_basis": "provisional"}}
+
+    fx = cz_raw.get("fx") or {}
+    u, e = fx.get("usd_czk") or {}, fx.get("eur_czk") or {}
+    if u.get("rate") and e.get("rate"):
+        out["fx"] = {"usd_czk": u["rate"], "eur_czk": e["rate"], "date": u.get("date"), "source": u.get("source")}
+        C.add("plausible range", "fx.usd_czk", 15 < u["rate"] < 30, f"{u['rate']} CZK on {u.get('date')}")
+        C.add("plausible range", "fx.eur_czk", 20 < e["rate"] < 30, f"{e['rate']} CZK on {e.get('date')}")
+
+    b = cz_raw.get("bank_fund_benchmark") or {}
+    if b.get("entry_fee_pct") is not None and b.get("ongoing_charges_pct") is not None:
+        sens = b.get("sensitivity") or {}
+        cases = []
+        if sens.get("cheap"):
+            cases.append({"id": "cheap", "label": "levnější", "entry_pct": sens["cheap"]["entry_fee_pct"], "ter_pct": sens["cheap"]["ongoing_charges_pct"]})
+        cases.append({"id": "typical", "label": "typický", "entry_pct": b["entry_fee_pct"], "ter_pct": b["ongoing_charges_pct"]})
+        if sens.get("expensive"):
+            cases.append({"id": "exp", "label": "dražší", "entry_pct": sens["expensive"]["entry_fee_pct"], "ter_pct": sens["expensive"]["ongoing_charges_pct"]})
+        funds = cz_raw.get("bank_funds") or []
+        out["bank"] = {
+            "entry_pct": b["entry_fee_pct"], "ter_pct": b["ongoing_charges_pct"], "cases": cases,
+            "source_note": ("Bankovní fond v kalkulačce = medián 6 akciových fondů prodávaných v ČR podle jejich sdělení klíčových informací "
+                            f"({len(funds)} fondů: Česká spořitelna, KB, ČSOB, Raiffeisenbank, Generali, Conseq; stav k 29. 10. 2026). "
+                            "Vstupní poplatek je maximum podle ceníku, banka může účtovat méně. Levnější a dražší varianta = rozpětí těchto fondů."),
+        }
+        C.add("plausible range", "bank.ongoing", 1.0 <= b["ongoing_charges_pct"] <= 3.0, f"{b['ongoing_charges_pct']} % p.a.")
+        C.add("plausible range", "bank.entry", 0 <= b["entry_fee_pct"] <= 5, f"{b['entry_fee_pct']} %")
+        C.add("bank benchmark sample", "bank_funds", len(funds) >= 5, f"{len(funds)} KID-sourced funds")
+
+    out["brokers"] = map_brokers(cz_raw, C)
+    out["tax"] = map_tax(cz_raw, C)
+    fxb = next((x for x in out["brokers"] if x.get("calc_fx")), None)
+    if fxb:
+        out["calc"] = {"fx_fee_pct": fxb["fx_fee_pct"], "fx_fee_basis": fxb["name"]}
+    return out
+
+
+def map_brokers(cz_raw, C):
+    return []
+
+
+def map_tax(cz_raw, C):
+    return None

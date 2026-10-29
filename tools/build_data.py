@@ -16,6 +16,7 @@ import re
 import sys
 from datetime import date
 
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
 TODAY = date(2026, 10, 29)
@@ -23,7 +24,7 @@ RETURNS_AS_OF = "2026-09-30"
 
 sys.path.insert(0, str(ROOT / "tools"))
 from curation import (LIST, REF, ASSET, US_SHARE, TWIN_LABELS, PRESETS,  # noqa: E402
-                      DIST_CZ, DOMICILE_CZ, build_cz)
+                      DIST_CZ, DOMICILE_CZ, build_cz, display_name)
 
 
 # ---------------------------------------------------------------- helpers
@@ -195,7 +196,8 @@ def twin_compact(c):
     size = num((c.get("fund_size_eur_m") or {}).get("value"))
     dom = (c.get("domicile") or "").upper()[:2]
     return {
-        "name": c.get("name"), "isin": c.get("isin"), "issuer": c.get("issuer"),
+        "name": display_name(c.get("name")), "isin": c.get("isin"), "issuer": c.get("issuer"),
+        "wrapper": "ETC" if "ETC" in (c.get("name") or "") else "UCITS",
         "ticker": l.get("ticker"), "ex": l.get("exchange"), "cur": l.get("currency"),
         "ter": num((c.get("ter_pct") or {}).get("value")),
         "dist": (c.get("distribution") or {}).get("value"),
@@ -228,7 +230,7 @@ for t in LIST + REF:
         continue
     top3 = v(e, "top3_holdings")
     us_out.append({
-        "t": t, "former": e.get("former_ticker"), "name": e.get("name"), "issuer": e.get("issuer"),
+        "t": t, "former": e.get("former_ticker"), "name": display_name(e.get("name")), "issuer": e.get("issuer"),
         "ex": v(e, "exchange"), "index": v(e, "index"),
         "ter": num(v(e, "expense_ratio_pct")), "aum": num(v(e, "aum_usd_bn")),
         "inception": v(e, "inception_date"), "n": int(num(v(e, "holdings_count"))) if num(v(e, "holdings_count")) else None,
