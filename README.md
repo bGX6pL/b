@@ -8,6 +8,7 @@ Four launch-ready landing page samples, two Meta ad concepts, the lead magnet it
 | Path | What |
 |---|---|
 | `index.html` | Review gallery: all samples, screenshots, ads, PDF, docs |
+| `gallery.html` | Landing page gallery: our 4 samples next to 29 competitor pages on one screen (mobile / after cookies / desktop), click for full page + notes. Stills: `screenshots/_sheet-gallery-{mobile,desktop}.jpg` |
 | `site/` | The deployable website (static, no build step) |
 | `site/a-dvojce/` · `b-poplatky/` · `c-srovnani/` · `d-portfolio/` | Samples A–D |
 | `site/dekujeme/` | Thank-you page (instant PDF, personal result, unlocked twins, 1-tap profiling) |
@@ -32,6 +33,8 @@ Four launch-ready landing page samples, two Meta ad concepts, the lead magnet it
 .venv/Scripts/python tools/make_pdf.py
 .venv/Scripts/python tools/render_ads.py
 .venv/Scripts/python tools/capture.py
+.venv/Scripts/python -X utf8 -I tools/build_gallery.py   # gallery data + thumbnails from competitors.json
+.venv/Scripts/python tools/gallery_sheet.py
 ```
 Setup once: `python -m venv .venv && .venv/Scripts/python -m pip install playwright pillow` (uses the installed Microsoft Edge, no browser download).
 
