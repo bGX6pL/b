@@ -202,7 +202,9 @@ dialog::backdrop { background: rgba(10,10,8,.62); }
       const n = G.items.filter(i => i.group === g.id).length;
       return `<button class="chip" data-g="${g.id}" style="--c: var(--g-${g.id})" aria-pressed="${!state.off.has(g.id)}"><i></i>${esc(g.label)} <span>${n}</span></button>`;
     }).join("") +
-    `<span class="legend">Under each page: <b>form fields</b> · <b>cookie banner cover</b><span class="more"> of the first screen</span> · <b>page weight</b>. <b class="ok">Green</b> = good, <b class="bad">red</b> = bad.</span>`;
+    `<span class="legend">Under each page: <b>form fields</b> · <b>cookie banner cover</b><span class="more"> of the first screen</span> · <b>page weight</b>. <b class="ok">Green</b> = good, <b class="bad">red</b> = bad.` +
+    (G.hidden && G.hidden.length ? ` <span title="${esc(G.hidden.map(h => `${h.label}: ${h.cookie}%${h.dims ? ", page dimmed" : ""}`).join(" · "))}">Left out: ${G.hidden.length} pages whose cookie popup covers half the screen or more, or dims the page.</span>` : "") +
+    `</span>`;
   }
 
   function renderGrid() {

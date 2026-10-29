@@ -32,7 +32,8 @@ def main():
             pg.evaluate("document.fonts.ready")
             pg.wait_for_timeout(400)
             out = ROOT / "screenshots" / f"_sheet-gallery-{name}.jpg"
-            pg.screenshot(path=str(out), type="jpeg", quality=86, full_page=True)
+            bottom = pg.evaluate("Math.ceil(Math.max(...[...document.querySelectorAll('.card')].map(c => c.getBoundingClientRect().bottom))) + 16")
+            pg.screenshot(path=str(out), type="jpeg", quality=86, clip={"x": 0, "y": 0, "width": 2400, "height": bottom})
             print(out.relative_to(ROOT), out.stat().st_size // 1024, "KB")
         b.close()
     srv.shutdown()
