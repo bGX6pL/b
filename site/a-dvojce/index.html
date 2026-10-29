@@ -400,7 +400,7 @@ footer a { color: var(--muted); }
     var alt = (tw.alt || []).slice(0, 2).map(function (a) { return "<b>" + a.ticker + "</b> " + F.pct(a.ter); });
     $("[data-eu-alt]").innerHTML = alt.length ? "Další možnosti: " + alt.join(" · ") + " — srovnání v taháku" : "";
     $("[data-eu-alt]").hidden = !alt.length;
-    $("[data-note]").innerHTML = "Pošleme PDF s dvojčetem k <b>" + f.t + "</b> a dalšími 19, poplatky brokerů a&nbsp;daněmi v&nbsp;ČR. Bez telefonu, bez poradce.";
+    $("[data-note]").innerHTML = "Pošleme PDF s dvojčetem k <b>" + f.t + "</b> a dalšími 19, poplatky brokerů a&nbsp;daněmi v&nbsp;ČR. Do minuty, bez telefonu.";
     $("[data-sheet-sub]").textContent = "Dvojče k " + f.t + " a dalších 19, poplatky brokerů a daně. PDF na 2 strany.";
     if (animate) { var eu = $("[data-eu]"); eu.classList.remove("flash"); void eu.offsetWidth; eu.classList.add("flash"); }
     Lead.setContext({ ticker: f.t, twin_isin: p.isin });

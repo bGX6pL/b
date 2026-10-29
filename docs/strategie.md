@@ -13,6 +13,23 @@
 
 ---
 
+## 0. Konkurence: co dělají ostatní a kde je mezera
+Podrobně v [`research/competitors/README.md`](../research/competitors/README.md) — 17 konkurentů, 89 screenshotů z mobilu i desktopu, Meta Ad Library (≈ 180 aktivních reklam na „ETF“ v ČR, 29. 10. 2026).
+
+| Zjištění | Co s tím děláme |
+|---|---|
+| **Nejbližší konkurent je XTB, e-book „Nejoblíbenější ETF u XTB pro rok 2026“.** Chce 4 povinná pole včetně telefonu a nejmenuje jediný fond. Na mobilu nejdřív ukáže právní blok o CFD a nadpis se vykreslí až po 2,5 s. Cookie lišta má jen „Přijmout vše“. | Jedno pole, žádný telefon, skutečné fondy a čísla hned v první obrazovce, nadpis je v HTML od první milisekundy. |
+| **Nikdo v ČR neinzeruje „americké ETF → evropské dvojče“.** Reklamní prostor kolem ETF zabírají kurzy XTB („byt vs. ETF“) a funnely poradců s telefonátem. | Prázdné pole pro naši hlavní reklamu (Dvojče). |
+| Správnou tabulku VOO/SPY/QQQ → UCITS česky má jen Finorum. Je ale schovaná pod pop-upy (≈ 88 % obrazovky) v článku na 17 000 px a nedá se stáhnout. | Tutéž hodnotu dáváme jako produkt: první obrazovku, PDF, ISIN ke zkopírování a brokery v ČR. |
+| **Cookie a pop-up stěny zakrývají 50–100 % první obrazovky** u poloviny konkurentů (Finex, justETF, Finorum, Trading 212, Revolut, Fondee…). | Kompaktní lišta (≈ 12 % obrazovky), „Odmítnout“ stejně velké jako „Povolit“, žádné skripty třetích stran před souhlasem. |
+| České stránky mají 1–4 MB. Lehké jsou jen anglické (Financial Expert Class 0,28 MB, EU ETF Scan 95 KB). | Naše varianty mají 140–260 KB (bez frameworku, vlastní písma, náhled PDF ve WebP). |
+| Hodnotu v první obrazovce ukazují jen Finanzfluss (skutečné řádky s TER), EU ETF Scan (karta „VOO → UCITS“) a kalkulačka Portu. Všechny stránky s PDF za formulářem ukazují jen sliby. | Každá z našich 4 variant ukazuje skutečný výsledek ještě před formulářem. |
+| Konkrétní odrážky s tickery (FEC) přesvědčují víc než obecné („tipy na oblíbené fondy“). | Naše odrážky mají čísla: 20 ETF, 20 dvojčat, 6 brokerů, 1 stránka daní. |
+
+**Mezera, kterou obsadíme:** český, na brokerovi nezávislý tahák „americké ETF → evropské dvojče → kde ho v ČR koupit a jak se daní“. Hodnota je vidět před formulářem, stránka je lehká a nemá cookie stěnu.
+
+---
+
 ## 1. Cílová skupina
 
 ### Primární: „Samouk z Instagramu“
@@ -161,6 +178,8 @@ Kreativy jsou v `ads/` (PNG 1080×1350 pro feed a 1080×1920 pro Stories/Reels),
 | Kvalita | odhlášení do 10 dnů | ≤ 6 % |
 
 **Test:** 2 reklamy × 2 stránky, rovnoměrný rozpočet, min. 300 návštěv na variantu, rozhoduje cena za lead *a* podíl odpovědí „mám brokera / chci začít“ (kvalita).
+
+**Další kola testů:** tykání vs. vykání (sociální sítě a „Investování pro holky“ tykají, XTB a Portu vykají; naše stránky zatím vykají), skutečná tvář a jméno autora vedle formuláře (jen pokud klient takovou osobu má, nic nevymýšlíme), varianta reklamy s QQQ/SCHD místo VOO (`?t=QQQ`).
 
 ---
 

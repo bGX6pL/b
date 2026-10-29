@@ -32,7 +32,7 @@
       "tone": "Corporate-promotional ('nejvýkonnější ETF na světě'), formal vykání, legalese-heavy top.",
       "steal": ["Year in the headline ('pro rok 2026') = freshness", "'E-BOOK ZDARMA' pill badge right under the H1", "Device mockup of the PDF makes the asset tangible", "FAQ that pre-answers 'Je to opravdu zdarma? Musím mít účet? Budete mi psát?'"],
       "avoid": ["4 mandatory fields incl. phone for a PDF", "Legal CFD block as the first thing on mobile (and inconsistent 74 % vs 77 % figures)", "No real value shown before the ask", "Accept-only cookie bar", "'Nejvýkonnější ETF na světě' hype claim on a regulated topic"],
-      "screenshots": {"m1": "shots/xtb-ebook-m1-raw.png", "m_full": "shots/xtb-ebook-m-full.png", "d1": "shots/xtb-ebook-d1.png", "extra": ["shots/xtb-nemovitosti-m1-raw.png", "shots/xtb-nemovitosti-m-full.png", "shots/xtb-nemovitosti-d1.png", "shots/xtb-kurz-m1-raw.png", "shots/xtb-kurz-m-full.png", "shots/xtb-kurz-d1.png"]},
+      "screenshots": {"m1": "shots/xtb-ebook-m1-raw.webp", "m_full": "shots/xtb-ebook-m-full.webp", "d1": "shots/xtb-ebook-d1.webp", "extra": ["shots/xtb-nemovitosti-m1-raw.webp", "shots/xtb-nemovitosti-m-full.webp", "shots/xtb-nemovitosti-d1.webp", "shots/xtb-kurz-m1-raw.webp", "shots/xtb-kurz-m-full.webp", "shots/xtb-kurz-d1.webp"]},
       "ad_funnel_variants": [
         {"url": "https://vzdelavani.xtb.com/nemovitosti-vs-akcie-a-etf", "h1": "Nemovitosti vs. akcie a ETF: kam dává větší smysl investovat?", "sub": "Mnoho lidí čeká na „správný moment“. Začít ale lze i bez statisíců. Co byste měli vědět, než se rozhodnete? Praktický e-book, který vám pomůže udělat si jasno.", "note": "Most frequent landing page in the CZ 'ETF' Ad Library sample; same 4-field form; H1 visible on first screen, cookie bar ~29%."},
         {"url": "https://cz.xtb.com/tvorba-akcioveho-portfolia", "h1": "Jak si vytvořit první portfolio", "sub": "Investování nemusí být složité - ukážeme vám první kroky od nuly.", "note": "Red eyebrow 'AKTUÁLNÍ PRO ROK 2026:', badge 'KURZ ZDARMA', 'Po vyplnění formuláře zašleme kurz na Váš e-mail'; ad promises 8 videos."}
@@ -60,7 +60,7 @@
       "tone": "Friendly, plain Czech, light humour ('lidsky napsaný e-book', cookie 'koláček'), vykání.",
       "steal": ["One-field e-mail form", "'lidsky napsaný' as a promise of tone", "Checklist of what's inside", "Calculator as a no-commitment value moment ('Kolik můžu vydělat?')", "Playful but fair cookie copy"],
       "avoid": ["Form not on the first mobile screen", "Text clipped at the right edge on mobile (horizontal overflow bug)", "E-book is generic 'how to start', nothing ETF-specific", "Return-based trust claims ('99,5 % vydělává') are risky for us"],
-      "screenshots": {"m1": "shots/portu-ebook-m1-raw.png", "m_full": "shots/portu-ebook-m-full.png", "d1": "shots/portu-ebook-d1.png", "extra": ["shots/portu-m1-raw.png", "shots/portu-m-full.png", "shots/portu-d1.png"]}
+      "screenshots": {"m1": "shots/portu-ebook-m1-raw.webp", "m_full": "shots/portu-ebook-m-full.webp", "d1": "shots/portu-ebook-d1.webp", "extra": ["shots/portu-m1-raw.webp", "shots/portu-m-full.webp", "shots/portu-d1.webp"]}
     },
     {
       "slug": "investovani-pro-holky",
@@ -84,7 +84,7 @@
       "tone": "Very personal, tykání, emotional (independence, 'okrádám sama sebe'), aspirational ('milionářkou').",
       "steal": ["Identity-based hook and a real human face", "Comment-to-DM ad mechanic for IG", "Tykání + 'Pojďme udělat tvoji první investici společně' = action promise", "Ladder of freebies (10 kroků, tabulka, kalkulačky)"],
       "avoid": ["Free vs paid is confusing (two buttons)", "Get-rich framing ('milionářkou') – trust/regulatory risk", "Stale 2020–21 testimonials", "Half-screen cookie block hides the offer"],
-      "screenshots": {"m1": "shots/ipholky-m1-raw.png", "m_full": "shots/ipholky-m-full.png", "d1": "shots/ipholky-d1.png", "extra": ["shots/ipholky-webinar-m1-raw.png", "shots/ipholky-webinar-m-full.png", "shots/ipholky-webinar-d1.png"]}
+      "screenshots": {"m1": "shots/ipholky-m1-raw.webp", "m_full": "shots/ipholky-m-full.webp", "d1": "shots/ipholky-d1.webp", "extra": ["shots/ipholky-webinar-m1-raw.webp", "shots/ipholky-webinar-m-full.webp", "shots/ipholky-webinar-d1.webp"]}
     },
     {
       "slug": "specialista-na-investovanie",
@@ -107,7 +107,7 @@
       "tone": "Old-school direct-response (tiers, countdown), formal.",
       "steal": ["Price anchoring: showing that the free e-book sits next to a 47 € course raises perceived value"],
       "avoid": ["Expired fake-urgency timer", "No content preview", "Two-step form", "Two different e-mail domains in the footer erode trust", "'Objednat' (order) wording for a free item"],
-      "screenshots": {"m1": "shots/specialista-m1-raw.png", "m_full": "shots/specialista-m-full.png", "d1": "shots/specialista-d1.png"}
+      "screenshots": {"m1": "shots/specialista-m1-raw.webp", "m_full": "shots/specialista-m-full.webp", "d1": "shots/specialista-d1.webp"}
     },
     {
       "slug": "finex",
@@ -131,7 +131,7 @@
       "tone": "Neutral-informative, media style.",
       "steal": ["TER shown next to every fund", "Article angle 'why can't I buy SPY + which UCITS to buy instead' (proves the pain is real in CZ)"],
       "avoid": ["Screening US-listed ETFs that most Czech retail investors cannot buy (confusing)", "Blocking cookie modal", "Desktop-table logic squeezed into mobile cards"],
-      "screenshots": {"m1": "shots/finex-m1-raw.png", "m_full": "shots/finex-m-full.png", "d1": "shots/finex-d1.png", "extra": ["shots/finex-sp500-m1-raw.png", "shots/finex-sp500-m-full.png"]}
+      "screenshots": {"m1": "shots/finex-m1-raw.webp", "m_full": "shots/finex-m-full.webp", "d1": "shots/finex-d1.webp", "extra": ["shots/finex-sp500-m1-raw.webp", "shots/finex-sp500-m-full.webp"]}
     },
     {
       "slug": "finorum",
@@ -154,7 +154,7 @@
       "tone": "Expert, precise, calm; Czech text but English pop-up.",
       "steal": ["Exactly our pitch in Czech: VOO/SPY/QQQ → SPYL/VUAA/CSPX/EQQQ with ISIN", "'Zdroje ověřeny <datum>' freshness stamp", "Checklist 'sedm údajů, které musí souhlasit'"],
       "avoid": ["Pop-up + cookie wall on mobile load", "English pop-up on Czech page", "Title says 2027 while it is 2026 (feels SEO-gamed)", "No downloadable asset – the table dies in a long article"],
-      "screenshots": {"m1": "shots/finorum-m1-raw.png", "m_full": "shots/finorum-m-full.png", "d1": "shots/finorum-d1.png"}
+      "screenshots": {"m1": "shots/finorum-m1-raw.webp", "m_full": "shots/finorum-m-full.webp", "d1": "shots/finorum-d1.webp"}
     },
     {
       "slug": "fondee",
@@ -177,7 +177,7 @@
       "tone": "Calm, reassuring, 'rozumíte' – anti-complexity.",
       "steal": ["Three-number proof row right under the H1", "Calculator with sensible defaults"],
       "avoid": ["Return figure as a headline trust signal", "Cookie sheet hides the CTA", "Rebrand (Direct Fondee) without explanation may confuse"],
-      "screenshots": {"m1": "shots/fondee-m1-raw.png", "m_full": "shots/fondee-m-full.png", "d1": "shots/fondee-d1.png"}
+      "screenshots": {"m1": "shots/fondee-m1-raw.webp", "m_full": "shots/fondee-m-full.webp", "d1": "shots/fondee-d1.webp"}
     },
     {
       "slug": "xtb-investicni-plany",
@@ -200,7 +200,7 @@
       "tone": "Lifestyle-aspirational.",
       "steal": ["Low entry point stated in hero ('od 350 Kč')", "Device-aware CTA (app on mobile)"],
       "avoid": ["Conflicting minimums (15 EUR vs 350 CZK)", "Accept-only cookie bar"],
-      "screenshots": {"m1": "shots/xtb-plany-m1-raw.png", "m_full": "shots/xtb-plany-m-full.png", "d1": "shots/xtb-plany-d1.png"}
+      "screenshots": {"m1": "shots/xtb-plany-m1-raw.webp", "m_full": "shots/xtb-plany-m-full.webp", "d1": "shots/xtb-plany-d1.webp"}
     },
     {
       "slug": "degiro",
@@ -223,7 +223,7 @@
       "tone": "Confident, value/price-led.",
       "steal": ["Concrete UCITS funds with ISIN on the LP", "Award number as eyebrow", "Fee table in plain numbers"],
       "avoid": ["'Neuvěřitelně nízké' superlatives; otherwise little to avoid"],
-      "screenshots": {"m1": "shots/degiro-m1-raw.png", "m_full": "shots/degiro-m-full.png", "d1": "shots/degiro-d1.png"}
+      "screenshots": {"m1": "shots/degiro-m1-raw.webp", "m_full": "shots/degiro-m-full.webp", "d1": "shots/degiro-d1.webp"}
     },
     {
       "slug": "lynx",
@@ -246,7 +246,7 @@
       "tone": "Serious, 'for active investors' (mentions shorting/options on ETFs).",
       "steal": ["Fast, cookie-light mobile first screen"],
       "avoid": ["No above-the-fold CTA on mobile", "Trader framing (short/opce) scares passive beginners"],
-      "screenshots": {"m1": "shots/lynx-m1-raw.png", "m_full": "shots/lynx-m-full.png", "d1": "shots/lynx-d1.png"}
+      "screenshots": {"m1": "shots/lynx-m1-raw.webp", "m_full": "shots/lynx-m-full.webp", "d1": "shots/lynx-d1.webp"}
     },
     {
       "slug": "trading212",
@@ -269,7 +269,7 @@
       "tone": "Short, confident, app-first.",
       "steal": ["Ultra-short H1 promise + one CTA"],
       "avoid": ["4 MB page; desktop bot-blocked ('Access Denied') – fragile"],
-      "screenshots": {"m1": "shots/trading212-m1-raw.png", "m_full": "shots/trading212-m-full.png", "d1": "shots/trading212-d1.png"}
+      "screenshots": {"m1": "shots/trading212-m1-raw.webp", "m_full": "shots/trading212-m-full.webp", "d1": "shots/trading212-d1.webp"}
     },
     {
       "slug": "justetf",
@@ -292,7 +292,7 @@
       "tone": "Neutral, expert, product-led.",
       "steal": ["'Plan & simulate' – tool as the hook", "Tools open without account (value first)"],
       "avoid": ["Two consent/country modals on mobile load"],
-      "screenshots": {"m1": "shots/justetf-m1-raw.png", "m_full": "shots/justetf-m-full.png", "d1": "shots/justetf-d1.png"}
+      "screenshots": {"m1": "shots/justetf-m1-raw.webp", "m_full": "shots/justetf-m-full.webp", "d1": "shots/justetf-d1.webp"}
     },
     {
       "slug": "extraetf",
@@ -315,7 +315,7 @@
       "tone": "Du-form, encouraging.",
       "steal": ["'Live-Demo' secondary CTA = try before you give an e-mail", "Search box as first element (ISIN/ticker)", "Third-party seal near CTA"],
       "avoid": ["Generic headline (no ETF in H1)"],
-      "screenshots": {"m1": "shots/extraetf-m1-raw.png", "m_full": "shots/extraetf-m-full.png", "d1": "shots/extraetf-d1.png"}
+      "screenshots": {"m1": "shots/extraetf-m1-raw.webp", "m_full": "shots/extraetf-m-full.webp", "d1": "shots/extraetf-d1.webp"}
     },
     {
       "slug": "finanzfluss",
@@ -338,7 +338,7 @@
       "tone": "Neutral, data-first.",
       "steal": ["Value on the first screen: real UCITS funds with TER", "Sticky search by ISIN/name"],
       "avoid": ["Client-side rendering delay on mobile", "Wide table on a phone"],
-      "screenshots": {"m1": "shots/finanzfluss-m1-wait8s.png", "m_full": "shots/finanzfluss-m-full.png", "d1": "shots/finanzfluss-d1.png", "extra": ["shots/finanzfluss-m1-raw.png"]}
+      "screenshots": {"m1": "shots/finanzfluss-m1-wait8s.webp", "m_full": "shots/finanzfluss-m-full.webp", "d1": "shots/finanzfluss-d1.webp", "extra": ["shots/finanzfluss-m1-raw.webp"]}
     },
     {
       "slug": "financial-expert-class",
@@ -361,7 +361,7 @@
       "tone": "Specific, anti-hype, numbers in bullets.",
       "steal": ["Bullets with concrete numbers and fund tickers", "'No US-centric advice that breaks at the EU border' – the exact positioning we need", "Delivery-time + e-mail-frequency microcopy under the button", "Reading-time promise (25 min)"],
       "avoid": ["Form not on first mobile screen", "Logo/menu waste on mobile"],
-      "screenshots": {"m1": "shots/fec-m1-raw.png", "m_full": "shots/fec-m-full.png", "d1": "shots/fec-d1.png"}
+      "screenshots": {"m1": "shots/fec-m1-raw.webp", "m_full": "shots/fec-m-full.webp", "d1": "shots/fec-d1.webp"}
     },
     {
       "slug": "eu-etf-scan",
@@ -384,7 +384,7 @@
       "tone": "Technical, neutral, English only.",
       "steal": ["Ticker-in → twin-out mental model", "Match score + 'why it appears'", "Data-updated stamp", "Tiny page weight"],
       "avoid": ["Table overflows horizontally on mobile", "No Czech, no broker availability, no CZK costs", "No capture = no relationship"],
-      "screenshots": {"m1": "shots/euetfscan-m1-raw.png", "m_full": "shots/euetfscan-m-full.png", "d1": "shots/euetfscan-d1.png"}
+      "screenshots": {"m1": "shots/euetfscan-m1-raw.webp", "m_full": "shots/euetfscan-m-full.webp", "d1": "shots/euetfscan-d1.webp"}
     },
     {
       "slug": "index-masterclass",
@@ -407,17 +407,17 @@
       "tone": "US-style direct response, big promises.",
       "steal": ["Audience qualifier line with flags ('pro investory v Česku')", "Contrarian angle vs 'just buy the S&P 500'", "Ad copy names the 4 European decisions (ETFs, tax, broker, plan)"],
       "avoid": ["€100 → €1.1M style imagery (misleading, regulatory risk in CZ)", "41k px page and 4.5 MB on mobile"],
-      "screenshots": {"m1": "shots/indexmasterclass-m1-raw.png", "m_full": "shots/indexmasterclass-m-full.png", "d1": "shots/indexmasterclass-d1.png"}
+      "screenshots": {"m1": "shots/indexmasterclass-m1-raw.webp", "m_full": "shots/indexmasterclass-m-full.webp", "d1": "shots/indexmasterclass-d1.webp"}
     }
   ],
   "light_entries": [
-    {"slug": "revolut", "name": "Revolut CZ – Robo poradce", "url": "https://www.revolut.com/cs-CZ/robo-advisor/", "type": "broker/robo LP", "h1": "Nechte to na Robo poradci", "subheadline": "Nechte automatizaci, ať udělá tu nejtěžší práci za vás. Během několika minut obdržíte personalizované portfolio, které směřuje k vašim investičním cílům.", "first_screen": "Dark hero, CTA truncated 'Investovat s Robo porad…', cookie sheet ~36% with dimmed page; truncated reject label.", "page_weight": {"transfer_kb": 9915, "requests": 139}, "note": "Heaviest page (9.9 MB). Other /cs-CZ/ investing URLs 404; desktop = Cloudflare check (not bypassed). No ETF-specific Czech LP found.", "screenshots": {"m1": "shots/revolut-m1-raw.png", "m_full": "shots/revolut-m-full.png", "d1": "shots/revolut-d1.png"}},
-    {"slug": "investicniweb", "name": "Investiční web – tag ETF", "url": "https://www.investicniweb.cz/etf", "type": "content", "h1": "ETF", "subheadline": "ETF je zkratka pro Exchange Traded Fund, česky burzovně obchodované fondy. S ETF si může investor snadno vytvořit diverzifikované portfolio…", "first_screen": "Market ticker, promo tiles, 3-line definition, latest article 'V ETF na index PX je už 100 milionů korun, stačilo osm dní' (16. 9. 2026). Newsletter field further down.", "page_weight": {"transfer_kb": 413, "requests": 21}, "note": "News feed, no comparison, no lead magnet.", "screenshots": {"m1": "shots/investicniweb-m1-raw.png", "m_full": "shots/investicniweb-m-full.png", "d1": "shots/investicniweb-d1.png"}},
-    {"slug": "penize", "name": "Peníze.cz – téma ETF", "url": "https://www.penize.cz/tema/etf", "type": "content (evergreen explainer)", "h1": "ETF", "subheadline": "ETF je zkratka anglického exchange traded fund… (encyclopedic intro)", "first_screen": "Wall of explanatory text, no CTA, no visual; 23 770 px long hub; newsletter + currency calculator further down; FINMAG promo.", "page_weight": {"transfer_kb": 286, "requests": 19}, "note": "Měšec.cz has no ETF hub (404s); its calculators are savings/loans only.", "screenshots": {"m1": "shots/penize-m1-raw.png", "m_full": "shots/penize-m-full.png", "d1": "shots/penize-d1.png"}},
-    {"slug": "kurzy", "name": "Kurzy.cz – S&P 500 UCITS ETF (BCPP quote page)", "url": "https://www.kurzy.cz/akcie-cz/akcie/s-p-500-ucits-etf-6201/", "type": "quote/data page", "h1": "S&P 500 UCITS ETF - Akcie S&P 500 UCITS ETF aktuálně - akcie online", "subheadline": "-", "first_screen": "SEO-stacked headings, ISIN IE00B5BMR087, link list, little data; desktop wrapped in a Datart wallpaper ad.", "page_weight": {"transfer_kb": 149, "requests": 23}, "note": "/etf/ hub exists but is a sparse list; no comparison, no capture.", "screenshots": {"m1": "shots/kurzy-m1-raw.png", "m_full": "shots/kurzy-m-full.png", "d1": "shots/kurzy-d1.png"}},
-    {"slug": "pruvodce-investicemi", "name": "Průvodce investicemi – e-book (Meta advertiser)", "url": "https://pruvodceinvesticemi.com/e-book/", "type": "lead magnet (trading/advisory funnel)", "h1": "Mějte všechny klíčové investiční taktiky v jednom e-booku", "subheadline": "(label 'Bezplatný e-book'; Take Profit/Stop Loss, fundamentální analýza)", "first_screen": "H1 + laptop mockup, cookie modal ~48%.", "page_weight": {"transfer_kb": 601, "requests": 23}, "note": "Form with contact fields + checkbox 'Již jsem v kontaktu s analytikem z Průvodce investicemi' = call-centre funnel; ads promise an 'ETF příručka' but send to fb.me (likely instant form). No company/IČO on page.", "screenshots": {"m1": "shots/pruvodce-m1-raw.png", "m_full": "shots/pruvodce-m-full.png", "d1": "shots/pruvodce-d1.png"}},
-    {"slug": "isj-invest", "name": "Investiční spoření jednoduše (isj-invest.cz) – Meta advertiser", "url": "https://isj-invest.cz/", "type": "advisor funnel", "h1": "PŘIBLIŽUJEME SVĚT INVESTIC BĚŽNÝM LIDEM", "subheadline": "Získejte jistotu ve světě financí. S naším osobním přístupem pochopíte základy investování snadno a rychle.", "first_screen": "CTA 'Konzultace zdarma' + 'Číst články'; small cookie pill. Ad promises e-book 'Jak sestavit nejlepší investiční portfolio' and 'ETF s 0% poplatkem' but lands on the homepage (message mismatch).", "page_weight": {"transfer_kb": 1013, "requests": 28}, "note": "", "screenshots": {"m1": "shots/isj-m1-raw.png", "m_full": "shots/isj-m-full.png", "d1": "shots/isj-d1.png"}},
-    {"slug": "bankovnipoplatky", "name": "Bankovnipoplatky", "url": "https://www.bankovnipoplatky.cz/", "type": "content (bank news)", "h1": "-", "subheadline": "-", "first_screen": "Rates ticker + 'Aktuality' news list; nothing on ETFs.", "page_weight": {"transfer_kb": null, "requests": null}, "note": "bankovnipoplatky.com is a parked domain (Rozhled.cz placeholder) as of 2026-10-29.", "screenshots": {"m1": "shots/bankovnipoplatky-m1-raw.png", "m_full": "shots/bankovnipoplatky-m-full.png", "d1": "shots/bankovnipoplatky-d1.png"}}
+    {"slug": "revolut", "name": "Revolut CZ – Robo poradce", "url": "https://www.revolut.com/cs-CZ/robo-advisor/", "type": "broker/robo LP", "h1": "Nechte to na Robo poradci", "subheadline": "Nechte automatizaci, ať udělá tu nejtěžší práci za vás. Během několika minut obdržíte personalizované portfolio, které směřuje k vašim investičním cílům.", "first_screen": "Dark hero, CTA truncated 'Investovat s Robo porad…', cookie sheet ~36% with dimmed page; truncated reject label.", "page_weight": {"transfer_kb": 9915, "requests": 139}, "note": "Heaviest page (9.9 MB). Other /cs-CZ/ investing URLs 404; desktop = Cloudflare check (not bypassed). No ETF-specific Czech LP found.", "screenshots": {"m1": "shots/revolut-m1-raw.webp", "m_full": "shots/revolut-m-full.webp", "d1": "shots/revolut-d1.webp"}},
+    {"slug": "investicniweb", "name": "Investiční web – tag ETF", "url": "https://www.investicniweb.cz/etf", "type": "content", "h1": "ETF", "subheadline": "ETF je zkratka pro Exchange Traded Fund, česky burzovně obchodované fondy. S ETF si může investor snadno vytvořit diverzifikované portfolio…", "first_screen": "Market ticker, promo tiles, 3-line definition, latest article 'V ETF na index PX je už 100 milionů korun, stačilo osm dní' (16. 9. 2026). Newsletter field further down.", "page_weight": {"transfer_kb": 413, "requests": 21}, "note": "News feed, no comparison, no lead magnet.", "screenshots": {"m1": "shots/investicniweb-m1-raw.webp", "m_full": "shots/investicniweb-m-full.webp", "d1": "shots/investicniweb-d1.webp"}},
+    {"slug": "penize", "name": "Peníze.cz – téma ETF", "url": "https://www.penize.cz/tema/etf", "type": "content (evergreen explainer)", "h1": "ETF", "subheadline": "ETF je zkratka anglického exchange traded fund… (encyclopedic intro)", "first_screen": "Wall of explanatory text, no CTA, no visual; 23 770 px long hub; newsletter + currency calculator further down; FINMAG promo.", "page_weight": {"transfer_kb": 286, "requests": 19}, "note": "Měšec.cz has no ETF hub (404s); its calculators are savings/loans only.", "screenshots": {"m1": "shots/penize-m1-raw.webp", "m_full": "shots/penize-m-full.webp", "d1": "shots/penize-d1.webp"}},
+    {"slug": "kurzy", "name": "Kurzy.cz – S&P 500 UCITS ETF (BCPP quote page)", "url": "https://www.kurzy.cz/akcie-cz/akcie/s-p-500-ucits-etf-6201/", "type": "quote/data page", "h1": "S&P 500 UCITS ETF - Akcie S&P 500 UCITS ETF aktuálně - akcie online", "subheadline": "-", "first_screen": "SEO-stacked headings, ISIN IE00B5BMR087, link list, little data; desktop wrapped in a Datart wallpaper ad.", "page_weight": {"transfer_kb": 149, "requests": 23}, "note": "/etf/ hub exists but is a sparse list; no comparison, no capture.", "screenshots": {"m1": "shots/kurzy-m1-raw.webp", "m_full": "shots/kurzy-m-full.webp", "d1": "shots/kurzy-d1.webp"}},
+    {"slug": "pruvodce-investicemi", "name": "Průvodce investicemi – e-book (Meta advertiser)", "url": "https://pruvodceinvesticemi.com/e-book/", "type": "lead magnet (trading/advisory funnel)", "h1": "Mějte všechny klíčové investiční taktiky v jednom e-booku", "subheadline": "(label 'Bezplatný e-book'; Take Profit/Stop Loss, fundamentální analýza)", "first_screen": "H1 + laptop mockup, cookie modal ~48%.", "page_weight": {"transfer_kb": 601, "requests": 23}, "note": "Form with contact fields + checkbox 'Již jsem v kontaktu s analytikem z Průvodce investicemi' = call-centre funnel; ads promise an 'ETF příručka' but send to fb.me (likely instant form). No company/IČO on page.", "screenshots": {"m1": "shots/pruvodce-m1-raw.webp", "m_full": "shots/pruvodce-m-full.webp", "d1": "shots/pruvodce-d1.webp"}},
+    {"slug": "isj-invest", "name": "Investiční spoření jednoduše (isj-invest.cz) – Meta advertiser", "url": "https://isj-invest.cz/", "type": "advisor funnel", "h1": "PŘIBLIŽUJEME SVĚT INVESTIC BĚŽNÝM LIDEM", "subheadline": "Získejte jistotu ve světě financí. S naším osobním přístupem pochopíte základy investování snadno a rychle.", "first_screen": "CTA 'Konzultace zdarma' + 'Číst články'; small cookie pill. Ad promises e-book 'Jak sestavit nejlepší investiční portfolio' and 'ETF s 0% poplatkem' but lands on the homepage (message mismatch).", "page_weight": {"transfer_kb": 1013, "requests": 28}, "note": "", "screenshots": {"m1": "shots/isj-m1-raw.webp", "m_full": "shots/isj-m-full.webp", "d1": "shots/isj-d1.webp"}},
+    {"slug": "bankovnipoplatky", "name": "Bankovnipoplatky", "url": "https://www.bankovnipoplatky.cz/", "type": "content (bank news)", "h1": "-", "subheadline": "-", "first_screen": "Rates ticker + 'Aktuality' news list; nothing on ETFs.", "page_weight": {"transfer_kb": null, "requests": null}, "note": "bankovnipoplatky.com is a parked domain (Rozhled.cz placeholder) as of 2026-10-29.", "screenshots": {"m1": "shots/bankovnipoplatky-m1-raw.webp", "m_full": "shots/bankovnipoplatky-m-full.webp", "d1": "shots/bankovnipoplatky-d1.webp"}}
   ],
   "meta_ad_library": {
     "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=ETF&search_type=keyword_unordered&media_type=all",
