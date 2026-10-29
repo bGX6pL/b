@@ -28,6 +28,17 @@ EXPLAINED = {
     ("source agreement", "SCHD.top3_holdings"): "Issuer holdings files (three dates) agree; the secondary source was stale.",
 }
 
+def issuer_short(name):
+    """'State Street Investment Management (SPDR)' -> 'State Street', 'iShares (BlackRock)' -> 'iShares'."""
+    n = (name or "")
+    if "State Street" in n:
+        return "State Street"
+    for k in ("Vanguard", "iShares", "Schwab", "Invesco", "J.P. Morgan"):
+        if k in n:
+            return "JPMorgan" if k == "J.P. Morgan" else k
+    return n.split(" (")[0]
+
+
 # Short index labels for tables (official names stay in data/etfs.json).
 INDEX_SHORT = {
     "VOO": "S&P 500", "SPY": "S&P 500", "IVV": "S&P 500", "SPYM": "S&P 500",

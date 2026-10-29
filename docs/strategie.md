@@ -22,7 +22,7 @@ Podrobně v [`research/competitors/README.md`](../research/competitors/README.md
 | **Nikdo v ČR neinzeruje „americké ETF → evropské dvojče“.** Reklamní prostor kolem ETF zabírají kurzy XTB („byt vs. ETF“) a funnely poradců s telefonátem. | Prázdné pole pro naši hlavní reklamu (Dvojče). |
 | Správnou tabulku VOO/SPY/QQQ → UCITS česky má jen Finorum. Je ale schovaná pod pop-upy (≈ 88 % obrazovky) v článku na 17 000 px a nedá se stáhnout. | Tutéž hodnotu dáváme jako produkt: první obrazovku, PDF, ISIN ke zkopírování a brokery v ČR. |
 | **Cookie a pop-up stěny zakrývají 50–100 % první obrazovky** u poloviny konkurentů (Finex, justETF, Finorum, Trading 212, Revolut, Fondee…). | Kompaktní lišta (≈ 12 % obrazovky), „Odmítnout“ stejně velké jako „Povolit“, žádné skripty třetích stran před souhlasem. |
-| České stránky mají 1–4 MB. Lehké jsou jen anglické (Financial Expert Class 0,28 MB, EU ETF Scan 95 KB). | Naše varianty mají 140–260 KB (bez frameworku, vlastní písma, náhled PDF ve WebP). |
+| České stránky mají 1–4 MB. Lehké jsou jen anglické (Financial Expert Class 0,28 MB, EU ETF Scan 95 KB). | Naše varianty mají 230–360 KB celkem včetně náhledu PDF, 11–14 požadavků, bez frameworku, s vlastními písmy (měřeno 29. 10. 2026). |
 | Hodnotu v první obrazovce ukazují jen Finanzfluss (skutečné řádky s TER), EU ETF Scan (karta „VOO → UCITS“) a kalkulačka Portu. Všechny stránky s PDF za formulářem ukazují jen sliby. | Každá z našich 4 variant ukazuje skutečný výsledek ještě před formulářem. |
 | Konkrétní odrážky s tickery (FEC) přesvědčují víc než obecné („tipy na oblíbené fondy“). | Naše odrážky mají čísla: 20 ETF, 20 dvojčat, 6 brokerů, 1 stránka daní. |
 

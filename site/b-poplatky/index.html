@@ -70,6 +70,8 @@ h1 em { font-style: normal; color: var(--accent); }
 .r-row--eu .v { color: #1B1A17; }
 .r-total { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: end; padding: 10px 0 2px; border-top: 3px double var(--paper-ink); margin-top: 8px; }
 .r-total .l { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.r-total .l { white-space: nowrap; }
+.r-total .v.is-long { font-size: clamp(22px, 6.6vw, 32px); }
 .r-total .v { font: 800 clamp(26px, 8vw, 36px)/1 var(--font-mono); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
 .r-foot { margin-top: 8px; font-size: 10.5px; line-height: 1.4; color: var(--paper-muted); }
 .r-foot button { border: 0; background: none; padding: 0; text-decoration: underline; font: inherit; color: var(--paper-ink); }
@@ -371,6 +373,7 @@ footer p + p { margin-top: 10px; }
     $("[data-cost-us]").textContent = "−" + F.czk(round(costUs));
     $("[data-cost-eu]").textContent = "−" + F.czk(round(costEu));
     $("[data-save]").textContent = F.czk(round(save));
+    $("[data-save]").classList.toggle("is-long", save >= 1e6);
     $("[data-sticky-save]").textContent = "S ETF ušetříte " + F.czk(round(save));
     $("[data-save]").classList.remove("pop"); void $("[data-save]").offsetWidth; $("[data-save]").classList.add("pop");
 
