@@ -32,8 +32,8 @@ h1 { font: var(--head-w) clamp(32px, 8.5vw, 54px)/1.02 var(--font-head); letter-
 .dl { margin-top: 18px; display: flex; align-items: center; gap: 14px; background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 12px; text-decoration: none; }
 .dl__ico { flex: none; width: 46px; height: 58px; border-radius: 4px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: end center; padding-bottom: 6px; font: 700 11px/1 var(--font-mono); position: relative; }
 .dl__ico::before { content: ""; position: absolute; top: 0; right: 0; border: 7px solid; border-color: var(--card) var(--card) rgba(0,0,0,.25) rgba(0,0,0,.25); }
-.dl b { display: block; font-size: 17px; }
-.dl span { font-size: 13px; color: var(--muted); }
+.dl b { display: block; font-size: 17px; color: var(--ink); }
+.dl__txt > span { font-size: 13px; color: var(--muted); }
 .dl i { margin-left: auto; font-style: normal; font-weight: 800; font-size: 22px; padding-right: 6px; }
 .mailnote { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
 
@@ -95,7 +95,7 @@ footer a { color: var(--muted); }
       <p data-sub>Nemusíte čekat na e-mail — stáhněte si ho rovnou:</p>
       <a class="dl" href="../tahak/etf-tahak-2026.pdf" download data-dl>
         <span class="dl__ico" aria-hidden="true">PDF</span>
-        <span><b>ETF tahák 2026</b><span>2 strany · 20 ETF z NYSE, dvojčata, brokeři, daně</span></span>
+        <span class="dl__txt"><b>ETF tahák 2026</b><span>2 strany · 20 ETF z NYSE, dvojčata, brokeři, daně</span></span>
         <i aria-hidden="true">↓</i>
       </a>
       <p class="mailnote" data-mailnote>Kopie míří i do vaší schránky. Nevidíte ji do 2 minut? Mrkněte do složky Promoakce, Hromadné nebo Spam.</p>

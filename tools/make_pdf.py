@@ -26,7 +26,13 @@ try:
         p.locator("#p1").screenshot(path=str(SITE / "tahak" / "nahled-1.png"))
         p.locator("#p2").screenshot(path=str(SITE / "tahak" / "nahled-2.png"))
         b.close()
-    for f in ("etf-tahak-2026.pdf", "nahled-1.png", "nahled-2.png"):
+    # Light preview for the landing pages (the PNG is ~340 KB; a 640 px WebP is a fraction of that).
+    from PIL import Image
+    for n in (1, 2):
+        im = Image.open(SITE / "tahak" / f"nahled-{n}.png").convert("RGB")
+        im = im.resize((640, round(im.height * 640 / im.width)), Image.LANCZOS)
+        im.save(SITE / "tahak" / f"nahled-{n}.webp", "WEBP", quality=82, method=6)
+    for f in ("etf-tahak-2026.pdf", "nahled-1.png", "nahled-1.webp", "nahled-2.webp"):
         print(f, round((SITE / "tahak" / f).stat().st_size / 1024), "KB")
 finally:
     srv.terminate()
