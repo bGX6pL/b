@@ -16710,8 +16710,324 @@
    },
    "note": "28.10. is a public holiday (no fixing); 29.10.2026 fixing published after 14:30 CET. Raw: data/raw/downloads/cnb-fx/"
   },
-  "brokers": [],
-  "tax": {},
+  "brokers": [
+   {
+    "name": "Fio e-Broker",
+    "entity": "Fio banka, a.s. (CZ, ČNB)",
+    "us_etfs_for_retail": true,
+    "us_etfs_note": "Execution-only access; Fio states it does not offer ETFs. 'U nás můžete obchodovat i s americkými ETF.'",
+    "us_etfs_source": "https://www.fio.cz/akcie-investice/etf",
+    "commission": "XETRA: <=EUR 1,400 EUR 3.95; 1,400.01-3,000 EUR 4.95; >3,000 0.15 % min EUR 6.95; Frankfurt +EUR 10; DIP account <=EUR 500 EUR 1.98. USA: USD 7.95 (<=100 shares) / USD 9.95; plus third-party fees",
+    "commission_xetra_eur": {
+     "to_1400": 3.95,
+     "to_3000": 4.95,
+     "above_3000_pct": 0.15,
+     "above_3000_min": 6.95
+    },
+    "commission_us_usd": {
+     "to_100_shares": 7.95,
+     "above_100_shares": 9.95
+    },
+    "fx_fee_pct": null,
+    "fx_note": "no explicit fee; Fio exchange-rate spread",
+    "custody": "free for USA and XETRA collective accounts",
+    "inactivity": null,
+    "fractional": false,
+    "savings_plan_etf": false,
+    "source": "https://www.fio.cz/docs/cz/C_zaklad_260701.pdf",
+    "source_annex": "https://www1.fio.cz/docs/cz/C_trh_260108.pdf",
+    "price_list_effective": "2026-07-01",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Patria Finance",
+    "entity": "Patria Finance, a.s. (ČSOB/KBC group, CZ, ČNB)",
+    "us_etfs_for_retail": "likely",
+    "us_etfs_note": "Per finex.cz review (11.8.2026) SPY, QQQ, IBIT available to retail; Patria 2023: execution-only ETFs need no Czech KID. No primary Patria statement found.",
+    "uncertain": true,
+    "us_etfs_source": "https://finex.cz/recenze/patria-finance/",
+    "commission": "Xetra/EU internet <=49,999 CZK: EUR 4.90 + 0.30 %; 50-99,999: EUR 4.90 + 0.20 %; 100-249,999: EUR 4.90 + 0.15 %; USA <=49,999 CZK: USD 2.90 + 0.30 %",
+    "fx_fee_pct": 1.5,
+    "custody": "foreign securities 0.12 % p.a. + VAT; account free",
+    "inactivity": null,
+    "regular_investing_fee_pct": 0.8,
+    "regular_investing_min_czk": 500,
+    "regular_investing_min_source": "https://www.patria.cz/zpravodajstvi/6939202/patria-finance-uvadi-prvni-korunove-zajistenou-investici-do-atraktivnich-svetovych-akcii-je-soucasti-vstupu-kbc-na-rapidne-rostouci-trh-etf-v-evrope.html",
+    "fractional": "in regular investing (per Patria article)",
+    "source": "https://cdn.patria.cz/Sazebnik-PD-od-1.7.2026.pdf",
+    "price_list_effective": "2026-07-01",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "XTB",
+    "entity": "XTB S.A., organizační složka (home regulator KNF)",
+    "us_etfs_for_retail": false,
+    "us_etfs_note": "'We are unable to offer ETFs from the United States (due to the lack of KIDs documentation)' (help updated 2026-02-03); CFDs only",
+    "us_etfs_source": "https://www.xtb.com/int/help-center/stocks-and-etfs/adding-a-new-instrument-to-the-offer",
+    "commission": "0 % up to EUR 100,000 monthly turnover; above 0.2 % (min EUR 10)",
+    "commission_pct": 0.0,
+    "commission_free_monthly_limit_eur": 100000,
+    "fx_fee_pct": 0.5,
+    "fx_fee_weekend_transfer_pct": 0.8,
+    "custody": "0.02 % p.a. only on portfolio value above EUR 250,000",
+    "inactivity": "EUR 10/month only if no trade in 365 days AND no deposit in 90 days (and no open position)",
+    "card_deposit_fee_pct_czk": 0.77,
+    "fractional": true,
+    "savings_plan_etf": true,
+    "source": "https://www.xtb.com/cz/soubory/tabulka-poplatku-a-provizi.pdf",
+    "price_list_date": "2026-04-29",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Trading 212",
+    "entity": "Trading 212 group (EU entity; intra-group execution via Trading 212 Markets (Ireland) Ltd from 2026-04-12 per finhacker.cz)",
+    "us_etfs_for_retail": false,
+    "us_etfs_note": "Not offered in Invest account (community/staff answers; no official help article found)",
+    "uncertain_source": true,
+    "us_etfs_source": "https://community.trading212.com/t/why-no-us-listed-us-index-etfs-etps/55400",
+    "commission": "0 (third-party sources)",
+    "commission_pct": 0.0,
+    "fx_fee_pct": 0.15,
+    "fx_note": "'Za převody měn účtujeme pouze 0,15% FX poplatek' (also at weekends); CZK supported as account currency",
+    "custody": "none (third-party)",
+    "inactivity": "none (third-party)",
+    "fractional": true,
+    "savings_plan_etf": "Pies (auto-invest)",
+    "source": "https://www.trading212.com/cs/multi-currency",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "DEGIRO",
+    "entity": "flatexDEGIRO Bank (DE)",
+    "us_etfs_for_retail": false,
+    "us_etfs_note": "PRIIPs: no purchase of products without correct/English documentation since 2018-01-02; CZ: local-language KID + passporting required",
+    "us_etfs_source": "https://www.degiro.com/uk/helpdesk/trading-possibilities/why-cant-i-trade-us-etfs",
+    "commission": "ETF Core Selection EUR 0 + EUR 1 handling; other ETFs EUR 2 + EUR 1; US stocks EUR 1 + EUR 1",
+    "commission_core_selection_eur": 1.0,
+    "commission_other_etf_eur": 3.0,
+    "fx_fee_pct": 0.25,
+    "fx_note": "AutoFX 0.25 %; manual FX EUR 10 + 0.25 %",
+    "custody": "EUR 0; connectivity fee max 0.25 % of account value, max EUR 2.50 per exchange per year (not BCPP)",
+    "inactivity": "EUR 0",
+    "fractional": null,
+    "savings_plan_etf": null,
+    "source": "https://www.degiro.cz/poplatky",
+    "price_list_date": "2025-10-01",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Interactive Brokers (IBKR Ireland)",
+    "entity": "Interactive Brokers Ireland Ltd (CBI)",
+    "us_etfs_for_retail": false,
+    "us_etfs_note": "'EEA and UK retail clients do not have access'; alternatives: UCITS equivalents, CFDs, professional reclassification",
+    "us_etfs_source": "https://www.interactivebrokers.com/lib/cstools/faq/#/content/1136192471",
+    "commission": "Germany Tiered 0.05 % (min EUR 1.25, max EUR 29) + exchange/clearing fees; Fixed 0.05 % (min EUR 3); marketing: EUR 3 per trade for W-European ETFs, 0.05 % above EUR 6,000",
+    "commission_tiered_pct": 0.05,
+    "commission_tiered_min_eur": 1.25,
+    "commission_fixed_min_eur": 3.0,
+    "fx_fee_pct": 0.002,
+    "fx_note": "spot FX 0.20 bp x trade value, min USD 2; auto-conversion +0.03 % on rate",
+    "fx_min_usd": 2.0,
+    "custody": "not re-checked",
+    "inactivity": "not re-checked ('No recurring fees' on ETF page)",
+    "fractional": true,
+    "savings_plan_etf": "June 2026: commission-free iShares ETFs via recurring investment from EUR 10 across Europe (BusinessWire 2026-06-09; not verified for CZ)",
+    "uncertain_recurring": true,
+    "source": "https://www.interactivebrokers.ie/en/pricing/commissions-stocks-europe.php",
+    "source_fx": "https://www.interactivebrokers.ie/en/pricing/commissions-spot-currencies.php",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Lynx",
+    "entity": "LYNX B.V., organizační složka (accounts at Interactive Brokers)",
+    "us_etfs_for_retail": false,
+    "us_etfs_note": "IBKR platform rules; finhacker.cz: only with professional status; no current Lynx page found",
+    "uncertain": true,
+    "us_etfs_source": "https://www.lynxbroker.cz/app/uploads/sites/3/2023/07/2023_Vseobecne-info_memo_PRIIPS_CZ.pdf",
+    "commission": "Tradegate EUR 1.00 + 0.15 % (max EUR 99); US stocks USD 0.01/share (min USD 5, max 2 %)",
+    "fx_fee_pct": null,
+    "fx_note": "no automatic conversion; manual FX per price list (amount not verified)",
+    "custody": null,
+    "inactivity": "conflicting: EUR 5/month platform fee (BrokerChooser 2026-04-27) vs none (Capitalo 2026-06)",
+    "uncertain_inactivity": true,
+    "source": "https://www.lynxbroker.cz/poplatky/",
+    "source_costs": "https://www.lynxbroker.com/media/doc/generic_cost_and_charges_information/generic_cost_and_charges_information_cz.pdf",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Revolut",
+    "entity": "Revolut Securities Europe UAB (Bank of Lithuania)",
+    "us_etfs_for_retail": false,
+    "us_etfs_note": "no US ETF offer found; disclosures cover 'ETFs listed in EEA'",
+    "uncertain": true,
+    "us_etfs_source": "https://cdn.revolut.com/legal/terms/RSEUAB/ex-ante-costs-report-ETFs-v6.0-EN.pdf",
+    "commission": "monthly free trades by plan; outside allowance EUR 1.00 per transaction (all plans); ETF Investment Plans (recurring) commission-free",
+    "commission_outside_allowance_eur": 1.0,
+    "fx_fee_pct": null,
+    "fx_note": "'a foreign exchange fee may apply' (plan-dependent)",
+    "custody": "none",
+    "inactivity": null,
+    "fractional": "not re-verified",
+    "savings_plan_etf": true,
+    "source": "https://cdn.revolut.com/legal/terms/RSEUAB/ex-ante-costs-report-ETFs-v6.0-EN.pdf",
+    "source_plans": "https://cdn.revolut.com/legal/terms/RSEUAB-ex-ante-costs-report-ETFs-Investment-Plan-v1.0.pdf",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Portu",
+    "type": "robo-advisor",
+    "us_etfs_for_retail": "n/a (UCITS portfolios only)",
+    "all_in_fee_pct_pa": 1.0,
+    "fee_tiers": "1 % p.a.; 0.8 / 0.6 / 0.4 % above 0.5 / 1 / 5 mil. CZK; 40 % discount for 15-year fixation",
+    "includes": "trading, FX, custody, rebalancing",
+    "source": "https://magazin.portu.cz/novy-sazebnik-portu-je-jednodussi-a-umoznuje-investovat-levneji/",
+    "source_pdf": "https://cdn.portu.cz/portu/documents/sazebnik-sluzeb-portu-01052024.pdf",
+    "price_list_effective": "2024-05-01",
+    "note": "re-check for 2026 changes",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Fondee",
+    "type": "robo-advisor (Direct Fondee)",
+    "us_etfs_for_retail": "n/a (UCITS portfolios only)",
+    "all_in_fee_pct_pa": 1.09,
+    "fee_note": "0.9 % + 21 % VAT; kids 0.24 %, DIP 0.3 %, student 0.61 %",
+    "fx_note": "bank rate + agreed spread (portfolios in EUR)",
+    "source": "https://www.fondee.cz/podpora/poplatky",
+    "price_list_effective": null,
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Česká spořitelna (George)",
+    "commission": "ETF commission 0.35 % (US/German ETFs)",
+    "commission_pct": 0.35,
+    "source": "https://www.csas.cz/static_internet/cs/Obchodni_informace-Produkty/Sazebnik/Produktove_sazebniky/Prilohy/vybrane_polozky_investovani.pdf",
+    "price_list_effective": "2026-10-23",
+    "note": "read by Q4 sub-research, not re-verified",
+    "uncertain": true,
+    "as_of": "2026-10-29"
+   }
+  ],
+  "tax": {
+   "law": {
+    "name": "zákon č. 586/1992 Sb., o daních z příjmů",
+    "version": "verze 157, znění 2026-08-01 až 2026-12-31",
+    "source": "https://www.zakonyprolidi.cz/cs/1992-586",
+    "as_of": "2026-10-29"
+   },
+   "time_test": {
+    "years": 3,
+    "section": "§ 4 odst. 1 písm. u)",
+    "note": "per lot; not for business assets",
+    "source": "https://www.zakonyprolidi.cz/cs/1992-586",
+    "as_of": "2026-10-29"
+   },
+   "small_sales_exemption": {
+    "czk_per_year": 100000,
+    "basis": "gross sale proceeds of securities in the tax year",
+    "section": "§ 4 odst. 1 písm. t)",
+    "source": "https://www.zakonyprolidi.cz/cs/1992-586",
+    "as_of": "2026-10-29"
+   },
+   "exempt_cap_40m": {
+    "czk": 40000000,
+    "applies_to_securities_2025": true,
+    "applies_to_securities_from_2026": false,
+    "applies_to_crypto": true,
+    "change": "removed for securities and business shares by zákon č. 360/2025 Sb., čl. VI bod 5, effective 2026-01-01 (2025 income still capped)",
+    "section": "§ 4 odst. 3",
+    "source": "https://www.zakonyprolidi.cz/cs/2025-360",
+    "source2": "https://www.tpa-group.cz/news/zruseni-limitu-pro-osvobozeni-prijmu-z-prodeje-obchodnich-podilu-a-cennych-papiru/",
+    "as_of": "2026-10-29"
+   },
+   "notification_exempt_income": {
+    "czk_threshold": 5000000,
+    "section": "§ 38v",
+    "penalty": "§ 38w: 0.1 % (late without request), 10 % (in substitute deadline), 15 % (not filed) of unreported income",
+    "source": "https://www.zakonyprolidi.cz/cs/1992-586",
+    "as_of": "2026-10-29"
+   },
+   "rates": {
+    "general_pct": 15,
+    "higher_pct": 23,
+    "higher_threshold": "36x average wage (§ 16 odst. 1)",
+    "higher_threshold_2026_czk": 1762812,
+    "average_wage_2026_czk": 48967,
+    "threshold_uncertain": true,
+    "threshold_source": "https://www.pruvodcepodnikanim.cz/clanek/minimalni-a-prumerna-mzda-2026/",
+    "separate_base_pct": 15,
+    "separate_base_section": "§ 16a; foreign dividends/interest optional via § 8 odst. 8",
+    "capital_gains_in_general_base": true,
+    "source": "https://www.zakonyprolidi.cz/cs/1992-586",
+    "as_of": "2026-10-29"
+   },
+   "foreign_dividends": {
+    "section": "§ 8 odst. 1 písm. a), § 8 odst. 4, § 8 odst. 8, § 16a",
+    "credit": "§ 38f odst. 2 prostý zápočet, capped by treaty rate and Czech tax",
+    "return_annex": "Příloha č. 3",
+    "source": "https://www.zakonyprolidi.cz/cs/1992-586",
+    "as_of": "2026-10-29"
+   },
+   "cz_us_treaty": {
+    "dividend_wht_pct": 15,
+    "article": "čl. 10 odst. 2 písm. b); odst. 3: 15 % applies to dividends paid by a Regulated Investment Company",
+    "treaty": "sdělení č. 32/1994 Sb.",
+    "source": "https://www.zakonyprolidi.cz/cs/1994-32",
+    "as_of": "2026-10-29"
+   },
+   "us_wht_without_w8ben_pct": {
+    "value": 30,
+    "source": "https://www.irs.gov/individuals/international-taxpayers/nra-withholding",
+    "reviewed": "2026-03-14",
+    "as_of": "2026-10-29"
+   },
+   "irish_ucits_accumulating": {
+    "investor_tax_until_sale": false,
+    "fund_level_us_wht_pct": 15,
+    "basis": "Ireland-US treaty (fund level); no Irish WHT to non-Irish investors",
+    "source": "https://cdn.taxesforexpats.com/articles/investments/ucits-etf-withholding-tax.html",
+    "note": "secondary source; Czech side = my reading of ZDP (no deemed-distribution rule found)",
+    "uncertain": true,
+    "as_of": "2026-10-29"
+   },
+   "jednotny_kurz_2025": {
+    "eur_czk": 24.66,
+    "usd_czk": 21.84,
+    "source": "https://financnisprava.gov.cz/assets/cs/prilohy/d-sprava-dani-a-poplatku/Pokyn_GFR_D-75_podpis.pdf",
+    "pokyn": "GFŘ-D-75 (Finanční zpravodaj 2/2026, 2026-01-14)",
+    "note": "refers to § 38 as in force to 2025-12-31; 2026 rule not checked",
+    "as_of": "2026-10-29"
+   },
+   "us_estate_tax_nra": {
+    "filing_threshold_usd": 60000,
+    "indexed": false,
+    "unified_credit_usd": 13000,
+    "us_situs": "stock of US corporations (incl. US-domiciled ETFs) is US-situs; stock of other corporations is not",
+    "cz_us_estate_treaty": false,
+    "treaty_countries": [
+     "Australia",
+     "Austria",
+     "Canada",
+     "Denmark",
+     "Finland",
+     "France",
+     "Germany",
+     "Greece",
+     "Ireland",
+     "Italy",
+     "Japan",
+     "Netherlands",
+     "South Africa",
+     "Switzerland",
+     "United Kingdom"
+    ],
+    "source": "https://www.irs.gov/instructions/i706na",
+    "source2": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax-for-nonresidents-not-citizens-of-the-united-states",
+    "instructions_rev": "09/2025",
+    "reviewed": "2026-04-30",
+    "as_of": "2026-10-29"
+   }
+  },
   "bank_funds": [
    {
     "name": "TOP STOCKS (třída CZK C)",
@@ -17321,6 +17637,82 @@
     "as_of": "2026-08-27",
     "read": "2026-10-29"
    }
+  },
+  "us_etf_access_rule": {
+   "cnb_execution_only": {
+    "rule": "Broker providing only execution-only access to a foreign exchange, without offering or advising, is not subject to PRIIPs art. 13(1) KID duty (must still give risk info, § 15d ZPKT)",
+    "source": "https://www.cnb.cz/cs/dohled-financni-trh/legislativni-zakladna/stanoviska-k-regulaci-financniho-trhu/RS2018-12",
+    "published": "2018-10-22",
+    "valid_until": "neurčeno",
+    "as_of": "2026-10-29"
+   },
+   "professional_client_cz": {
+    "rule": "ZPKT § 2b: written request + 2 of 3: avg >=10 significant trades/quarter over last 4 quarters; cash+instruments >= EUR 500,000; >=1 year relevant financial-sector job",
+    "source": "https://www.zakonyprolidi.cz/cs/2004-256",
+    "as_of": "2026-10-29"
+   }
+  },
+  "ucits_czk_options": [
+   {
+    "name": "bluesphere° World Equity UCITS CZK Hedged ETF",
+    "issuer": "KBC Asset Management (via Patria/ČSOB)",
+    "listing": "Euronext Amsterdam + dual listing BCPP",
+    "available_from": "2026-04-16",
+    "isin": null,
+    "ter_pct": null,
+    "source": "https://www.patria.cz/zpravodajstvi/6939202/patria-finance-uvadi-prvni-korunove-zajistenou-investici-do-atraktivnich-svetovych-akcii-je-soucasti-vstupu-kbc-na-rapidne-rostouci-trh-etf-v-evrope.html",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "bluesphere° CZK-hedged US / Europe / technology equity ETFs",
+    "available_from": "summer 2026",
+    "source": "https://www.patria.cz/zpravodajstvi/7091000/patria-finance-a-csob-rozsiruji-nabidku-korunove-zajistenych-etf-nove-americke-evropske-i-technologicke-akcie-bez-menoveho-rizika.html",
+    "as_of": "2026-10-29"
+   },
+   {
+    "name": "Wood & Co PX ETF",
+    "listing": "BCPP",
+    "available_from": "2026-09",
+    "source": "https://www.patria.cz/zpravodajstvi/7232019/etf-dospela-i-v-cesku-patria-otevrela-investorum-svet-prazska-burza-ted-dostala-vlastni-fond.html",
+    "as_of": "2026-10-29"
+   }
+  ],
+  "launch_check": {
+   "as_of": "2026-10-29",
+   "blockers": [
+    {
+     "channel": "google_ads",
+     "status": "likely blocked for finance keywords until Financial Services Verification (G2RS + Google) is completed",
+     "enforcement_cz": "2026-09-15",
+     "source": "https://support.google.com/adspolicy/answer/12390454?hl=en"
+    },
+    {
+     "channel": "tiktok",
+     "status": "treat as blocked: CZ financial ads require local licence; advisory services not allowed",
+     "source": "https://web.archive.org/web/20260612142026/https://ads.tiktok.com/help/article/tiktok-ads-policy-financial-services",
+     "uncertain": true
+    },
+    {
+     "channel": "meta",
+     "status": "not blocked; DSA advertiser/payer fields + possible identity verification",
+     "source": "https://www.facebook.com/business/help/719892839342050"
+    }
+   ],
+   "page_must_haves": [
+    "operator name, IČO, seat in footer (OZ § 435)",
+    "cookie opt-in; Pixel/GA4/Ads tags only after consent (127/2005 § 89(3))",
+    "PDF delivered without newsletter tie-in; separate unticked newsletter checkbox + double opt-in (480/2004 § 7; GDPR 7(4))",
+    "self-hosted fonts",
+    "education-only disclaimer; no personalised picks; no buy CTA for US-domiciled ETFs; no paid broker affiliate links before legal review",
+    "e-mail only, never phone"
+   ],
+   "corrections_to_brief": [
+    "40 mil. CZK cap removed for securities from 2026-01-01 (zákon 360/2025 Sb.); applies to 2025 income and to crypto only",
+    "Fio (and probably Patria) let Czech retail buy US ETFs execution-only (ČNB RS2018-12 B.2); foreign brokers block them",
+    "typical bank equity fund: ~3 % entry + ~2 % p.a. ongoing, not 3-5 % entry",
+    "23 % applies to taxable gains above 36x average wage (2026: 1,762,812 CZK); foreign dividends can stay at 15 % via separate tax base",
+    "Czech all-web traffic only ~44-49 % mobile (StatCounter)"
+   ]
   }
  },
  "checks": [
@@ -21109,6 +21501,48 @@
    "subject": "bank_funds",
    "result": "pass",
    "detail": "6 KID-sourced funds"
+  },
+  {
+   "check": "broker data",
+   "subject": "XTB",
+   "result": "pass",
+   "detail": "source https://www.xtb.com/cz/soubory/tabulka-poplatku-a-provizi.pdf (2026-10-29)"
+  },
+  {
+   "check": "broker data",
+   "subject": "Trading 212",
+   "result": "pass",
+   "detail": "source https://www.trading212.com/cs/multi-currency (2026-10-29) [uncertain]"
+  },
+  {
+   "check": "broker data",
+   "subject": "DEGIRO",
+   "result": "pass",
+   "detail": "source https://www.degiro.cz/poplatky (2026-10-29)"
+  },
+  {
+   "check": "broker data",
+   "subject": "Interactive Brokers",
+   "result": "pass",
+   "detail": "source https://www.interactivebrokers.ie/en/pricing/commissions-stocks-europe.php (2026-10-29)"
+  },
+  {
+   "check": "broker data",
+   "subject": "Fio e-Broker",
+   "result": "pass",
+   "detail": "source https://www.fio.cz/docs/cz/C_zaklad_260701.pdf (2026-10-29)"
+  },
+  {
+   "check": "broker data",
+   "subject": "Revolut",
+   "result": "pass",
+   "detail": "source https://cdn.revolut.com/legal/terms/RSEUAB/ex-ante-costs-report-ETFs-v6.0-EN.pdf (2026-10-29) [uncertain]"
+  },
+  {
+   "check": "tax facts",
+   "subject": "40m cap",
+   "result": "pass",
+   "detail": "cap removed for securities from 2026 (zákon 360/2025 Sb.)"
   }
  ]
 }

@@ -19,7 +19,7 @@ Slib reklamy a první obrazovka stránky jsou **stejná věta a stejný obrázek
 ![Reklama 1 feed](../ads/ad-1-dvojce-feed.png)
 
 **Primární text** (prvních ~125 znaků je vidět bez „Zobrazit víc“):
-> VOO, SPY ani QQQ vám většina brokerů v Česku neprodá. Ke každému ale existuje evropské „dvojče“ se stejným indexem.
+> VOO, SPY ani QQQ vám většina brokerů v Česku neprodá (XTB, Trading 212, DEGIRO…). Ke každému ale existuje evropské „dvojče“ se stejným indexem.
 >
 > Srovnali jsme 20 známých ETF z burzy NYSE: poplatky, výnosy a jejich dvojčata, která si koupíte normálně. Plus poplatky 6 brokerů a daně na jedné stránce.
 >
@@ -62,4 +62,11 @@ V kreativě je drobným písmem předpoklad výpočtu (7 % ročně před poplatk
 - **Publikum:** ČR, 22–45 let, Advantage+ audience se signály: investování, ETF, akcie, XTB, Trading 212, Portu, finanční gramotnost. Vyloučit stávající kontakty (nahraný seznam).
 - **Umístění:** Advantage+ placements; kreativa 4:5 pro feed, 9:16 pro Stories/Reels.
 - **Rozpočet testu:** 2 reklamy × 2 landing pages, rovnoměrně, cca 7 dní nebo 300 návštěv na kombinaci.
-- **Pozor na zakázané praktiky:** žádné garantované výnosy, žádné celebrity, žádné „zbohatněte“. Kategorie finanční služby — viz `research/cz-context.md` (ověření inzerenta).
+- **Pozor na zakázané praktiky:** žádné garantované výnosy, žádné celebrity, žádný vzhled falešného zpravodajského článku, žádné „zbohatněte“. Cílit 18+.
+
+## Kde reklamu spustit (stav k 29. 10. 2026, zdroje v `research/cz-context.md` §7)
+| Platforma | Den 1? | Proč |
+|---|---|---|
+| **Meta** (Instagram, Facebook) | **Ano** | ČR není na seznamu zemí s povinným ověřením finančního inzerenta. Reklama, která produkt jen zmiňuje bez možnosti ho rovnou koupit, smí běžet bez licence. Povinná pole DSA (inzerent a plátce) vyplnit; nový účet může Meta podržet kvůli ověření identity → založit business portfolio dnes. |
+| **Google Ads** | **Ne** | Od 15. 9. 2026 platí i pro ČR ověření finančních služeb (Financial Services Verification). Týká se i nefinančních inzerentů, kteří cílí na lidi hledající finanční služby. Ověření (G2RS) zahájit hned; do té doby žádné finanční klíčové slovo. Stránka musí ukazovat adresu provozovatele a poplatky. |
+| **TikTok** | **Ne** | Česká pravidla vyžadují licenci a zakazují poradenské služby; výjimku pro vzdělávací obsah jsme nenašli. Ověřit u zástupce TikToku. |

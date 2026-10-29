@@ -4,7 +4,7 @@
 
 **⚠ Chybějící vstupy:** us-etfs-part1.json — data jsou zatím neúplná.
 
-**Výsledek:** 616 kontrol prošlo · 5 upozornění · 10 chyb · 0 informativních.  
+**Výsledek:** 623 kontrol prošlo · 5 upozornění · 10 chyb · 0 informativních.  
 Výnosy ke dni **2026-09-30** (celkový výnos v USD na NAV, p.a.). Sestaveno 2026-10-29.
 
 ## Metodika
@@ -34,6 +34,8 @@ Výnosy ke dni **2026-09-30** (celkový výnos v USD na NAV, p.a.). Sestaveno 20
 | listing present | 74 | 0 | 0 | 0 |
 | twin mapped | 23 | 0 | 0 | 0 |
 | bank benchmark sample | 1 | 0 | 0 | 0 |
+| broker data | 6 | 0 | 0 | 0 |
+| tax facts | 1 | 0 | 0 | 0 |
 
 ## Chyby
 

@@ -66,7 +66,7 @@ Proměnné: `{{dvojce}}` (blok s dvojčetem, výpočtem nebo lístkem podle vari
 **Předmět:** Daně z ETF: kdy nemusíte řešit nic
 **Preheader:** Časový test, limit 100 000 Kč a co s dividendami.
 
-> - **Držíte déle než 3 roky?** Zisk z prodeje je osvobozený (časový test; od roku 2025 s ročním limitem 40 mil. Kč).
+> - **Držíte déle než 3 roky?** Zisk z prodeje je osvobozený (časový test). Limit 40 mil. Kč platil jen pro rok 2025, od 1. 1. 2026 se na cenné papíry nevztahuje.
 > - **Prodáte za méně než 100 000 Kč za rok?** I pak je příjem osvobozený.
 > - **Akumulační fond** nevyplácí dividendy, takže do prodeje nic nepřiznáváte.
 > - **Distribuční fond** = dividendy patří do daňového přiznání.

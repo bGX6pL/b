@@ -9,11 +9,11 @@ Stránky jsou statické (HTML + 3 malé skripty, bez frameworku), takže se daj�
 | 2 | Doména + HTTPS, nasazení složky `site/` | [K] | — |
 | 3 | E-mailová služba (doporučení: Ecomail nebo SmartEmailing — české, servery v EU, české šablony) + seznam „ETF tahák“ + automatizace 5 e-mailů z `docs/emaily.md` | [K] | — |
 | 4 | Endpoint formuláře (`LEAD_CONFIG.endpoint`) — malá serverless funkce, která přijme JSON z formuláře a založí kontakt v e-mailové službě se štítky `variant`, `placement`, `ticker`/`portfolio`/`calc`, `utm_*`; vrátí `{"id": "<náhodné ID>"}` (nikdy ne e-mail) | technik | `site/assets/lead.js` (kontrakt v hlavičce souboru) |
-| 5 | Endpoint `…/profile` pro odpověď „kde investujete“ (přiřadí podle `id` štítek brokera) | technik | `site/dekujeme/index.html` |
+| 5 | Endpointy z děkovací stránky: `…/consent` (souhlas s tipy — uloží přesné znění a čas, odešle double opt-in e-mail) a `…/profile` (odpověď „kde investujete“ jako štítek). Oba podle `id`. E-mail 0 s PDF odchází všem bez ohledu na souhlas. | technik | `site/dekujeme/index.html` |
 | 6 | Meta Pixel ID a GA4 ID do `LEAD_CONFIG` (načtou se až po souhlasu) | [K] | `site/assets/consent.js` |
 | 7 | Ověření domény v Meta Business, událost `Lead` jako konverze kampaně | [K] | — |
-| 8 | Právní kontrola textů: patička, souhlas u formuláře, `/ochrana-udaju/`, upozornění v PDF a reklamách | právník [K] | viz `research/cz-context.md` |
-| 9 | Ověření inzerenta / kategorie finančních služeb v Meta a Google, pokud se na ČR vztahuje | [K] | viz `research/cz-context.md` |
+| 8 | Právní kontrola: patička a prohlášení (MAR — autor, datum, střet zájmů), souhlas na děkovací stránce, `/ochrana-udaju/`, upozornění v PDF a reklamách, vzorová portfolia ve variantě D | právník [K] | `research/cz-context.md` §6 |
+| 9 | Meta: business portfolio, povinná pole DSA (inzerent/plátce), případné ověření identity. Google: zahájit Financial Services Verification (G2RS) — bez ní Google Ads na finanční témata v ČR neběží (od 15. 9. 2026). TikTok: zatím ne. | [K] | `docs/reklamy.md`, `research/cz-context.md` §7 |
 | 10 | Finální PDF: `tools/make_pdf.py` po doplnění provozovatele | technik | `site/tahak/` |
 
 Konfigurace se vkládá na každou stránku **před** skripty, např.:

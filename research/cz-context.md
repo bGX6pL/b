@@ -8,21 +8,134 @@ Legend: **[UNCERTAIN]** = could not be verified from a primary source, or source
 
 ## 0. Launch blockers and contradictions with the brief (short)
 
-(Filled in at the end; see bottom of the file.)
+**Would block or limit launching ads tomorrow**
+1. **Google Ads – likely blocked for finance keywords.** Financial Services Verification now covers Czechia: "Rolling enforcement begins on July 23, 2026" for 24 EEA markets incl. Czechia; the regulator table lists Czechia from **15 Sep 2026**. In-scope advertisers "must go through verification when requested by Google" (G2RS + Google), incl. non-financial advertisers targeting users seeking financial services; landing page must show a physical address and fees. Whether an unlicensed educational lead magnet is "in scope" is decided by Google per account **[UNCERTAIN]** → do not count on Google Search at launch; start G2RS today. (§7)
+2. **TikTok – treat as blocked.** Czech section requires advertisers to be licensed; "Advisory services" not allowed; no education carve-out found (policy read via 12 Jun 2026 snapshot; live site DNS-blocked on this network). (§7)
+3. **Meta – not blocked.** Czechia is not on Meta's financial-services verification list; but EU advertiser/payer (DSA) fields are mandatory and new accounts may be held for identity verification → set up the business portfolio today; 18+; no return promises, no celebrities, no fake-news look. (§7)
+4. **Must be on the page before any ad runs (legal, not platform):** operator identity (name, IČO, seat) in the footer; cookie opt-in with Pixel/GA4/Ads tags blocked until consent (127/2005 § 89(3)); PDF sent to everyone who enters an e-mail, newsletter only via a separate unticked checkbox + double opt-in (480/2004 § 7, GDPR 7(4)); self-hosted fonts; disclaimers; no personalised "best ETF for you"; no buy CTA for US-domiciled ETFs (ZISIF § 295a); no paid broker affiliate links before legal review (ZPKT § 2(1)(y)). (§6)
+
+**Contradicts or corrects assumptions in the brief**
+- **40 mil. Kč cap:** applied only to tax year 2025; **removed for securities from 1. 1. 2026** (zákon č. 360/2025 Sb., čl. VI bod 5); it remains only for crypto-assets. (§3.1)
+- **US ETFs are not universally off-limits:** per ČNB Q&A RS2018-12 (B.2) execution-only brokers have no PRIIPs KID duty → **Fio explicitly lets retail clients trade US ETFs**, Patria reportedly too; XTB, IBKR/Lynx, DEGIRO, Trading 212, Revolut block them. (§1)
+- **"Typical bank fund" is ~3 % entry + ~2 % p.a.**, not "3–5 % entry" (Raiffeisenbank charges 0 % entry on own funds; ČS discounts regular investing). (§4)
+- **23 % rate does apply** to taxable gains (sale < 3 years) in the part of the tax base above 36× average wage (2026: 1 762 812 Kč); foreign dividends can stay at 15 % via the separate tax base. (§3.1–3.2)
+- **US estate tax:** confirmed – USD 60 000 filing threshold, no CZ–US estate-tax treaty. (§3.5)
+- **Mobile share:** Czech all-web traffic is only ~44–49 % mobile (StatCounter); Meta/Instagram ad clicks will be mostly mobile, but there is no sourced figure. **November is the weakest month** for young Czech investors (XTB data) → expect higher CPL now. (§8)
+- **Latest ČNB rates are from 27. 10. 2026** (28. 10. holiday): USD/CZK 21,834; EUR/CZK 24,340. (§5)
 
 ---
 
 ## 1. Přístup k US ETF pro české retailové klienty (PRIIPs/KID)
 
-_(in progress)_
+### 1.1 The rule and the Czech twist
+
+- **PRIIPs (Reg. 1286/2014) art. 13:** whoever *advises on or sells* a PRIIP must give a retail investor the KID before the contract is binding. US issuers usually publish no KID, so most EU brokers block *buying* US-domiciled ETFs for retail clients (selling/holding existing positions stays possible). IBKR: "If no KID is available from the manufacturer, the PRIIP will be restricted from trading for EEA and UK retail clients" and "U.S. clients are not impacted by PRIIPs, so the issuers of U.S. listed ETFs usually do not create KIDs. This means that EEA and UK retail clients do not have access to such products." https://www.interactivebrokers.com/lib/cstools/faq/#/content/1136192471 (rendered 2026-10-29; raw `ibkr/faq_1136192471.txt`)
+- **ČNB position (primary, still valid):** ČNB Q&A on PRIIPs, part B.2 "Poskytování KID v případě execution-only služeb" (published 22. 10. 2018, "Platnost … do: neurčeno"): a firm that only executes client-initiated orders / only "zprostředkovává přístup na zahraniční burzu", without actively offering the product and without advice, **"nelze jej považovat za subjekt povinnosti podle čl. 13 odst. 1 nařízení PRIIPs"**; it must still give enough risk information (§ 15d ZPKT). https://www.cnb.cz/cs/dohled-financni-trh/legislativni-zakladna/stanoviska-k-regulaci-financniho-trhu/RS2018-12 (read 2026-10-29; raw `cnb-priips/`).
+  → This is why **Czech-regulated brokers (Fio, reportedly Patria) let Czech retail clients buy US ETFs**, while foreign brokers passporting into CZ (IBKR Ireland/Lynx, XTB, DEGIRO, Trading 212, Revolut) apply the stricter reading of their home regulators and block them. **This contradicts the brief's implicit assumption that Czech retail investors cannot buy NYSE ETFs at all.**
+
+### 1.2 Broker by broker (read 2026-10-29)
+
+| Broker (entity) | Can CZ retail buy US-domiciled ETFs? | Evidence |
+|---|---|---|
+| **Fio e-Broker** (Fio banka, CZ) | **Yes** (execution-only) | Fio ETF page: „U nás můžete obchodovat i s **americkými ETF**.“ and „Fio banka svým klientům ani dalším osobám nenabízí žádné ETF … pouze umožňuje přístup na vybrané trhy“. https://www.fio.cz/akcie-investice/etf (raw `fio/etf.html`). |
+| **Patria Finance** (ČSOB group, CZ) | **Probably yes [UNCERTAIN – no primary statement found]** | finex.cz review (updated 11. 8. 2026): „Unikátem je především zpřístupnění fyzických amerických ETF českým retailovým klientům“, e.g. SPY, QQQ, IBIT. https://finex.cz/recenze/patria-finance/ . Patria 17. 3. 2023: ETFs it does not actively offer are traded execution-only, for which "povinnost tvorby českých KID není" (kurzy.cz, https://zpravy.kurzy.cz/703492-sumy-kolem-obchodovani-s-etf-v-patrii-je-svet-v-poradku-burzovne-obchodovane-fondy-jsou-chytrou/ ). Verify in the Patria app before claiming. |
+| **XTB** (XTB S.A., organizační složka; home regulator KNF) | **No** (only CFDs on US ETFs) | Help centre (updated 2026-02-03): "We are unable to offer ETFs from the United States (due to the lack of KIDs documentation)". https://www.xtb.com/int/help-center/stocks-and-etfs/adding-a-new-instrument-to-the-offer |
+| **Interactive Brokers** (IBKR Ireland) | **No** for retail; alternatives: UCITS equivalents, CFDs, or professional reclassification | IBKR FAQ quoted above. |
+| **Lynx** (LYNX B.V., org. složka; accounts at IBKR) | **No** for non-professional clients (same IBKR platform) | Lynx: clients trade "na platformě" Interactive Brokers (Lynx PRIIPs memo, účinnost 17. 7. 2023, https://www.lynxbroker.cz/app/uploads/sites/3/2023/07/2023_Vseobecne-info_memo_PRIIPS_CZ.pdf ); finhacker.cz (19. 8. 2020, upd. 14. 1. 2022): US ETFs at Lynx only with professional status. **[UNCERTAIN – no current Lynx page found]** |
+| **DEGIRO** (flatex) | **No** | "Due to the new PRIIPS legislation" products "where no correct documentation and/or documentation in English is provided" cannot be bought "as of the 2nd of January 2018", "U.S. products are particularly impacted"; hold/sell still possible. https://www.degiro.com/uk/helpdesk/trading-possibilities/why-cant-i-trade-us-etfs ; CZ page also requires a KID "in your local language" and passporting: https://www.degiro.cz/helpdesk/trading-possibilities/impact-new-priips-regulation |
+| **Trading 212** | **No** in Invest account (CFD only) | Only community/staff forum answers found (e.g. https://community.trading212.com/t/why-no-us-listed-us-index-etfs-etps/55400 ); no official help-centre article found **[UNCERTAIN wording, consistent practice]**. |
+| **Revolut** (Revolut Securities Europe UAB, LT) | **Not offered [UNCERTAIN]** | Help centre only explains the KID requirement (https://help.revolut.com/en-CZ/help/wealth/stocks/getting-started-with-etf-s/what-is-a-key-investor-document-kid/ , rendered); cost disclosure is titled "ETFs listed in EEA" (https://cdn.revolut.com/legal/terms/RSEUAB/ex-ante-costs-report-ETFs-v6.0-EN.pdf ). |
+| **Portu / Fondee** (robo-advisors) | Not applicable – they build portfolios from UCITS ETFs only; client cannot pick US ETFs | Portu/Fondee fee pages (see §2). |
+
+### 1.3 Exceptions and workarounds
+
+- **Professional client on request (ZPKT § 2b, implements MiFID II Annex II):** written request + firm's consent + at least **2 of 3**: (1) on average ≥ 10 transactions of significant size per quarter over the previous 4 quarters in the relevant market; (2) cash + financial instruments ≥ **EUR 500 000**; (3) ≥ 1 year working in the financial sector in a position requiring knowledge of the relevant transactions. Loss of retail protections (incl. investor-compensation claims) must be acknowledged in writing. https://www.zakonyprolidi.cz/cs/2004-256 (read 2026-10-29). Unrealistic for the target group.
+- **CFDs on US ETFs** (XTB, IBKR, T212 CFD): leveraged derivatives, ESMA risk warnings (XTB: "U 77 % účtů retailových investorů došlo … ke vzniku ztráty"), no ownership – not a substitute for long-term investing.
+- **Options exercise/assignment into US ETFs:** circulated as a workaround in blogs (e.g. https://jeangalea.com/buy-us-etfs-in-europe/ ); legally grey and broker-dependent **[UNCERTAIN – do not mention on the page]**.
+- **US ETFs with an EU KID:** none found from the major US issuers (SPY/VOO/IVV/QQQ/VTI). Forum reports of brokers commissioning "generic KIDs" for US ETFs are unverified **[UNCERTAIN]**.
+- **Changes 2025–2026:** no change in the KID requirement for US ETFs found. The EU Retail Investment Strategy (incl. PRIIPs amendments, procedure 2023/0237(COD)) did not remove it as far as found **[UNCERTAIN – trilogue status not verified]**. New since 2025/26: more CZK-friendly UCITS options – bluesphere° World Equity UCITS **CZK Hedged** ETF (KBC AM via Patria/ČSOB, Euronext Amsterdam + dual listing on BCPP, available from 16. 4. 2026: https://www.patria.cz/zpravodajstvi/6939202/patria-finance-uvadi-prvni-korunove-zajistenou-investici-do-atraktivnich-svetovych-akcii-je-soucasti-vstupu-kbc-na-rapidne-rostouci-trh-etf-v-evrope.html ; US/Europe/tech CZK-hedged versions added in summer 2026: https://www.patria.cz/zpravodajstvi/7091000/patria-finance-a-csob-rozsiruji-nabidku-korunove-zajistenych-etf-nove-americke-evropske-i-technologicke-akcie-bez-menoveho-rizika.html ), Wood & Co PX ETF on BCPP (Sept 2026: https://www.patria.cz/zpravodajstvi/7232019/etf-dospela-i-v-cesku-patria-otevrela-investorum-svet-prazska-burza-ted-dostala-vlastni-fond.html ). ISIN/TER of these not verified.
+
+**Implications for the landing page (1)**
+- Don't claim "v ČR si americká ETF nekoupíte" – it is false for Fio (and probably Patria). Accurate framing: „Většina zahraničních brokerů (XTB, Trading 212, DEGIRO, IBKR/Lynx, Revolut) americká ETF drobným investorům v EU neprodá, protože k nim chybí dokument KID. Někteří čeští brokeři je umožňují koupit v režimu ‚execution-only‘, tedy bez nabízení a bez KID.“
+- Use NYSE ETFs (SPY, VOO, VTI, QQQ…) as the **reference/benchmark** and map each to its **UCITS twin** (e.g. CSPX/SXR8, VUAA, IWDA/SWDA, VWCE, EQQQ) – that is what the reader can buy anywhere, and it also avoids US estate tax (§3.4) and keeps the page away from "offering" non-registered foreign funds (ZISIF § 295a, see §6a).
+- Do not promote CFDs, professional status or options as workarounds.
+- Add a dated "ověřeno k 29. 10. 2026" line – broker policies change.
 
 ## 2. Náklady nákupu UCITS ETF u brokerů
 
-_(in progress)_
+All read 2026-10-29. "FX" = cost of converting CZK → EUR/USD. Brokers' bid/ask spreads and ETF TER are extra. **Broker costs change often – re-check before publishing a table.**
+
+| Broker | Commission on UCITS ETF (EUR venue) | FX CZK→EUR/USD | Custody / inactivity | Fractions / savings plan | Source (date) |
+|---|---|---|---|---|---|
+| **XTB** | **0 %** up to EUR 100 000 monthly turnover; above: 0.2 % (min. EUR 10) | **0.5 %** mark-up on the XTB rate (0.8 % for transfers between own currency accounts at weekends/holidays) | Custody 0.02 % p.a. only on the part of the portfolio above EUR 250 000; EUR 10/month only if no trade for 365 days **and** no deposit for 90 days and no open position; card deposits 0.77 % (CZK) – first deposit free for clients from 27. 10. 2025 | Yes ("Frakční práva"); "Investiční plány" 0 % within the limit | Tabulka poplatků a provizí ze dne 29. dubna 2026: https://www.xtb.com/cz/soubory/tabulka-poplatku-a-provizi.pdf (raw `xtb/`); plans: https://cz.xtb.com/investicni-plany |
+| **Trading 212** | 0 (no commission on Invest – per third-party sources) | **0.15 %** („Za převody měn účtujeme pouze 0,15% FX poplatek … ani o víkendech“); CZK can be held as account currency | No custody/inactivity fee (third-party) | Yes (fractional, "Pies" auto-invest; pie top-ups also pay 0.15 % FX) | https://www.trading212.com/cs/multi-currency (rendered; raw `rendered/t212_multicurrency_cs.txt`); execution/multi-currency changes from 12. 4. 2026: https://www.finhacker.cz/trading-212-meni-zpusob-provadeni-obchodu-a-pravidla-prace-s-vice-menami/ |
+| **DEGIRO** | **Core Selection: €0 + €1 handling fee**; other ETFs €2 + €1 | **AutoFX 0.25 %**; manual FX €10 + 0.25 % | Custody €0, inactivity €0; connectivity fee max 0.25 % of account value, max €2.50 per exchange per year (not for BCPP) | Fractions: not offered **[UNCERTAIN]**; no native savings plan found | https://www.degiro.cz/poplatky (page "Date: 01-10-2025", rendered; raw `rendered/degiro_cz_poplatky.txt`) |
+| **IBKR (Ireland)** | Germany/Xetra: Tiered 0.05 % (min. **EUR 1.25**, max EUR 29) + exchange/clearing fees; Fixed 0.05 % (min. EUR 3); marketing page: "€3/£3 per trade for Western European ETFs", 0.05 % above €6 000 | Spot FX 0.20 bp × trade value, **min. USD 2**; auto-conversion: +0.03 % on the rate | Not re-checked (no inactivity fee per IBKR marketing "No recurring fees") | Fractional shares yes (EU min. EUR 1.25); June 2026: commission-free iShares ETFs via recurring investment "from €10" across Europe (BusinessWire 9. 6. 2026 – read via search snippet only, page returned 403 **[UNCERTAIN whether CZ clients qualify]**) | https://www.interactivebrokers.ie/en/pricing/commissions-stocks-europe.php (raw `ibkr/commissions-stocks-europe.html`); https://www.interactivebrokers.ie/en/pricing/commissions-spot-currencies.php ; https://www.interactivebrokers.ie/en/trading/products-etfs.php |
+| **Lynx** | Tradegate: **EUR 1.00 + 0.15 %** (max. EUR 99); US: USD 0.01/share (min. USD 5) | No automatic conversion; client converts manually at IBKR spot FX + Lynx price-list fee **[UNCERTAIN amount]** | Inactivity/platform fee: conflicting (BrokerChooser 27. 4. 2026: €5/month "platform fee"; Capitalo 6/2026: none) **[UNCERTAIN]** | – | https://www.lynxbroker.cz/poplatky/ (rendered); cost info 01. 07. 2025: https://www.lynxbroker.com/media/doc/generic_cost_and_charges_information/generic_cost_and_charges_information_cz.pdf |
+| **Fio e-Broker** | XETRA: ≤ EUR 1 400 **€3.95**; 1 400.01–3 000 €4.95; > 3 000 0.15 % (min. €6.95); Frankfurt surcharge €10; on DIP account ≤ EUR 500 €1.98. USA: $7.95 (≤ 100 ks) / $9.95. Plus third-party fees (annex) | No explicit fee – Fio's own exchange rate (spread); reviewers call it "nejsou extra výhodné" (finex.cz, 1. 8. 2025) | Custody on collective accounts for USA and XETRA: **zdarma** | No fractions; no ETF savings plan found | Ceník základních služeb (účinný od 1. 7. 2026): https://www.fio.cz/docs/cz/C_zaklad_260701.pdf ; Příloha ceníku (účinná 8. 12. 2025/8. 1. 2026): https://www1.fio.cz/docs/cz/C_trh_260108.pdf (raw `fio/`) |
+| **Revolut** | Free trades per month by plan; outside the allowance **EUR 1.00 per transaction** (all plans); **ETF Investment Plans (recurring) commission-free** (Revolut pre-funds the commission from inducements) | "a foreign exchange fee may apply" (Revolut FX rules by plan – not quantified) | No custody fee | Fractions yes **[not re-verified]**; Investment Plans yes | Ex-ante costs ETFs v6.0: https://cdn.revolut.com/legal/terms/RSEUAB/ex-ante-costs-report-ETFs-v6.0-EN.pdf ; Investment Plan disclosure: https://cdn.revolut.com/legal/terms/RSEUAB-ex-ante-costs-report-ETFs-Investment-Plan-v1.0.pdf (raw `revolut/`) |
+| **Patria Finance** | Xetra/EU (internet, ≤ 49 999 Kč): **4.90 EUR + 0.30 %**; USA ≤ 49 999 Kč: 2.90 USD + 0.30 %; Prague: BCPP fee 0.04 % extra | **1.5 %** deviation from market rate | Foreign securities custody **0.12 % p.a. + VAT**; account free | Regular ETF investing **0.8 %** per purchase (from 500 Kč with fractions per Patria 16. 4. 2026 article) | Sazebník poplatků platný od 1. 7. 2026: https://cdn.patria.cz/Sazebnik-PD-od-1.7.2026.pdf (raw `patria/`) |
+| **Portu** (robo) | All-in management fee **1 % p.a.**; 0.8 / 0.6 / 0.4 % above 0.5 / 1 / 5 mil. Kč; includes trading, FX, custody, rebalancing; 15-year fixation discount 40 % | included | included | Regular investing; fractions internal | Price list effective 1. 5. 2024 (Portu magazín 23. 4. 2024): https://magazin.portu.cz/novy-sazebnik-portu-je-jednodussi-a-umoznuje-investovat-levneji/ ; price list PDF: https://cdn.portu.cz/portu/documents/sazebnik-sluzeb-portu-01052024.pdf **[re-check for 2026 changes]** |
+| **Fondee** (Direct Fondee) | Classic account **0.9 % p.a. + 21 % VAT = 1.09 %**; kids 0.24 %; DIP 0.3 %; student 0.61 % | Bank rate + agreed spread (portfolios in EUR) | included | Regular investing | https://www.fondee.cz/podpora/poplatky (read 2026-10-29; no effective date on page) |
+| *Česká spořitelna (George)* | ETF commission 0.35 % (US/German ETFs) | n/a | n/a | n/a | ČS price list effective 23. 10. 2026 (as read by the Q4 sub-research): https://www.csas.cz/static_internet/cs/Obchodni_informace-Produkty/Sazebnik/Produktove_sazebniky/Prilohy/vybrane_polozky_investovani.pdf **[not re-verified]** |
+
+**Worked example (illustration, 2 000 Kč/month into an EUR-quoted UCITS ETF on Xetra, ČNB EUR/CZK 24,340 → ≈ EUR 82):**
+- XTB: 0 commission + 0.5 % FX ≈ 10 Kč/month (0.5 %).
+- Trading 212: 0 + 0.15 % ≈ 3 Kč (0.15 %).
+- DEGIRO (Core Selection): €1 ≈ 24 Kč + 0.25 % ≈ 5 Kč → ≈ 1.5 % of a 2 000 Kč purchase (fee is fixed, so it falls with larger tickets).
+- IBKR Tiered: min. €1.25 ≈ 30 Kč (+ exchange fees) + FX min. USD 2 per conversion if converted each time → ≈ 2–4 % at this ticket size (convert less often).
+- Fio: €3.95 ≈ 96 Kč → ≈ 4.8 % per purchase (+ FX spread) – not suitable for small monthly amounts.
+- Patria regular investing: 0.8 %.
+- Portu/Fondee: no per-trade cost, but 1 % / 1.09 % p.a. on the whole portfolio.
+(Arithmetic only, broker spreads and ETF TER excluded.)
+
+**Implications for the landing page (2)**
+- The fee calculator needs three broker cost types: % commission, fixed per-trade fee, % FX, plus robo "all-in % p.a.".
+- Safe defaults for "levný broker" scenario: 0 % commission + 0.15–0.5 % FX (T212/XTB); show DEGIRO/IBKR as fixed-fee options better for larger, less frequent purchases.
+- Never present a broker list as a recommendation or with paid links (see §6a ZPKT § 2(1)(y) risk); state the price-list dates.
+- CZK-hedged UCITS ETFs (bluesphere°) and Prague-listed ETFs avoid FX conversion – worth one line in the cheat-sheet, neutral wording.
 
 ## 3. Zdanění fyzických osob v ČR
 
-_(in progress)_
+Primary text: zákon č. 586/1992 Sb., o daních z příjmů, **verze 157, aktuální znění 01. 08. 2026 – 31. 12. 2026**, https://www.zakonyprolidi.cz/cs/1992-586 (read 2026-10-29; raw `zakonyprolidi/1992-586_ZDP.html`). Letters of § 4(1) are cited as they stand in this version (older articles call the same exemptions "písm. w/x").
+
+### 3.1 Capital gains on ETF units (ostatní příjmy, § 10)
+
+- **Time test 3 years – § 4 odst. 1 písm. u):** exempt is "příjem z úplatného převodu cenného papíru, přesáhne-li doba mezi nabytím a úplatným převodem … dobu 3 let"; not for securities held in business assets (until 3 years after the business ends). FIFO/lot-by-lot per purchase.
+- **100 000 Kč rule – § 4 odst. 1 písm. t):** exempt are "příjmy z úplatného převodu cenných papírů, pokud jejich úhrn u poplatníka nepřesáhne ve zdaňovacím období částku 100000 Kč" → **gross sale proceeds**, not profit.
+- **40 mil. Kč cap – CHANGED, contradicts the brief:** the cap (introduced by the 2024 "konsolidační balíček", applied to tax year 2025) was **removed for securities and business shares from 1. 1. 2026** by **zákon č. 360/2025 Sb., čl. VI bod 5** (deletes "příjmů z úplatného převodu cenného papíru osvobozených podle odstavce 1 písm. u)" from § 4 odst. 3; law in force 29. 9. 2025, effective 1. 1. 2026; transitional provision 1: tax periods begun before that date use the old law → **the cap still applies to 2025 income**). The current § 4 odst. 3 keeps the 40 000 000 Kč cap **only for crypto-assets (písm. zk)**. https://www.zakonyprolidi.cz/cs/2025-360 (raw `zakonyprolidi/2025-360.html`), corroborated by TPA Group https://www.tpa-group.cz/news/zruseni-limitu-pro-osvobozeni-prijmu-z-prodeje-obchodnich-podilu-a-cennych-papiru/ and penize.cz https://www.penize.cz/akcie-svet/484372-limit-40-milionu-korun-pro-dane-prodej-akcii-krypta-firmy (read 2026-10-29).
+- **Taxable gains:** § 10 – income minus acquisition price; losses only offset within the same type of income in the same year ("Jsou-li výdaje … vyšší než příjem, k rozdílu se nepřihlíží", § 10 odst. 4). Part of the general tax base → **15 %**, and **23 % on the part of the total tax base above 36× average wage** (§ 16 odst. 1). For 2026: 36 × 48 967 Kč = **1 762 812 Kč** (secondary sources, e.g. https://www.pruvodcepodnikanim.cz/clanek/minimalni-a-prumerna-mzda-2026/ ; one source gives 47 544/1 711 584 Kč – **[UNCERTAIN, verify in nařízení vlády]**). So yes, **23 % can apply to large taxable gains** (e.g. sale before 3 years on top of a high salary).
+- **Notification duty – § 38v:** an exempt income "vyšší než 5000000 Kč" must be reported to the tax office by the tax-return deadline (amount, circumstances, date); penalties § 38w: 0.1 % / 10 % / 15 % of the unreported income. Applies e.g. to an exempt (time-tested) sale with proceeds > 5 mil. Kč.
+
+### 3.2 Dividends from foreign ETFs (distributing)
+
+- Foreign dividends are capital income (§ 8 odst. 1 písm. a); from abroad they are taxed in the return without deductions (§ 8 odst. 4) and **may be put into the separate tax base taxed at 15 % (§ 8 odst. 8 + § 16a: "Sazba daně pro samostatný základ daně činí 15 %")** – i.e. not subject to 23 %, but no personal allowances against it.
+- **Foreign tax credit – § 38f odst. 2 (prostý zápočet):** Czech tax reduced by foreign tax paid, capped at the Czech tax attributable to that income and at the treaty rate. Reported in the return, **Příloha č. 3** (foreign income) – (Finanční správa form instructions not re-read today; secondary: https://www.dauc.cz/clanky/13545/drzba-zahranicnich-akcii-fyzickou-osobou-jak-zdanit-vyplacenou-dividendu ).
+- **US-domiciled ETF (RIC) dividends:** CZ–US treaty (sdělení č. 32/1994 Sb.) čl. 10 odst. 2 písm. b) **15 %**, and čl. 10 odst. 3: "Pododstavec b) odstavce 2 se použije v případě dividend vyplácených společností Regulated Investment Company". https://www.zakonyprolidi.cz/cs/1994-32 (raw `zakonyprolidi/1994-32_smlouva_CZ_US.html`). Without a treaty claim (Form **W-8BEN**) the US statutory rate is **30 %**: IRS – "Most types of U.S. source income received by a foreign person are subject to U.S. tax of 30%" unless reduced by treaty (page reviewed 14-Mar-2026): https://www.irs.gov/individuals/international-taxpayers/nra-withholding . Excess over 15 % is **not creditable in CZ** (treaty cap) – reclaim only from the US.
+- With W-8BEN: 15 % US WHT + Czech 15 % on the gross dividend minus 15 % credit → **≈ 0 % additional Czech tax, but the dividend must still be declared**.
+
+### 3.3 Accumulating Irish UCITS ETFs
+
+- No distribution → no capital income for the investor; the investor is taxed only on sale (§ 10, with the time test / 100 000 Kč rule above). **[MY READING]** Czech law has no deemed-distribution / "Vorabpauschale"-type rule for individuals – none found in ZDP.
+- Inside the fund: US dividends to an Irish fund bear **15 %** US WHT under the Ireland–US treaty (vs 30 % statutory); Ireland levies no WHT on distributions to non-Irish investors (secondary: https://cdn.taxesforexpats.com/articles/investments/ucits-etf-withholding-tax.html ; check each fund's prospectus) **[secondary source]**.
+- This 15 % is a fund-level cost; it is **not creditable** by the Czech investor.
+
+### 3.4 FX conversion for the tax return
+
+- Taxpayers not keeping accounts may use the ČNB daily rate or the **jednotný kurz**; for 2025: **EUR 24,66 Kč, USD 21,84 Kč** (Pokyn GFŘ-D-75, Finanční zpravodaj 2/2026, 14. 1. 2026), https://financnisprava.gov.cz/assets/cs/prilohy/d-sprava-dani-a-poplatku/Pokyn_GFR_D-75_podpis.pdf (raw `financnisprava/`). The pokyn refers to § 38 "ve znění účinném do 31. 12. 2025" → **the rule for 2026 income may differ [UNCERTAIN – not checked]**.
+
+### 3.5 US estate tax for non-resident aliens
+
+- Executors must file **Form 706-NA** if US-situated assets (plus adjusted taxable gifts) exceed **USD 60 000** – "not indexed for inflation" (IRS, reviewed 28-Jun-2026): https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax-for-nonresidents-not-citizens-of-the-united-states . Instructions for 706-NA (Rev. 09/2025, reviewed 30-Apr-2026): "stock of corporations organized in or under U.S. law is property located in the United States"; stock of other corporations is outside the US; maximum unified credit generally **USD 13 000** (≈ USD 60 000 exempt). https://www.irs.gov/instructions/i706na
+- Treaty list in the same instructions ("Death tax treaties are in effect with"): Australia, Austria, Canada, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Japan, Netherlands, South Africa, Switzerland, United Kingdom → **no CZ–US estate tax treaty (your assumption confirmed)**.
+- → US-domiciled ETFs (SPY, VOO…) are US-situs; Irish UCITS ETFs are shares of an Irish company → not US-situs **[MY READING based on the IRS rule above]**.
+
+**Implications for the landing page (3)**
+- Tax copy to use: „Při prodeji po více než 3 letech je zisk z ETF osvobozen (§ 4 odst. 1 písm. u) ZDP). Osvobozený je i prodej, pokud celkové příjmy z prodeje cenných papírů za rok nepřesáhnou 100 000 Kč (§ 4 odst. 1 písm. t)). Od roku 2026 se u cenných papírů neuplatní limit 40 mil. Kč (platil jen pro rok 2025).“ + "osvobozený příjem nad 5 mil. Kč je nutné oznámit (§ 38v)".
+- Don't write "23 % se na investory nevztahuje" – it can apply to taxable gains; dividends can stay at 15 % via the separate tax base.
+- Accumulating Irish UCITS = simplest for Czech investors (no annual dividend filing, 15 % US WHT at fund level, no US estate-tax exposure) – a factual, non-personalised point for the cheat-sheet.
+- US ETFs: mention W-8BEN (15 % vs 30 %) and the USD 60 000 estate-tax threshold as reasons why the NYSE comparison is "for reference".
+- Always attach the 44(7)-style caveat: „Daňové informace jsou zjednodušené, vycházejí z předpisů platných k 29. 10. 2026 a závisí na individuálních poměrech.“
 
 ## 4. Typické náklady bankovních podílových fondů
 

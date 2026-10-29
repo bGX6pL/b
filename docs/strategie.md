@@ -4,7 +4,7 @@
 
 ## Ve zkratce
 
-1. **Klíčový insight:** Čech, který „chce koupit VOO“, ho u svého brokera nenajde. Většina brokerů v EU americká ETF drobným investorům neprodá, protože nemají dokument KID (nařízení PRIIPs). Ke skoro každému ale existuje evropský fond (UCITS) na stejný index — **„evropské dvojče“**. Kdo srovnává ETF z NYSE, ve skutečnosti hledá, *co si z toho může koupit on*. To je hodnota, kterou mu dáme.
+1. **Klíčový insight:** Čech, který „chce koupit VOO“, ho u svého brokera většinou nenajde. XTB, Trading 212, DEGIRO, IBKR/Lynx i Revolut americká ETF drobným investorům neprodají, protože nemají dokument KID (nařízení PRIIPs). Výjimkou je Fio e-Broker (execution-only podle stanoviska ČNB z roku 2018). Ani tam to ale pro Čecha nebývá nejlepší cesta: dividendy je nutné přiznávat, potřebuje formulář W-8BEN a nad 60 000 USD hrozí americká dědická daň. Ke skoro každému ale existuje evropský fond (UCITS) na stejný index — **„evropské dvojče“**. Kdo srovnává ETF z NYSE, ve skutečnosti hledá, *co si z toho může koupit on*. To je hodnota, kterou mu dáme.
 2. **Výměnou za e-mail:** *ETF tahák 2026* — PDF na 2 strany: 20 ETF z NYSE, jejich evropská dvojčata (ISIN, ticker, poplatek), poplatky 6 brokerů dostupných v ČR a daně na jedné stránce. K tomu osobní výstup z interaktivního prvku (dvojče, výpočet, nákupní lístek) a čtvrtletní aktualizace.
 3. **Kdy o kontakt žádáme:** až po první „malé výhře“ — výsledek interaktivního prvku je předvyplněný už v první obrazovce, formulář je hned pod ním. Žádný pop-up při vstupu.
 4. **Formulář:** jedno pole (e-mail). Žádné jméno, **nikdy telefon** — v Česku je to i signál „nejsme podvodný call centrum“.
