@@ -96,7 +96,8 @@ h2 em { font-style: italic; font-weight: 480; }
 .ticket ol { margin: 12px 0 0; padding: 0; list-style: none; counter-reset: s; }
 .ticket li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 10px 0; border-top: 1px dashed var(--line); }
 .ticket li::before { content: counter(s); width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; font-weight: 800; font-size: 13px; }
-.ticket li span { color: var(--muted); font-size: 14px; display: block; }
+.ticket li > div > span { color: var(--muted); font-size: 14px; display: block; }
+.ticket li span span { display: inline; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12.5px; color: var(--ink); }
 .ticket .blur { filter: blur(4px); user-select: none; }
 
 .inside { display: grid; gap: 22px; margin-top: 22px; align-items: center; }
