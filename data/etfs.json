@@ -1,10 +1,3661 @@
 {
  "compiled": "2026-10-29",
  "returns_as_of": "2026-09-30",
- "missing_inputs": [
-  "us-etfs-part1.json"
- ],
+ "missing_inputs": [],
  "us_etfs": {
+  "VOO": {
+   "ticker": "VOO",
+   "former_ticker": null,
+   "name": "Vanguard S&P 500 ETF",
+   "issuer": "Vanguard",
+   "issuer_url": "https://investor.vanguard.com/investment-products/etfs/profile/voo",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/voo/quote",
+       "value": "ARCX (NYSE Arca) exchange code",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "S&P 500 Index",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: benchmark)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/characteristic",
+       "value": "S&P 500 Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": "S&P 500 Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": "S&P 500",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.03,
+     "as_of": "2026-04-28",
+     "sources": [
+      {
+       "name": "issuer API (profile: expenseRatio)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/profile",
+       "value": 0.03,
+       "as_of": "2026-04-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": 0.03,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/voo/quote",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross; prospectus expense ratio dated 2026-04-28."
+    },
+    "aum_usd_bn": {
+     "value": 1032.26,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet (ETF total net assets)",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": 1032.26,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer API (shareClassTotalNetAssets, rounded)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/characteristic",
+       "value": "$1.0 trillion",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": 1050.0,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (Total Assets, fund-level)",
+       "url": "https://www.morningstar.com/etfs/arcx/voo/quote",
+       "value": "1.73 Tril",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "SHARE-CLASS level: ETF share class total net assets $1,032,260 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $1,732,017 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 1.73 Tril. stockanalysis.com $1.05T on 2026-10-28 differs by 1.7% (later date), within 5%."
+    },
+    "inception_date": {
+     "value": "2010-09-07",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer API (profile: inceptionDate)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/profile",
+       "value": "2010-09-07",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": "2010-09-07",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": "Sep 7, 2010",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older."
+    },
+    "holdings_count": {
+     "value": 505,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: numberOfStocks)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/characteristic",
+       "value": 505,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Number of stocks)",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": 505,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": 518,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 518 (+2.6%); it counts all holding lines (incl. cash/derivatives/collateral) and is dated 2026-10-28."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (distribution: distributionFrequency)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/distribution",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Dividend schedule)",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 1.06,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/voo/quote",
+       "value": 1.06,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": 1.05,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. For reference, issuer 30-day SEC yield: 1.00% (2026-09-30)."
+    },
+    "ret_1y_pct": {
+     "value": 15.7,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/performance",
+       "value": 15.7,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": 15.7,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/voo/performance",
+       "value": 15.7,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_5y_pct": {
+     "value": 13.75,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/performance",
+       "value": 13.75,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": 13.75,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/voo/performance",
+       "value": 13.75,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_10y_pct": {
+     "value": 15.29,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/performance",
+       "value": 15.29,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": 15.29,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/voo/performance",
+       "value": 15.29,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "NVIDIA Corp.",
+       8.38
+      ],
+      [
+       "Apple Inc.",
+       7.37
+      ],
+      [
+       "Microsoft Corp.",
+       5.78
+      ]
+     ],
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (portfolio-holding/stock)",
+       "url": "https://investor.vanguard.com/vmf/api/VOO/portfolio-holding/stock",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         8.38
+        ],
+        [
+         "Apple Inc.",
+         7.37
+        ],
+        [
+         "Microsoft Corp.",
+         5.78
+        ]
+       ],
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/voo/",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         8.39
+        ],
+        [
+         "Apple Inc.",
+         7.38
+        ],
+        [
+         "Microsoft Corp.",
+         5.78
+        ]
+       ],
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (% of total net assets, 1 decimal)",
+       "url": "https://fund-docs.vanguard.com/F0968.pdf",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         8.4
+        ],
+        [
+         "Apple Inc.",
+         7.4
+        ],
+        [
+         "Microsoft Corp.",
+         5.8
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 8.4, 7.4, 5.8."
+    }
+   },
+   "notes": ""
+  },
+  "SPY": {
+   "ticker": "SPY",
+   "former_ticker": null,
+   "name": "State Street SPDR S&P 500 ETF Trust",
+   "issuer": "State Street Investment Management (SPDR)",
+   "issuer_url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Listing Information)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": "NYSE ARCA",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fund-finder JSON (primaryExchange)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": "NYSE ARCA",
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "S&P 500 Index",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Fund Information: Benchmark)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": "S&P 500 Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+       "value": "S&P 500 Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": "S&P 500",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.0945,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Gross Expense Ratio)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": 0.0945,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+       "value": 0.0945,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": 0.09,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/spy/quote",
+       "value": 0.095,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Gross = net per issuer fact sheet. stockanalysis (0.09%) and Morningstar (0.095%) display rounded versions of 0.0945%."
+    },
+    "aum_usd_bn": {
+     "value": 814.82,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Assets Under Management)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": 814.816,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fund-finder JSON (aum)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": 814.816,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "Morningstar (Total Assets)",
+       "url": "https://www.morningstar.com/etfs/arcx/spy/quote",
+       "value": 814.82,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": 804.37,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "FUND-level = share-class level (single-class UIT). Issuer value $814,816.36 M as of 2026-10-27 (issuer publishes daily). stockanalysis diff 1.3%."
+    },
+    "inception_date": {
+     "value": "1993-01-22",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Inception Date / Listing Date)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": "1993-01-22",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+       "value": "1993-01-22",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": "Jan 22, 1993",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Inception date = listing date per issuer listing table."
+    },
+    "holdings_count": {
+     "value": 504,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Fund Characteristics: Number of Holdings)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": 504,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Number of Holdings)",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+       "value": 504,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": 505,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "stockanalysis.com 505 includes non-equity lines (0.2% diff)."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Distribution Frequency)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 0.99,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Fund Distribution Yield)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": 0.99,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/spy/quote",
+       "value": 0.99,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": 0.98,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month (SSGA 'Fund Distribution Yield' = distributions of past 365 days / NAV, as of 2026-10-27; Morningstar TTM uses the 2026-09-30 NAV). For reference, 30-day SEC yield: 0.95% (issuer page, 2026-10-27) / 0.96% (fact sheet, 2026-09-30)."
+    },
+    "ret_1y_pct": {
+     "value": 15.6,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Fund Performance, Quarter End, NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": 15.6,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fund-finder JSON (Quarter End, NAV)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": 15.6,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+       "value": 15.6,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/spy/performance",
+       "value": 15.63,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). SPY trails VOO/IVV/SPYM by ~0.10-0.11 pp p.a.: higher fee (0.0945% vs 0.02-0.03%) plus UIT structure (cannot reinvest dividends between payments)."
+    },
+    "ret_5y_pct": {
+     "value": 13.65,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Fund Performance, Quarter End, NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": 13.65,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fund-finder JSON (Quarter End, NAV)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": 13.65,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+       "value": 13.65,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/spy/performance",
+       "value": 13.69,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). SPY trails VOO/IVV/SPYM by ~0.10-0.11 pp p.a.: higher fee (0.0945% vs 0.02-0.03%) plus UIT structure (cannot reinvest dividends between payments)."
+    },
+    "ret_10y_pct": {
+     "value": 15.18,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Fund Performance, Quarter End, NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+       "value": 15.18,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fund-finder JSON (Quarter End, NAV)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": 15.18,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+       "value": 15.18,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/spy/performance",
+       "value": 15.23,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). SPY trails VOO/IVV/SPYM by ~0.10-0.11 pp p.a.: higher fee (0.0945% vs 0.02-0.03%) plus UIT structure (cannot reinvest dividends between payments)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "NVIDIA Corp.",
+       7.92
+      ],
+      [
+       "Apple Inc.",
+       7.61
+      ],
+      [
+       "Microsoft Corp.",
+       5.93
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer daily holdings XLSX",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/fund-data/etfs/us/holdings-daily-us-en-spy.xlsx",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.92
+        ],
+        [
+         "Apple Inc.",
+         7.61
+        ],
+        [
+         "Microsoft Corp.",
+         5.93
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spy/",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.92
+        ],
+        [
+         "Apple Inc.",
+         7.61
+        ],
+        [
+         "Microsoft Corp.",
+         5.93
+        ]
+       ],
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (as of 2026-09-30)",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         8.38
+        ],
+        [
+         "Apple Inc.",
+         7.37
+        ],
+        [
+         "Microsoft Corp.",
+         5.77
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund from issuer daily holdings file dated 2026-10-27 (matches stockanalysis.com). Quarter-end (2026-09-30) fact-sheet weights for reference: 8.38, 7.37, 5.77."
+    }
+   },
+   "notes": "Issuer now brands the fund 'State Street SPDR S&P 500 ETF Trust' (formerly 'SPDR S&P 500 ETF Trust'; SSGA is now 'State Street Investment Management'); ticker unchanged."
+  },
+  "IVV": {
+   "ticker": "IVV",
+   "former_ticker": null,
+   "name": "iShares Core S&P 500 ETF",
+   "issuer": "iShares (BlackRock)",
+   "issuer_url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Key Facts: Exchange)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/ivv/quote",
+       "value": "ARCX exchange code in quote URL",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "S&P 500 Index",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Key Facts: Benchmark Index)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": "S&P 500 Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": "S&P 500",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.03,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Expense Ratio, fees as stated in the prospectus)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/ivv/quote",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross (no waiver shown)."
+    },
+    "aum_usd_bn": {
+     "value": 885.14,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": 885.141,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "Morningstar (Total Assets)",
+       "url": "https://www.morningstar.com/etfs/arcx/ivv/quote",
+       "value": 885.14,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": 874.51,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "FUND-level = share-class level (single share class ETF). Issuer 'Net Assets of Fund' $885,141,071,461 as of 2026-10-27 (issuer publishes daily, not a 2026-09-30 figure on the page). Diffs: Morningstar 0.0%, stockanalysis 1.2%."
+    },
+    "inception_date": {
+     "value": "2000-05-15",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Fund Inception)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": "2000-05-15",
+       "as_of": null
+      },
+      {
+       "name": "issuer fund data file (Fund Inception)",
+       "url": "https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=239726&component=fundDownload&userType=individual",
+       "value": "2000-05-15",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": "May 15, 2000",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund launch = listing date."
+    },
+    "holdings_count": {
+     "value": 505,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Number of Holdings)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": 505,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer holdings CSV (equity lines)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-s-p-500-etf/latest-holdings.csv",
+       "value": 505,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": 509,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer count excludes cash and derivatives. stockanalysis.com 509 = all lines of the issuer CSV incl. cash/futures/collateral (0.8% diff)."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Distribution Frequency)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 1.1,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (12m Trailing Yield)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": 1.1,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/ivv/quote",
+       "value": 1.1,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": 1.08,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month yield (iShares '12m Trailing Yield', as of 2026-09-30). Morningstar TTM (same basis/date) agrees within 0.10 pp; stockanalysis.com uses the 2026-10-28 price. For reference, issuer 30-day SEC yield: 0.95% (2026-09-30)."
+    },
+    "ret_1y_pct": {
+     "value": 15.71,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": 15.71,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/ivv/performance",
+       "value": 15.7,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_5y_pct": {
+     "value": 13.76,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": 13.76,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/ivv/performance",
+       "value": 13.76,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_10y_pct": {
+     "value": 15.3,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+       "value": 15.3,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/ivv/performance",
+       "value": 15.3,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "NVIDIA Corp.",
+       7.92
+      ],
+      [
+       "Apple Inc.",
+       7.61
+      ],
+      [
+       "Microsoft Corp.",
+       5.93
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer holdings CSV",
+       "url": "https://www.ishares.com/us/products/239726/ishares-core-s-p-500-etf/latest-holdings.csv",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.92
+        ],
+        [
+         "Apple Inc.",
+         7.61
+        ],
+        [
+         "Microsoft Corp.",
+         5.93
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/ivv/",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.92
+        ],
+        [
+         "Apple Inc.",
+         7.61
+        ],
+        [
+         "Microsoft Corp.",
+         5.93
+        ]
+       ],
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund net assets from the issuer's latest holdings CSV (2026-10-27); iShares no longer serves a 2026-09-30 holdings file and its fact sheet is still dated 2026-06-30. stockanalysis.com shows identical weights."
+    }
+   },
+   "notes": ""
+  },
+  "SPYM": {
+   "ticker": "SPYM",
+   "former_ticker": "SPLG",
+   "name": "State Street SPDR Portfolio S&P 500 ETF",
+   "issuer": "State Street Investment Management (SPDR)",
+   "issuer_url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Listing Information)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": "NYSE ARCA",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fund-finder JSON (primaryExchange)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": "NYSE ARCA",
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "S&P 500 Index",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Fund Information: Benchmark)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": "S&P 500 Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spym.pdf",
+       "value": "S&P 500 Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": "S&P 500",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.02,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Gross Expense Ratio)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": 0.02,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spym.pdf",
+       "value": 0.02,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": 0.02,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/spym/quote",
+       "value": 0.02,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer shows gross expense ratio; no waiver."
+    },
+    "aum_usd_bn": {
+     "value": 185.01,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Assets Under Management)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": 185.007,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fund-finder JSON (aum)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": 185.007,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "Morningstar (Total Assets)",
+       "url": "https://www.morningstar.com/etfs/arcx/spym/quote",
+       "value": 185.01,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": 182.14,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "SHARE-CLASS page: SSGA labels this page 'ETF Share Class'; AUM shown is for the ETF share class (other share classes, if any, not verified). Issuer value $185,006.72 M as of 2026-10-27 (issuer publishes daily). stockanalysis diff 1.5%."
+    },
+    "inception_date": {
+     "value": "2005-11-08",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Inception Date / Listing Date)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": "2005-11-08",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spym.pdf",
+       "value": "2005-11-08",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": "Nov 8, 2005",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Inception date = listing date per issuer listing table."
+    },
+    "holdings_count": {
+     "value": 505,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Fund Characteristics: Number of Holdings)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": 505,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer fact sheet (Number of Holdings)",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spym.pdf",
+       "value": 505,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": 508,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "stockanalysis.com 508 includes non-equity lines (0.6% diff)."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Distribution Frequency)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 1.01,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Fund Distribution Yield)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": 1.01,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/spym/quote",
+       "value": 1.02,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": 1.0,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month (SSGA 'Fund Distribution Yield' = distributions of past 365 days / NAV, as of 2026-10-27; Morningstar TTM uses the 2026-09-30 NAV). For reference, 30-day SEC yield: 1.03% (issuer page, 2026-10-27) / 1.04% (fact sheet, 2026-09-30)."
+    },
+    "ret_1y_pct": {
+     "value": 15.7,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Fund Performance, Quarter End, NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": 15.7,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fund-finder JSON (Quarter End, NAV)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": 15.7,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/spym/performance",
+       "value": 15.71,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_5y_pct": {
+     "value": 13.76,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Fund Performance, Quarter End, NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": 13.76,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fund-finder JSON (Quarter End, NAV)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": 13.76,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/spym/performance",
+       "value": 13.76,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_10y_pct": {
+     "value": 15.31,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Fund Performance, Quarter End, NAV)",
+       "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym",
+       "value": 15.31,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fund-finder JSON (Quarter End, NAV)",
+       "url": "https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder",
+       "value": 15.31,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/spym/performance",
+       "value": 15.32,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). CAUTION: the fund has tracked the S&P 500 only since 2020-01-24 (before: Dow Jones U.S. Large-Cap Total Stock Market Index until 2013-07-09, Russell 1000 until 2017-11-16, SSGA Large Cap Index until 2020-01-24, per issuer page). The 10y window (from 2016-09-30) therefore is not a pure S&P 500 record; 1y and 5y windows are fully on the S&P 500."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "NVIDIA Corp.",
+       7.92
+      ],
+      [
+       "Apple Inc.",
+       7.61
+      ],
+      [
+       "Microsoft Corp.",
+       5.92
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer daily holdings XLSX",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/fund-data/etfs/us/holdings-daily-us-en-spym.xlsx",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.92
+        ],
+        [
+         "Apple Inc.",
+         7.61
+        ],
+        [
+         "Microsoft Corp.",
+         5.92
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/spym/",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.92
+        ],
+        [
+         "Apple Inc.",
+         7.61
+        ],
+        [
+         "Microsoft Corp.",
+         5.92
+        ]
+       ],
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (as of 2026-09-30)",
+       "url": "https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spym.pdf",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         8.37
+        ],
+        [
+         "Apple Inc.",
+         7.36
+        ],
+        [
+         "Microsoft Corp.",
+         5.77
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund from issuer daily holdings file dated 2026-10-27 (matches stockanalysis.com). Quarter-end (2026-09-30) fact-sheet weights for reference: 8.37, 7.36, 5.77."
+    }
+   },
+   "notes": "Ticker changed SPLG -> SPYM and name 'SPDR Portfolio S&P 500 ETF' -> 'State Street SPDR Portfolio S&P 500 ETF', effective Friday 2025-10-31 (MIAX corporate action alert 2025-10-30; SSGA notice to APs on ticker/fund name changes 10-31-25; stockanalysis.com/etf/splg redirects to /etf/spym). Index, strategy and fee unchanged by the rename. Same fund/CUSIP 78464A854. Benchmark is the S&P 500 only since 2020-01-24 (see ret_10y_pct note). Issuer labels the page 'ETF Share Class'."
+  },
+  "VTI": {
+   "ticker": "VTI",
+   "former_ticker": null,
+   "name": "Vanguard Morningstar Total Stock Market ETF",
+   "issuer": "Vanguard",
+   "issuer_url": "https://investor.vanguard.com/investment-products/etfs/profile/vti",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vti/quote",
+       "value": "ARCX (NYSE Arca) exchange code",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "Morningstar US Total Market Index",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: benchmark)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/characteristic",
+       "value": "Morningstar US Total Market Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": "Morningstar US Total Market Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": "Morningstar US Total Market TR USD",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.03,
+     "as_of": "2026-04-28",
+     "sources": [
+      {
+       "name": "issuer API (profile: expenseRatio)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/profile",
+       "value": 0.03,
+       "as_of": "2026-04-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": 0.03,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/vti/quote",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross; prospectus expense ratio dated 2026-04-28."
+    },
+    "aum_usd_bn": {
+     "value": 689.22,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet (ETF total net assets)",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": 689.219,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer API (shareClassTotalNetAssets, rounded)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/characteristic",
+       "value": "$689.2 billion",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": 691.08,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (Total Assets, fund-level)",
+       "url": "https://www.morningstar.com/etfs/arcx/vti/quote",
+       "value": "2.32 Tril",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "SHARE-CLASS level: ETF share class total net assets $689,219 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $2,322,816 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 2.32 Tril. stockanalysis.com $691.08B on 2026-10-28 differs by 0.3% (later date), within 5%."
+    },
+    "inception_date": {
+     "value": "2001-05-24",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer API (profile: inceptionDate)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/profile",
+       "value": "2001-05-24",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": "2001-05-24",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": "May 24, 2001",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older."
+    },
+    "holdings_count": {
+     "value": 3519,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: numberOfStocks)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/characteristic",
+       "value": 3519,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Number of stocks)",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": 3519,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": 3527,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 3,527 (+0.2%); it counts all holding lines (incl. cash/derivatives/collateral) and is dated 2026-10-28."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (distribution: distributionFrequency)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/distribution",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Dividend schedule)",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 1.06,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/vti/quote",
+       "value": 1.06,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": 1.04,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. For reference, issuer 30-day SEC yield: 1.03% (2026-09-30)."
+    },
+    "ret_1y_pct": {
+     "value": 15.33,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/performance",
+       "value": 15.33,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": 15.33,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vti/performance",
+       "value": 15.33,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_5y_pct": {
+     "value": 12.56,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/performance",
+       "value": 12.56,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": 12.56,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vti/performance",
+       "value": 12.56,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_10y_pct": {
+     "value": 14.7,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/performance",
+       "value": 14.7,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": 14.7,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vti/performance",
+       "value": 14.7,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "NVIDIA Corp.",
+       7.13
+      ],
+      [
+       "Apple Inc.",
+       6.63
+      ],
+      [
+       "Microsoft Corp.",
+       5.19
+      ]
+     ],
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (portfolio-holding/stock)",
+       "url": "https://investor.vanguard.com/vmf/api/VTI/portfolio-holding/stock",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.13
+        ],
+        [
+         "Apple Inc.",
+         6.63
+        ],
+        [
+         "Microsoft Corp.",
+         5.19
+        ]
+       ],
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vti/",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.13
+        ],
+        [
+         "Apple Inc.",
+         6.63
+        ],
+        [
+         "Microsoft Corp.",
+         5.2
+        ]
+       ],
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (% of total net assets, 1 decimal)",
+       "url": "https://fund-docs.vanguard.com/F0970.pdf",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         7.1
+        ],
+        [
+         "Apple Inc.",
+         6.6
+        ],
+        [
+         "Microsoft Corp.",
+         5.2
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 7.1, 6.6, 5.2."
+    }
+   },
+   "notes": "Renamed in 2026 from 'Vanguard Total Stock Market ETF' to 'Vanguard Morningstar Total Stock Market ETF' (ticker unchanged). Benchmark 'CRSP US Total Market Index' was rebranded 'Morningstar US Total Market Index' after Morningstar acquired CRSP's index business (Vanguard press release 2026-04-29; Morningstar completed the rebrand 2026-07-28; methodology unchanged). Some third-party sites may still show the old names."
+  },
+  "IWM": {
+   "ticker": "IWM",
+   "former_ticker": null,
+   "name": "iShares Russell 2000 ETF",
+   "issuer": "iShares (BlackRock)",
+   "issuer_url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Key Facts: Exchange)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/iwm/quote",
+       "value": "ARCX exchange code in quote URL",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "Russell 2000 Index",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Key Facts: Benchmark Index)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": "Russell 2000 Index",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": "Russell 2000",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.19,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Expense Ratio, fees as stated in the prospectus)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": 0.19,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": 0.19,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/iwm/quote",
+       "value": 0.19,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross (no waiver shown)."
+    },
+    "aum_usd_bn": {
+     "value": 75.51,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": 75.511,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "Morningstar (Total Assets)",
+       "url": "https://www.morningstar.com/etfs/arcx/iwm/quote",
+       "value": 75.51,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": 74.32,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "FUND-level = share-class level (single share class ETF). Issuer 'Net Assets of Fund' $75,511,165,609 as of 2026-10-27 (issuer publishes daily, not a 2026-09-30 figure on the page). Diffs: Morningstar 0.0%, stockanalysis 1.6%."
+    },
+    "inception_date": {
+     "value": "2000-05-22",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Fund Inception)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": "2000-05-22",
+       "as_of": null
+      },
+      {
+       "name": "issuer fund data file (Fund Inception)",
+       "url": "https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=239710&component=fundDownload&userType=individual",
+       "value": "2000-05-22",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": "May 22, 2000",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund launch = listing date."
+    },
+    "holdings_count": {
+     "value": 1976,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Number of Holdings)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": 1976,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer holdings CSV (equity lines)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/latest-holdings.csv",
+       "value": 1976,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": 1982,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer count excludes cash and derivatives. stockanalysis.com 1,982 = all lines of the issuer CSV incl. cash/futures/collateral (0.3% diff)."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Distribution Frequency)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 0.98,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (12m Trailing Yield)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": 0.98,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/iwm/quote",
+       "value": 0.98,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": 0.97,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month yield (iShares '12m Trailing Yield', as of 2026-09-30). Morningstar TTM (same basis/date) agrees within 0.10 pp; stockanalysis.com uses the 2026-10-28 price. For reference, issuer 30-day SEC yield: 1.18% (2026-09-30)."
+    },
+    "ret_1y_pct": {
+     "value": 16.06,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": 16.06,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/iwm/performance",
+       "value": 16.07,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_5y_pct": {
+     "value": 6.22,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": 6.22,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/iwm/performance",
+       "value": 6.22,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_10y_pct": {
+     "value": 9.75,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+       "value": 9.75,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/iwm/performance",
+       "value": 9.75,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "JFrog Ltd.",
+       0.37
+      ],
+      [
+       "Twist Bioscience Corp.",
+       0.35
+      ],
+      [
+       "Glaukos Corp.",
+       0.35
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer holdings CSV",
+       "url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/latest-holdings.csv",
+       "value": [
+        [
+         "JFrog Ltd.",
+         0.37
+        ],
+        [
+         "Twist Bioscience Corp.",
+         0.35
+        ],
+        [
+         "Glaukos Corp.",
+         0.35
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iwm/",
+       "value": [
+        [
+         "JFrog Ltd.",
+         0.37
+        ],
+        [
+         "Twist Bioscience Corp.",
+         0.35
+        ],
+        [
+         "Glaukos Corp.",
+         0.35
+        ]
+       ],
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund net assets from the issuer's latest holdings CSV (2026-10-27); iShares no longer serves a 2026-09-30 holdings file and its fact sheet is still dated 2026-06-30. stockanalysis.com shows identical weights. Russell 2000 is very diversified: top-3 weights are tiny (~0.35%) and change often, so they carry little information."
+    }
+   },
+   "notes": ""
+  },
+  "VT": {
+   "ticker": "VT",
+   "former_ticker": null,
+   "name": "Vanguard Total World Stock ETF",
+   "issuer": "Vanguard",
+   "issuer_url": "https://investor.vanguard.com/investment-products/etfs/profile/vt",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vt/quote",
+       "value": "ARCX (NYSE Arca) exchange code",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "FTSE Global All Cap Index",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: benchmark)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/characteristic",
+       "value": "FTSE Global All Cap Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": "FTSE Global All Cap Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": "FTSE Global All Cap Net Tax (US RIC) Index",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.06,
+     "as_of": "2026-02-27",
+     "sources": [
+      {
+       "name": "issuer API (profile: expenseRatio)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/profile",
+       "value": 0.06,
+       "as_of": "2026-02-27"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": 0.06,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": 0.06,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/vt/quote",
+       "value": 0.06,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross; prospectus expense ratio dated 2026-02-27."
+    },
+    "aum_usd_bn": {
+     "value": 81.75,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet (ETF total net assets)",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": 81.752,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer API (shareClassTotalNetAssets, rounded)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/characteristic",
+       "value": "$81.8 billion",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": 83.11,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (Total Assets, fund-level)",
+       "url": "https://www.morningstar.com/etfs/arcx/vt/quote",
+       "value": "101.18 Bil",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "SHARE-CLASS level: ETF share class total net assets $81,752 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $101,182 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 101.18 Bil. stockanalysis.com $83.11B on 2026-10-28 differs by 1.7% (later date), within 5%."
+    },
+    "inception_date": {
+     "value": "2008-06-24",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer API (profile: inceptionDate)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/profile",
+       "value": "2008-06-24",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": "2008-06-24",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": "Jun 24, 2008",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older."
+    },
+    "holdings_count": {
+     "value": 10185,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: numberOfStocks)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/characteristic",
+       "value": 10185,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Number of stocks)",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": 10185,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": 10242,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 10,242 (+0.6%); it counts all holding lines (incl. cash/derivatives/collateral) and is dated 2026-10-28."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (distribution: distributionFrequency)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/distribution",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Dividend schedule)",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 1.53,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/vt/quote",
+       "value": 1.53,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": 1.53,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. Vanguard publishes no 30-day SEC yield for this fund on its site API (Morningstar shows none either)."
+    },
+    "ret_1y_pct": {
+     "value": 16.32,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/performance",
+       "value": 16.32,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": 16.32,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vt/performance",
+       "value": 16.32,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_5y_pct": {
+     "value": 11.34,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/performance",
+       "value": 11.34,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": 11.34,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vt/performance",
+       "value": 11.34,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_10y_pct": {
+     "value": 12.32,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/performance",
+       "value": 12.32,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": 12.32,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vt/performance",
+       "value": 12.32,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "NVIDIA Corp.",
+       4.52
+      ],
+      [
+       "Apple Inc.",
+       4.09
+      ],
+      [
+       "Microsoft Corp.",
+       3.23
+      ]
+     ],
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (portfolio-holding/stock)",
+       "url": "https://investor.vanguard.com/vmf/api/VT/portfolio-holding/stock",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         4.52
+        ],
+        [
+         "Apple Inc.",
+         4.09
+        ],
+        [
+         "Microsoft Corp.",
+         3.23
+        ]
+       ],
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vt/",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         4.54
+        ],
+        [
+         "Apple Inc.",
+         4.11
+        ],
+        [
+         "Microsoft Corp.",
+         3.25
+        ]
+       ],
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (% of total net assets, 1 decimal)",
+       "url": "https://fund-docs.vanguard.com/F3141.pdf",
+       "value": [
+        [
+         "NVIDIA Corp.",
+         4.6
+        ],
+        [
+         "Apple Inc.",
+         4.1
+        ],
+        [
+         "Microsoft Corp.",
+         3.3
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 4.6, 4.1, 3.3."
+    }
+   },
+   "notes": ""
+  },
+  "VEA": {
+   "ticker": "VEA",
+   "former_ticker": null,
+   "name": "Vanguard FTSE Developed Markets ETF",
+   "issuer": "Vanguard",
+   "issuer_url": "https://investor.vanguard.com/investment-products/etfs/profile/vea",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vea/quote",
+       "value": "ARCX (NYSE Arca) exchange code",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "FTSE Developed All Cap ex US Index",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: benchmark)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/characteristic",
+       "value": "FTSE Developed All Cap ex US Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": "FTSE Developed All Cap ex US Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": "FTSE Developed ex US All Cap Net Tax (US RIC) Index",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.03,
+     "as_of": "2026-04-28",
+     "sources": [
+      {
+       "name": "issuer API (profile: expenseRatio)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/profile",
+       "value": 0.03,
+       "as_of": "2026-04-28"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": 0.03,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/vea/quote",
+       "value": 0.03,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross; prospectus expense ratio dated 2026-04-28."
+    },
+    "aum_usd_bn": {
+     "value": 231.62,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet (ETF total net assets)",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": 231.615,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer API (shareClassTotalNetAssets, rounded)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/characteristic",
+       "value": "$231.6 billion",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": 226.39,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (Total Assets, fund-level)",
+       "url": "https://www.morningstar.com/etfs/arcx/vea/quote",
+       "value": "313.54 Bil",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "SHARE-CLASS level: ETF share class total net assets $231,615 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $313,544 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 313.54 Bil. stockanalysis.com $226.39B on 2026-10-28 differs by 2.3% (later date), within 5%."
+    },
+    "inception_date": {
+     "value": "2007-07-20",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer API (profile: inceptionDate)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/profile",
+       "value": "2007-07-20",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": "2007-07-20",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": "Jul 20, 2007",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older."
+    },
+    "holdings_count": {
+     "value": 3903,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: numberOfStocks)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/characteristic",
+       "value": 3903,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Number of stocks)",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": 3903,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": 3961,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 3,961 (+1.5%); it counts all holding lines (incl. cash/derivatives/collateral) and is dated 2026-10-28."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (distribution: distributionFrequency)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/distribution",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Dividend schedule)",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "dividend_yield_pct": {
+     "value": 2.41,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/vea/quote",
+       "value": 2.41,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": 2.42,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. Vanguard publishes no 30-day SEC yield for this fund on its site API (Morningstar shows none either)."
+    },
+    "ret_1y_pct": {
+     "value": 20.77,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/performance",
+       "value": 20.77,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": 20.77,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vea/performance",
+       "value": 20.77,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_5y_pct": {
+     "value": 10.32,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/performance",
+       "value": 10.32,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": 10.32,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vea/performance",
+       "value": 10.32,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_10y_pct": {
+     "value": 9.76,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/performance",
+       "value": 9.76,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": 9.76,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vea/performance",
+       "value": 9.76,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "Samsung Electronics Co. Ltd.",
+       2.8
+      ],
+      [
+       "SK hynix Inc.",
+       2.28
+      ],
+      [
+       "ASML Holding NV",
+       2.13
+      ]
+     ],
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (portfolio-holding/stock)",
+       "url": "https://investor.vanguard.com/vmf/api/VEA/portfolio-holding/stock",
+       "value": [
+        [
+         "Samsung Electronics Co. Ltd.",
+         2.8
+        ],
+        [
+         "SK hynix Inc.",
+         2.28
+        ],
+        [
+         "ASML Holding NV",
+         2.13
+        ]
+       ],
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vea/",
+       "value": [
+        [
+         "Samsung Electronics Co. Ltd.",
+         2.81
+        ],
+        [
+         "SK hynix Inc.",
+         2.3
+        ],
+        [
+         "ASML Holding NV",
+         2.14
+        ]
+       ],
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (% of total net assets, 1 decimal)",
+       "url": "https://fund-docs.vanguard.com/F0936.pdf",
+       "value": [
+        [
+         "Samsung Electronics Co. Ltd.",
+         3.2
+        ],
+        [
+         "SK hynix Inc.",
+         2.3
+        ],
+        [
+         "ASML Holding NV",
+         2.2
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 3.2, 2.3, 2.2."
+    }
+   },
+   "notes": "FTSE developed universe includes Canada and South Korea, unlike MSCI EAFE (IEFA); Samsung and SK hynix are VEA's top holdings, hence the higher 1y return vs IEFA."
+  },
+  "VWO": {
+   "ticker": "VWO",
+   "former_ticker": null,
+   "name": "Vanguard FTSE Emerging Markets ETF",
+   "issuer": "Vanguard",
+   "issuer_url": "https://investor.vanguard.com/investment-products/etfs/profile/vwo",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": "NYSE Arca",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vwo/quote",
+       "value": "ARCX (NYSE Arca) exchange code",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "FTSE Emerging Markets All Cap China A Inclusion Index",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: benchmark)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/characteristic",
+       "value": "FTSE Emerging Markets All Cap China A Inclusion Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": "FTSE Emerging Markets All Cap China A Inclusion Index",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": "FTSE Custom Emerging Markets All Cap China A Inclusion Net Tax (US RIC) Index",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.06,
+     "as_of": "2026-02-27",
+     "sources": [
+      {
+       "name": "issuer API (profile: expenseRatio)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/profile",
+       "value": 0.06,
+       "as_of": "2026-02-27"
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": 0.06,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": 0.06,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/vwo/quote",
+       "value": 0.06,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross; prospectus expense ratio dated 2026-02-27."
+    },
+    "aum_usd_bn": {
+     "value": 125.42,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer fact sheet (ETF total net assets)",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": 125.416,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer API (shareClassTotalNetAssets, rounded)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/characteristic",
+       "value": "$125.4 billion",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": 119.96,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (Total Assets, fund-level)",
+       "url": "https://www.morningstar.com/etfs/arcx/vwo/quote",
+       "value": "164.66 Bil",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "SHARE-CLASS level: ETF share class total net assets $125,416 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $164,653 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 164.66 Bil. stockanalysis.com $119.96B on 2026-10-28 differs by 4.4% (later date), within 5%."
+    },
+    "inception_date": {
+     "value": "2005-03-04",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer API (profile: inceptionDate)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/profile",
+       "value": "2005-03-04",
+       "as_of": null
+      },
+      {
+       "name": "issuer fact sheet",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": "2005-03-04",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": "Mar 4, 2005",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older."
+    },
+    "holdings_count": {
+     "value": 6507,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (characteristic: numberOfStocks)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/characteristic",
+       "value": 6507,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Number of stocks)",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": 6507,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": 5096,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 5,096 (-21.7%): outlier (apparently an incomplete holdings list on that site); the two issuer documents agree, so the issuer value is kept."
+    },
+    "distribution_freq": {
+     "value": "Quarterly",
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (distribution: distributionFrequency)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/distribution",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (Dividend schedule)",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": "Quarterly",
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": "Quarterly",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer distribution history shows no March 2026 payment (paid Jun/Sep 2026 and Jun/Sep/Dec 2025), but the stated schedule is quarterly."
+    },
+    "dividend_yield_pct": {
+     "value": 2.05,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/vwo/quote",
+       "value": 2.05,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": 2.14,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. Vanguard publishes no 30-day SEC yield for this fund on its site API (Morningstar shows none either)."
+    },
+    "ret_1y_pct": {
+     "value": 12.54,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/performance",
+       "value": 12.54,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": 12.54,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vwo/performance",
+       "value": 12.54,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). Morningstar figure read from its 'Month End' view (as of 2026-09-30 = quarter-end; its 'Quarter End' view was empty for VWO)."
+    },
+    "ret_5y_pct": {
+     "value": 6.62,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/performance",
+       "value": 6.62,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": 6.62,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vwo/performance",
+       "value": 6.62,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). Morningstar figure read from its 'Month End' view (as of 2026-09-30 = quarter-end; its 'Quarter End' view was empty for VWO)."
+    },
+    "ret_10y_pct": {
+     "value": 7.66,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (performance: quarterEndAvgAnnualRtn, NAV)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/performance",
+       "value": 7.66,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "issuer fact sheet (NAV return)",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": 7.66,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/vwo/performance",
+       "value": 7.66,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). Morningstar figure read from its 'Month End' view (as of 2026-09-30 = quarter-end; its 'Quarter End' view was empty for VWO)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "Taiwan Semiconductor Manufacturing Co. Ltd.",
+       15.74
+      ],
+      [
+       "Tencent Holdings Ltd.",
+       2.82
+      ],
+      [
+       "Alibaba Group Holding Ltd.",
+       2.11
+      ]
+     ],
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer API (portfolio-holding/stock)",
+       "url": "https://investor.vanguard.com/vmf/api/VWO/portfolio-holding/stock",
+       "value": [
+        [
+         "Taiwan Semiconductor Manufacturing Co. Ltd.",
+         15.74
+        ],
+        [
+         "Tencent Holdings Ltd.",
+         2.82
+        ],
+        [
+         "Alibaba Group Holding Ltd.",
+         2.11
+        ]
+       ],
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/vwo/",
+       "value": [
+        [
+         "Taiwan Semiconductor Manufacturing Co. Ltd.",
+         15.75
+        ],
+        [
+         "Tencent Holdings Ltd.",
+         2.82
+        ],
+        [
+         "Alibaba Group Holding Ltd.",
+         2.11
+        ]
+       ],
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "issuer fact sheet (% of total net assets, 1 decimal)",
+       "url": "https://fund-docs.vanguard.com/F0964.pdf",
+       "value": [
+        [
+         "Taiwan Semiconductor Manufacturing Co. Ltd.",
+         16.4
+        ],
+        [
+         "Tencent Holdings Ltd.",
+         2.9
+        ],
+        [
+         "Alibaba Group Holding Ltd.",
+         2.2
+        ]
+       ],
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 16.4, 2.9, 2.2."
+    }
+   },
+   "notes": "FTSE classifies South Korea as developed, so VWO excludes Korea (Korean stocks sit in VEA/VT) and includes China A-shares; this explains VWO's much lower 1y return (12.54%) vs IEMG (26.84%, MSCI EM incl. Korea). Verified, not a data error."
+  },
+  "IEMG": {
+   "ticker": "IEMG",
+   "former_ticker": null,
+   "name": "iShares Core MSCI Emerging Markets ETF",
+   "issuer": "iShares (BlackRock)",
+   "issuer_url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+   "fields": {
+    "exchange": {
+     "value": "NYSE Arca",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Key Facts: Exchange)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": "NYSE Arca",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/iemg/quote",
+       "value": "ARCX exchange code in quote URL",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Primary listing NYSE Arca."
+    },
+    "index": {
+     "value": "MSCI Emerging Markets Investable Market Index (USD) (Net)",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Key Facts: Benchmark Index)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": "MSCI Emerging Markets Investable Market Index (USD) (Net)",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": "MSCI Emerging Markets IMI",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": ""
+    },
+    "expense_ratio_pct": {
+     "value": 0.09,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Expense Ratio, fees as stated in the prospectus)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": 0.09,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": 0.09,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (prospectus net expense ratio)",
+       "url": "https://www.morningstar.com/etfs/arcx/iemg/quote",
+       "value": 0.09,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Net = gross (no waiver shown)."
+    },
+    "aum_usd_bn": {
+     "value": 152.62,
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Net Assets of Fund)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": 152.624,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "Morningstar (Total Assets)",
+       "url": "https://www.morningstar.com/etfs/arcx/iemg/quote",
+       "value": 150.39,
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Assets)",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": 148.52,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "FUND-level = share-class level (single share class ETF). Issuer 'Net Assets of Fund' $152,624,436,117 as of 2026-10-28 (issuer publishes daily, not a 2026-09-30 figure on the page). Diffs: Morningstar 1.5%, stockanalysis 2.7%."
+    },
+    "inception_date": {
+     "value": "2012-10-18",
+     "as_of": null,
+     "sources": [
+      {
+       "name": "issuer page (Fund Inception)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": "2012-10-18",
+       "as_of": null
+      },
+      {
+       "name": "issuer fund data file (Fund Inception)",
+       "url": "https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=244050&component=fundDownload&userType=individual",
+       "value": "2012-10-18",
+       "as_of": null
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": "Oct 18, 2012",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Fund launch = listing date."
+    },
+    "holdings_count": {
+     "value": 2851,
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer page (Number of Holdings)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": 2851,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "issuer holdings CSV (equity lines)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf/latest-holdings.csv",
+       "value": 2851,
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": 2889,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Issuer count excludes cash and derivatives. stockanalysis.com 2,889 = all lines of the issuer CSV incl. cash/futures/collateral (1.3% diff)."
+    },
+    "distribution_freq": {
+     "value": "Semi-annual",
+     "as_of": "2026-10-28",
+     "sources": [
+      {
+       "name": "issuer page (Distribution Frequency)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": "Semi-annual",
+       "as_of": "2026-10-28"
+      },
+      {
+       "name": "stockanalysis.com (Payout Frequency)",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": "Semi-Annual",
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Pays in June and December."
+    },
+    "dividend_yield_pct": {
+     "value": 2.2,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (12m Trailing Yield)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": 2.2,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar (TTM Yield)",
+       "url": "https://www.morningstar.com/etfs/arcx/iemg/quote",
+       "value": 2.21,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "stockanalysis.com (TTM dividends / price)",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": 2.32,
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Type: trailing-12-month yield (iShares '12m Trailing Yield', as of 2026-09-30). Morningstar TTM (same basis/date) agrees within 0.10 pp; stockanalysis.com uses the 2026-10-28 price and is 0.12 pp higher. For reference, issuer 30-day SEC yield: 1.75% (2026-09-30)."
+    },
+    "ret_1y_pct": {
+     "value": 26.84,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": 26.84,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/iemg/performance",
+       "value": 26.84,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_5y_pct": {
+     "value": 8.79,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": 8.79,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/iemg/performance",
+       "value": 8.79,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "ret_10y_pct": {
+     "value": 8.97,
+     "as_of": "2026-09-30",
+     "sources": [
+      {
+       "name": "issuer page (Average Annual, NAV Total Return)",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf",
+       "value": 8.97,
+       "as_of": "2026-09-30"
+      },
+      {
+       "name": "Morningstar",
+       "url": "https://www.morningstar.com/etfs/arcx/iemg/performance",
+       "value": 8.97,
+       "as_of": "2026-09-30"
+      }
+     ],
+     "status": "verified",
+     "note": "Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row)."
+    },
+    "top3_holdings": {
+     "value": [
+      [
+       "Taiwan Semiconductor Manufacturing Co. Ltd.",
+       14.03
+      ],
+      [
+       "Samsung Electronics Co. Ltd.",
+       6.05
+      ],
+      [
+       "SK hynix Inc.",
+       4.31
+      ]
+     ],
+     "as_of": "2026-10-27",
+     "sources": [
+      {
+       "name": "issuer holdings CSV",
+       "url": "https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf/latest-holdings.csv",
+       "value": [
+        [
+         "Taiwan Semiconductor Manufacturing Co. Ltd.",
+         14.03
+        ],
+        [
+         "Samsung Electronics Co. Ltd.",
+         6.05
+        ],
+        [
+         "SK hynix Inc.",
+         4.31
+        ]
+       ],
+       "as_of": "2026-10-27"
+      },
+      {
+       "name": "stockanalysis.com",
+       "url": "https://stockanalysis.com/etf/iemg/",
+       "value": [
+        [
+         "Taiwan Semiconductor Manufacturing Co. Ltd.",
+         14.03
+        ],
+        [
+         "Samsung Electronics Co. Ltd.",
+         6.05
+        ],
+        [
+         "SK hynix Inc.",
+         4.31
+        ]
+       ],
+       "as_of": "2026-10-28"
+      }
+     ],
+     "status": "verified",
+     "note": "Weights = % of fund net assets from the issuer's latest holdings CSV (2026-10-27); iShares no longer serves a 2026-09-30 holdings file and its fact sheet is still dated 2026-06-30. stockanalysis.com shows identical weights."
+    }
+   },
+   "notes": "MSCI EM includes South Korea (Samsung, SK hynix in top 3), unlike FTSE-based VWO; this explains IEMG's 26.84% vs VWO's 12.54% 1y NAV return. Verified on issuer + Morningstar."
+  },
   "VUG": {
    "ticker": "VUG",
    "former_ticker": null,
@@ -4212,6 +7863,10 @@
    "source": "Index contains US-listed US companies only (index methodology); 100 % US by construction."
   },
   "SCHB": {
+   "value": 1.0,
+   "source": "Index contains US-listed US companies only (index methodology); 100 % US by construction."
+  },
+  "IWM": {
    "value": 1.0,
    "source": "Index contains US-listed US companies only (index methodology); 100 % US by construction."
   },
@@ -17717,64 +21372,1024 @@
  },
  "checks": [
   {
-   "check": "coverage",
+   "check": "required field",
+   "subject": "VOO.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VOO.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VOO.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VOO.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VOO.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "VOO",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
   },
   {
-   "check": "coverage",
+   "check": "plausible range",
+   "subject": "VOO.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.03 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VOO.aum_usd_bn",
+   "result": "pass",
+   "detail": "1032.26 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VOO.holdings_count",
+   "result": "pass",
+   "detail": "505.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VOO.dividend_yield_pct",
+   "result": "pass",
+   "detail": "1.06 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VOO.ret_1y_pct",
+   "result": "pass",
+   "detail": "15.7 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VOO.ret_5y_pct",
+   "result": "pass",
+   "detail": "13.75 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VOO.ret_10y_pct",
+   "result": "pass",
+   "detail": "15.29 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "VOO.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VOO.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VOO.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "VOO",
+   "result": "pass",
+   "detail": "all sources 0.03 %"
+  },
+  {
+   "check": "required field",
+   "subject": "SPY.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "SPY.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "SPY.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "SPY.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "SPY.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "SPY",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
   },
   {
-   "check": "coverage",
+   "check": "plausible range",
+   "subject": "SPY.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.0945 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPY.aum_usd_bn",
+   "result": "pass",
+   "detail": "814.82 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPY.holdings_count",
+   "result": "pass",
+   "detail": "504.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPY.dividend_yield_pct",
+   "result": "pass",
+   "detail": "0.99 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPY.ret_1y_pct",
+   "result": "pass",
+   "detail": "15.6 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPY.ret_5y_pct",
+   "result": "pass",
+   "detail": "13.65 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPY.ret_10y_pct",
+   "result": "pass",
+   "detail": "15.18 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "SPY.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "SPY.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "SPY.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "SPY",
+   "result": "explained",
+   "detail": "sources disagree [0.09, 0.0945, 0.095]; chosen 0.0945 — Gross = net per issuer fact sheet. stockanalysis (0.09%) and Morningstar (0.095%) display rounded versions of 0.0945%. — Secondary sources display 0.0945 % rounded (0.09 / 0.095); the prospectus figure is 0.0945 %."
+  },
+  {
+   "check": "required field",
+   "subject": "IVV.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IVV.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IVV.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IVV.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IVV.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "IVV",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
   },
   {
-   "check": "coverage",
+   "check": "plausible range",
+   "subject": "IVV.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.03 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IVV.aum_usd_bn",
+   "result": "pass",
+   "detail": "885.14 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IVV.holdings_count",
+   "result": "pass",
+   "detail": "505.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IVV.dividend_yield_pct",
+   "result": "pass",
+   "detail": "1.1 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IVV.ret_1y_pct",
+   "result": "pass",
+   "detail": "15.71 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IVV.ret_5y_pct",
+   "result": "pass",
+   "detail": "13.76 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IVV.ret_10y_pct",
+   "result": "pass",
+   "detail": "15.3 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "IVV.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "IVV.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "IVV.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "IVV",
+   "result": "pass",
+   "detail": "all sources 0.03 %"
+  },
+  {
+   "check": "required field",
+   "subject": "SPYM.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "SPYM.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "SPYM.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "SPYM.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "SPYM.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "SPYM",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
   },
   {
-   "check": "coverage",
+   "check": "plausible range",
+   "subject": "SPYM.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.02 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPYM.aum_usd_bn",
+   "result": "pass",
+   "detail": "185.01 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPYM.holdings_count",
+   "result": "pass",
+   "detail": "505.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPYM.dividend_yield_pct",
+   "result": "pass",
+   "detail": "1.01 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPYM.ret_1y_pct",
+   "result": "pass",
+   "detail": "15.7 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPYM.ret_5y_pct",
+   "result": "pass",
+   "detail": "13.76 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "SPYM.ret_10y_pct",
+   "result": "pass",
+   "detail": "15.31 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "SPYM.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "SPYM.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "SPYM.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "SPYM",
+   "result": "pass",
+   "detail": "all sources 0.02 %"
+  },
+  {
+   "check": "required field",
+   "subject": "VTI.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VTI.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VTI.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VTI.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VTI.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "VTI",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
   },
   {
-   "check": "coverage",
+   "check": "plausible range",
+   "subject": "VTI.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.03 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VTI.aum_usd_bn",
+   "result": "pass",
+   "detail": "689.22 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VTI.holdings_count",
+   "result": "pass",
+   "detail": "3519.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VTI.dividend_yield_pct",
+   "result": "pass",
+   "detail": "1.06 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VTI.ret_1y_pct",
+   "result": "pass",
+   "detail": "15.33 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VTI.ret_5y_pct",
+   "result": "pass",
+   "detail": "12.56 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VTI.ret_10y_pct",
+   "result": "pass",
+   "detail": "14.7 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "VTI.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VTI.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VTI.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "VTI",
+   "result": "pass",
+   "detail": "all sources 0.03 %"
+  },
+  {
+   "check": "required field",
+   "subject": "IWM.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IWM.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IWM.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IWM.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IWM.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
+   "subject": "IWM",
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IWM.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.19 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IWM.aum_usd_bn",
+   "result": "pass",
+   "detail": "75.51 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IWM.holdings_count",
+   "result": "pass",
+   "detail": "1976.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IWM.dividend_yield_pct",
+   "result": "pass",
+   "detail": "0.98 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IWM.ret_1y_pct",
+   "result": "pass",
+   "detail": "16.06 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IWM.ret_5y_pct",
+   "result": "pass",
+   "detail": "6.22 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IWM.ret_10y_pct",
+   "result": "pass",
+   "detail": "9.75 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "IWM.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "IWM.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "IWM.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "IWM",
+   "result": "pass",
+   "detail": "all sources 0.19 %"
+  },
+  {
+   "check": "required field",
+   "subject": "VT.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VT.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VT.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VT.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VT.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "VT",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
   },
   {
-   "check": "coverage",
+   "check": "plausible range",
+   "subject": "VT.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.06 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VT.aum_usd_bn",
+   "result": "pass",
+   "detail": "81.75 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VT.holdings_count",
+   "result": "pass",
+   "detail": "10185.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VT.dividend_yield_pct",
+   "result": "pass",
+   "detail": "1.53 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VT.ret_1y_pct",
+   "result": "pass",
+   "detail": "16.32 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VT.ret_5y_pct",
+   "result": "pass",
+   "detail": "11.34 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VT.ret_10y_pct",
+   "result": "pass",
+   "detail": "12.32 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "VT.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VT.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VT.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "VT",
+   "result": "pass",
+   "detail": "all sources 0.06 %"
+  },
+  {
+   "check": "required field",
+   "subject": "VEA.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VEA.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VEA.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VEA.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VEA.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "VEA",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
   },
   {
-   "check": "coverage",
-   "subject": "IEFA",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "check": "plausible range",
+   "subject": "VEA.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.03 within [0.0, 1.0]"
   },
   {
-   "check": "coverage",
+   "check": "plausible range",
+   "subject": "VEA.aum_usd_bn",
+   "result": "pass",
+   "detail": "231.62 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VEA.holdings_count",
+   "result": "pass",
+   "detail": "3903.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VEA.dividend_yield_pct",
+   "result": "pass",
+   "detail": "2.41 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VEA.ret_1y_pct",
+   "result": "pass",
+   "detail": "20.77 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VEA.ret_5y_pct",
+   "result": "pass",
+   "detail": "10.32 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VEA.ret_10y_pct",
+   "result": "pass",
+   "detail": "9.76 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "VEA.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VEA.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VEA.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "VEA",
+   "result": "pass",
+   "detail": "all sources 0.03 %"
+  },
+  {
+   "check": "required field",
+   "subject": "VWO.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VWO.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VWO.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VWO.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "VWO.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "VWO",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
   },
   {
-   "check": "coverage",
+   "check": "plausible range",
+   "subject": "VWO.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.06 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VWO.aum_usd_bn",
+   "result": "pass",
+   "detail": "125.42 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VWO.holdings_count",
+   "result": "pass",
+   "detail": "6507.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VWO.dividend_yield_pct",
+   "result": "pass",
+   "detail": "2.05 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VWO.ret_1y_pct",
+   "result": "pass",
+   "detail": "12.54 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VWO.ret_5y_pct",
+   "result": "pass",
+   "detail": "6.62 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "VWO.ret_10y_pct",
+   "result": "pass",
+   "detail": "7.66 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "VWO.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VWO.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "VWO.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "VWO",
+   "result": "pass",
+   "detail": "all sources 0.06 %"
+  },
+  {
+   "check": "required field",
+   "subject": "IEMG.exchange",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IEMG.index",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IEMG.expense_ratio_pct",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IEMG.aum_usd_bn",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "required field",
+   "subject": "IEMG.inception_date",
+   "result": "pass",
+   "detail": "value present"
+  },
+  {
+   "check": "listing venue",
    "subject": "IEMG",
-   "result": "fail",
-   "detail": "ticker missing from research files"
+   "result": "pass",
+   "detail": "primary listing: NYSE Arca"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IEMG.expense_ratio_pct",
+   "result": "pass",
+   "detail": "0.09 within [0.0, 1.0]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IEMG.aum_usd_bn",
+   "result": "pass",
+   "detail": "152.62 within [0.5, 2000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IEMG.holdings_count",
+   "result": "pass",
+   "detail": "2851.0 within [1, 15000]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IEMG.dividend_yield_pct",
+   "result": "pass",
+   "detail": "2.2 within [0, 12]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IEMG.ret_1y_pct",
+   "result": "pass",
+   "detail": "26.84 within [-60, 80]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IEMG.ret_5y_pct",
+   "result": "pass",
+   "detail": "8.79 within [-25, 40]"
+  },
+  {
+   "check": "plausible range",
+   "subject": "IEMG.ret_10y_pct",
+   "result": "pass",
+   "detail": "8.97 within [-15, 30]"
+  },
+  {
+   "check": "returns date",
+   "subject": "IEMG.ret_1y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "IEMG.ret_5y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "returns date",
+   "subject": "IEMG.ret_10y_pct",
+   "result": "pass",
+   "detail": "as_of 2026-09-30"
+  },
+  {
+   "check": "fee consensus",
+   "subject": "IEMG",
+   "result": "pass",
+   "detail": "all sources 0.09 %"
   },
   {
    "check": "required field",
@@ -18283,8 +22898,8 @@
   {
    "check": "source agreement",
    "subject": "SCHD.top3_holdings",
-   "result": "warn",
-   "detail": "conflict resolved by researcher: Issuer documents (2026-09-30, 2026-10-13, 2026-10-27) consistently show TXN, QCOM, PG as top 3; stockanalysis shows TXN, COP, CVX - rejected (issuer preferred)."
+   "result": "explained",
+   "detail": "conflict resolved by researcher: Issuer documents (2026-09-30, 2026-10-13, 2026-10-27) consistently show TXN, QCOM, PG as top 3; stockanalysis shows TXN, COP, CVX - rejected (issuer preferred). — Issuer holdings files (three dates) agree; the secondary source was stale."
   },
   {
    "check": "fee consensus",
@@ -18829,8 +23444,8 @@
   {
    "check": "fee consensus",
    "subject": "QQQ",
-   "result": "warn",
-   "detail": "sources disagree [0.18, 0.2]; chosen 0.18 — Cut from 0.20% to 0.18% with the conversion from a unit investment trust to an open-end ETF (shareholder vote 2025-12-19, effective ~2025-12"
+   "result": "explained",
+   "detail": "sources disagree [0.18, 0.2]; chosen 0.18 — Cut from 0.20% to 0.18% with the conversion from a unit investment trust to an open-end ETF (shareholder vote 2025-12-19, effective ~2025-12 — QQQ's fee fell from 0.20 % to 0.18 % when it converted from a unit investment trust to an open-end ETF (Dec 2025); older databases still show 0.20 %."
   },
   {
    "check": "required field",
@@ -18942,6 +23557,204 @@
   },
   {
    "check": "peer consistency",
+   "subject": "S&P 500: VOO vs IVV ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.01 pp ≤ allowed 0.25 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: VOO vs SPY ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.10 pp ≤ allowed 0.31 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: VOO vs SPYM ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.00 pp ≤ allowed 0.26 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: IVV vs SPY ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.11 pp ≤ allowed 0.31 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: IVV vs SPYM ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.01 pp ≤ allowed 0.26 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: SPY vs SPYM ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.10 pp ≤ allowed 0.32 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: VOO vs IVV ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.01 pp ≤ allowed 0.15 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: VOO vs SPY ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.10 pp ≤ allowed 0.21 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: VOO vs SPYM ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.01 pp ≤ allowed 0.16 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: IVV vs SPY ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.11 pp ≤ allowed 0.21 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: IVV vs SPYM ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.00 pp ≤ allowed 0.16 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: SPY vs SPYM ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.11 pp ≤ allowed 0.22 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: VOO vs IVV ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.01 pp ≤ allowed 0.15 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: VOO vs SPY ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.11 pp ≤ allowed 0.21 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: VOO vs SPYM ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.02 pp ≤ allowed 0.16 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: IVV vs SPY ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.12 pp ≤ allowed 0.21 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: IVV vs SPYM ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.01 pp ≤ allowed 0.16 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "S&P 500: SPY vs SPYM ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.13 pp ≤ allowed 0.22 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: VTI vs ITOT ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.03 pp ≤ allowed 0.85 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: VTI vs SCHB ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.08 pp ≤ allowed 0.85 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: ITOT vs SCHB ret_1y_pct",
+   "result": "pass",
+   "detail": "Δ 0.05 pp ≤ allowed 0.85 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: VTI vs ITOT ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.02 pp ≤ allowed 0.75 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: VTI vs SCHB ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.06 pp ≤ allowed 0.75 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: ITOT vs SCHB ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 0.04 pp ≤ allowed 0.75 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: VTI vs ITOT ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.03 pp ≤ allowed 0.75 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: VTI vs SCHB ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.01 pp ≤ allowed 0.75 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "US total market: ITOT vs SCHB ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.04 pp ≤ allowed 0.75 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "developed ex-US: VEA vs IEFA ret_1y_pct",
+   "result": "explained",
+   "detail": "Δ 6.01 pp > allowed 1.49 pp — investigate — Different indexes: FTSE (VEA) counts South Korea as developed and includes Canada; MSCI EAFE IMI (IEFA) excludes both. Korea's 2026 rally explains the 1-year gap; both figures confirmed by issuer and Morningstar."
+  },
+  {
+   "check": "peer consistency",
+   "subject": "developed ex-US: VEA vs IEFA ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 1.28 pp ≤ allowed 1.39 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "developed ex-US: VEA vs IEFA ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 0.67 pp ≤ allowed 1.39 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "emerging markets: VWO vs IEMG ret_1y_pct",
+   "result": "explained",
+   "detail": "Δ 14.30 pp > allowed 2.28 pp — investigate — Mirror image of the above: MSCI EM IMI (IEMG) includes South Korea, FTSE Emerging (VWO) does not. Confirmed by issuer fact sheets and Morningstar."
+  },
+  {
+   "check": "peer consistency",
+   "subject": "emerging markets: VWO vs IEMG ret_5y_pct",
+   "result": "pass",
+   "detail": "Δ 2.17 pp ≤ allowed 2.18 pp"
+  },
+  {
+   "check": "peer consistency",
+   "subject": "emerging markets: VWO vs IEMG ret_10y_pct",
+   "result": "pass",
+   "detail": "Δ 1.31 pp ≤ allowed 2.18 pp"
+  },
+  {
+   "check": "peer consistency",
    "subject": "gold: GLD vs IAU ret_1y_pct",
    "result": "pass",
    "detail": "Δ 0.16 pp ≤ allowed 0.45 pp"
@@ -18979,8 +23792,8 @@
   {
    "check": "peer consistency",
    "subject": "US tech: VGT vs XLK ret_1y_pct",
-   "result": "warn",
-   "detail": "Δ 4.28 pp > allowed 4.26 pp — investigate"
+   "result": "explained",
+   "detail": "Δ 4.28 pp > allowed 4.26 pp — investigate — Different capping rules (XLK: S&P Technology Select Sector capped index; VGT: MSCI US IMI IT 25/50) change the weight of the largest chip stocks; gap is 0.02 pp above the generous tolerance; both confirmed by issuer fact sheets."
   },
   {
    "check": "peer consistency",
@@ -21097,8 +25910,8 @@
   {
    "check": "ISIN ↔ domicile",
    "subject": "DE000A2T0VU5",
-   "result": "warn",
-   "detail": "prefix DE vs domicile IE"
+   "result": "explained",
+   "detail": "prefix DE vs domicile IE — Gold ETC = debt security of an Irish issuer (Xtrackers IE Physical Gold plc) settled via the German CSD, hence the DE ISIN."
   },
   {
    "check": "plausible range",
@@ -21187,8 +26000,8 @@
   {
    "check": "ISIN ↔ domicile",
    "subject": "FR0013416716",
-   "result": "warn",
-   "detail": "prefix FR vs domicile IE"
+   "result": "explained",
+   "detail": "prefix FR vs domicile IE — Gold ETC of the Irish issuer Amundi Physical Metals plc with a French ISIN; prefix reflects the CSD, not the domicile."
   },
   {
    "check": "plausible range",
@@ -21366,6 +26179,12 @@
   },
   {
    "check": "twin mapped",
+   "subject": "IWM",
+   "result": "pass",
+   "detail": "russell2000"
+  },
+  {
+   "check": "twin mapped",
    "subject": "VT",
    "result": "pass",
    "detail": "global_all_cap"
@@ -21373,12 +26192,6 @@
   {
    "check": "twin mapped",
    "subject": "VEA",
-   "result": "pass",
-   "detail": "developed_ex_us"
-  },
-  {
-   "check": "twin mapped",
-   "subject": "IEFA",
    "result": "pass",
    "detail": "developed_ex_us"
   },
@@ -21471,6 +26284,120 @@
    "subject": "BND",
    "result": "pass",
    "detail": "us_aggregate_bond"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VOO",
+   "result": "pass",
+   "detail": "1.06 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "SPY",
+   "result": "pass",
+   "detail": "0.99 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "IVV",
+   "result": "pass",
+   "detail": "1.1 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "SPYM",
+   "result": "pass",
+   "detail": "1.01 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VTI",
+   "result": "pass",
+   "detail": "1.06 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "IWM",
+   "result": "pass",
+   "detail": "0.98 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VT",
+   "result": "pass",
+   "detail": "1.53 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VEA",
+   "result": "pass",
+   "detail": "2.41 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VWO",
+   "result": "pass",
+   "detail": "2.05 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "IEMG",
+   "result": "pass",
+   "detail": "2.2 % — TTM (headline)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VUG",
+   "result": "pass",
+   "detail": "0.39 % — TTM from stockanalysis (TTM dividend yield - different type, reference only) (2026-10-28)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "SCHG",
+   "result": "pass",
+   "detail": "0.39 % — TTM from issuer page (Distribution Yield TTM, reference) (2026-09-30)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VGT",
+   "result": "pass",
+   "detail": "0.38 % — TTM from stockanalysis (TTM dividend yield - different type, reference only) (2026-10-28)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "XLK",
+   "result": "pass",
+   "detail": "0.44 % — TTM from issuer page (Fund Distribution Yield = TTM, reference) (2026-10-27)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "SCHD",
+   "result": "pass",
+   "detail": "3.24 % — TTM from issuer page (Distribution Yield TTM, reference) (2026-09-30)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VYM",
+   "result": "pass",
+   "detail": "2.25 % — TTM from stockanalysis (TTM dividend yield - different type, reference only) (2026-10-28)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "VIG",
+   "result": "pass",
+   "detail": "1.48 % — TTM from stockanalysis (TTM dividend yield - different type, reference only) (2026-10-28)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "JEPI",
+   "result": "pass",
+   "detail": "8.04 % — TTM from issuer fact sheet (12-month rolling dividend yield, reference) (2026-09-30)"
+  },
+  {
+   "check": "dividend basis",
+   "subject": "AGG",
+   "result": "pass",
+   "detail": "4.13 % — TTM from issuer page (12m Trailing Yield, reference) (2026-10-27)"
   },
   {
    "check": "plausible range",

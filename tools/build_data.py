@@ -24,7 +24,7 @@ RETURNS_AS_OF = "2026-09-30"
 
 sys.path.insert(0, str(ROOT / "tools"))
 from curation import (LIST, REF, ASSET, US_SHARE, TWIN_LABELS, PRESETS,  # noqa: E402
-                      DIST_CZ, DOMICILE_CZ, build_cz, display_name)
+                      DIST_CZ, DOMICILE_CZ, build_cz, display_name, EXPLAINED, INDEX_SHORT)
 
 
 # ---------------------------------------------------------------- helpers
@@ -67,7 +67,12 @@ class Checks:
         self.rows = []
 
     def add(self, check, subject, ok, detail, level="fail"):
-        self.rows.append({"check": check, "subject": subject, "result": "pass" if ok else level, "detail": detail})
+        result = "pass" if ok else level
+        if not ok and level == "warn":
+            why = next((w for (c, s), w in EXPLAINED.items() if c == check and subject.startswith(s)), None)
+            if why:
+                result, detail = "explained", f"{detail} — {why}"
+        self.rows.append({"check": check, "subject": subject, "result": result, "detail": detail})
 
     def count(self, r):
         return sum(1 for x in self.rows if x["result"] == r)
@@ -181,6 +186,32 @@ for s in twins_raw["twin_sets"]:
 for t in LIST + REF:
     C.add("twin mapped", t, t in set_of, set_of.get(t, "no twin set"))
 
+# ---------------------------------------------------------------- dividend yield on one basis
+# Part 1 researched trailing-12-month (TTM) yields, part 2 headlined the 30-day SEC yield. Mixing the two in
+# one column would be apples and oranges, so every fund is normalised to TTM (issuer first, then databases).
+TTM_PAT = re.compile(r"TTM|12m Trailing|12-month|trailing 12|Distribution Yield|rolling", re.I)
+
+
+def ttm_yield(e):
+    fo = e["fields"].get("dividend_yield_pct") or {}
+    if fo.get("value") is None:
+        return None, None
+    if (fo.get("note") or "").lower().startswith("type: trailing"):
+        return num(fo["value"]), "TTM (headline)"
+    cands = [s for s in fo.get("sources", []) if TTM_PAT.search(s.get("name") or "") and "SEC" not in (s.get("name") or "")]
+    cands.sort(key=lambda s: 0 if "issuer" in (s.get("name") or "").lower() else 1)
+    if cands:
+        return num(cands[0].get("value")), f"TTM from {cands[0].get('name')} ({cands[0].get('as_of')})"
+    return None, None
+
+
+for t in LIST + REF:
+    e = us_raw.get(t)
+    if not e or (e["fields"].get("dividend_yield_pct") or {}).get("value") is None:
+        continue
+    val, basis = ttm_yield(e)
+    C.add("dividend basis", t, val is not None, f"{val} % — {basis}" if val is not None else "no TTM figure, only SEC yield")
+
 # ---------------------------------------------------------------- assemble outputs
 def listing(c, prefer=("Xetra", "LSE", "Borsa Italiana", "Euronext Amsterdam")):
     ls = c.get("listings", [])
@@ -231,11 +262,11 @@ for t in LIST + REF:
     top3 = v(e, "top3_holdings")
     us_out.append({
         "t": t, "former": e.get("former_ticker"), "name": display_name(e.get("name")), "issuer": e.get("issuer"),
-        "ex": v(e, "exchange"), "index": v(e, "index"),
+        "ex": v(e, "exchange"), "index": INDEX_SHORT.get(t) or v(e, "index"), "index_official": v(e, "index"),
         "ter": num(v(e, "expense_ratio_pct")), "aum": num(v(e, "aum_usd_bn")),
         "inception": v(e, "inception_date"), "n": int(num(v(e, "holdings_count"))) if num(v(e, "holdings_count")) else None,
         "dist": DIST_CZ.get(str(v(e, "distribution_freq") or "").lower(), v(e, "distribution_freq")),
-        "yld": num(v(e, "dividend_yield_pct")), "yld_type": (e["fields"].get("dividend_yield_pct") or {}).get("note", "")[:60],
+        "yld": ttm_yield(e)[0], "yld_basis": ttm_yield(e)[1],
         "r1": num(v(e, "ret_1y_pct")), "r5": num(v(e, "ret_5y_pct")), "r10": num(v(e, "ret_10y_pct")),
         "top3": top3 if isinstance(top3, list) else None,
         "twin": set_of.get(t), "asset": ASSET.get(t, "equity"), "us_share": US_SHARE.get(t, {}).get("value"),
@@ -277,7 +308,7 @@ if not missing_inputs or "--partial" in sys.argv:
 from report import write_report  # noqa: E402
 write_report(ROOT / "docs" / "data-overeni.md", C, us_raw, us_out, twins_out, twins_raw, cz, missing_inputs, LIST, REF, RETURNS_AS_OF)
 
-print(f"checks: {C.count('pass')} pass, {C.count('warn')} warn, {C.count('fail')} fail, {C.count('info')} info;"
+print(f"checks: {C.count('pass')} pass, {C.count('explained')} explained, {C.count('warn')} warn, {C.count('fail')} fail, {C.count('info')} info;"
       f" funds {len(us_out)}, twin sets {len(twins_out)}; missing inputs: {missing_inputs or 'none'}")
 for r in C.rows:
     if r["result"] == "fail":

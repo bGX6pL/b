@@ -2,9 +2,7 @@
 
 > Generováno skriptem `tools/build_data.py` — needitovat ručně. Každé číslo na stránkách, v PDF i v reklamách pochází z `data/etfs.json`.
 
-**⚠ Chybějící vstupy:** us-etfs-part1.json — data jsou zatím neúplná.
-
-**Výsledek:** 623 kontrol prošlo · 5 upozornění · 10 chyb · 0 informativních.  
+**Výsledek:** 842 kontrol prošlo · 8 odchylek prověřeno a vysvětleno · 0 nevysvětlených upozornění · 0 chyb.  
 Výnosy ke dni **2026-09-30** (celkový výnos v USD na NAV, p.a.). Sestaveno 2026-10-29.
 
 ## Metodika
@@ -14,65 +12,64 @@ Výnosy ke dni **2026-09-30** (celkový výnos v USD na NAV, p.a.). Sestaveno 20
 3. **Tolerance:** poplatek musí sedět přesně; velikost fondu ±5 % (různá data); počet akcií ±2 %; výnosy ±0,15 p. b. při stejném datu a bázi (NAV).
 4. **Test dvojčat (outliery):** fondy na stejný index musí mít výnos lišící se nejvýš o rozdíl poplatků + toleranci. Pro podobné (ne stejné) indexy je tolerance širší a odchylka je jen upozornění.
 5. **Formální kontroly:** primární burza NYSE/NYSE Arca u všech 20 fondů v taháku, rozumné rozsahy hodnot, jednotné datum výnosů, kontrolní číslice ISIN (ISO 6166), shoda ISIN s domicilem, akumulační/distribuční třída, existence kotace.
+6. **Jednotná báze:** dividendový výnos u všech fondů jako TTM (vyplacené dividendy za 12 měsíců / cena), nikoli mix s 30denním SEC yield; výnosy všech fondů k jednomu datu (30. 9. 2026) na NAV.
 
 ## Souhrn kontrol
 
-| Kontrola | ✔ prošlo | ! upozornění | ✖ chyba | i |
+| Kontrola | ✔ prošlo | ≈ vysvětleno | ! upozornění | ✖ chyba |
 |---|---:|---:|---:|---:|
-| coverage | 0 | 0 | 10 | 0 |
-| required field | 65 | 0 | 0 | 0 |
-| listing venue | 13 | 0 | 0 | 0 |
-| plausible range | 151 | 0 | 0 | 0 |
-| returns date | 29 | 0 | 0 | 0 |
-| fee consensus | 12 | 1 | 0 | 0 |
+| required field | 115 | 0 | 0 | 0 |
+| listing venue | 23 | 0 | 0 | 0 |
+| plausible range | 221 | 0 | 0 | 0 |
+| returns date | 59 | 0 | 0 | 0 |
+| fee consensus | 21 | 2 | 0 | 0 |
 | source agreement | 0 | 1 | 0 | 0 |
-| peer consistency | 8 | 1 | 0 | 0 |
+| peer consistency | 39 | 3 | 0 | 0 |
 | twin pick exists | 20 | 0 | 0 | 0 |
 | ISIN check digit | 74 | 0 | 0 | 0 |
 | ISIN ↔ domicile | 72 | 2 | 0 | 0 |
 | distribution policy | 74 | 0 | 0 | 0 |
 | listing present | 74 | 0 | 0 | 0 |
 | twin mapped | 23 | 0 | 0 | 0 |
+| dividend basis | 19 | 0 | 0 | 0 |
 | bank benchmark sample | 1 | 0 | 0 | 0 |
 | broker data | 6 | 0 | 0 | 0 |
 | tax facts | 1 | 0 | 0 | 0 |
 
 ## Chyby
 
-- **coverage** · VOO — ticker missing from research files
-- **coverage** · SPY — ticker missing from research files
-- **coverage** · IVV — ticker missing from research files
-- **coverage** · SPYM — ticker missing from research files
-- **coverage** · VTI — ticker missing from research files
-- **coverage** · VT — ticker missing from research files
-- **coverage** · VEA — ticker missing from research files
-- **coverage** · IEFA — ticker missing from research files
-- **coverage** · VWO — ticker missing from research files
-- **coverage** · IEMG — ticker missing from research files
+Žádné.
 
-## Upozornění (ověřeno ručně, ponecháno s poznámkou)
+## Prověřené odchylky (skutečné, nejde o chyby v datech)
 
-- **source agreement** · SCHD.top3_holdings — conflict resolved by researcher: Issuer documents (2026-09-30, 2026-10-13, 2026-10-27) consistently show TXN, QCOM, PG as top 3; stockanalysis shows TXN, COP, CVX - rejected (issuer preferred).
-- **fee consensus** · QQQ — sources disagree [0.18, 0.2]; chosen 0.18 — Cut from 0.20% to 0.18% with the conversion from a unit investment trust to an open-end ETF (shareholder vote 2025-12-19, effective ~2025-12
-- **peer consistency** · US tech: VGT vs XLK ret_1y_pct — Δ 4.28 pp > allowed 4.26 pp — investigate
-- **ISIN ↔ domicile** · DE000A2T0VU5 — prefix DE vs domicile IE
-- **ISIN ↔ domicile** · FR0013416716 — prefix FR vs domicile IE
+- **fee consensus** · SPY — sources disagree [0.09, 0.0945, 0.095]; chosen 0.0945 — Gross = net per issuer fact sheet. stockanalysis (0.09%) and Morningstar (0.095%) display rounded versions of 0.0945%. — Secondary sources display 0.0945 % rounded (0.09 / 0.095); the prospectus figure is 0.0945 %.
+- **source agreement** · SCHD.top3_holdings — conflict resolved by researcher: Issuer documents (2026-09-30, 2026-10-13, 2026-10-27) consistently show TXN, QCOM, PG as top 3; stockanalysis shows TXN, COP, CVX - rejected (issuer preferred). — Issuer holdings files (three dates) agree; the secondary source was stale.
+- **fee consensus** · QQQ — sources disagree [0.18, 0.2]; chosen 0.18 — Cut from 0.20% to 0.18% with the conversion from a unit investment trust to an open-end ETF (shareholder vote 2025-12-19, effective ~2025-12 — QQQ's fee fell from 0.20 % to 0.18 % when it converted from a unit investment trust to an open-end ETF (Dec 2025); older databases still show 0.20 %.
+- **peer consistency** · developed ex-US: VEA vs IEFA ret_1y_pct — Δ 6.01 pp > allowed 1.49 pp — investigate — Different indexes: FTSE (VEA) counts South Korea as developed and includes Canada; MSCI EAFE IMI (IEFA) excludes both. Korea's 2026 rally explains the 1-year gap; both figures confirmed by issuer and Morningstar.
+- **peer consistency** · emerging markets: VWO vs IEMG ret_1y_pct — Δ 14.30 pp > allowed 2.28 pp — investigate — Mirror image of the above: MSCI EM IMI (IEMG) includes South Korea, FTSE Emerging (VWO) does not. Confirmed by issuer fact sheets and Morningstar.
+- **peer consistency** · US tech: VGT vs XLK ret_1y_pct — Δ 4.28 pp > allowed 4.26 pp — investigate — Different capping rules (XLK: S&P Technology Select Sector capped index; VGT: MSCI US IMI IT 25/50) change the weight of the largest chip stocks; gap is 0.02 pp above the generous tolerance; both confirmed by issuer fact sheets.
+- **ISIN ↔ domicile** · DE000A2T0VU5 — prefix DE vs domicile IE — Gold ETC = debt security of an Irish issuer (Xtrackers IE Physical Gold plc) settled via the German CSD, hence the DE ISIN.
+- **ISIN ↔ domicile** · FR0013416716 — prefix FR vs domicile IE — Gold ETC of the Irish issuer Amundi Physical Metals plc with a French ISIN; prefix reflects the CSD, not the domicile.
+
+## Nevysvětlená upozornění
+
+Žádná.
 
 
 ## Americká ETF v taháku
 
 | Ticker | Burza | Index | Poplatek % | Velikost mld. USD | Akcií | Dividenda % | 1 rok % | 5 let % p.a. | 10 let % p.a. |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
-| VOO | — chybí — | | | | | | | | |
-| SPY | — chybí — | | | | | | | | |
-| IVV | — chybí — | | | | | | | | |
-| SPYM | — chybí — | | | | | | | | |
-| VTI | — chybí — | | | | | | | | |
-| VT | — chybí — | | | | | | | | |
-| VEA | — chybí — | | | | | | | | |
-| IEFA | — chybí — | | | | | | | | |
-| VWO | — chybí — | | | | | | | | |
-| IEMG | — chybí — | | | | | | | | |
+| **VOO** | NYSE Arca ✔ | S&P 500 Index | 0.03 ✔ | 1032.26 ✔ | 505 ✔ | 1.06 ✔ | 15.7 ✔ | 13.75 ✔ | 15.29 ✔ |
+| **SPY** | NYSE Arca ✔ | S&P 500 Index | 0.0945 ✔ | 814.82 ✔ | 504 ✔ | 0.99 ✔ | 15.6 ✔ | 13.65 ✔ | 15.18 ✔ |
+| **IVV** | NYSE Arca ✔ | S&P 500 Index | 0.03 ✔ | 885.14 ✔ | 505 ✔ | 1.1 ✔ | 15.71 ✔ | 13.76 ✔ | 15.3 ✔ |
+| **SPYM** | NYSE Arca ✔ | S&P 500 Index | 0.02 ✔ | 185.01 ✔ | 505 ✔ | 1.01 ✔ | 15.7 ✔ | 13.76 ✔ | 15.31 ✔ |
+| **VTI** | NYSE Arca ✔ | Morningstar US Total Market Index | 0.03 ✔ | 689.22 ✔ | 3519 ✔ | 1.06 ✔ | 15.33 ✔ | 12.56 ✔ | 14.7 ✔ |
+| **IWM** | NYSE Arca ✔ | Russell 2000 Index | 0.19 ✔ | 75.51 ✔ | 1976 ✔ | 0.98 ✔ | 16.06 ✔ | 6.22 ✔ | 9.75 ✔ |
+| **VT** | NYSE Arca ✔ | FTSE Global All Cap Index | 0.06 ✔ | 81.75 ✔ | 10185 ✔ | 1.53 ✔ | 16.32 ✔ | 11.34 ✔ | 12.32 ✔ |
+| **VEA** | NYSE Arca ✔ | FTSE Developed All Cap ex US Index | 0.03 ✔ | 231.62 ✔ | 3903 ✔ | 2.41 ✔ | 20.77 ✔ | 10.32 ✔ | 9.76 ✔ |
+| **VWO** | NYSE Arca ✔ | FTSE Emerging Markets All Cap China A Inclusion Index | 0.06 ✔ | 125.42 ✔ | 6507 ✔ | 2.05 ✔ | 12.54 ✔ | 6.62 ✔ | 7.66 ✔ |
+| **IEMG** | NYSE Arca ✔ | MSCI Emerging Markets Investable Market Index (USD) (Net) | 0.09 ✔ | 152.62 ✔ | 2851 ✔ | 2.2 ✔ | 26.84 ✔ | 8.79 ✔ | 8.97 ✔ |
 | **VUG** | NYSE Arca ✔ | Morningstar US Large Cap Growth Index | 0.03 ✔ | 232.87 ✔ | 135 ✔ | 0.35 ◐ | 13.09 ✔ | 13.87 ✔ | 17.94 ✔ |
 | **SCHG** | NYSE Arca ✔ | Dow Jones U.S. Large-Cap Growth Total Stock Market Index | 0.04 ✔ | 63.78 ✔ | 189 ✔ | 0.35 ◐ | 13.01 ✔ | 14.71 ✔ | 18.68 ✔ |
 | **VGT** | NYSE Arca ✔ | MSCI US Investable Market Information Technology 25/50 Index | 0.09 ✔ | 154.54 ✔ | 318 ✔ | 0.33 ◐ | 35.19 ✔ | 20.92 ✔ | 24.72 ✔ |
@@ -93,13 +90,46 @@ Velikost fondu: viz poznámka u každého fondu v `data/etfs.json`, zda jde o ET
 
 | Skupina a pole | Výsledek | Detail |
 |---|---|---|
+| S&P 500: VOO vs IVV ret_1y_pct | ✔ | Δ 0.01 pp ≤ allowed 0.25 pp |
+| S&P 500: VOO vs SPY ret_1y_pct | ✔ | Δ 0.10 pp ≤ allowed 0.31 pp |
+| S&P 500: VOO vs SPYM ret_1y_pct | ✔ | Δ 0.00 pp ≤ allowed 0.26 pp |
+| S&P 500: IVV vs SPY ret_1y_pct | ✔ | Δ 0.11 pp ≤ allowed 0.31 pp |
+| S&P 500: IVV vs SPYM ret_1y_pct | ✔ | Δ 0.01 pp ≤ allowed 0.26 pp |
+| S&P 500: SPY vs SPYM ret_1y_pct | ✔ | Δ 0.10 pp ≤ allowed 0.32 pp |
+| S&P 500: VOO vs IVV ret_5y_pct | ✔ | Δ 0.01 pp ≤ allowed 0.15 pp |
+| S&P 500: VOO vs SPY ret_5y_pct | ✔ | Δ 0.10 pp ≤ allowed 0.21 pp |
+| S&P 500: VOO vs SPYM ret_5y_pct | ✔ | Δ 0.01 pp ≤ allowed 0.16 pp |
+| S&P 500: IVV vs SPY ret_5y_pct | ✔ | Δ 0.11 pp ≤ allowed 0.21 pp |
+| S&P 500: IVV vs SPYM ret_5y_pct | ✔ | Δ 0.00 pp ≤ allowed 0.16 pp |
+| S&P 500: SPY vs SPYM ret_5y_pct | ✔ | Δ 0.11 pp ≤ allowed 0.22 pp |
+| S&P 500: VOO vs IVV ret_10y_pct | ✔ | Δ 0.01 pp ≤ allowed 0.15 pp |
+| S&P 500: VOO vs SPY ret_10y_pct | ✔ | Δ 0.11 pp ≤ allowed 0.21 pp |
+| S&P 500: VOO vs SPYM ret_10y_pct | ✔ | Δ 0.02 pp ≤ allowed 0.16 pp |
+| S&P 500: IVV vs SPY ret_10y_pct | ✔ | Δ 0.12 pp ≤ allowed 0.21 pp |
+| S&P 500: IVV vs SPYM ret_10y_pct | ✔ | Δ 0.01 pp ≤ allowed 0.16 pp |
+| S&P 500: SPY vs SPYM ret_10y_pct | ✔ | Δ 0.13 pp ≤ allowed 0.22 pp |
+| US total market: VTI vs ITOT ret_1y_pct | ✔ | Δ 0.03 pp ≤ allowed 0.85 pp |
+| US total market: VTI vs SCHB ret_1y_pct | ✔ | Δ 0.08 pp ≤ allowed 0.85 pp |
+| US total market: ITOT vs SCHB ret_1y_pct | ✔ | Δ 0.05 pp ≤ allowed 0.85 pp |
+| US total market: VTI vs ITOT ret_5y_pct | ✔ | Δ 0.02 pp ≤ allowed 0.75 pp |
+| US total market: VTI vs SCHB ret_5y_pct | ✔ | Δ 0.06 pp ≤ allowed 0.75 pp |
+| US total market: ITOT vs SCHB ret_5y_pct | ✔ | Δ 0.04 pp ≤ allowed 0.75 pp |
+| US total market: VTI vs ITOT ret_10y_pct | ✔ | Δ 0.03 pp ≤ allowed 0.75 pp |
+| US total market: VTI vs SCHB ret_10y_pct | ✔ | Δ 0.01 pp ≤ allowed 0.75 pp |
+| US total market: ITOT vs SCHB ret_10y_pct | ✔ | Δ 0.04 pp ≤ allowed 0.75 pp |
+| developed ex-US: VEA vs IEFA ret_1y_pct | ≈ | Δ 6.01 pp > allowed 1.49 pp — investigate — Different indexes: FTSE (VEA) counts South Korea as developed and includes Canada; MSCI EAFE IMI (IEFA) excludes both. Korea's 2026 rally explains the 1-year gap; both figures confirmed by issuer and Morningstar. |
+| developed ex-US: VEA vs IEFA ret_5y_pct | ✔ | Δ 1.28 pp ≤ allowed 1.39 pp |
+| developed ex-US: VEA vs IEFA ret_10y_pct | ✔ | Δ 0.67 pp ≤ allowed 1.39 pp |
+| emerging markets: VWO vs IEMG ret_1y_pct | ≈ | Δ 14.30 pp > allowed 2.28 pp — investigate — Mirror image of the above: MSCI EM IMI (IEMG) includes South Korea, FTSE Emerging (VWO) does not. Confirmed by issuer fact sheets and Morningstar. |
+| emerging markets: VWO vs IEMG ret_5y_pct | ✔ | Δ 2.17 pp ≤ allowed 2.18 pp |
+| emerging markets: VWO vs IEMG ret_10y_pct | ✔ | Δ 1.31 pp ≤ allowed 2.18 pp |
 | gold: GLD vs IAU ret_1y_pct | ✔ | Δ 0.16 pp ≤ allowed 0.45 pp |
 | gold: GLD vs IAU ret_5y_pct | ✔ | Δ 0.18 pp ≤ allowed 0.35 pp |
 | gold: GLD vs IAU ret_10y_pct | ✔ | Δ 0.17 pp ≤ allowed 0.35 pp |
 | US large growth: VUG vs SCHG ret_1y_pct | ✔ | Δ 0.08 pp ≤ allowed 3.76 pp |
 | US large growth: VUG vs SCHG ret_5y_pct | ✔ | Δ 0.84 pp ≤ allowed 3.66 pp |
 | US large growth: VUG vs SCHG ret_10y_pct | ✔ | Δ 0.74 pp ≤ allowed 3.66 pp |
-| US tech: VGT vs XLK ret_1y_pct | ! | Δ 4.28 pp > allowed 4.26 pp — investigate |
+| US tech: VGT vs XLK ret_1y_pct | ≈ | Δ 4.28 pp > allowed 4.26 pp — investigate — Different capping rules (XLK: S&P Technology Select Sector capped index; VGT: MSCI US IMI IT 25/50) change the weight of the largest chip stocks; gap is 0.02 pp above the generous tolerance; both confirmed by issuer fact sheets. |
 | US tech: VGT vs XLK ret_5y_pct | ✔ | Δ 1.22 pp ≤ allowed 4.16 pp |
 | US tech: VGT vs XLK ret_10y_pct | ✔ | Δ 0.06 pp ≤ allowed 4.16 pp |
 
@@ -130,6 +160,124 @@ Velikost fondu: viz poznámka u každého fondu v `data/etfs.json`, zda jde o ET
 
 ## Poznámky výzkumu ke každému fondu
 
+- **VOO** — Vanguard S&P 500 ETF
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Net = gross; prospectus expense ratio dated 2026-04-28.
+  - *aum_usd_bn*: SHARE-CLASS level: ETF share class total net assets $1,032,260 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $1,732,017 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 1.73 Tril. stockanalysis.com $1.05T on 2026-10-28 differs by 1.7% (later date), within 5%.
+  - *inception_date*: Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older.
+  - *holdings_count*: Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 518 (+2.6%); it counts all holding lines (incl. cash/derivatives/collateral) and is dated 2026-10-28.
+  - *dividend_yield_pct*: Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. For reference, issuer 30-day SEC yield: 1.00% (2026-09-30).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *top3_holdings*: Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 8.4, 7.4, 5.8.
+- **SPY** — State Street SPDR S&P 500 ETF Trust
+  - Issuer now brands the fund 'State Street SPDR S&P 500 ETF Trust' (formerly 'SPDR S&P 500 ETF Trust'; SSGA is now 'State Street Investment Management'); ticker unchanged.
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Gross = net per issuer fact sheet. stockanalysis (0.09%) and Morningstar (0.095%) display rounded versions of 0.0945%.
+  - *aum_usd_bn*: FUND-level = share-class level (single-class UIT). Issuer value $814,816.36 M as of 2026-10-27 (issuer publishes daily). stockanalysis diff 1.3%.
+  - *inception_date*: Inception date = listing date per issuer listing table.
+  - *holdings_count*: stockanalysis.com 505 includes non-equity lines (0.2% diff).
+  - *dividend_yield_pct*: Type: trailing-12-month (SSGA 'Fund Distribution Yield' = distributions of past 365 days / NAV, as of 2026-10-27; Morningstar TTM uses the 2026-09-30 NAV). For reference, 30-day SEC yield: 0.95% (issuer page, 2026-10-27) / 0.96% (fact sheet, 2026-09-30).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). SPY trails VOO/IVV/SPYM by ~0.10-0.11 pp p.a.: higher fee (0.0945% vs 0.02-0.03%) plus UIT structure (cannot reinvest dividends between payments).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). SPY trails VOO/IVV/SPYM by ~0.10-0.11 pp p.a.: higher fee (0.0945% vs 0.02-0.03%) plus UIT structure (cannot reinvest dividends between payments).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). SPY trails VOO/IVV/SPYM by ~0.10-0.11 pp p.a.: higher fee (0.0945% vs 0.02-0.03%) plus UIT structure (cannot reinvest dividends between payments).
+  - *top3_holdings*: Weights = % of fund from issuer daily holdings file dated 2026-10-27 (matches stockanalysis.com). Quarter-end (2026-09-30) fact-sheet weights for reference: 8.38, 7.37, 5.77.
+- **IVV** — iShares Core S&P 500 ETF
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Net = gross (no waiver shown).
+  - *aum_usd_bn*: FUND-level = share-class level (single share class ETF). Issuer 'Net Assets of Fund' $885,141,071,461 as of 2026-10-27 (issuer publishes daily, not a 2026-09-30 figure on the page). Diffs: Morningstar 0.0%, stockanalysis 1.2%.
+  - *inception_date*: Fund launch = listing date.
+  - *holdings_count*: Issuer count excludes cash and derivatives. stockanalysis.com 509 = all lines of the issuer CSV incl. cash/futures/collateral (0.8% diff).
+  - *dividend_yield_pct*: Type: trailing-12-month yield (iShares '12m Trailing Yield', as of 2026-09-30). Morningstar TTM (same basis/date) agrees within 0.10 pp; stockanalysis.com uses the 2026-10-28 price. For reference, issuer 30-day SEC yield: 0.95% (2026-09-30).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *top3_holdings*: Weights = % of fund net assets from the issuer's latest holdings CSV (2026-10-27); iShares no longer serves a 2026-09-30 holdings file and its fact sheet is still dated 2026-06-30. stockanalysis.com shows identical weights.
+- **SPYM** — State Street SPDR Portfolio S&P 500 ETF
+  - Ticker changed SPLG -> SPYM and name 'SPDR Portfolio S&P 500 ETF' -> 'State Street SPDR Portfolio S&P 500 ETF', effective Friday 2025-10-31 (MIAX corporate action alert 2025-10-30; SSGA notice to APs on ticker/fund name changes 10-31-25; stockanalysis.com/etf/splg redirects to /etf/spym). Index, strategy and fee unchanged by the rename. Same fund/CUSIP 78464A854. Benchmark is the S&P 500 only since 2020-01-24 (see ret_10y_pct note). Issuer labels the page 'ETF Share Class'.
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Issuer shows gross expense ratio; no waiver.
+  - *aum_usd_bn*: SHARE-CLASS page: SSGA labels this page 'ETF Share Class'; AUM shown is for the ETF share class (other share classes, if any, not verified). Issuer value $185,006.72 M as of 2026-10-27 (issuer publishes daily). stockanalysis diff 1.5%.
+  - *inception_date*: Inception date = listing date per issuer listing table.
+  - *holdings_count*: stockanalysis.com 508 includes non-equity lines (0.6% diff).
+  - *dividend_yield_pct*: Type: trailing-12-month (SSGA 'Fund Distribution Yield' = distributions of past 365 days / NAV, as of 2026-10-27; Morningstar TTM uses the 2026-09-30 NAV). For reference, 30-day SEC yield: 1.03% (issuer page, 2026-10-27) / 1.04% (fact sheet, 2026-09-30).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). CAUTION: the fund has tracked the S&P 500 only since 2020-01-24 (before: Dow Jones U.S. Large-Cap Total Stock Market Index until 2013-07-09, Russell 1000 until 2017-11-16, SSGA Large Cap Index until 2020-01-24, per issuer page). The 10y window (from 2016-09-30) therefore is not a pure S&P 500 record; 1y and 5y windows are fully on the S&P 500.
+  - *top3_holdings*: Weights = % of fund from issuer daily holdings file dated 2026-10-27 (matches stockanalysis.com). Quarter-end (2026-09-30) fact-sheet weights for reference: 8.37, 7.36, 5.77.
+- **VTI** — Vanguard Morningstar Total Stock Market ETF
+  - Renamed in 2026 from 'Vanguard Total Stock Market ETF' to 'Vanguard Morningstar Total Stock Market ETF' (ticker unchanged). Benchmark 'CRSP US Total Market Index' was rebranded 'Morningstar US Total Market Index' after Morningstar acquired CRSP's index business (Vanguard press release 2026-04-29; Morningstar completed the rebrand 2026-07-28; methodology unchanged). Some third-party sites may still show the old names.
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Net = gross; prospectus expense ratio dated 2026-04-28.
+  - *aum_usd_bn*: SHARE-CLASS level: ETF share class total net assets $689,219 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $2,322,816 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 2.32 Tril. stockanalysis.com $691.08B on 2026-10-28 differs by 0.3% (later date), within 5%.
+  - *inception_date*: Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older.
+  - *holdings_count*: Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 3,527 (+0.2%); it counts all holding lines (incl. cash/derivatives/collateral) and is dated 2026-10-28.
+  - *dividend_yield_pct*: Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. For reference, issuer 30-day SEC yield: 1.03% (2026-09-30).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *top3_holdings*: Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 7.1, 6.6, 5.2.
+- **IWM** — iShares Russell 2000 ETF
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Net = gross (no waiver shown).
+  - *aum_usd_bn*: FUND-level = share-class level (single share class ETF). Issuer 'Net Assets of Fund' $75,511,165,609 as of 2026-10-27 (issuer publishes daily, not a 2026-09-30 figure on the page). Diffs: Morningstar 0.0%, stockanalysis 1.6%.
+  - *inception_date*: Fund launch = listing date.
+  - *holdings_count*: Issuer count excludes cash and derivatives. stockanalysis.com 1,982 = all lines of the issuer CSV incl. cash/futures/collateral (0.3% diff).
+  - *dividend_yield_pct*: Type: trailing-12-month yield (iShares '12m Trailing Yield', as of 2026-09-30). Morningstar TTM (same basis/date) agrees within 0.10 pp; stockanalysis.com uses the 2026-10-28 price. For reference, issuer 30-day SEC yield: 1.18% (2026-09-30).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *top3_holdings*: Weights = % of fund net assets from the issuer's latest holdings CSV (2026-10-27); iShares no longer serves a 2026-09-30 holdings file and its fact sheet is still dated 2026-06-30. stockanalysis.com shows identical weights. Russell 2000 is very diversified: top-3 weights are tiny (~0.35%) and change often, so they carry little information.
+- **VT** — Vanguard Total World Stock ETF
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Net = gross; prospectus expense ratio dated 2026-02-27.
+  - *aum_usd_bn*: SHARE-CLASS level: ETF share class total net assets $81,752 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $101,182 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 101.18 Bil. stockanalysis.com $83.11B on 2026-10-28 differs by 1.7% (later date), within 5%.
+  - *inception_date*: Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older.
+  - *holdings_count*: Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 10,242 (+0.6%); it counts all holding lines (incl. cash/derivatives/collateral) and is dated 2026-10-28.
+  - *dividend_yield_pct*: Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. Vanguard publishes no 30-day SEC yield for this fund on its site API (Morningstar shows none either).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *top3_holdings*: Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 4.6, 4.1, 3.3.
+- **VEA** — Vanguard FTSE Developed Markets ETF
+  - FTSE developed universe includes Canada and South Korea, unlike MSCI EAFE (IEFA); Samsung and SK hynix are VEA's top holdings, hence the higher 1y return vs IEFA.
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Net = gross; prospectus expense ratio dated 2026-04-28.
+  - *aum_usd_bn*: SHARE-CLASS level: ETF share class total net assets $231,615 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $313,544 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 313.54 Bil. stockanalysis.com $226.39B on 2026-10-28 differs by 2.3% (later date), within 5%.
+  - *inception_date*: Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older.
+  - *holdings_count*: Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 3,961 (+1.5%); it counts all holding lines (incl. cash/derivatives/collateral) and is dated 2026-10-28.
+  - *dividend_yield_pct*: Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. Vanguard publishes no 30-day SEC yield for this fund on its site API (Morningstar shows none either).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *top3_holdings*: Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 3.2, 2.3, 2.2.
+- **VWO** — Vanguard FTSE Emerging Markets ETF
+  - FTSE classifies South Korea as developed, so VWO excludes Korea (Korean stocks sit in VEA/VT) and includes China A-shares; this explains VWO's much lower 1y return (12.54%) vs IEMG (26.84%, MSCI EM incl. Korea). Verified, not a data error.
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Net = gross; prospectus expense ratio dated 2026-02-27.
+  - *aum_usd_bn*: SHARE-CLASS level: ETF share class total net assets $125,416 million as of 2026-09-30. Fund-level (all share classes incl. Vanguard mutual-fund shares) = $164,653 million (fact sheet, 2026-09-30), matching Morningstar Total Assets 164.66 Bil. stockanalysis.com $119.96B on 2026-10-28 differs by 4.4% (later date), within 5%.
+  - *inception_date*: Inception of the ETF share class (= listing date); the underlying Vanguard fund (with mutual-fund share classes) is older.
+  - *holdings_count*: Number of stocks per issuer as of 2026-09-30. stockanalysis.com shows 5,096 (-21.7%): outlier (apparently an incomplete holdings list on that site); the two issuer documents agree, so the issuer value is kept.
+  - *distribution_freq*: Issuer distribution history shows no March 2026 payment (paid Jun/Sep 2026 and Jun/Sep/Dec 2025), but the stated schedule is quarterly.
+  - *dividend_yield_pct*: Type: trailing-12-month (TTM) distribution yield. Morningstar 'TTM Yield' = trailing 12-month distributions / month-end NAV (2026-09-30; methodology confirmed by recomputing RSP from Invesco data). stockanalysis.com uses TTM dividends / last price (2026-10-28), so small differences are expected; tolerance used: 0.10 pp. Vanguard does not publish a TTM yield, so Morningstar is the primary source here. Vanguard publishes no 30-day SEC yield for this fund on its site API (Morningstar shows none either).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). Morningstar figure read from its 'Month End' view (as of 2026-09-30 = quarter-end; its 'Quarter End' view was empty for VWO).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). Morningstar figure read from its 'Month End' view (as of 2026-09-30 = quarter-end; its 'Quarter End' view was empty for VWO).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row). Morningstar figure read from its 'Month End' view (as of 2026-09-30 = quarter-end; its 'Quarter End' view was empty for VWO).
+  - *top3_holdings*: Weights = % of fund per Vanguard's month-end holdings file (2026-09-30; Vanguard publishes holdings monthly). stockanalysis.com mirrors the same file (diff <= 0.02 pp). The fact sheet uses % of total net assets, rounded to 0.1, and aggregates lines per company (e.g. Alphabet A+C, Samsung common+preferred), so it can differ slightly: 16.4, 2.9, 2.2.
+- **IEMG** — iShares Core MSCI Emerging Markets ETF
+  - MSCI EM includes South Korea (Samsung, SK hynix in top 3), unlike FTSE-based VWO; this explains IEMG's 26.84% vs VWO's 12.54% 1y NAV return. Verified on issuer + Morningstar.
+  - *exchange*: Primary listing NYSE Arca.
+  - *expense_ratio_pct*: Net = gross (no waiver shown).
+  - *aum_usd_bn*: FUND-level = share-class level (single share class ETF). Issuer 'Net Assets of Fund' $152,624,436,117 as of 2026-10-28 (issuer publishes daily, not a 2026-09-30 figure on the page). Diffs: Morningstar 1.5%, stockanalysis 2.7%.
+  - *inception_date*: Fund launch = listing date.
+  - *holdings_count*: Issuer count excludes cash and derivatives. stockanalysis.com 2,889 = all lines of the issuer CSV incl. cash/futures/collateral (1.3% diff).
+  - *distribution_freq*: Pays in June and December.
+  - *dividend_yield_pct*: Type: trailing-12-month yield (iShares '12m Trailing Yield', as of 2026-09-30). Morningstar TTM (same basis/date) agrees within 0.10 pp; stockanalysis.com uses the 2026-10-28 price and is 0.12 pp higher. For reference, issuer 30-day SEC yield: 1.75% (2026-09-30).
+  - *ret_1y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_5y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *ret_10y_pct*: Annualized total return at NAV, as of 2026-09-30 (quarter-end). Morningstar value read from its Trailing Returns 'Quarter End' view (NAV row).
+  - *top3_holdings*: Weights = % of fund net assets from the issuer's latest holdings CSV (2026-10-27); iShares no longer serves a 2026-09-30 holdings file and its fact sheet is still dated 2026-06-30. stockanalysis.com shows identical weights.
 - **VUG** — Vanguard Morningstar Growth ETF
   - Name changed in 2026 from 'Vanguard Growth ETF' together with the index switch from CRSP to Morningstar; ticker unchanged. 6:1 share split effective 2026-04-21 (Yahoo split record; issuer 52-week high $504 vs NAV ~$88) - per-share prices before that date are not comparable.
   - *exchange*: Primary listing NYSE Arca (Yahoo 'PCX' and Nasdaq.com 'PSE' are legacy codes for NYSE Arca).
@@ -274,6 +422,16 @@ Velikost fondu: viz poznámka u každého fondu v `data/etfs.json`, zda jde o ET
 
 ## Zdroje
 
+- **VOO:** <https://fund-docs.vanguard.com/F0968.pdf> · <https://investor.vanguard.com/vmf/api/VOO/characteristic> · <https://investor.vanguard.com/vmf/api/VOO/distribution> · <https://investor.vanguard.com/vmf/api/VOO/performance> · <https://investor.vanguard.com/vmf/api/VOO/portfolio-holding/stock> · <https://investor.vanguard.com/vmf/api/VOO/profile> · <https://stockanalysis.com/etf/voo/> · <https://www.morningstar.com/etfs/arcx/voo/performance>
+- **SPY:** <https://stockanalysis.com/etf/spy/> · <https://www.morningstar.com/etfs/arcx/spy/performance> · <https://www.morningstar.com/etfs/arcx/spy/quote> · <https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder> · <https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy> · <https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf> · <https://www.ssga.com/us/en/intermediary/library-content/products/fund-data/etfs/us/holdings-daily-us-en-spy.xlsx>
+- **IVV:** <https://stockanalysis.com/etf/ivv/> · <https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=239726&component=fundDownload&userType=individual> · <https://www.ishares.com/us/products/239726/ishares-core-s-p-500-etf/latest-holdings.csv> · <https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf> · <https://www.morningstar.com/etfs/arcx/ivv/performance> · <https://www.morningstar.com/etfs/arcx/ivv/quote>
+- **SPYM:** <https://stockanalysis.com/etf/spym/> · <https://www.morningstar.com/etfs/arcx/spym/performance> · <https://www.morningstar.com/etfs/arcx/spym/quote> · <https://www.ssga.com/bin/v1/ssmp/fund/fundfinder?country=us&language=en&role=intermediary&product=etfs&ui=fund-finder> · <https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-portfolio-sp-500-etf-spym> · <https://www.ssga.com/us/en/intermediary/library-content/products/factsheets/etfs/us/factsheet-us-en-spym.pdf> · <https://www.ssga.com/us/en/intermediary/library-content/products/fund-data/etfs/us/holdings-daily-us-en-spym.xlsx>
+- **VTI:** <https://fund-docs.vanguard.com/F0970.pdf> · <https://investor.vanguard.com/vmf/api/VTI/characteristic> · <https://investor.vanguard.com/vmf/api/VTI/distribution> · <https://investor.vanguard.com/vmf/api/VTI/performance> · <https://investor.vanguard.com/vmf/api/VTI/portfolio-holding/stock> · <https://investor.vanguard.com/vmf/api/VTI/profile> · <https://stockanalysis.com/etf/vti/> · <https://www.morningstar.com/etfs/arcx/vti/performance>
+- **IWM:** <https://stockanalysis.com/etf/iwm/> · <https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=239710&component=fundDownload&userType=individual> · <https://www.ishares.com/us/products/239710/ishares-russell-2000-etf> · <https://www.ishares.com/us/products/239710/ishares-russell-2000-etf/latest-holdings.csv> · <https://www.morningstar.com/etfs/arcx/iwm/performance> · <https://www.morningstar.com/etfs/arcx/iwm/quote>
+- **VT:** <https://fund-docs.vanguard.com/F3141.pdf> · <https://investor.vanguard.com/vmf/api/VT/characteristic> · <https://investor.vanguard.com/vmf/api/VT/distribution> · <https://investor.vanguard.com/vmf/api/VT/performance> · <https://investor.vanguard.com/vmf/api/VT/portfolio-holding/stock> · <https://investor.vanguard.com/vmf/api/VT/profile> · <https://stockanalysis.com/etf/vt/> · <https://www.morningstar.com/etfs/arcx/vt/performance>
+- **VEA:** <https://fund-docs.vanguard.com/F0936.pdf> · <https://investor.vanguard.com/vmf/api/VEA/characteristic> · <https://investor.vanguard.com/vmf/api/VEA/distribution> · <https://investor.vanguard.com/vmf/api/VEA/performance> · <https://investor.vanguard.com/vmf/api/VEA/portfolio-holding/stock> · <https://investor.vanguard.com/vmf/api/VEA/profile> · <https://stockanalysis.com/etf/vea/> · <https://www.morningstar.com/etfs/arcx/vea/performance>
+- **VWO:** <https://fund-docs.vanguard.com/F0964.pdf> · <https://investor.vanguard.com/vmf/api/VWO/characteristic> · <https://investor.vanguard.com/vmf/api/VWO/distribution> · <https://investor.vanguard.com/vmf/api/VWO/performance> · <https://investor.vanguard.com/vmf/api/VWO/portfolio-holding/stock> · <https://investor.vanguard.com/vmf/api/VWO/profile> · <https://stockanalysis.com/etf/vwo/> · <https://www.morningstar.com/etfs/arcx/vwo/performance>
+- **IEMG:** <https://stockanalysis.com/etf/iemg/> · <https://www.blackrock.com/varnish-api/blk-one01-product-data/product-data/api/v1/get-fund-document?appType=PRODUCT_PAGE&appSubType=ISHARES&targetSite=us-ishares&locale=en_US&portfolioId=244050&component=fundDownload&userType=individual> · <https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf> · <https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf/latest-holdings.csv> · <https://www.morningstar.com/etfs/arcx/iemg/performance> · <https://www.morningstar.com/etfs/arcx/iemg/quote>
 - **VUG:** <https://api.nasdaq.com/api/quote/VUG/info?assetclass=etf> · <https://api.nasdaq.com/api/quote/VUG/summary?assetclass=etf> · <https://fund-docs.vanguard.com/F0967.pdf> · <https://investor.vanguard.com/investment-products/etfs/profile/vug> · <https://investor.vanguard.com/irr/funds/profile/VUG-AdditionalFundData> · <https://query1.finance.yahoo.com/v8/finance/chart/VUG> · <https://stockanalysis.com/etf/vug/> · <https://stockanalysis.com/etf/vug/holdings/>
 - **SCHG:** <https://api.nasdaq.com/api/quote/SCHG/info?assetclass=etf> · <https://api.nasdaq.com/api/quote/SCHG/summary?assetclass=etf> · <https://query1.finance.yahoo.com/v8/finance/chart/SCHG> · <https://stockanalysis.com/etf/schg/> · <https://stockanalysis.com/etf/schg/holdings/> · <https://www.schwabassetmanagement.com/products/schg> · <https://www.schwabassetmanagement.com/resource/schg-fact-sheet>
 - **VGT:** <https://api.nasdaq.com/api/quote/VGT/info?assetclass=etf> · <https://api.nasdaq.com/api/quote/VGT/summary?assetclass=etf> · <https://fund-docs.vanguard.com/F0958.pdf> · <https://investor.vanguard.com/investment-products/etfs/profile/vgt> · <https://investor.vanguard.com/irr/funds/profile/VGT-AdditionalFundData> · <https://query1.finance.yahoo.com/v8/finance/chart/VGT> · <https://stockanalysis.com/etf/vgt/> · <https://stockanalysis.com/etf/vgt/holdings/>

@@ -2,6 +2,7 @@
 from collections import Counter, defaultdict
 
 MARK = {"verified": "✔", "single-source": "◐", "conflict": "⚠"}
+RESULT_MARK = {"pass": "✔", "explained": "≈", "warn": "!"}
 
 
 def _f(e, k):
@@ -29,7 +30,7 @@ def write_report(path, C, us_raw, us_out, twins_out, twins_raw, cz, missing, LIS
     w("> Generováno skriptem `tools/build_data.py` — needitovat ručně. Každé číslo na stránkách, v PDF i v reklamách pochází z `data/etfs.json`.\n")
     if missing:
         w(f"**⚠ Chybějící vstupy:** {', '.join(missing)} — data jsou zatím neúplná.\n")
-    w(f"**Výsledek:** {res['pass']} kontrol prošlo · {res['warn']} upozornění · {res['fail']} chyb · {res['info']} informativních.  ")
+    w(f"**Výsledek:** {res['pass']} kontrol prošlo · {res['explained']} odchylek prověřeno a vysvětleno · {res['warn']} nevysvětlených upozornění · {res['fail']} chyb.  ")
     w(f"Výnosy ke dni **{returns_as_of}** (celkový výnos v USD na NAV, p.a.). Sestaveno 2026-10-29.\n")
 
     w("## Metodika\n")
@@ -38,20 +39,24 @@ def write_report(path, C, us_raw, us_out, twins_out, twins_raw, cz, missing, LIS
       "✔ ověřeno ≥ 2 zdroji v toleranci · ◐ jediný zdroj · ⚠ zdroje se lišily, rozhodl správce.")
     w("3. **Tolerance:** poplatek musí sedět přesně; velikost fondu ±5 % (různá data); počet akcií ±2 %; výnosy ±0,15 p. b. při stejném datu a bázi (NAV).")
     w("4. **Test dvojčat (outliery):** fondy na stejný index musí mít výnos lišící se nejvýš o rozdíl poplatků + toleranci. Pro podobné (ne stejné) indexy je tolerance širší a odchylka je jen upozornění.")
-    w("5. **Formální kontroly:** primární burza NYSE/NYSE Arca u všech 20 fondů v taháku, rozumné rozsahy hodnot, jednotné datum výnosů, kontrolní číslice ISIN (ISO 6166), shoda ISIN s domicilem, akumulační/distribuční třída, existence kotace.\n")
+    w("5. **Formální kontroly:** primární burza NYSE/NYSE Arca u všech 20 fondů v taháku, rozumné rozsahy hodnot, jednotné datum výnosů, kontrolní číslice ISIN (ISO 6166), shoda ISIN s domicilem, akumulační/distribuční třída, existence kotace.")
+    w("6. **Jednotná báze:** dividendový výnos u všech fondů jako TTM (vyplacené dividendy za 12 měsíců / cena), nikoli mix s 30denním SEC yield; výnosy všech fondů k jednomu datu (30. 9. 2026) na NAV.\n")
 
     w("## Souhrn kontrol\n")
-    w("| Kontrola | ✔ prošlo | ! upozornění | ✖ chyba | i |")
+    w("| Kontrola | ✔ prošlo | ≈ vysvětleno | ! upozornění | ✖ chyba |")
     w("|---|---:|---:|---:|---:|")
     for k, c in by_check.items():
-        w(f"| {k} | {c['pass']} | {c['warn']} | {c['fail']} | {c['info']} |")
+        w(f"| {k} | {c['pass']} | {c['explained']} | {c['warn']} | {c['fail']} |")
     w("")
 
     fails = [r for r in C.rows if r["result"] == "fail"]
     warns = [r for r in C.rows if r["result"] == "warn"]
+    expl = [r for r in C.rows if r["result"] == "explained"]
     w("## Chyby\n")
     w("Žádné." if not fails else "\n".join(f"- **{r['check']}** · {r['subject']} — {r['detail']}" for r in fails))
-    w("\n## Upozornění (ověřeno ručně, ponecháno s poznámkou)\n")
+    w("\n## Prověřené odchylky (skutečné, nejde o chyby v datech)\n")
+    w("Žádné." if not expl else "\n".join(f"- **{r['check']}** · {r['subject']} — {r['detail']}" for r in expl))
+    w("\n## Nevysvětlená upozornění\n")
     w("Žádná." if not warns else "\n".join(f"- **{r['check']}** · {r['subject']} — {r['detail']}" for r in warns))
     w("")
 
@@ -72,7 +77,7 @@ def write_report(path, C, us_raw, us_out, twins_out, twins_raw, cz, missing, LIS
     w("|---|---|---|")
     for r in C.rows:
         if r["check"] == "peer consistency":
-            w(f"| {r['subject']} | {'✔' if r['result']=='pass' else ('!' if r['result']=='warn' else '✖')} | {r['detail']} |")
+            w(f"| {r['subject']} | {RESULT_MARK.get(r['result'], '✖')} | {r['detail']} |")
     w("")
 
     w("## Evropská dvojčata\n")

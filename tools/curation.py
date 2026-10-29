@@ -2,9 +2,10 @@
 and the few hand-sourced values (each with its source). Imported by build_data.py."""
 
 # The 20 NYSE-listed ETFs in the cheat sheet. Broad core first, then style/income, bonds, gold.
-# Researched-but-not-listed funds (ITOT, SCHB, IAU, DIA, IWM, RSP, VNQ, VB, DGRO) still serve as
-# cross-checks for their peers (same index ⇒ same return).
-LIST = ["VOO", "SPY", "IVV", "SPYM", "VTI", "VT", "VEA", "IEFA", "VWO", "IEMG",
+# Researched-but-not-listed funds (ITOT, SCHB, IAU, IEFA, DIA, RSP, VNQ, VB, DGRO) still serve as
+# cross-checks for their peers (same index ⇒ same return). IEFA was dropped from the list because its
+# primary listing moved from NYSE Arca to Cboe BZX (2017) — the build's listing-venue check flagged it.
+LIST = ["VOO", "SPY", "IVV", "SPYM", "VTI", "IWM", "VT", "VEA", "VWO", "IEMG",
         "VUG", "SCHG", "VGT", "XLK", "SCHD", "VYM", "VIG", "JEPI", "AGG", "GLD"]
 
 # Nasdaq-listed, but people ask for them all the time (QQQ) or they appear in the classic
@@ -12,14 +13,40 @@ LIST = ["VOO", "SPY", "IVV", "SPYM", "VTI", "VT", "VEA", "IEFA", "VWO", "IEMG",
 REF = ["QQQ", "VXUS", "BND"]
 
 # Peers used only for verification.
-CHECK_ONLY = ["ITOT", "SCHB", "IAU"]
+CHECK_ONLY = ["ITOT", "SCHB", "IAU", "IEFA"]
+
+# Anomalies the checks flag that were investigated and are real (not data errors). Matched on
+# (check name, start of subject); the report shows them as "explained" with this reason.
+EXPLAINED = {
+    ("peer consistency", "developed ex-US: VEA vs IEFA"): "Different indexes: FTSE (VEA) counts South Korea as developed and includes Canada; MSCI EAFE IMI (IEFA) excludes both. Korea's 2026 rally explains the 1-year gap; both figures confirmed by issuer and Morningstar.",
+    ("peer consistency", "emerging markets: VWO vs IEMG"): "Mirror image of the above: MSCI EM IMI (IEMG) includes South Korea, FTSE Emerging (VWO) does not. Confirmed by issuer fact sheets and Morningstar.",
+    ("peer consistency", "US tech: VGT vs XLK"): "Different capping rules (XLK: S&P Technology Select Sector capped index; VGT: MSCI US IMI IT 25/50) change the weight of the largest chip stocks; gap is 0.02 pp above the generous tolerance; both confirmed by issuer fact sheets.",
+    ("ISIN ↔ domicile", "DE000A2T0VU5"): "Gold ETC = debt security of an Irish issuer (Xtrackers IE Physical Gold plc) settled via the German CSD, hence the DE ISIN.",
+    ("ISIN ↔ domicile", "FR0013416716"): "Gold ETC of the Irish issuer Amundi Physical Metals plc with a French ISIN; prefix reflects the CSD, not the domicile.",
+    ("fee consensus", "SPY"): "Secondary sources display 0.0945 % rounded (0.09 / 0.095); the prospectus figure is 0.0945 %.",
+    ("fee consensus", "QQQ"): "QQQ's fee fell from 0.20 % to 0.18 % when it converted from a unit investment trust to an open-end ETF (Dec 2025); older databases still show 0.20 %.",
+    ("source agreement", "SCHD.top3_holdings"): "Issuer holdings files (three dates) agree; the secondary source was stale.",
+}
+
+# Short index labels for tables (official names stay in data/etfs.json).
+INDEX_SHORT = {
+    "VOO": "S&P 500", "SPY": "S&P 500", "IVV": "S&P 500", "SPYM": "S&P 500",
+    "VTI": "Morningstar US Total Market", "ITOT": "S&P Total Market", "SCHB": "DJ US Broad Market",
+    "IWM": "Russell 2000", "VT": "FTSE Global All Cap", "VEA": "FTSE Developed ex US",
+    "IEFA": "MSCI EAFE IMI", "VWO": "FTSE Emerging", "IEMG": "MSCI EM IMI",
+    "VUG": "Morningstar US LC Growth", "SCHG": "DJ US Large-Cap Growth", "VGT": "MSCI US IMI IT 25/50",
+    "XLK": "Technology Select Sector", "SCHD": "DJ US Dividend 100", "VYM": "FTSE High Dividend Yield",
+    "VIG": "S&P US Dividend Growers", "JEPI": "aktivní (měřítko S&P 500)", "AGG": "Bloomberg US Aggregate",
+    "GLD": "cena zlata (LBMA)", "IAU": "cena zlata (LBMA)", "QQQ": "Nasdaq-100", "VXUS": "FTSE Global All Cap ex US",
+    "BND": "Bloomberg US Aggregate (float adj.)",
+}
 
 ASSET = {"AGG": "bond", "BND": "bond", "GLD": "gold", "IAU": "gold", "VNQ": "reit"}
 
 _US_ONLY = "Index contains US-listed US companies only (index methodology); 100 % US by construction."
 _EX_US = "Index excludes the United States by construction (ex-US / emerging markets index)."
 US_SHARE = {t: {"value": 1.0, "source": _US_ONLY} for t in
-            ["VOO", "SPY", "IVV", "SPYM", "VTI", "ITOT", "SCHB", "VUG", "SCHG", "VGT", "XLK", "SCHD", "VYM", "VIG", "JEPI", "QQQ"]}
+            ["VOO", "SPY", "IVV", "SPYM", "VTI", "ITOT", "SCHB", "IWM", "VUG", "SCHG", "VGT", "XLK", "SCHD", "VYM", "VIG", "JEPI", "QQQ"]}
 US_SHARE.update({t: {"value": 0.0, "source": _EX_US} for t in ["VEA", "IEFA", "VWO", "IEMG", "VXUS"]})
 US_SHARE["VT"] = {"value": 0.6243, "as_of": "2026-09-30",
                   "source": "Vanguard VT product page, market allocation: United States 62.43 % (benchmark 62.35 %) as at 30 Sep 2026 — "

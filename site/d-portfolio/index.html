@@ -306,7 +306,7 @@ footer p + p { margin-top: 10px; }
     { id: "world", name: "Celý svět jedním fondem", w: { VT: 100 } },
     { id: "div", name: "Dividendové", w: { SCHD: 60, VOO: 40 } }
   ]).filter(function (p) { return Object.keys(p.w).every(function (t) { return byT[t] && D.twins[byT[t].twin]; }); });
-  var ADDABLE = ["VOO", "QQQ", "VT", "VTI", "VXUS", "SCHD", "VUG", "VEA", "VWO", "VGT", "AGG", "BND", "GLD"].filter(function (t) { return byT[t] && D.twins[byT[t].twin]; });
+  var ADDABLE = ["VOO", "QQQ", "VT", "VTI", "IWM", "VXUS", "SCHD", "VUG", "VEA", "VWO", "VGT", "AGG", "BND", "GLD"].filter(function (t) { return byT[t] && D.twins[byT[t].twin]; });
   var state = { w: {}, preset: null };
 
   function setPreset(p) { state.w = Object.assign({}, p.w); state.preset = p.id; render(); }
