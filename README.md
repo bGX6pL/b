@@ -28,12 +28,12 @@ Four launch-ready landing page samples, two Meta ad concepts, the lead magnet it
 
 ## Rebuild everything from data
 ```bash
-.venv/Scripts/python -I tools/build_data.py   # fails on any outlier / bad ISIN / wrong listing venue
+.venv/Scripts/python -X utf8 -I tools/build_data.py   # fails on any outlier / bad ISIN / wrong listing venue
 .venv/Scripts/python tools/make_pdf.py
 .venv/Scripts/python tools/render_ads.py
 .venv/Scripts/python tools/capture.py
 ```
-Setup once: `python -m venv .venv && .venv/Scripts/python -m pip install playwright` (uses the installed Microsoft Edge, no browser download).
+Setup once: `python -m venv .venv && .venv/Scripts/python -m pip install playwright pillow` (uses the installed Microsoft Edge, no browser download).
 
 ## Data verification (as of 2026-10-29)
 23 US ETFs (20 NYSE-listed in the cheat sheet + 3 Nasdaq references) and 20 UCITS twin sets (74 candidates) — **842 checks pass, 8 anomalies investigated and explained, 0 failures** (`docs/data-overeni.md`). Checks include listing venue, same-index return consistency, ISIN check digits, one returns date, one dividend-yield basis (TTM), plausible ranges and source agreement.
