@@ -7,16 +7,21 @@
 ## Deploy (Vercel + GitHub)
 1. Push this repo to GitHub, then in Vercel: **Add New → Project →** pick the repo **→ Deploy**. No settings to change: `vercel.json` sets framework "Other", no build step, output directory `public/`, security headers, long cache for fonts, `noindex` for the PDF and the thank-you page, and trailing-slash URLs.
 2. Add the domain in **Settings → Domains**.
-3. Keys go in **one file**, `public/assets/config.js`: Meta Pixel ID, GA4 Measurement ID, form endpoint URL. Commit + push and Vercel redeploys. These IDs are public by design; secrets (Conversions API token, e-mail service key) belong to the endpoint, never in that file.
+3. Keys go in two places. Public IDs (Meta Pixel, GA4) in `public/assets/config.js`, then commit + push. Secrets in Vercel → Settings → Environment Variables, then redeploy: `ECOMAIL_API_KEY`, `ECOMAIL_LIST_PDF`, `ECOMAIL_LIST_TIPS`, and optionally `META_PIXEL_ID` + `META_CAPI_TOKEN` for the server-side Lead. The full table and the Ecomail list/automation setup are in `docs/spusteni.md` §2–3.
 4. Before ads run: see `docs/spusteni.md` (Czech launch checklist: what the client supplies, how tracking is wired, post-deploy checks).
 
-Check the ad tracking any time: `.venv/Scripts/python -X utf8 tools/check_tracking.py` swaps in test IDs, stubs the Meta/Google scripts and mocks the endpoint, then walks three visitors through landing page → form → thank-you page (accepts cookies / refuses / accepts late). It asserts PageView, ViewContent and exactly one Lead whose eventID matches the `event_id` sent to the endpoint, the GA4 events, UTM/fbclid and calculator state in the payload, and zero Meta/Google requests after a refusal.
+**Form endpoint:** `api/lead.mjs`, one Vercel function with no dependencies, run in Frankfurt (`fra1`). `POST /api/lead` adds the contact to the Ecomail PDF list (no double opt-in; an Ecomail automation sends e-mail 0) with calculator, UTM and placement as custom fields, sends a Meta Conversions API `Lead` only if the visitor accepted cookies, and returns an encrypted 24-hour token instead of the e-mail. The thank-you page sends that token back to `/api/lead/consent` (newsletter list with double opt-in, exact consent wording and time stored) and `/api/lead/profile` (broker). Without the Ecomail keys it answers 503 and the form shows "try again"; on localhost the form stays in demo mode.
+
+**Checks** (test keys, nothing reaches Ecomail, Meta or Google):
+- `node tools/check_endpoint.mjs`: the function on its own. Covers missing keys, foreign origin, bad e-mail, rate limit, what goes to Ecomail, Conversions API only with consent, double opt-in, forged/expired tokens, broker, Ecomail outage, and no e-mail addresses in logs.
+- `.venv/Scripts/python -X utf8 tools/check_tracking.py`: four visitors in a real browser (accepts cookies / refuses / accepts late / full chain through the real function via `tools/dev_server.mjs` with a fake Ecomail and Meta). Asserts PageView, ViewContent and exactly one Lead whose eventID matches the server event's `event_id`, the GA4 events, UTM/fbclid and calculator state, and zero Meta/Google requests after a refusal.
 
 ## What's where
 | Path | What |
 |---|---|
 | `public/` | **The live site** (deployed): `index.html` = landing page, `dekujeme/` thank-you, `ochrana-udaju/` privacy notice, `tahak/` PDF, `assets/config.js` keys, `404.html`, `favicon.svg` |
-| `vercel.json` | Vercel config: serve `public/` as-is, headers |
+| `vercel.json` | Vercel config: serve `public/` as-is, function region `fra1`, `/api/lead/:action` rewrite, headers |
+| `api/lead.mjs` | Form endpoint (Ecomail + Meta Conversions API), see above |
 | `index.html` | Review overview of the 4 original samples, screenshots, ads, PDF, docs (serve the repo root to open it) |
 | `gallery.html` | Landing page gallery: our 4 samples next to 20 competitor pages on one screen (mobile / after cookies / desktop), click for full page + notes. Pages whose cookie popup covers ≥ 45 % of the mobile screen or dims it are left out. Stills: `screenshots/_sheet-gallery-{mobile,desktop}.jpg` |
 | `site/` | Archive: the 4 original samples (not deployed); `site/tahak/tahak.html` is still the PDF source |
@@ -35,7 +40,7 @@ Check the ad tracking any time: `.venv/Scripts/python -X utf8 tools/check_tracki
 | `research/competitors/` | Competitor research with mobile screenshots |
 | `research/cz-context.md` | Czech brokers, taxes, regulation, ad platform rules, audience data |
 | `data/raw/` | Research inputs, each value with sources · `data/etfs.json` / `.csv` ground truth |
-| `tools/` | `build_data.py` (merge + checks), `make_pdf.py`, `render_ads.py`, `capture_final.py`, `check_tracking.py`, `capture.py` (samples), `shot.py` |
+| `tools/` | `build_data.py` (merge + checks), `make_pdf.py`, `render_ads.py`, `capture_final.py`, `check_tracking.py`, `check_endpoint.mjs`, `dev_server.mjs` (local Vercel stand-in: `node tools/dev_server.mjs --fake-upstream`), `capture.py` (samples), `shot.py` |
 
 ## Rebuild everything from data
 ```bash
@@ -44,6 +49,7 @@ Check the ad tracking any time: `.venv/Scripts/python -X utf8 tools/check_tracki
 .venv/Scripts/python tools/render_ads.py
 .venv/Scripts/python tools/capture_final.py
 .venv/Scripts/python -X utf8 tools/check_tracking.py
+node tools/check_endpoint.mjs
 .venv/Scripts/python -X utf8 -I tools/build_gallery.py   # gallery data + thumbnails from competitors.json
 .venv/Scripts/python tools/gallery_sheet.py
 ```

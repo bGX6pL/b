@@ -169,7 +169,7 @@ Kreativy jsou v `ads/` (PNG 1080×1350 pro feed a 1080×1920 pro Stories/Reels),
 
 ## 8. Měření
 
-**Události** (v `dataLayer`, do Meta/GA4 jen se souhlasem): `lp_view`, `finder_select`, `calc_change`, `table_sort`, `builder_preset`, `lead_sheet_open`, `lead_form_start`, `generate_lead` (Meta: `Lead`), `lead_thankyou_view`, `lead_profile`. Zapojení na finální stránce: `docs/spusteni.md` §4.
+**Události** (v `dataLayer`, do Meta/GA4 jen se souhlasem): `lp_view`, `finder_select`, `calc_change`, `table_sort`, `builder_preset`, `lead_sheet_open`, `lead_form_start`, `generate_lead` (Meta: `Lead`), `lead_thankyou_view`, `lead_profile`. Zapojení na finální stránce: `docs/spusteni.md` §5.
 
 **Trychtýř a cílové hodnoty pro první týden** (orientační; benchmarky ověříme na vlastních datech):
 | Krok | Metrika | Cíl |

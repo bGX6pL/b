@@ -13,9 +13,10 @@
  * Config: assets/config.js (keys) + the page's own { thankYou, variant }.
  * Without an endpoint the form runs in demo mode (no data leaves the browser).
  *
- * Endpoint contract: POST JSON
- *   { email, variant, placement, context, page, referrer, ts, event_id, utm_source…utm_term, fbclid, gclid, ad }
- * → 2xx with {"id": "<random id>"} (never the e-mail). Any non-2xx shows "try again" and keeps the visitor on the page.
+ * Endpoint contract (implemented by api/lead.mjs): POST JSON
+ *   { email, variant, placement, context, page, referrer, ts, event_id, consent, utm_source…utm_term, fbclid, gclid, ad }
+ * → 2xx with {"id": "<opaque token>"} (never the plain e-mail). Any non-2xx shows "try again" and keeps the visitor here.
+ * consent = the cookie choice ("granted" / "denied" / null): the server sends its Conversions API copy only if "granted".
  * event_id is the same ID the Meta Pixel sends with the Lead event on the thank-you page, so a server-side
  * Conversions API call with event_id = this value is de-duplicated against the browser event.
  */
@@ -108,9 +109,11 @@
       btn.disabled = true;
       form.classList.add("is-sending");
       var eid = "lead-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 10);
+      var consent = null;
+      try { consent = localStorage.getItem("consent_v1"); } catch (x) { /* storage blocked: treated as no answer */ }
       var payload = Object.assign({
         email: email, variant: cfg.variant, placement: form.dataset.placement || "", context: context,
-        page: location.pathname, referrer: document.referrer.slice(0, 300), ts: new Date().toISOString(), event_id: eid
+        page: location.pathname, referrer: document.referrer.slice(0, 300), ts: new Date().toISOString(), event_id: eid, consent: consent
       }, utm());
       send(payload).then(function (res) {
         // The endpoint may answer {"id": "..."}; the thank-you page uses it to attach the follow-up answer to this lead.

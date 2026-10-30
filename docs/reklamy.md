@@ -60,7 +60,7 @@ V kreativě je drobným písmem předpoklad výpočtu (7 % ročně před poplatk
 
 ## Nastavení kampaně (návrh)
 
-- **Cíl:** Potenciální zákazníci (Leads) s konverzí na webu, událost `Lead` z Meta Pixelu (vyvolá se jednou po úspěšném odeslání formuláře, na děkovací stránce, s `eventID` pro spárování) + doporučeně Conversions API ze serveru. Zapojení a kontrola: `docs/spusteni.md` §4.
+- **Cíl:** Potenciální zákazníci (Leads) s konverzí na webu, událost `Lead` z Meta Pixelu (vyvolá se jednou po úspěšném odeslání formuláře, na děkovací stránce, s `eventID` pro spárování) + stejná událost ze serveru přes Conversions API (hotovo, zapne se tokenem `META_CAPI_TOKEN`; Meta obě spáruje). Zapojení a kontrola: `docs/spusteni.md` §5.
 - **Publikum:** ČR, 22–45 let, Advantage+ audience se signály: investování, ETF, akcie, XTB, Trading 212, Portu, finanční gramotnost. Vyloučit stávající kontakty (nahraný seznam).
 - **Umístění:** Advantage+ placements; kreativa 4:5 pro feed, 9:16 pro Stories/Reels.
 - **Rozpočet testu:** 2 reklamy × 1 stránka, rovnoměrně, cca 7 dní nebo 300 návštěv na reklamu; rozhoduje cena za `Lead`.
