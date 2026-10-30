@@ -1,5 +1,7 @@
 # ETF tahák — strategie lead magnetu
 
+> **Rozhodnutí 30. 10. 2026:** finální je varianta **B — Účtenka** ve světlém provedení (`public/`, na Vercelu). Varianty A, C a D zůstávají jako archiv v `site/`; níže je původní strategie se všemi čtyřmi.
+
 > Landing page se srovnáním ETF z burzy NYSE pro českého drobného investora, který přichází z reklamy na mobilu a stránce dá pár vteřin. Cíl: získat e-mail výměnou za hodnotu, kterou návštěvník vidí ještě před vyplněním formuláře.
 
 ## Ve zkratce
@@ -167,7 +169,7 @@ Kreativy jsou v `ads/` (PNG 1080×1350 pro feed a 1080×1920 pro Stories/Reels),
 
 ## 8. Měření
 
-**Události** (v `dataLayer`, do Meta/GA4 jen se souhlasem): `lp_view`, `finder_select`, `calc_change`, `table_sort`, `builder_preset`, `lead_sheet_open`, `lead_form_start`, `generate_lead` (Meta: `Lead`), `lead_thankyou_view`, `lead_profile`.
+**Události** (v `dataLayer`, do Meta/GA4 jen se souhlasem): `lp_view`, `finder_select`, `calc_change`, `table_sort`, `builder_preset`, `lead_sheet_open`, `lead_form_start`, `generate_lead` (Meta: `Lead`), `lead_thankyou_view`, `lead_profile`. Zapojení na finální stránce: `docs/spusteni.md` §4.
 
 **Trychtýř a cílové hodnoty pro první týden** (orientační; benchmarky ověříme na vlastních datech):
 | Krok | Metrika | Cíl |
@@ -180,7 +182,7 @@ Kreativy jsou v `ads/` (PNG 1080×1350 pro feed a 1080×1920 pro Stories/Reels),
 | E-maily | open rate e-mailu č. 1 / proklik | ≥ 55 % / ≥ 20 % |
 | Kvalita | odhlášení do 10 dnů | ≤ 6 % |
 
-**Test:** 2 reklamy × 2 stránky, rovnoměrný rozpočet, min. 300 návštěv na variantu, rozhoduje cena za lead *a* podíl odpovědí „mám brokera / chci začít“ (kvalita).
+**Test (původní plán se 4 variantami):** 2 reklamy × 2 stránky, rovnoměrný rozpočet, min. 300 návštěv na variantu, rozhoduje cena za lead *a* podíl odpovědí „mám brokera / chci začít“ (kvalita).
 
 **Další kola testů:** tykání vs. vykání (sociální sítě a „Investování pro holky“ tykají, XTB a Portu vykají; naše stránky zatím vykají), skutečná tvář a jméno autora vedle formuláře (jen pokud klient takovou osobu má, nic nevymýšlíme), varianta reklamy s QQQ/SCHD místo VOO (`?t=QQQ`).
 

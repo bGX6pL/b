@@ -5,7 +5,7 @@
 <title>Ad creative</title>
 <!-- Render: tools/render_ads.py opens this at ?ad=1|2&f=feed|story with the exact canvas size (1080×1350 / 1080×1920).
      Numbers come from the same data.js and the same fee formula as the landing pages, so ad and page always agree. -->
-<link rel="stylesheet" href="../site/assets/fonts/fonts.css">
+<link rel="stylesheet" href="../public/assets/fonts/fonts.css">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { width: 1080px; height: var(--h); overflow: hidden; }
@@ -14,68 +14,69 @@ body { -webkit-font-smoothing: antialiased; }
 .safe { position: absolute; inset: 0; pointer-events: none; }
 [data-f="story"] .ad { padding-top: 240px; padding-bottom: 330px; } /* keep clear of Stories/Reels UI */
 
+/* Both ads use the final landing page's look (public/index.html): light, Bricolage Grotesque + JetBrains Mono, ink + lime. */
+.ad { --bg: #F2F4EE; --ink: #0F1713; --muted: #59645D; --line: #DCE1D9; --lime: #D4F45A; --green: #3D6A00; --red: #C2361A;
+  background: var(--bg); color: var(--ink); font-family: "Bricolage Grotesque", sans-serif; font-variation-settings: "opsz" 14; }
+.ad h1 { font-weight: 800; font-variation-settings: "opsz" 96; }
+.ad .eyebrow { font: 600 28px/1 "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; color: var(--green); }
+.brand { font: 800 34px/1 "Bricolage Grotesque", sans-serif; letter-spacing: -.02em; display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+.brand i { width: 36px; height: 36px; border-radius: 9px; background: var(--lime); position: relative; }
+.brand i::before, .brand i::after { content: ""; position: absolute; left: 8px; right: 8px; height: 5px; border-radius: 3px; background: var(--ink); }
+.brand i::before { top: 9px; } .brand i::after { bottom: 9px; }
+.ad .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
+.ad .foot p { font-size: 34px; line-height: 1.25; max-width: 640px; }
+.ad .foot p b { font-weight: 800; }
+.ad .foot p.fine { font-size: 22px; line-height: 1.35; color: #6A726C; margin-top: 18px; }
+
 /* ---------- Ad 1: Dvojče ---------- */
-.a1 { background: #F1EDE3; color: #15130F; font-family: "Schibsted Grotesk", sans-serif; padding: 84px 80px 64px; }
-.a1 .eyebrow { font: 600 30px/1 "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #5F594E; }
-.a1 h1 { font-weight: 800; font-size: 150px; line-height: .95; letter-spacing: -.045em; margin-top: 26px; }
-.a1 h1 .tk { font-family: "JetBrains Mono", monospace; font-weight: 700; background: #15130F; color: #F1EDE3; padding: 0 .1em; border-radius: .1em; letter-spacing: -.05em; line-height: 1.12; display: inline-block; }
+.a1 { padding: 84px 80px 64px; }
+.a1 h1 { font-size: 150px; line-height: .95; letter-spacing: -.045em; margin-top: 26px; }
+.a1 h1 .tk { font-family: "JetBrains Mono", monospace; font-weight: 700; background: var(--ink); color: #fff; padding: 0 .1em; border-radius: .1em; letter-spacing: -.05em; line-height: 1.12; display: inline-block; }
 .a1 h1 small { display: block; font-size: 80px; letter-spacing: -.035em; margin-top: 34px; }
-.a1 .stubs { margin-top: 56px; }
-.stub { position: relative; background: #FFFDF7; border: 2px solid #D6CEBD; border-radius: 28px; padding: 30px 36px; }
-.stub .meta { font: 600 24px/1 "JetBrains Mono", monospace; letter-spacing: .05em; text-transform: uppercase; color: #5F594E; display: flex; justify-content: space-between; }
+.a1 h1 small em { font-style: normal; background: linear-gradient(transparent 55%, var(--lime) 55% 90%, transparent 90%); }
+.a1 .stubs { margin-top: 56px; margin-bottom: 40px; }
+.stub { position: relative; background: #fff; border-radius: 28px; padding: 30px 36px; box-shadow: 0 1px 2px rgba(15,23,19,.08); }
+.stub .meta { font: 600 24px/1 "JetBrains Mono", monospace; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; }
 .stub .tk { font: 700 92px/1 "JetBrains Mono", monospace; letter-spacing: -.04em; margin-top: 16px; display: flex; align-items: baseline; gap: 22px; }
-.stub .tk span { font-size: 32px; font-weight: 600; letter-spacing: 0; color: #5F594E; }
-.stub .nm { font-size: 30px; color: #5F594E; margin-top: 8px; }
-.stub--us .tk b { color: #8C8576; text-decoration: line-through; text-decoration-thickness: 7px; text-decoration-color: #B3362A; }
-.stamp { position: absolute; right: 34px; top: 50%; transform: translateY(-50%) rotate(-8deg); border: 5px solid #B3362A; color: #B3362A; border-radius: 16px; padding: 12px 16px;
+.stub .tk span { font-size: 32px; font-weight: 600; letter-spacing: 0; color: var(--muted); }
+.stub .nm { font-size: 30px; color: var(--muted); margin-top: 8px; }
+.stub--us { background: transparent; box-shadow: inset 0 0 0 2px var(--line); }
+.stub--us .tk b { color: #8E968F; text-decoration: line-through; text-decoration-thickness: 7px; text-decoration-color: var(--red); }
+.stamp { position: absolute; right: 34px; top: 50%; transform: translateY(-50%) rotate(-8deg); border: 5px solid var(--red); color: var(--red); border-radius: 16px; padding: 12px 16px;
   font: 800 28px/1.1 "JetBrains Mono", monospace; text-transform: uppercase; text-align: center; }
 .perf { height: 64px; display: flex; align-items: center; justify-content: center; position: relative; }
-.perf::before { content: ""; position: absolute; left: 40px; right: 40px; top: 50%; border-top: 4px dashed #D6CEBD; }
-.perf span { position: relative; background: #F1EDE3; padding: 0 20px; font: 700 26px/1 "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #0B6B4C; }
-.stub--eu { border: 4px solid #0B6B4C; box-shadow: 0 30px 60px -36px rgba(11,107,76,.7); }
-.stub--eu .meta { color: #0B6B4C; }
-.a1 .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
-.a1 .foot p { font-size: 34px; line-height: 1.25; max-width: 640px; }
-.a1 .foot p b { font-weight: 800; }
-.brand { font: 800 34px/1 "Schibsted Grotesk", sans-serif; display: flex; align-items: center; gap: 12px; white-space: nowrap; }
-.brand i { width: 36px; height: 36px; border-radius: 9px; background: currentColor; position: relative; }
-.brand i::before, .brand i::after { content: ""; position: absolute; left: 8px; right: 8px; height: 5px; border-radius: 3px; background: #F1EDE3; }
-.brand i::before { top: 9px; } .brand i::after { bottom: 9px; background: #7ED3A8; }
-.ad .foot p.fine { font-size: 22px; line-height: 1.35; color: #7A7468; margin-top: 18px; }
-[data-f="story"] .a1 h1 { font-size: 150px; }
-.a1 .stubs { margin-bottom: 40px; }
+.perf::before { content: ""; position: absolute; left: 40px; right: 40px; top: 50%; border-top: 4px dashed var(--line); }
+.perf span { position: relative; background: var(--bg); padding: 0 20px; font: 700 26px/1 "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--green); }
+.stub--eu { box-shadow: 0 0 0 4px var(--ink), 0 30px 60px -36px rgba(15,23,19,.5); }
+.stub--eu .meta { color: var(--green); }
 [data-f="story"] .a1 .stubs { margin-top: 80px; }
 
 /* ---------- Ad 2: Účtenka ---------- */
-.a2 { background: #0F1713; color: #F2F0E8; font-family: "Bricolage Grotesque", sans-serif; padding: 80px 80px 60px; }
-.a2 .eyebrow { font: 600 28px/1 "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; color: #D4F45A; }
-.a2 h1 { font-weight: 800; font-variation-settings: "opsz" 96; font-size: 118px; line-height: .96; letter-spacing: -.04em; margin-top: 22px; }
-.a2 h1 em { font-style: normal; color: #D4F45A; }
-.rc { margin-top: 48px; background: #FBF8F0; color: #1B1A17; font-family: "JetBrains Mono", monospace; padding: 40px 44px 30px;
+.a2 { padding: 80px 80px 60px; }
+.a2 h1 { font-size: 118px; line-height: .96; letter-spacing: -.04em; margin-top: 22px; }
+.a2 h1 em { white-space: nowrap; font-style: normal; background: linear-gradient(transparent 55%, var(--lime) 55% 88%, transparent 88%); }
+.rcs { margin-top: 48px; filter: drop-shadow(0 2px 2px rgba(15,23,19,.10)) drop-shadow(0 24px 40px rgba(15,23,19,.14)); }
+.rc { background: #FFFDF8; color: var(--ink); font-family: "JetBrains Mono", monospace; padding: 40px 44px 30px;
   -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom/26px 51% repeat-x, conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top/26px 51% repeat-x; }
-.rc .hd { text-align: center; border-bottom: 3px dashed #D9D3C3; padding-bottom: 20px; }
+.rc .hd { text-align: center; border-bottom: 3px dashed #D8DDD5; padding-bottom: 20px; }
 .rc .hd b { display: block; font-size: 34px; letter-spacing: .16em; }
-.rc .hd span { font-size: 26px; color: #6E6A60; }
-.rc .row { display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 2px dotted #D9D3C3; gap: 20px; }
+.rc .hd span { font-size: 26px; color: #6A726C; }
+.rc .row { display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 2px dotted #D8DDD5; gap: 20px; }
 .rc .row .l { font-size: 29px; font-weight: 700; }
-.rc .row .l small { display: block; font-weight: 500; font-size: 22px; color: #6E6A60; margin-top: 6px; }
+.rc .row .l small { display: block; font-weight: 500; font-size: 22px; color: #6A726C; margin-top: 6px; }
 .rc .row .v { font-size: 40px; font-weight: 700; white-space: nowrap; }
-.rc .bank .v { color: #C2361A; }
-.rc .tot { display: flex; justify-content: space-between; align-items: flex-end; border-top: 6px double #1B1A17; margin-top: 14px; padding-top: 22px; }
+.rc .bank .v { color: var(--red); }
+.rc .tot { display: flex; justify-content: space-between; align-items: flex-end; border-top: 6px double var(--ink); margin-top: 14px; padding-top: 22px; }
 .rc .tot .l { font-size: 26px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .rc .tot .v { font-size: 84px; font-weight: 800; letter-spacing: -.04em; line-height: 1; }
-.a2 .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
-.a2 .foot p { font-size: 34px; line-height: 1.25; max-width: 640px; }
-.a2 .brand i { background: #D4F45A; } .a2 .brand i::before, .a2 .brand i::after { background: #0F1713; }
-.a2 .foot p.fine { color: #8D998F; }
 [data-f="story"] .a2 h1 { font-size: 132px; }
-[data-f="story"] .rc { margin-top: 70px; }
+[data-f="story"] .rcs { margin-top: 70px; }
 </style>
 </head>
 <body>
 <div id="root"></div>
-<script src="../site/assets/data.js"></script>
-<script src="../site/assets/fmt.js"></script>
+<script src="../public/assets/data.js"></script>
+<script src="../public/assets/fmt.js"></script>
 <script>
 (function () {
   var q = new URLSearchParams(location.search), ad = q.get("ad") || "1", f = q.get("f") || "feed";
@@ -89,7 +90,7 @@ body { -webkit-font-smoothing: antialiased; }
     root.innerHTML =
       '<div class="ad a1">' +
       '<p class="eyebrow">ETF z burzy NYSE</p>' +
-      '<h1>Chcete <span class="tk">VOO</span>?<small>Tady je jeho evropské dvojče.</small></h1>' +
+      '<h1>Chcete <span class="tk">VOO</span>?<small>Tady je jeho evropské <em>dvojče.</em></small></h1>' +
       '<div class="stubs">' +
       '<div class="stub stub--us"><div class="meta"><span>' + us.ex + ' · USA</span></div><div class="tk"><b>VOO</b><span>' + F.pct(us.ter) + '</span></div><p class="nm">' + us.name + '</p><div class="stamp">U většiny<br>brokerů<br>nekoupíte</div></div>' +
       '<div class="perf"><span>↓ evropské dvojče</span></div>' +
@@ -102,17 +103,17 @@ body { -webkit-font-smoothing: antialiased; }
     var fx = D.calc && D.calc.fx_fee_pct !== undefined ? D.calc.fx_fee_pct : 0.5;
     var fv = function (ter, up) { var n = y * 12, net = (1 + R) * (1 - ter / 100) - 1, m = Math.pow(1 + net, 1 / 12) - 1; return c * (1 - up / 100) * (Math.pow(1 + m, n) - 1) / m; };
     var r = function (v) { return Math.round(v / 1000) * 1000; };
-    // Same model as /b-poplatky/: bank entry fee is a mark-up inside the payment (rate/(1+rate)), FX fee flat per deposit.
+    // Same model as the landing page (public/index.html): bank entry fee is a mark-up inside the payment (rate/(1+rate)), FX fee flat per deposit.
     var bankUp = 100 * bank.entry_pct / (100 + bank.entry_pct);
     var g = fv(0, 0), cb = g - fv(bank.ter_pct, bankUp), ce = g - fv(tw.ter, fx), save = fv(tw.ter, fx) - fv(bank.ter_pct, bankUp);
     root.innerHTML =
       '<div class="ad a2">' +
       '<p class="eyebrow">ETF z NYSE vs. bankovní fond</p>' +
       '<h1>Kolik vám za <em>20 let</em> sebere poplatek?</h1>' +
-      '<div class="rc"><div class="hd"><b>ÚČTENKA ZA 20 LET</b><span>3 000 Kč měsíčně · vloženo ' + F.czk(c * 12 * y) + "</span></div>" +
+      '<div class="rcs"><div class="rc"><div class="hd"><b>ÚČTENKA ZA 20 LET</b><span>3 000 Kč měsíčně · vloženo ' + F.czk(c * 12 * y) + "</span></div>" +
       '<div class="row bank"><div class="l">Bankovní fond<small>' + F.pctS(bank.ter_pct) + " ročně + " + F.pctS(bank.entry_pct) + ' vstupní</small></div><div class="v">−' + F.czk(r(cb)) + "</div></div>" +
       '<div class="row"><div class="l">ETF ' + tw.ticker + '<small>evropské dvojče VOO · ' + F.pctS(tw.ter) + " + směna " + F.pctS(fx) + '</small></div><div class="v">−' + F.czk(r(ce)) + "</div></div>" +
-      '<div class="tot"><div class="l">Rozdíl</div><div class="v">' + F.czk(r(save)) + "</div></div></div>" +
+      '<div class="tot"><div class="l">Rozdíl</div><div class="v">' + F.czk(r(save)) + "</div></div></div></div>" +
       '<div class="foot"><div><p>Spočítejte si to za 5 vteřin a stáhněte tahák nejlevnějších ETF.</p><p class="fine">Modelový výpočet při 7 % ročně před poplatky, nejde o předpověď ani doporučení.</p></div><span class="brand"><i></i>ETF tahák</span></div>' +
       "</div>";
   }

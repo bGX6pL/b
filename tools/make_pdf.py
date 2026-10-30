@@ -1,6 +1,6 @@
 """Render the lead magnet: site/tahak/tahak.html -> site/tahak/etf-tahak-2026.pdf + nahled-1.png (page-1 preview
-used on the landing pages). Uses the local static server on :8765 if running, else starts one."""
-import pathlib, subprocess, sys, time, urllib.request
+used on the landing pages), then copy the PDF and the preview the live site uses into public/tahak/."""
+import pathlib, shutil, subprocess, sys, time, urllib.request
 from playwright.sync_api import sync_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -34,5 +34,8 @@ try:
         im.save(SITE / "tahak" / f"nahled-{n}.webp", "WEBP", quality=82, method=6)
     for f in ("etf-tahak-2026.pdf", "nahled-1.png", "nahled-1.webp", "nahled-2.webp"):
         print(f, round((SITE / "tahak" / f).stat().st_size / 1024), "KB")
+    for f in ("etf-tahak-2026.pdf", "nahled-1.webp"):
+        shutil.copy2(SITE / "tahak" / f, ROOT / "public" / "tahak" / f)
+    print("copied to public/tahak/")
 finally:
     srv.terminate()

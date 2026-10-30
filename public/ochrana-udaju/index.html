@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ochrana osobních údajů | ETF tahák</title>
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/base.css">
+<style>
+:root { color-scheme: only light; --bg: #FFFFFF; --card: #FFFFFF; --ink: #0F1713; --muted: #59645D; --line: #E3E7E1; --accent: #D4F45A; --danger: #C2361A;
+  --font-head: "Bricolage Grotesque", system-ui, sans-serif; --font-body: "Bricolage Grotesque", system-ui, sans-serif; --font-mono: "JetBrains Mono", monospace;
+  --consent-bg: #0F1713; --consent-ink: #FFFFFF; }
+body { font-variation-settings: "opsz" 14; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 60px; }
+.top { height: 56px; display: flex; align-items: center; } .top a { font: 800 19px/1 var(--font-head); letter-spacing: -.02em; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.top i { width: 22px; height: 22px; border-radius: 6px; background: var(--accent); position: relative; flex: none; }
+.top i::before, .top i::after { content: ""; position: absolute; left: 5px; right: 5px; height: 3px; border-radius: 2px; background: var(--ink); }
+.top i::before { top: 6px; } .top i::after { bottom: 6px; }
+h1 { font: 800 clamp(30px, 7vw, 44px)/1.05 var(--font-head); font-variation-settings: "opsz" 96; letter-spacing: -.035em; margin: 18px 0 8px; }
+h2 { font: 800 20px/1.2 var(--font-head); margin: 30px 0 8px; letter-spacing: -.01em; }
+p, li { color: #26302A; } p + p { margin-top: 10px; } ul { padding-left: 20px; } li + li { margin-top: 6px; }
+.muted { color: var(--muted); font-size: 14px; }
+.ph { background: #FFF0B3; color: #5C4700; padding: 0 3px; border-radius: 3px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; } th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.btn { display: inline-block; margin-top: 10px; background: #F2F4EE; border-radius: 10px; padding: 11px 15px; font-weight: 700; text-decoration: none; }
+</style>
+<script src="/assets/config.js"></script>
+<script src="/assets/consent.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a href="/"><i aria-hidden="true"></i>ETF tahák</a></header>
+  <h1>Ochrana osobních údajů</h1>
+  <p class="muted">Platné od <span class="ph">[datum spuštění]</span>. Text je šablona — před spuštěním ji zkontroluje právník provozovatele.</p>
+
+  <h2>Kdo vaše údaje zpracovává</h2>
+  <p>Správcem je <span class="ph">[obchodní firma]</span>, IČO <span class="ph">[•]</span>, se sídlem <span class="ph">[adresa]</span>, zapsaná v obchodním rejstříku vedeném <span class="ph">[soud, oddíl, vložka]</span>. Kontakt pro ochranu údajů: <span class="ph">[e-mail]</span>.</p>
+
+  <h2>Co od vás chceme a proč</h2>
+  <table>
+    <thead><tr><th>Údaj</th><th>Účel</th><th>Právní základ</th><th>Jak dlouho</th></tr></thead>
+    <tbody>
+      <tr><td>E-mail</td><td>Zaslání taháku, o který jste požádali (dostane ho každý, bez podmínky odběru)</td><td>Plnění vaší žádosti (čl. 6 odst. 1 písm. b GDPR)</td><td>30 dní od odeslání taháku (doručitelnost, reklamace)</td></tr>
+      <tr><td>E-mail</td><td>4 tipy o ETF a čtvrtletní aktualizace taháku — jen pokud se k nim po odeslání přihlásíte a odběr potvrdíte v e-mailu</td><td>Váš souhlas (čl. 6 odst. 1 písm. a GDPR; § 7 zákona č. 480/2004 Sb.); ukládáme znění souhlasu a čas</td><td>Do odvolání souhlasu, nejdéle 3 roky od posledního otevření e-mailu</td></tr>
+      <tr><td>Odpověď „kde investujete“, údaje z kalkulačky či skladače, zdroj kampaně (UTM)</td><td>Abychom vám (pokud odebíráte) psali k věci a věděli, která reklama funguje</td><td>Oprávněný zájem (čl. 6 odst. 1 písm. f GDPR)</td><td>Stejně dlouho jako e-mail</td></tr>
+    </tbody>
+  </table>
+  <p>Telefon, jméno ani adresu po vás nechceme a nikdy nebudeme. Vaše údaje neprodáváme ani nepředáváme k marketingu třetím stranám.</p>
+
+  <h2>Kdo k údajům má přístup</h2>
+  <ul>
+    <li>Rozesílací služba <span class="ph">[např. Ecomail.cz s.r.o., Praha]</span> — ukládá e-mail a posílá zprávy, servery v EU.</li>
+    <li>Hosting webu <span class="ph">[poskytovatel]</span>.</li>
+    <li>Pouze s vaším souhlasem s cookies: Meta Platforms Ireland Ltd. (Meta Pixel) a Google Ireland Ltd. (Google Analytics 4) — měření reklamy. Mohou předávat data do USA v rámci EU-US Data Privacy Framework.</li>
+  </ul>
+
+  <h2>Vaše práva</h2>
+  <p>Můžete kdykoli odvolat souhlas (odkaz „odhlásit“ v každém e-mailu), požádat o přístup, opravu, výmaz, omezení zpracování a přenositelnost údajů a vznést námitku proti zpracování na základě oprávněného zájmu. Napište na <span class="ph">[e-mail]</span>. Máte také právo podat stížnost u Úřadu pro ochranu osobních údajů (uoou.gov.cz).</p>
+
+  <h2 id="cookies">Cookies</h2>
+  <p>Bez vašeho souhlasu používáme jen to, co web nutně potřebuje (uložení vaší volby o cookies v prohlížeči). Měřicí a reklamní cookies Meta a Google se načtou až po kliknutí na „Povolit“. Fonty hostujeme sami, takže při načtení stránky se vaše IP adresa neposílá Googlu.</p>
+  <a href="#" class="btn" data-consent-reset>Změnit nastavení cookies</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#FFFFFF">
+<title>Hotovo — váš ETF tahák | ETF tahák</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/base.css">
+<style>
+:root {
+  color-scheme: only light;
+  --bg: #FFFFFF; --card: #FFFFFF; --ink: #0F1713; --muted: #59645D; --line: #E3E7E1; --soft: #F2F4EE;
+  --accent: #D4F45A; --accent-ink: #0F1713; --accent-text: #3D6A00; --danger: #C2361A; --ok: #3D6A00;
+  --radius: 14px;
+  --font-head: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --consent-bg: #0F1713; --consent-ink: #FFFFFF;
+}
+body { font-variation-settings: "opsz" 14; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+.logo { text-decoration: none; font: 800 19px/1 var(--font-head); letter-spacing: -.02em; display: flex; align-items: center; gap: 8px; }
+.logo i { width: 22px; height: 22px; border-radius: 6px; background: var(--accent); position: relative; flex: none; }
+.logo i::before, .logo i::after { content: ""; position: absolute; left: 5px; right: 5px; height: 3px; border-radius: 2px; background: var(--ink); }
+.logo i::before { top: 6px; } .logo i::after { bottom: 6px; }
+.top span { font: 500 11.5px/1.2 var(--font-mono); color: var(--muted); }
+
+.done { padding: 18px 0 30px; }
+.check { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: 24px; font-weight: 800; margin-bottom: 14px; }
+h1 { font: 800 clamp(32px, 8.5vw, 54px)/1.02 var(--font-head); font-variation-settings: "opsz" 96; letter-spacing: -.035em; text-wrap: balance; }
+.done > p { margin-top: 10px; color: var(--muted); }
+.dl { margin-top: 18px; display: flex; align-items: center; gap: 14px; background: var(--accent); color: var(--accent-ink); border-radius: 16px; padding: 12px 16px 12px 12px; text-decoration: none; max-width: 520px; }
+.dl__ico { flex: none; width: 40px; height: 50px; border-radius: 4px; background: var(--ink); color: #fff; display: grid; place-items: end center; padding-bottom: 6px; font: 700 10.5px/1 var(--font-mono); position: relative; }
+.dl__ico::before { content: ""; position: absolute; top: 0; right: 0; border: 6px solid; border-color: var(--accent) var(--accent) rgba(255,255,255,.35) rgba(255,255,255,.35); }
+.dl b { display: block; font-size: 17px; }
+.dl__txt > span { font-size: 13px; opacity: .8; }
+.dl i { margin-left: auto; font-style: normal; font-weight: 800; font-size: 22px; }
+.mailnote { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+
+.mine { margin-top: 26px; }
+.mine:empty { display: none; }
+.mine > b { font: 600 11.5px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--accent-text); }
+.mine ul { margin: 10px 0 0; padding: 0; list-style: none; }
+.mine li { padding: 4px 0; font-size: 15px; line-height: 1.45; }
+.mine li b { background: linear-gradient(transparent 58%, var(--accent) 58%); }
+.mine code { font-family: var(--font-mono); font-size: 13px; }
+
+section { padding: 34px 0; border-top: 1px solid var(--line); }
+h2 { font: 800 clamp(24px, 6vw, 34px)/1.08 var(--font-head); font-variation-settings: "opsz" 72; letter-spacing: -.03em; text-wrap: balance; }
+.kicker { font: 600 11.5px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 10px; }
+
+.ask > p { color: var(--muted); font-size: 15px; margin-top: 8px; max-width: 36em; }
+.optin { display: grid; gap: 8px; margin-top: 18px; }
+.optin button { border-radius: 12px; padding: 14px 18px; font-weight: 800; font-size: 16px; border: 0; }
+.optin__yes { background: var(--accent); color: var(--accent-ink); }
+.optin__no { background: var(--soft); color: var(--ink); font-weight: 600 !important; font-size: 15px !important; }
+.ask .fine { font-size: 12px; margin-top: 12px; } .ask .fine a { color: var(--muted); }
+.noopt { margin-top: 12px; font-weight: 700; color: var(--ink) !important; }
+.h3 { font-size: clamp(20px, 5vw, 26px) !important; }
+[data-step2] { margin-top: 24px; }
+[data-step2] > p { color: var(--muted); font-size: 15px; margin-top: 6px; }
+.opts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.opts button { border: 0; background: var(--soft); border-radius: 999px; padding: 10px 14px; font-weight: 700; font-size: 14px; }
+.opts button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.thanks { display: none; margin-top: 12px; font-weight: 700; color: var(--accent-text); }
+.ask.is-answered .thanks { display: block; }
+@media (min-width: 600px) { .optin { grid-template-columns: auto auto; justify-content: start; } }
+
+.twins { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 14px; }
+.twins th { text-align: left; font: 600 10.5px/1.2 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding: 8px 6px; border-bottom: 1.5px solid var(--ink); }
+.twins td { padding: 9px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.twins td b { font-family: var(--font-mono); font-size: 13.5px; }
+.twins td small { display: block; color: var(--muted); font-size: 11.5px; }
+.twins .isin { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
+.tblwrap { overflow-x: auto; margin: 0 -16px; padding: 0 16px; }
+
+.steps { list-style: none; margin: 14px 0 0; padding: 0; }
+.steps li { display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+.steps li:first-child { border-top: 0; }
+.steps .when { font: 700 12px/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; color: var(--accent-text); padding-top: 2px; }
+.steps b { display: block; }
+.steps span { color: var(--muted); font-size: 14px; }
+
+footer { padding: 26px 0 40px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+footer a { color: var(--muted); }
+.ph { background: #FFF0B3; color: #5C4700; padding: 0 3px; border-radius: 3px; }
+@media (min-width: 900px) { .top { height: 72px; } .done { padding-top: 40px; } }
+</style>
+<script src="/assets/config.js"></script>
+<script>window.LEAD_CONFIG = Object.assign({ variant: "B" }, window.LEAD_CONFIG || {});</script>
+<script src="/assets/consent.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="logo" href="/"><i aria-hidden="true"></i>ETF tahák</a><span>hotovo</span></header>
+
+  <main>
+    <div class="done">
+      <div class="check" aria-hidden="true">✓</div>
+      <h1 data-h1>Hotovo. Tahák je váš.</h1>
+      <p data-sub>Nemusíte čekat na e-mail — stáhněte si ho rovnou:</p>
+      <a class="dl" href="/tahak/etf-tahak-2026.pdf" download data-dl>
+        <span class="dl__ico" aria-hidden="true">PDF</span>
+        <span class="dl__txt"><b>ETF tahák 2026</b><span>2 strany · 20 ETF z NYSE, dvojčata, brokeři, daně</span></span>
+        <i aria-hidden="true">↓</i>
+      </a>
+      <p class="mailnote" data-mailnote>Kopie míří i do vaší schránky. Nevidíte ji do 2 minut? Mrkněte do složky Promoakce, Hromadné nebo Spam.</p>
+      <div class="mine" data-mine></div>
+    </div>
+
+    <section aria-labelledby="h-ask">
+      <div class="ask" data-ask>
+        <p class="kicker">Chcete víc? Nemusíte.</p>
+        <h2 id="h-ask">Poslat vám 4 krátké tipy a čtvrtletní aktualizaci taháku?</h2>
+        <p data-consent-text>Během 10 dnů 4 e-maily s praktickými tipy o ETF, pak jednou za čtvrtletí aktualizovaný tahák. Žádné volání, odhlášení jedním klikem v každém e-mailu.</p>
+        <div class="optin" data-optin-btns>
+          <button type="button" class="optin__yes" data-optin="yes">Ano, posílejte</button>
+          <button type="button" class="optin__no" data-optin="no">Ne, stačí mi tahák</button>
+        </div>
+        <p class="fine">Odběr potvrdíte v e-mailu, který vám hned pošleme. Souhlas můžete kdykoli odvolat. <a href="/ochrana-udaju/">Ochrana údajů</a></p>
+        <p class="noopt" data-noopt hidden>Rozumíme. Tahák máte a víc vám psát nebudeme.</p>
+        <div data-step2 hidden>
+        <h2 class="h3">Pro kterého brokera vám máme psát?</h2>
+        <p>Třetí e-mail pak bude o vašem brokerovi: jak tam dvojče najít a kolik zaplatíte.</p>
+        <div class="opts" role="group" aria-label="Broker" data-opts>
+          <button type="button" data-b="xtb">XTB</button>
+          <button type="button" data-b="t212">Trading 212</button>
+          <button type="button" data-b="degiro">DEGIRO</button>
+          <button type="button" data-b="ibkr">Interactive Brokers</button>
+          <button type="button" data-b="fio">Fio e-Broker</button>
+          <button type="button" data-b="revolut">Revolut</button>
+          <button type="button" data-b="robo">Portu / Fondee</button>
+          <button type="button" data-b="other">Jinde</button>
+          <button type="button" data-b="none">Zatím nikde</button>
+        </div>
+        <p class="thanks" role="status">Díky! Teď jen potvrďte odběr v e-mailu.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-twins">
+      <p class="kicker">Odemčeno</p>
+      <h2 id="h-twins">Všechna dvojčata na jednom místě</h2>
+      <div class="tblwrap">
+        <table class="twins">
+          <thead><tr><th>Z NYSE</th><th>Dvojče v ČR</th><th>Poplatek</th></tr></thead>
+          <tbody data-twins></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-next">
+      <p class="kicker">Co přijde, když se přihlásíte</p>
+      <h2 id="h-next">4 krátké e-maily. Žádné volání.</h2>
+      <ol class="steps">
+        <li><span class="when">Teď</span><div><b>ETF tahák v PDF</b><span>Totéž, co jste právě stáhli, ať ho máte v telefonu.</span></div></li>
+        <li><span class="when">Zítra</span><div><b>3 chyby při prvním nákupu ETF</b><span>Špatná burza, zbytečná směna měny, distribuční místo akumulační.</span></div></li>
+        <li><span class="when">Za 3 dny</span><div><b>Dvojče u vašeho brokera</b><span>Kde ho v aplikaci najdete a jak nastavit pravidelný nákup.</span></div></li>
+        <li><span class="when">Za 6 dní</span><div><b>Daně bez stresu</b><span>Kdy nemusíte nic přiznávat a kdy ano.</span></div></li>
+        <li><span class="when">Za 10 dní</span><div><b>Kontrolní seznam před prvním nákupem</b><span>Pět otázek, které si položit, než pošlete první peníze.</span></div></li>
+        <li><span class="when">Čtvrtletně</span><div><b>Aktualizovaný tahák</b><span>Nové poplatky a výnosy. Odhlásit se můžete v každém e-mailu.</span></div></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>ETF tahák provozuje <span class="ph">[společnost s.r.o., IČO, sídlo]</span>. <a href="/ochrana-udaju/">Ochrana osobních údajů</a> · <a href="#" data-consent-reset>Nastavení cookies</a>. Obsah má informační charakter a není investičním doporučením. Investování je spojeno s rizikem, minulé výnosy nejsou zárukou budoucích.</p>
+  </footer>
+</div>
+
+<script src="/assets/data.js"></script>
+<script src="/assets/fmt.js"></script>
+<script>
+(function () {
+  var D = window.ETF_DATA, F = window.Fmt, $ = function (s) { return document.querySelector(s); };
+  var lead = null;
+  try { lead = JSON.parse(sessionStorage.getItem("lead") || "null"); } catch (e) { /* storage blocked */ }
+  var cfg = window.LEAD_CONFIG || {};
+  if (window.Track) window.Track("lead_thankyou_view", { variant: cfg.variant });
+
+  // The conversion: once per submitted form (a reload or a direct visit does not count again).
+  // event_id matches the one sent to the endpoint, so a server-side Conversions API event de-duplicates against it.
+  if (lead && lead.eid && !lead.tracked && window.Track) {
+    window.Track("generate_lead", { variant: lead.variant || cfg.variant, placement: lead.placement || "", event_id: lead.eid });
+    lead.tracked = true;
+    try { sessionStorage.setItem("lead", JSON.stringify(lead)); } catch (e) {}
+  }
+
+  if (lead && lead.masked) $("[data-mailnote]").textContent = "Kopie míří na " + lead.masked + ". Nevidíte ji do 2 minut? Mrkněte do složky Promoakce, Hromadné nebo Spam.";
+
+  // Echo back what the visitor worked out on the landing page.
+  var ctx = (lead && lead.context) || {};
+  if (ctx.calc_save_czk) {
+    $("[data-mine]").innerHTML = "<b>Váš výpočet</b><ul><li>" + F.czk(ctx.calc_amount) + " měsíčně po dobu " + ctx.calc_years +
+      " let: s evropským ETF místo bankovního fondu zůstane v kapse zhruba <b>" + F.czk(ctx.calc_save_czk) + "</b> (při 7 % ročně před poplatky).</li></ul>";
+  }
+
+  $("[data-twins]").innerHTML = D.us.filter(function (f) { return D.twins[f.twin]; }).map(function (f) {
+    var tw = D.twins[f.twin], p = tw.pick;
+    return "<tr><td><b>" + f.t + "</b><small>" + F.pct(f.ter) + "</small></td><td><b>" + p.ticker + "</b> " + (tw.match === "exact" ? "" : "<small>podobný index</small>") +
+      "<small>" + p.name + "</small><span class='isin'>" + p.isin + "</span></td><td class='num'>" + F.pct(p.ter) + "</td></tr>";
+  }).join("");
+
+  function post(path, body) {
+    if (!cfg.endpoint) return;
+    fetch(cfg.endpoint.replace(/\/?$/, path), { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
+      body: JSON.stringify(Object.assign({ id: lead && lead.id, variant: cfg.variant }, body)) }).catch(function () {});
+  }
+  // Newsletter consent is asked separately from the PDF (which everyone gets): freely given, unticked by default,
+  // with the exact wording stored as evidence (GDPR art. 7(1); zákon 480/2004 Sb. § 7).
+  document.querySelector("[data-optin-btns]").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-optin]"); if (!b) return;
+    var yes = b.dataset.optin === "yes";
+    this.hidden = true;
+    $("[data-noopt]").hidden = yes;
+    $("[data-step2]").hidden = !yes;
+    if (window.Track) window.Track(yes ? "newsletter_optin" : "newsletter_decline", { variant: cfg.variant });
+    if (yes) post("/consent", { newsletter: true, consent_text: $("[data-consent-text]").textContent.trim(), ts: new Date().toISOString() });
+  });
+  $("[data-opts]").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    this.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    $("[data-ask]").classList.add("is-answered");
+    if (window.Track) window.Track("lead_profile", { broker: b.dataset.b });
+    post("/profile", { broker: b.dataset.b });
+  });
+})();
+</script>
+</body>
+</html>

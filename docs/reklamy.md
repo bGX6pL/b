@@ -1,16 +1,18 @@
 # Dvě verze reklamy
 
-Obě reklamy jsou připravené pro Meta (Instagram + Facebook: Feed, Stories, Reels). Kreativy se generují z `ads/creative.html` stejnými daty a stejným vzorcem jako landing pages (`tools/render_ads.py`), takže číslo v reklamě vždy sedí s číslem na stránce.
+Obě reklamy jsou připravené pro Meta (Instagram + Facebook: Feed, Stories, Reels) a obě vedou na **finální stránku** (varianta B, `/`). Kreativy se generují z `ads/creative.html` stejnými daty a stejným vzorcem jako stránka (`tools/render_ads.py`), takže číslo v reklamě vždy sedí s číslem na stránce. Vzhled reklam odpovídá stránce: světlé pozadí, stejné písmo, inkoustová + limetková.
 
 | | Reklama 1 — Dvojče | Reklama 2 — Účtenka |
 |---|---|---|
 | Úhel | Problém + zvědavost („proč VOO nejde koupit?“) | Peníze + překvapení („kolik mě stojí poplatky?“) |
 | Pro koho | Samouk z Instagramu, zná VOO/SPY/QQQ | I bankovní střadatel, ETF zná jen z doslechu |
-| Landing page | **A — Dvojče** (`/a-dvojce/?t=VOO`), alt. **D** (`/d-portfolio/?p=sp`) | **B — Účtenka** (`/b-poplatky/?m=3000&y=20`), alt. **C** (`/c-srovnani/?sort=ter`) |
+| Landing page | `/` (účtenka v první obrazovce obsahuje řádek „VOO z NYSE → Dvojče SPYL“) | `/?m=3000&y=20` (stejná účtenka jako v reklamě) |
 | Feed 4:5 | `ads/ad-1-dvojce-feed.png` | `ads/ad-2-uctenka-feed.png` |
 | Stories/Reels 9:16 | `ads/ad-1-dvojce-story.png` | `ads/ad-2-uctenka-story.png` |
 
-Slib reklamy a první obrazovka stránky jsou **stejná věta a stejný obrázek** — návštěvník během první vteřiny pozná, že je na správném místě.
+U reklamy 2 jsou slib reklamy a první obrazovka stránky **stejná věta a stejný obrázek** — návštěvník během první vteřiny pozná, že je na správném místě.
+
+**Pozor u reklamy 1:** byla navržená pro variantu A (vyhledávač dvojčat). Na finální stránce B najde návštěvník VOO a jeho dvojče SPYL hned v účtence, ale nadpis mluví o poplatcích, ne o dvojčeti. Když bude mít reklama 1 dobré CTR a slabou konverzi, je to důvod — pak buď běžet jen s reklamou 2, nebo reklamu 1 přepsat na úhel poplatků.
 
 ---
 
@@ -28,11 +30,11 @@ Slib reklamy a první obrazovka stránky jsou **stejná věta a stejný obrázek
 **Nadpis:** Chcete VOO? Tady je jeho dvojče
 **Popis:** 20 ETF z NYSE + dvojčata · PDF zdarma
 **Tlačítko:** Stáhnout
-**URL:** `https://[doména]/a-dvojce/?t=VOO&utm_source=meta&utm_medium=paid_social&utm_campaign=etf_tahak_2026&utm_content=ad1_dvojce`
+**URL:** `https://[doména]/?utm_source=meta&utm_medium=paid_social&utm_campaign=etf_tahak_2026&utm_content=ad1_dvojce`
 
 **Varianty textu na test (stejný vizuál):**
 - „Hledáte VOO u XTB nebo Trading 212 a nejde to? Není to chyba aplikace…“
-- Vizuál s SPY nebo QQQ místo VOO → odkaz s `?t=SPY` / `?t=QQQ` (stránka otevře přesně ten fond).
+- Vizuál s SPY nebo QQQ místo VOO: finální stránka počítá s VOO, takže tuto variantu zatím netestovat.
 
 ---
 
@@ -50,7 +52,7 @@ Slib reklamy a první obrazovka stránky jsou **stejná věta a stejný obrázek
 **Nadpis:** Účtenka za 20 let investování
 **Popis:** Kalkulačka poplatků + tahák zdarma
 **Tlačítko:** Zjistit více
-**URL:** `https://[doména]/b-poplatky/?m=3000&y=20&utm_source=meta&utm_medium=paid_social&utm_campaign=etf_tahak_2026&utm_content=ad2_uctenka`
+**URL:** `https://[doména]/?m=3000&y=20&utm_source=meta&utm_medium=paid_social&utm_campaign=etf_tahak_2026&utm_content=ad2_uctenka`
 
 V kreativě je drobným písmem předpoklad výpočtu (7 % ročně před poplatky, modelový výpočet) — tvrzení „rozdíl ve stovkách tisíc“ je tak podložené a dohledatelné na stránce („Jak počítáme“).
 
@@ -58,10 +60,10 @@ V kreativě je drobným písmem předpoklad výpočtu (7 % ročně před poplatk
 
 ## Nastavení kampaně (návrh)
 
-- **Cíl:** Potenciální zákazníci (Leads) s konverzí na webu, událost `Lead` z Meta Pixelu (vyvolá se na úspěšné odeslání formuláře) + doporučeně Conversions API ze serveru.
+- **Cíl:** Potenciální zákazníci (Leads) s konverzí na webu, událost `Lead` z Meta Pixelu (vyvolá se jednou po úspěšném odeslání formuláře, na děkovací stránce, s `eventID` pro spárování) + doporučeně Conversions API ze serveru. Zapojení a kontrola: `docs/spusteni.md` §4.
 - **Publikum:** ČR, 22–45 let, Advantage+ audience se signály: investování, ETF, akcie, XTB, Trading 212, Portu, finanční gramotnost. Vyloučit stávající kontakty (nahraný seznam).
 - **Umístění:** Advantage+ placements; kreativa 4:5 pro feed, 9:16 pro Stories/Reels.
-- **Rozpočet testu:** 2 reklamy × 2 landing pages, rovnoměrně, cca 7 dní nebo 300 návštěv na kombinaci.
+- **Rozpočet testu:** 2 reklamy × 1 stránka, rovnoměrně, cca 7 dní nebo 300 návštěv na reklamu; rozhoduje cena za `Lead`.
 - **Pozor na zakázané praktiky:** žádné garantované výnosy, žádné celebrity, žádný vzhled falešného zpravodajského článku, žádné „zbohatněte“. Cílit 18+.
 
 ## Kde reklamu spustit (stav k 29. 10. 2026, zdroje v `research/cz-context.md` §7)
